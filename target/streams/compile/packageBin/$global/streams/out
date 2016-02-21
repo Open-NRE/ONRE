@@ -1,0 +1,25 @@
+[0m[[0minfo[0m] [0mPackaging /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/onre_2.10-1.0.0-SNAPSHOT.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	main/java[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java[0m
+[0m[[0mdebug[0m] [0m	main[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main[0m
+[0m[[0mdebug[0m] [0m	main/java/edu/iitd/cse/open_nre/onre[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu/iitd/cse/open_nre/onre[0m
+[0m[[0mdebug[0m] [0m	main/java/edu/iitd/cse/open_nre/onre/helper[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu/iitd/cse/open_nre/onre/helper[0m
+[0m[[0mdebug[0m] [0m	main/java/edu/iitd[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu/iitd[0m
+[0m[[0mdebug[0m] [0m	main/java/edu/iitd/cse[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu/iitd/cse[0m
+[0m[[0mdebug[0m] [0m	main/java/edu/iitd/cse/open_nre/onre/runner[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu/iitd/cse/open_nre/onre/runner[0m
+[0m[[0mdebug[0m] [0m	main/java/edu/iitd/cse/open_nre/onre/helper/MayIHelpYou.class[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu/iitd/cse/open_nre/onre/helper/MayIHelpYou.class[0m
+[0m[[0mdebug[0m] [0m	main/java/edu/iitd/cse/open_nre/onre/runner/TestMain.class[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu/iitd/cse/open_nre/onre/runner/TestMain.class[0m
+[0m[[0mdebug[0m] [0m	main/java/edu[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu[0m
+[0m[[0mdebug[0m] [0m	main/java/edu/iitd/cse/open_nre[0m
+[0m[[0mdebug[0m] [0m	  /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/ONRE/target/scala-2.10/classes/main/java/edu/iitd/cse/open_nre[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
