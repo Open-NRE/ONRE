@@ -19,8 +19,8 @@ public class OnreExtraction {
 	private String	       temporal;
 
 	public String toString() {
-		return "(" + this.argument + OnreConst.EXTR_DELIMETER + this.relation + OnreConst.EXTR_DELIMETER
-		        + this.quantity + OnreConst.EXTR_DELIMETER + this.unit + OnreConst.EXTR_DELIMETER + this.changeType
-		        + OnreConst.EXTR_DELIMETER + this.temporal + ")";
+		return "(" + this.argument + OnreConst.DELIMETER_EXTR + this.relation + OnreConst.DELIMETER_EXTR
+		        + this.quantity + OnreConst.DELIMETER_EXTR + this.unit + OnreConst.DELIMETER_EXTR + this.changeType
+		        + OnreConst.DELIMETER_EXTR + this.temporal + ")";
 	}
 }
