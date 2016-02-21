@@ -9,22 +9,22 @@ name := "onre"
 
 organization := "edu.iitd.cse.open_nre.onre" //TODO
 
-//crossScalaVersions := Seq("2.10.2")
+crossScalaVersions := Seq("2.10.2")
 
-//scalaVersion <<= crossScalaVersions { (vs: Seq[String]) => vs.head }
+scalaVersion <<= crossScalaVersions { (vs: Seq[String]) => vs.head }
 
 resolvers += "Sonatype SNAPSHOTS" at "https://oss.sonatype.org/content/repositories/snapshots/"
 
 libraryDependencies ++= Seq(
-  "edu.washington.cs.knowitall.nlptools" %% "nlptools-core" % "2.4.5"
+  "edu.washington.cs.knowitall.nlptools" %% "nlptools-core" % "2.4.5",
   // for remote components
-  //"net.databinder.dispatch" %% "dispatch-core" % "0.11.0",
+  "net.databinder.dispatch" %% "dispatch-core" % "0.11.0",
   // resource management
-  //"com.jsuereth" %% "scala-arm" % "1.3",
+  "com.jsuereth" %% "scala-arm" % "1.3",
   // logging
-  //"org.slf4j" % "slf4j-api" % "1.7.5",
-  //"ch.qos.logback" % "logback-core" % "1.0.13",
-  //"ch.qos.logback" % "logback-classic" % "1.0.13"
+  "org.slf4j" % "slf4j-api" % "1.7.5",
+  "ch.qos.logback" % "logback-core" % "1.0.13",
+  "ch.qos.logback" % "logback-classic" % "1.0.13"
   //"org.scalatest" % "scalatest_2.10" % "2.0.RC1" % "test")
 )
 
