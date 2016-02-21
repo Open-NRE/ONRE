@@ -4,7 +4,7 @@
 		module="onre-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160221123836"
+		publication="20160221185100"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

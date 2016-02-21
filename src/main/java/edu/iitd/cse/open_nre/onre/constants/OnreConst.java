@@ -11,8 +11,6 @@ public class OnreConst {
 
 	public static final String	 DELIMETER_EXTR	         = " ; ";
 	
-	public static final String	 DELIMETER_PROP	         = "=";
-
 	public static final String[]	CHANGE_KEYS_INCREASE	= { "increase", "up", "growth", "surge", "rise", "more",
 	        "boost", "expansion", "hike", "upgrade", "enlargement", "rise", "raise", "gain", "inflation", "addition" };
 
@@ -21,6 +19,6 @@ public class OnreConst {
 	
 
 	//file paths
-	public static final String FILE_PROPERTIES = "data/config.properties";
+	public static final String FILE_PROPERTIES = "config.properties";
 
 }

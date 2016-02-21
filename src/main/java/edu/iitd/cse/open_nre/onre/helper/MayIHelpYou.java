@@ -14,6 +14,8 @@ public class MayIHelpYou {
 
 	public static void runMe(DependencyGraph depGraph) {
 		System.out.println(depGraph);
-		System.out.println("You are running me :)");
+		depGraph.printDependencies();
+		OnreGraphHelper.simplifyGraph(depGraph);
+		//System.out.println("You are running me :)");
 	}
 }
