@@ -7,7 +7,7 @@ ReleaseSettings.defaults
 
 name := "onre"
 
-organization := "edu.washington.cs.knowitall.openie"
+organization := "edu.washington.cs.knowitall.openie" //TODO
 
 //crossScalaVersions := Seq("2.10.2")
 
