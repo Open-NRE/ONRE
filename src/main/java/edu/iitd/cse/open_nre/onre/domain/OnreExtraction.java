@@ -3,7 +3,6 @@
  */
 package edu.iitd.cse.open_nre.onre.domain;
 
-import edu.iitd.cse.open_nre.onre.constants.OnreChangeType;
 import edu.iitd.cse.open_nre.onre.constants.OnreConst;
 
 /**
@@ -11,12 +10,20 @@ import edu.iitd.cse.open_nre.onre.constants.OnreConst;
  *
  */
 public class OnreExtraction {
-	private String	       argument;
-	private String	       relation;
-	private double	       quantity;
-	private String	       unit;
-	private OnreChangeType	changeType;
-	private String	       temporal;
+	public OnreExtractionPart	argument;
+	public OnreExtractionPart	relation;
+	public OnreExtractionPart	quantity;
+	public OnreExtractionPart	unit;
+	public OnreExtractionPart	changeType;
+	public OnreExtractionPart	temporal;
+	
+	public OnreExtraction(OnreExtractionPart argument, OnreExtractionPart relation, OnreExtractionPart quantity,
+	        OnreExtractionPart unit) {
+		this.argument = argument;
+		this.relation = relation;
+		this.quantity = quantity;
+		this.unit = unit;
+	}
 
 	public String toString() {
 		return "(" + this.argument + OnreConst.DELIMETER_EXTR + this.relation + OnreConst.DELIMETER_EXTR

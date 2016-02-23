@@ -17,16 +17,21 @@ public class OnreGraphHelper {
 		DependencyGraph simplifiedDepGraph = depGraph;
 
 		if (OnrePropertiesReader.isCollapseGraph()) {
-			simplifiedDepGraph = depGraph.collapse();
+			simplifiedDepGraph = simplifiedDepGraph.collapse();
 		}
 
 		if (OnrePropertiesReader.isSimplifyPostags()) {
-			simplifiedDepGraph = depGraph.simplifyPostags();
+			simplifiedDepGraph = simplifiedDepGraph.simplifyPostags();
 		}
 
 		if (OnrePropertiesReader.isSimplifyVBPostags()) {
-			simplifiedDepGraph = depGraph.simplifyVBPostags();
+			simplifiedDepGraph = simplifiedDepGraph.simplifyVBPostags();
 		}
+
+		simplifiedDepGraph = simplifiedDepGraph.normalize();
+		simplifiedDepGraph = simplifiedDepGraph.collapseNNPOf();
+		simplifiedDepGraph = simplifiedDepGraph.collapseWeakLeaves();
+		simplifiedDepGraph = simplifiedDepGraph.collapseXNsubj();
 
 		return simplifiedDepGraph;
 	}

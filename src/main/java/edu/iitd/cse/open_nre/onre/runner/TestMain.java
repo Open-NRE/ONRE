@@ -23,7 +23,7 @@ public class TestMain {
 	public static void main(String[] args) {
 		System.out.println("I am here");
 
-		String sentence = "India has a population of 25 million.";
+		String sentence = "Deadpool has a budget of $58 million.";
 
 		//String cleaned = clean(sentence);
 		ClearTokenizer tokenizer = new ClearTokenizer();
