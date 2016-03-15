@@ -16,8 +16,10 @@ scalaVersion <<= crossScalaVersions { (vs: Seq[String]) => vs.head }
 resolvers += "Sonatype SNAPSHOTS" at "https://oss.sonatype.org/content/repositories/snapshots/"
 
 libraryDependencies ++= Seq(
+  //"org.scala-lang" %% "scala-library" % "2.11.8",
   "edu.washington.cs.knowitall.nlptools" %% "nlptools-parse-clear" % "2.4.5",
   "edu.washington.cs.knowitall.nlptools" %% "nlptools-core" % "2.4.5",
+  "edu.washington.cs.knowitall.nlptools" %% "nlptools-stem-morpha" % "2.4.5",
   // for splitting sentences
   "edu.washington.cs.knowitall.nlptools" %% "nlptools-sentence-opennlp" % "2.4.5",
   // for remote components
