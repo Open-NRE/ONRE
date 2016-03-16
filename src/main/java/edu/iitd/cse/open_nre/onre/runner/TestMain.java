@@ -25,7 +25,7 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "The population of India is 1.2 billion.";
+		String sentence = "The population of Australia is 1.2 billion.";
 
 		//String cleaned = clean(sentence);
 		ClearTokenizer tokenizer = new ClearTokenizer();
