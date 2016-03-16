@@ -3,11 +3,12 @@
  */
 package edu.iitd.cse.open_nre.onre.runner;
 
+import java.io.IOException;
+
 import edu.iitd.cse.open_nre.onre.helper.MayIHelpYou;
 import edu.knowitall.tool.parse.ClearParser;
 import edu.knowitall.tool.parse.DependencyParser;
 import edu.knowitall.tool.parse.graph.DependencyGraph;
-import edu.knowitall.tool.parse.graph.DependencyNode;
 import edu.knowitall.tool.postag.ClearPostagger;
 import edu.knowitall.tool.tokenize.ClearTokenizer;
 
@@ -19,8 +20,9 @@ import edu.knowitall.tool.tokenize.ClearTokenizer;
 public class TestMain {
 	/**
 	 * @param args
+	 * @throws IOException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
 		String sentence = "The population of India is 1.2 billion.";

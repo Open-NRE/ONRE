@@ -10,6 +10,7 @@ import java.util.Set;
 import scala.collection.JavaConversions;
 import edu.iitd.cse.open_nre.onre.OnrePropertiesReader;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.knowitall.collection.immutable.graph.Graph;
 import edu.knowitall.collection.immutable.graph.Graph.Edge;
 import edu.knowitall.tool.parse.graph.Dependency;

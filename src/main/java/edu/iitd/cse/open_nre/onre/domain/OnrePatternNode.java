@@ -13,18 +13,30 @@ import edu.knowitall.tool.parse.graph.DependencyNode;
  *
  */
 public class OnrePatternNode { 
-	public String dependencyLabel; //TODO: change all 'public' to 'private'
+	public String dependencyLabel;
 	
 	public String word;
 	public String posTag;
+	
 	public int index;
 	public int offset;
 	
 	public List<OnrePatternNode> children;
+	public OnrePatternNode parent;
 	
 	/*public OnrePatternNode() {
 		this.children = new ArrayList<OnrePatternNode>();
 	}*/
+	
+	public OnrePatternNode(String nodeString, OnrePatternNode parentNode) {
+		String split[] = nodeString.split("\\|");
+		this.dependencyLabel = split[0];
+		this.word = split[1];
+		this.posTag = split[2];
+		this.parent = parentNode;
+
+		this.children = new ArrayList<OnrePatternNode>();
+	}
 	
 	public OnrePatternNode(DependencyNode depNode) {
 		this.word = depNode.text();
@@ -33,7 +45,6 @@ public class OnrePatternNode {
 		this.offset = depNode.offset();
 		
 		this.children = new ArrayList<OnrePatternNode>();
-		//this.edge = ; //TODO
 	}
 	
 	public String toString() {
