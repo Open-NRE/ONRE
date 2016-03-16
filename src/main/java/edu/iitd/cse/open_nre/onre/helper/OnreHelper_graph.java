@@ -21,14 +21,14 @@ import edu.knowitall.tool.parse.graph.DependencyNode;
  * @author harinder
  *
  */
-public class OnreGraphHelper {
+public class OnreHelper_graph {
 
 	// TODO: check if the function required
 	public static DependencyGraph simplifyGraph(DependencyGraph depGraph) {
 		DependencyGraph simplifiedDepGraph = depGraph;
 
 		if (OnrePropertiesReader.isCollapseGraph()) {
-			simplifiedDepGraph = simplifiedDepGraph.collapse();
+			//simplifiedDepGraph = simplifiedDepGraph.collapse(); //TODO: when collapsing, dependencies don't change???
 		}
 
 		if (OnrePropertiesReader.isSimplifyPostags()) {

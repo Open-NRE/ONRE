@@ -1,1 +1,1 @@
-<(|is|VBZ)<(attr|{unit}|CD)<(number|{value}|CD)>(nsubj|{rel}|NN)<(prep|of|IN)<(pobj|{arg}|NNP)>>>>
+<(|is|VERB)<(attr|{q_modifier}|CD)<(number|{q_value}|CD)>(nsubj|{rel}|NN)<(prep|of|IN)<(pobj|{arg}|NNP)>>>>

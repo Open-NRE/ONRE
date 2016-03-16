@@ -23,10 +23,10 @@ public class MayIHelpYou {
 
     public static Seq<OnreExtraction> runMe(DependencyGraph depGraph) throws IOException {
 		
-		DependencyGraph simplifiedGraph = OnreGraphHelper.simplifyGraph(depGraph);
-		OnrePatternNode onrePatternNode = OnreGraphHelper.convertGraph2PatternTree(simplifiedGraph);
+		DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
+		OnrePatternNode onrePatternNode = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
 
-		List<OnrePatternNode> list_configuredPattern = OnrePatternHelper.getConfiguredPatterns();
+		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
 		
 		List<OnreExtraction> extrs = getExtractions(onrePatternNode, list_configuredPattern);
 		//addDummyExtractions(extrs);
@@ -46,11 +46,11 @@ public class MayIHelpYou {
     	return extrs;
     }
     
-    private static OnreExtraction getExtraction(OnrePatternNode onrePatternNode, OnrePatternNode configuredPattern) {
-    	//TODO: -----implement-----
-    		//TODO: find subtree
-    		//TODO: make extraction
-    	return null; //TODO: obviously this needs to be changed
+    private static OnreExtraction getExtraction(OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured) {
+    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(patternNode_sentence, patternNode_configured);	
+    	OnreExtraction onreExtraction = OnreHelper.createExtractionFromSubTree(subTree, patternNode_configured);
+    	//TODO: expand the extraction/pattern - imp
+    	return onreExtraction;
     }
 
 	private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {

@@ -24,6 +24,8 @@ public class OnrePatternNode {
 	public List<OnrePatternNode> children;
 	public OnrePatternNode parent;
 	
+	//public ExtractionPartType extractionPartType;
+	
 	/*public OnrePatternNode() {
 		this.children = new ArrayList<OnrePatternNode>();
 	}*/
@@ -45,6 +47,16 @@ public class OnrePatternNode {
 		this.offset = depNode.offset();
 		
 		this.children = new ArrayList<OnrePatternNode>();
+	}
+	
+	public boolean isEqualTo(OnrePatternNode onrePatternNode) {
+		if(!this.posTag.equalsIgnoreCase(onrePatternNode.posTag)) return false;
+		if(this.dependencyLabel!=null && !this.dependencyLabel.equalsIgnoreCase(onrePatternNode.dependencyLabel)) return false;
+		
+		if(onrePatternNode.word.startsWith("{") && onrePatternNode.word.endsWith("}")) {}
+		else if(!this.word.equalsIgnoreCase(onrePatternNode.word)) return false; 
+		
+		return true;
 	}
 	
 	public String toString() {

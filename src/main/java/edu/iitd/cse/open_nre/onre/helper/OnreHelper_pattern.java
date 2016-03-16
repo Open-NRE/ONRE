@@ -15,7 +15,7 @@ import edu.iitd.cse.open_nre.onre.utils.OnreIO;
  * @author harinder
  *
  */
-public class OnrePatternHelper {
+public class OnreHelper_pattern {
 	
 	public static List<OnrePatternNode> getConfiguredPatterns() throws IOException {
 		List<OnrePatternNode> list_configuredPattern = new ArrayList<OnrePatternNode>();
