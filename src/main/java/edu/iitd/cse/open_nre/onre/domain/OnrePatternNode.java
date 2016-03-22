@@ -50,16 +50,49 @@ public class OnrePatternNode {
 	}
 	
 	public boolean isEqualTo(OnrePatternNode onrePatternNode) {
-		if(!this.posTag.equalsIgnoreCase(onrePatternNode.posTag)) return false;
-		if(this.dependencyLabel!=null && !this.dependencyLabel.equalsIgnoreCase(onrePatternNode.dependencyLabel)) return false;
-		
-		if(onrePatternNode.word.startsWith("{") && onrePatternNode.word.endsWith("}")) {}
-		else if(!this.word.equalsIgnoreCase(onrePatternNode.word)) return false; 
-		
+		System.out.println(this.word);
+		System.out.println(onrePatternNode.word);
+		System.out.println();
+		if(!isMatchPosTag(onrePatternNode)) return false;
+		if(!isMatchDepLabel(onrePatternNode)) return false;
+		if(!isMatchWord(onrePatternNode)) return false; 
 		return true;
+	}
+
+	private boolean isMatchWord(OnrePatternNode onrePatternNode) {
+		//TODO: null/empty checks for both this & that
+		if(this.word==null || this.word.equals("")) return true;
+		if(onrePatternNode.word==null || onrePatternNode.word.equals("")) return true;
+		
+		//TODO: curly check for both this & that
+		if(onrePatternNode.word.startsWith("{") && onrePatternNode.word.endsWith("}")) return true;
+		if(this.word.startsWith("{") && this.word.endsWith("}")) return true;
+		
+		if(this.word.equalsIgnoreCase(onrePatternNode.word)) return true;
+		
+		return false;
+	}
+
+	private boolean isMatchDepLabel(OnrePatternNode onrePatternNode) {
+		//TODO: null/empty checks for both this & that
+		if(this.dependencyLabel==null || this.dependencyLabel.equals("")) return true;
+		if(onrePatternNode.dependencyLabel==null || onrePatternNode.dependencyLabel.equals("")) return true;
+		
+		if(this.dependencyLabel.equalsIgnoreCase(onrePatternNode.dependencyLabel)) return true;
+		
+		return false;
+	}
+
+	private boolean isMatchPosTag(OnrePatternNode onrePatternNode) {
+		//TODO: null/empty checks for both this & that
+		if(this.posTag==null || this.posTag.equals("")) return true;
+		if(onrePatternNode.posTag==null || onrePatternNode.posTag.equals("")) return true;
+		
+		if(this.posTag.equalsIgnoreCase(onrePatternNode.posTag)) return true;
+		return false;
 	}
 	
 	public String toString() {
-		return word + "_" + posTag + "_" + index;
+		return "(" + dependencyLabel + "_" + word + "_" + posTag + ")" + children;
 	}
 }
