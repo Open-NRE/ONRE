@@ -50,7 +50,9 @@ public class OnreHelper_graph {
 	public static OnrePatternNode convertGraph2PatternTree(DependencyGraph depGraph) {
 		Map<DependencyNode, Map<DependencyNode,String>> depMap = getDependencyMap(depGraph);
 		DependencyNode start = getVertexWithNoIncoming(depGraph.graph());
-		return convertGraph2PatternTree_helper(start, depGraph.graph(), depMap);
+		OnrePatternNode onrePatternNode = convertGraph2PatternTree_helper(start, depGraph.graph(), depMap);
+		OnreUtils.sortPatternTree(onrePatternNode);
+		return onrePatternNode;
 	}
 	
 	@SuppressWarnings("unchecked")

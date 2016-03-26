@@ -50,9 +50,9 @@ public class OnrePatternNode {
 	}
 	
 	public boolean isEqualTo(OnrePatternNode onrePatternNode) {
-		System.out.println(this.word);
-		System.out.println(onrePatternNode.word);
-		System.out.println();
+		//System.out.println(this.word);
+		//System.out.println(onrePatternNode.word);
+		//System.out.println();
 		if(!isMatchPosTag(onrePatternNode)) return false;
 		if(!isMatchDepLabel(onrePatternNode)) return false;
 		if(!isMatchWord(onrePatternNode)) return false; 
