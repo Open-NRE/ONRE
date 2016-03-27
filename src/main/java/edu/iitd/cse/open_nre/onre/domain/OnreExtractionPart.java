@@ -14,6 +14,11 @@ public class OnreExtractionPart {
 	public Interval offsetInterval;
 	public int index; //TODO: required for expanding extraction
 	
+	public OnreExtractionPart() {
+		this.text = "";
+		this.offsetInterval = new Interval(0, 0); //TODO: dummy offset
+	}
+	
 	public OnreExtractionPart(String text, Interval offsetInterval) {
 		this.text = text;
 		this.offsetInterval = offsetInterval;

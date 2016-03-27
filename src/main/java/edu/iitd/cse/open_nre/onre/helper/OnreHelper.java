@@ -82,4 +82,10 @@ public class OnreHelper {
 		}
 	}
 	
+	public static void onreExtraction_dummyForNull(OnreExtraction onreExtraction) {
+		if(onreExtraction.quantity_modifier == null) onreExtraction.quantity_modifier = new OnreExtractionPart();
+		if(onreExtraction.quantity_unit == null) onreExtraction.quantity_unit = new OnreExtractionPart();
+	}
+	
+	
 }

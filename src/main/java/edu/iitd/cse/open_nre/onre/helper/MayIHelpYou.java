@@ -44,7 +44,7 @@ public class MayIHelpYou {
     	
     	for (OnrePatternNode configuredPattern : list_configuredPattern) {
 	        OnreExtraction onreExtraction = getExtraction(onrePatternNode, configuredPattern);
-	        if(onreExtraction!=null) extrs.add(onreExtraction);
+	        if(onreExtraction != null) extrs.add(onreExtraction);
         }
     	
     	return extrs;
@@ -57,6 +57,8 @@ public class MayIHelpYou {
     	if(subTree == null) return null;
     	
     	OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
+    	OnreHelper.onreExtraction_dummyForNull(onreExtraction);
+    	
     	return onreExtraction;
     }
 
