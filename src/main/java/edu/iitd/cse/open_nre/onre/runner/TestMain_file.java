@@ -32,8 +32,7 @@ public class TestMain_file {
 		while(line != null) {
 			System.out.println("::" + (++i));
 			DependencyGraph depGraph = TestMain.getDepGraph(line);
-			MayIHelpYou.runMe(depGraph);
-			
+			if(depGraph != null) MayIHelpYou.runMe(depGraph);
 			line = br.readLine();
 		}
 		br.close();

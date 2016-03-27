@@ -25,10 +25,14 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "The population of urban India is 1.2 billion.";
+		//String sentence = "The population of urban India is 1.2 billion.";
+		String sentence = "Rural Roads National Highways Development Projects NHAI has taken up some "
+				+ "major projects in the country under different phases : Golden Quadrilateral : "
+				+ "It comprises construction of 5,846 km long 4/6 lane, high density traffic corridor, "
+				+ "to connect India's four big metro cities of Delhi-Mumbai-Chennai- Kolkata.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		//System.out.println("---Got depGraph");
-		MayIHelpYou.runMe(depGraph);
+		if(depGraph != null) MayIHelpYou.runMe(depGraph);
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {
@@ -37,7 +41,15 @@ public class TestMain {
 		ClearPostagger postagger = new ClearPostagger(tokenizer);
 		DependencyParser parser = new ClearParser(postagger);
 		
-		DependencyGraph depGraph = parser.apply(sentence);
+		DependencyGraph depGraph = null;
+		
+		try {
+		depGraph = parser.apply(sentence);
+		} catch(AssertionError error) {
+			System.err.println("----->" + error.toString());
+			return null;
+		}
+		
 	    return depGraph;
     }
 
