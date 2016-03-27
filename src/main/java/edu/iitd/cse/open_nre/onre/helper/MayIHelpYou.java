@@ -22,12 +22,13 @@ public class MayIHelpYou {
     public static Seq<OnreExtraction> runMe(DependencyGraph depGraph) throws IOException {
 		
 		DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
+		//System.out.println("---simplified graph");
 		OnrePatternNode onrePatternNode = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
-
+		//System.out.println("---convertGraph2PatternTree");
 		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
-		
+		//System.out.println("---getConfiguredPatterns");
 		List<OnreExtraction> extrs = getExtractions(onrePatternNode, list_configuredPattern);
-		
+		//System.out.println("---getExtractions");
 		for (OnreExtraction onreExtraction : extrs) {
 			System.out.println(onreExtraction);
 		}
@@ -53,9 +54,10 @@ public class MayIHelpYou {
     	OnreExtraction onreExtraction = new OnreExtraction();
     	OnrePatternNode subTree = OnreHelper.findPatternSubTree(patternNode_sentence, patternNode_configured, onreExtraction);
     	
-    	if(subTree != null) return onreExtraction;
-    	return null;
-    	//TODO: expand the extraction/pattern - imp
+    	if(subTree == null) return null;
+    	
+    	OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
+    	return onreExtraction;
     }
 
 	private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {

@@ -9,6 +9,7 @@ import java.util.Queue;
 import java.util.Set;
 
 import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode;
+import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import scala.collection.JavaConversions;
 
@@ -25,16 +26,27 @@ public class OnreUtils {
 	}
 	
 	public static void sortPatternTree(OnrePatternNode onrePatternNode) {
-		Queue<OnrePatternNode> patternQ = new LinkedList<>();
-		patternQ.add(onrePatternNode);
+		Queue<OnrePatternNode> q_patternNode = new LinkedList<>();
+		q_patternNode.add(onrePatternNode);
 		
-		while(!patternQ.isEmpty()) {
-			OnrePatternNode currNode = patternQ.remove();
+		while(!q_patternNode.isEmpty()) {
+			OnrePatternNode currNode = q_patternNode.remove();
 			Collections.sort(currNode.children, new OnreComparator_PatternNode());
-			for (OnrePatternNode child : currNode.children) {
-	            patternQ.add(child);
-            }
+			q_patternNode.addAll(currNode.children);
 		}
+	}
+	
+	public static OnrePatternNode searchNodeInTree(OnreExtractionPart onreExtractionPart, OnrePatternNode tree) {
+		Queue<OnrePatternNode> q_patternNode = new LinkedList<>();
+		q_patternNode.add(tree);
+		
+		while(!q_patternNode.isEmpty()) {
+			OnrePatternNode currNode = q_patternNode.remove();
+			if(currNode.index==onreExtractionPart.index) return currNode;
+			q_patternNode.addAll(currNode.children);
+		}
+		
+		return null;
 	}
 	
 }

@@ -6,6 +6,7 @@ package edu.iitd.cse.open_nre.onre.helper;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 
 /**
  * @author harinder
@@ -13,14 +14,14 @@ import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
  */
 public class OnreHelper {
 	
-    private static void switch_extraction(OnrePatternNode subTreeNode, OnrePatternNode patternNode_configured,
+    private static void setExtractionPart(OnrePatternNode subTreeNode, OnrePatternNode patternNode_configured,
             OnreExtraction onreExtraction) {
 	    switch(patternNode_configured.word){
-	    	case "{rel}": onreExtraction.relation = new OnreExtractionPart(subTreeNode.word); break;
-	    	case "{q_value}": onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word); break;
-	    	case "{q_modifier}": onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word); break;
-	    	case "{q_unit}": onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word); break;
-	    	case "{arg}": onreExtraction.argument = new OnreExtractionPart(subTreeNode.word); break;
+	    	case "{rel}": onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case "{q_value}": onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case "{q_modifier}": onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case "{q_unit}": onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case "{arg}": onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    }
 	}
 	
@@ -30,7 +31,7 @@ public class OnreHelper {
 		if (patternNode_sentence.isEqualTo(patternNode_configured) 
 				&& matchChildren(patternNode_sentence, patternNode_configured, onreExtraction)) {
 			
-			switch_extraction(patternNode_sentence, patternNode_configured, onreExtraction);
+			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction);
 			return patternNode_sentence;
 		}
 
@@ -48,7 +49,7 @@ public class OnreHelper {
 			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction) {
     	
 		if (patternNode_sentence.isEqualTo(patternNode_configured)) 
-			switch_extraction(patternNode_sentence, patternNode_configured, onreExtraction);
+			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction);
 		else return false;
 		
     	if (patternNode_sentence.children.size() < patternNode_configured.children.size()) return false;
@@ -70,4 +71,15 @@ public class OnreHelper {
 
     	return result;
     }
+	
+	public static void expandExtraction(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+		//TODO: expandExtraction | to be implemented
+		
+		//expand argument on amod
+		OnrePatternNode onrePatternNode = OnreUtils.searchNodeInTree(onreExtraction.argument, patternNode_sentence);
+		for(OnrePatternNode child : onrePatternNode.children) {
+			if(child.dependencyLabel.equals("amod")) onreExtraction.argument.text = child.word + " " + onreExtraction.argument.text; 
+		}
+	}
+	
 }

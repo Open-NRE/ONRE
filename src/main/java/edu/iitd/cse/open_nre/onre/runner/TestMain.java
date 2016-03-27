@@ -25,20 +25,21 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "The population of India is 1.2 billion.";
+		String sentence = "The population of urban India is 1.2 billion.";
+		DependencyGraph depGraph = getDepGraph(sentence);
+		//System.out.println("---Got depGraph");
+		MayIHelpYou.runMe(depGraph);
+	}
 
-		//String cleaned = clean(sentence);
+    public static DependencyGraph getDepGraph(String sentence) {
+	    //String cleaned = clean(sentence);
 		ClearTokenizer tokenizer = new ClearTokenizer();
 		ClearPostagger postagger = new ClearPostagger(tokenizer);
 		DependencyParser parser = new ClearParser(postagger);
 		
 		DependencyGraph depGraph = parser.apply(sentence);
-		
-		//MorphaStemmer morphaStemmer = new MorphaStemmer();
-		//DependencyPattern pattern = DependencyPattern.deserialize("be {rel} {prep}	{arg1} <nsubjpass< {rel:postag=VBN} >{prep:regex=prep_(.*)}> {arg2}	1.0000", morphaStemmer);
-		
-		MayIHelpYou.runMe(depGraph);
-	}
+	    return depGraph;
+    }
 
 	/*private String clean(String line) {
 		String cleaned = line;
