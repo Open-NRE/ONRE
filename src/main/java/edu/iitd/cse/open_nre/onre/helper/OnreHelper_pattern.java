@@ -23,6 +23,7 @@ public class OnreHelper_pattern {
 		List<String> configuredPatterns = OnreIO.readDepPatterns();
 
 		for (String configuredPattern : configuredPatterns) {
+			if(configuredPattern.trim().length()==0) continue;
 			list_configuredPattern.add(convertPattern2PatternTree(configuredPattern));
         }
 		

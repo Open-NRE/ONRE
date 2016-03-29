@@ -11,7 +11,7 @@ import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
  * @author harinder
  *
  */
-public class OnreComparator_PatternNode implements Comparator<OnrePatternNode> {
+public class OnreComparator_PatternNode_depLabel implements Comparator<OnrePatternNode> {
 
 	@Override
     public int compare(OnrePatternNode o1, OnrePatternNode o2) {

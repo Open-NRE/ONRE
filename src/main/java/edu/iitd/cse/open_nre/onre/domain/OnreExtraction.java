@@ -10,6 +10,7 @@ import edu.iitd.cse.open_nre.onre.constants.OnreConst;
  *
  */
 public class OnreExtraction {
+	
 	public OnreExtractionPart	argument;
 	public OnreExtractionPart	relation;
 	public OnreExtractionPart	quantity_value;

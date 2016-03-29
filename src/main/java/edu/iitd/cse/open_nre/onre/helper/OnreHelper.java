@@ -3,6 +3,11 @@
  */
 package edu.iitd.cse.open_nre.onre.helper;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_Index;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
@@ -75,12 +80,29 @@ public class OnreHelper {
 	public static void expandExtraction(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		//TODO: expandExtraction | to be implemented
 		
-		//expand argument on amod
-		OnrePatternNode onrePatternNode = OnreUtils.searchNodeInTree(onreExtraction.argument, patternNode_sentence);
-		for(OnrePatternNode child : onrePatternNode.children) {
-			if(child.dependencyLabel.equals("amod")) onreExtraction.argument.text = child.word + " " + onreExtraction.argument.text; 
-		}
+		//TODO: imp-I feel we need to keep expanding(from children) unless not possible
+		
+		expandArgument(onreExtraction, patternNode_sentence);
 	}
+
+	public static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+		OnrePatternNode argument = OnreUtils.searchNodeInTree(onreExtraction.argument, patternNode_sentence);
+		
+	    List<OnrePatternNode> expansions_argument = new ArrayList<>();
+		expansions_argument.add(argument);
+		for(OnrePatternNode child : argument.children) {
+			if(child.dependencyLabel.equals("amod")) expansions_argument.add(child);
+			if(child.dependencyLabel.equals("nn")) expansions_argument.add(child);
+		}
+		
+		Collections.sort(expansions_argument, new OnreComparator_PatternNode_Index());
+		StringBuilder sb = new StringBuilder("");
+		for (OnrePatternNode expansion : expansions_argument) {
+			sb.append(expansion.word + " ");
+        }
+		
+		onreExtraction.argument.text = sb.toString().trim();
+    }
 	
 	public static void onreExtraction_dummyForNull(OnreExtraction onreExtraction) {
 		if(onreExtraction.quantity_modifier == null) onreExtraction.quantity_modifier = new OnreExtractionPart();

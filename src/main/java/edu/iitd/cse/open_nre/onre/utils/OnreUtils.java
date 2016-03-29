@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
-import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode;
+import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_depLabel;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import scala.collection.JavaConversions;
@@ -31,7 +31,7 @@ public class OnreUtils {
 		
 		while(!q_patternNode.isEmpty()) {
 			OnrePatternNode currNode = q_patternNode.remove();
-			Collections.sort(currNode.children, new OnreComparator_PatternNode());
+			Collections.sort(currNode.children, new OnreComparator_PatternNode_depLabel());
 			q_patternNode.addAll(currNode.children);
 		}
 	}

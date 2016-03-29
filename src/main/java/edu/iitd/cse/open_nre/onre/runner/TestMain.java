@@ -25,8 +25,8 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		//String sentence = "The population of urban India is 1.2 billion.";
-		String sentence = "India has a population of 1.2 billion";
+		String sentence = "The height of Eiffel Tower is 1063 feet.";
+		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		//System.out.println("---Got depGraph");
 		if(depGraph != null) MayIHelpYou.runMe(depGraph);
