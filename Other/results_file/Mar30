@@ -1,0 +1,419 @@
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+I am here
+::1
+log4j:WARN No appenders could be found for logger (com.clearnlp.component.pos.EnglishPOSTagger).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+::2
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Rural Roads National Highways Development Projects NHAI has taken up some major projects in the country under different phases : Golden Quadrilateral : It comprises construction of 5,846 km long 4/6 lane, high density traffic corridor, to connect India’s four big metro cities of Delhi-Mumbai-Chennai- Kolkata.' starting at 252
+::3
+::4
+::5
+::6
+::7
+::8
+::9
+::10
+::11
+::12
+::13
+::14
+::15
+::16
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Density' in '10.3 : India – Density of Roads, 2001 116 India : People and Economy 2015-16country.' starting at 74
+::17
+::18
+::19
+::20
+::21
+::22
+::23
+::24
+(Indian Railways network ; length ; 64460  ; km ; null ; null)
+::25
+::26
+::27
+::28
+::29
+::30
+(broad gauge lines ; total length ; 55188  ; km ; null ; null)
+::31
+::32
+(narrow guage ; total length ; 2463  ; km ; null ; null)
+::33
+::34
+::35
+::36
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'India has 14,500 km of navigable waterways, contributing about 1% to the country’s transportation.' starting at 80
+::37
+::38
+::39
+----->java.lang.AssertionError: assumption failed: Could not find offset of '(i)' in 'It is divided into three parts for developmental purposes– (i) Haldia-Farakka (560 km), (ii) Farakka-Patna (460 km), (iii) Patna- Allahabad (600 km).' starting at 70
+::40
+::41
+::42
+::43
+::44
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Approximately 95 per cent of India’s foreign trade by volume and 70 per cent by value moves through ocean routes.' starting at 34
+::45
+::46
+::47
+----->java.lang.AssertionError: assumption failed: Could not find offset of '-' in 'History of Indian Airlines 1911 – Air transport in India was launched between Allahabad and Naini.' starting at 31
+::48
+::49
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Transport and Communication 121 2015-16The country’s largest state-owned domestic carrier, Indian Airlines dropped the word ‘Airlines’ from its name and is known as ‘Indian’ w.e.f.' starting at 50
+::50
+::51
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Asia’s first cross country pipeline covering a distance of 1,157 km was 122 India : People and Economy 2015-16Personal Communication System Among all the personal communication system internet is the most effective and advanced one.' starting at 4
+::52
+::53
+::54
+::55
+::56
+::57
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'In 1950-51, India’s external trade was worth Rs.1,214 crore, which rose to Rs. 22,09,270 crore in 2009-10.' starting at 17
+::58
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''' in 'Changing P a ttern of the Pa Composition of India’ s Expor India’s Export t s Source : Economic Survey, 2011-12 Fig. 11.1 2015-16Table 11.1 India’s Foreign Trade Value in Rs.' starting at 49
+::59
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Amongst the agricultural products, there is a great decline in the exports of traditional items such as coffee, spices, tea, pulses, etc. though an increase has been registered in floricultural products, fresh fruits, marine products and sugar, etc. Manufacturing sector alone accounted for 68.0 per cent of India’s total value of export in 2010-11.' starting at 313
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Table 11.2 : Composition of India’s Export, 1997-2011 (Percentage share in Exports) Commodities Agriculture and allied products Ore and Minerals Manufactured goods Crude and petroleum products Other commodities 1997-98 18.93 2003-04 11.8 2009-2010 10.0 2010-11 9.9 3.03 3.71 4.9 4.0 75.83 75.96 67.4 68.0 1.01 5.59 16.2 16.8 1.2 2.94 1.5 1.2 Source : Economic Survey 2011-12 As has already been mentioned, the composition of commodities in India’s international trade has been undergoing a change over the years.' starting at 33
+::60
+::61
+::62
+::63
+::64
+::65
+::66
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Table 11.6 Direction of India’s Import trade (in crore rupees) Region Imports 2009-10 2010-11 Europe 263471 323857 (a) EU countries (27) 181937 202779 97871 118612 139480 100602 Africa North America Latin America Asia and ASEAN 48942 829224 64576 1029881 Source : Department of Commerce based on DCCI&S provisional data, Economic Survey 2011-12.' starting at 29::67
+
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Table 11.7 India’s Major Trading Partners’ Percentage share in total trade (Export + Import) Country U.S.A. 2003-04 Country 2010-11 10.3 U.A.E.' starting at 16::68
+
+::69
+::70
+::71
+::72
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'The 12 major ports handled about 71 per cent of the country’s oceanic traffic in 2008-09.' starting at 59
+::73
+::74
+::75
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Major' in '11.4 : India – Major Ports and Sea Routes 130 India : People and Economy 2015-16Some of the Indian ports along with their hinterlands are as follows : Kandla Port situated at the head of Gulf of Kuchchh has been developed as a major port to cater to the needs of western and north western parts of the country and also to reduce the pressure at Mumbai port.' starting at 78
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'The port is 20 km long and 6-10 km wide with 54 berths and has the country’s largest oil terminal.' starting at 74
+::76
+::77
+::78
+::79
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Air' in '11.5 : India – Air Routes 132 India : People and Economy 2015-16in 1859.' starting at 62
+::80
+::81
+::82
+::83
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''' in '134 India : People and Economy 2015-16 Unit V Chapter 12 En vir onmental P ollution Envir vironmental Pollution Environmental pollution results from ‘the release of substances and energy from waste products of human activities.' starting at 148
+::84
+::85
+::86
+::87
+::88
+::89
+::90
+::91
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'The family was passing through very At present, 47 per cent of the world’s six billion population lives in cities and more will join them in near future.' starting at 72
+::92
+::93
+::94
+::95
+::96
+::97
+----->java.lang.AssertionError: assumption failed: Could not find offset of '-' in 'Geographical perspective on selected issues and problems 141 2015-16Dharavi–Asia’s Largest Slum “.... Buses merely skirt the periphery.' starting at 75
+::98
+::99
+::100
+::101
+::102
+::103
+::104
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Distribution' in '1.1 : India – Distribution of Population 2 India : People and Economy 2015-16States/UTs of large size and large population States/UTs of large size but small population States/UTs of smaller size but larger population Check from the table (Appendix–iA) that U.P., Maharashtra, Bihar, West Bengal, Andhra Pradesh along with Tamil Nadu, Madhya Pradesh, Rajasthan, Karnataka and Gujarat, together account for about 76 per cent of the total population of the country.' starting at 75
+::105
+::106
+(population ; density ; 382  ; persons ; null ; null)
+::107
+::108
+::109
+::110
+::111
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Density' in '1.2 : India – Density of Population Activity: Construct a choropleth map to represent Density of population in India-2011 based on data given in Appendix– iA and compare that with the above map.' starting at 117
+::112
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'The annual growth rate of India’s population is 1.64 per cent (2011).' starting at 31
+::113
+::114
+::115
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in '6 India : People and Economy 2015-16Phase I : The period from 1901-1921 is referred to as a period of stagnant or stationary phase of growth of India’s population, since in this period growth rate was very low, even recording a negative growth rate during 1911-1921.' starting at 149
+::116
+::117
+::118
+::119
+::120
+::121
+::122
+::123
+::124
+----->java.lang.AssertionError: assumption failed: Could not find offset of '-' in 'According to Grierson (Linguistic Survey of India, 1903 – 1928) there were 179 languages and as many as 544 dialects in the country.' starting at 55
+::125
+::126
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Myanmari' in 'Dravidian (Dravida) 20% Tibeto – Myanmari Sino-Tibetan (Kirata) 0.85% Indo – European (Aryan) 73% Source : Ahmed, A. (1999) : Social Geography, Rawat Publication, New Delhi Table 1.3 : Religious Communities of India, 2001 Look at Table 1.2 and prepare a pie diagram of linguistic composition of India showing the sectoral shares of each linguistic group.' starting at 47
+::127
+::128
+::129
+::130
+::131
+----->java.lang.AssertionError: assumption failed: Could not find offset of '-' in '1.4 : India – Occupational Structure, 2011 Identify some issues in which India is ahead of or lagging behind its neighbours.' starting at 11
+::132
+::133
+::134
+::135
+::136
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in '(i) India’s population as per 2011 census is : (a) 1028 million (c) 3287 million (b) 3182 million (d) 1210 million Population: Distribution, Density, Growth and Composition 13 2015-16(ii) (iii) (iv) 2. (b) Kerala (d) Punjab Which one of the following states has the highest proportion of urban population in India according to 2011 Census?' starting at 9
+::137
+::138
+::139
+::140
+::141
+::142
+::143
+::144
+::145
+::146
+::147
+::148
+::149
+::150
+::151
+::152
+::153
+::154
+::155
+::156
+::157
+::158
+::159
+::160
+::161
+::162
+::163
+::164
+::165
+::166
+::167
+::168
+::169
+::170
+::171
+::172
+----->java.lang.AssertionError: assumption failed: Could not find offset of '"' in 'Chandigarh 85.65 76.65 d e h s T i l R b E u C p N re © e b o t t o n Indicators of Social Empowerment “Development is freedom”.' starting at 102
+::173
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Index-2001' in 'Table 3.4 : India – Human Development Index-2001 State HDI Value Andhra Pradesh 0.416 Assam Bihar 0.386 0.367 Gujarat 0.479 Haryana Karnataka 0.509 0.478 d e h s T i l R b E u C p N re © e b o t t Can literacy reflect the status of Human Developments?' starting at 249::174
+
+::175
+::176
+::177
+::178
+::179
+::180
+::181
+::182
+::183
+::184
+::185
+::186
+::187
+::188
+::189
+::190
+::191
+----->java.lang.AssertionError: assumption failed: Could not find offset of '"' in 'You can see the definition of towns in Chapter 10 of the book, “Fundamentals of Human Geography.”' starting at 62
+::192
+::193
+::194
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Metropolitan' in '4.5 : India – Metropolitan Cities, 2001 Human Settlements 35 2015-16Table 4.1 : India – Trends of Urbanisation 1901-2011 Year Number of Towns/UAs Urban Population (in Thousands) % of Total Population Decennial Growth (%) 1901 1,827 25,851.9' starting at 66
+::195
+----->java.lang.AssertionError: assumption failed: Could not find offset of '--' in '10.84 —- 1911 1,815 25,941.6 10.29 0.35 1921 1,949 28,086.2' starting at 5
+::196
+::197
+::198
+::199
+(urbanisation ; level ; 28  ; cent ; null ; null)
+::200
+::201
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Class-wise' in '36 India : People and Economy 2015-16Table 4.2 : India – Class-wise number of towns and cities and their population, 2001 Class All classes Total I II III IV V VI Population Size Number Population (Million) 1,00,000 and more 50,000 – 99,999 20,000 – 49,999 10,000 – 9,999 5,000 – 9,999 Less than 5,000 5161 423 498 1386 1560 1057 227 285.35 172.04 34.43 41.97 22.6 7.98 0.8 % of total Urban Population % Growth 1991-2001 100 61.48 12.3 15.0 8.08 2.85 0.29 31.13 23.12 43.45 46.19 32.94 41.49 21.21 combinations: (i) a town and its adjoining urban outgrowths, (ii) two or more contiguous towns with or without their outgrowths, and (iii) a city and one or more adjoining towns with their outgrowths together forming a contiguous spread.' starting at 63
+::202
+::203
+::204
+::205
+----->java.lang.AssertionError: assumption failed: Could not find offset of '-' in 'Garrisson Cantonment towns These towns emerged as garrisson towns such as Ambala, Jalandhar, Mhow, Babina, Udhampur, etc. Human Settlements 37 2015-16Table 4.3 : India – Population of Million plus Cities/Urban Agglomeration, 2001 Rank Name of Urban Agglomeration/ Cities 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 Population (in million) Greater Mumbai 16.37 Kolkata 13.22 Delhi 12.79 Chennai 6.42 Bangalore 5.69 Hyderabad 5.53 Ahmedabad 4.52 Pune 3.76 Surat 2.81 Kanpur 2.69 Jaipur 2.32 Lucknow 2.27 Nagpur 2.12 Patna 1.71 Indore 1.64 Vadodara 1.49 Bhopal 1.45 Coimbatore 1.45 Ludhiana 1.39 Kochchi 1.36 Vishakhapatnam 1.33 Agra 1.32 Varanasi 1.21 Madurai 1.19 Meerut 1.17 Nashik 1.15 Jabalpur 1.12 Jamshedpur 1.10 Asansol 1.09 Dhanbad 1.06 Faridabad 1.05 Allahabad 1.05 Amritsar 1.01 Vijayawada 1.01 Rajkot 1.00 Total 107.88' starting at 167
+::206
+::207
+::208
+::209
+::210
+::211
+::212
+::213
+::214
+::215
+::216
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''' in 'The cropping intensity (CI) is calculated as follows : Cropping Intensity in percentage = GCA  ́ 100 NSA this season facilitate the cultivation of temperate and subtropical crops such as wheat, gram and mustard.' starting at 93
+::217
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'March' in 'The low temperature conditions during 44 Table 5.2 : Cropping Seasons in India Cropping Season Major Crops Cultivated Northern States Southern States Kharif June-September Rice, Cotton, Bajra, Maize, Jowar, Tur Rice, Maize, Ragi, Jowar, Groundnut Rabi October – March Wheat, Gram, Rapeseeds and Mustard, Barley Rice, Maize, Ragi, Groundnut, Jowar Vegetables, Fruits, Fodder Rice, Vegetables, Fodder Zaid April–June India : People and Economy 2015-16is to protect the crops from adverse effects of soil moisture deficiency which often means that irrigation acts as a supplementary source of water over and above the rainfall.' starting at 447
+::218
+::219
+::220
+::221
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Distribution' in '5.3 : India – Distribution of Rice 46 India : People and Economy 2015-16to dry climatic conditions are responsible for higher yield of rice in this region.' starting at 70
+::222
+::223
+::224
+::225
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Distribution' in '5.4 : India – Distribution of Wheat 48 India : People and Economy 2015-16Gram Groundnut Gram is cultivated in subtropical areas.' starting at 71
+::226
+::227
+::228
+::229
+::230
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Distribution' in '5.6 : India – Distribution of Cotton and Jute 50 India : People and Economy 2015-16These two states together produce about 90 per cent of total output of soyabean in the country.' starting at 81
+::231
+::232
+::233
+::234
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Distribution' in '5.9 : India – Distribution of Sugarcane 52 India : People and Economy 2015-16In southern India, it is cultivated in irrigated tracts of Karnataka, Tamil Nadu, Telangana and Andhra Pradesh.' starting at 75
+::235
+::236
+::237
+::238
+::239
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Distribution' in '5.11 : India – Distribution of Tea and Coffee 54 India : People and Economy 2015-16India.' starting at 81
+::240
+::241
+::242
+::243
+::244
+::245
+::246
+::247
+::248
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Approximately, 71 per cent of the earth’s surface is covered with it but fresh water constitutes only about 3 per cent of the total water.' starting at 39
+::249
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Water Resources of India India accounts for about 2.45 per cent of world’s surface area, 4 per cent of the world’s water resources and about 16 per cent of world’s population.' starting at 72
+::250
+::251
+::252
+::253
+::254
+::255
+::256
+::257
+::258
+::259
+::260
+::261
+::262
+::263
+::264
+::265
+::266
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'River' in '6.1 : India – River Basins 62 India : People and Economy 2015-16demands for water would need the supplies.' starting at 62
+::267
+::268
+::269
+::270
+(domestic sector ; share ; 9  ; cent ; null ; null)
+::271
+::272
+::273
+::274
+::275
+::276
+::277
+::278
+::279
+::280
+::281
+::282
+::283
+::284
+::285
+::286
+::287
+----->java.lang.AssertionError: assumption failed: Could not find offset of '"' in 'Bulk of the valuable minerals are products of pre-palaezoic age (Refer: Chapter 2 of Class XI, Textbook: “Fundamentals of Physical Geography” and are mainly associated with metamorphic and igneous rocks of the peninsular India.' starting at 104
+::288
+::289
+::290
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Metallic' in '7.2 : India – Metallic Minerals (Ferrous) Mineral and Energy Resources 75 2015-16formations, however, it is mainly associated with Dharwar system.' starting at 79
+::291
+::292
+::293
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Minerals' in '7.3 : India – Minerals (Non-Ferrous) Mineral and Energy Resources 77 2015-16conventional sources of energy.' starting at 28
+::294
+::295
+::296
+::297
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Conventional' in '7.5 : India – Conventional Energy Resources Mineral and Energy Resources 79 2015-16Tertiary coals occur in Assam, Arunachal Pradesh, Meghalaya and Nagaland.' starting at 81
+::298
+::299
+::300
+::301
+::302
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Oil' in '7.6 : India – Oil Refineries Mineral and Energy Resources 81 2015-16How are the developed countries of the world utilising non-conventional energy resources?' starting at 66
+::303
+::304
+::305
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'The country’s potential of wind power generation exceeds 50,000 megawatts, of which one fourth can be easily harnessed.' starting at 11
+::306
+::307
+::308
+::309
+::310
+::311
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Iron' in '8.1 : India – Iron and Steel Plants 88 India : People and Economy 2015-16Fig.' starting at 71
+::312
+::313
+::314
+::315
+::316
+::317
+::318
+::319
+::320
+::321
+::322
+::323
+::324
+----->java.lang.AssertionError: assumption failed: Could not find offset of 'Industrial' in '8.13 : India – Major Industrial Region Manufacturing Industries 99 2015-16Several indices are used to identify the clustering of industries, important among them are : (i) the number of industrial units, (ii) number of industrial workers, (iii) quantum of power used for industrial purposes, (iv) total industrial output, and (v) value added by manufacturing, etc. Major industrial regions of the country are given below in some details (Fig. 8.13).' starting at 370
+::325
+::326
+::327
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''' in 'Manufacturing Industries 103 2015-16 Unit III Chapter 9 PLANNING AND SUSTAINABLE DEVELOPMENT IN INDIAN CONTEXT The word ‘planning’ is not new to you as it is a part of everyday usage.' starting at 119::328
+
+::329
+::330
+::331
+::332
+::333
+::334
+----->java.lang.AssertionError: assumption failed: Could not find offset of '-' in 'Case Study – Integrated Tribal Development Project in Bharmaur* Region This region lies between 32° 11’ N and 32°41’ N latitudes and 76° 22’ E and 76° 53’E longitudes.' starting at 10
+::335
+::336
+::337
+::338
+(India ; population ; 1.2  ; billion ; null ; null)
+::339
+::340
+::341
+::342
+::343
+::344
+::345
+::346
+::347
+(system ; total planned length ; 9,060  ; km ; null ; null)
+::348
+::349
+

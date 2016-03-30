@@ -149,19 +149,6 @@ TreeSet(nn(India_NNP_2 -> Road_NNP_0), nn(India_NNP_2 -> Transport_NNP_1), nsubj
 
 --------------------------------------------------------------------------------------------------------------------
 
-has_VERB_1
-  {argument}_NNP_0
-  {relation}_NN_3
-    a_DT_2
-    of_IN_4
-      {q_modifier}_CD_6
-        {q_value}_CD_5
-
-
-
-
-
-
 
 
 

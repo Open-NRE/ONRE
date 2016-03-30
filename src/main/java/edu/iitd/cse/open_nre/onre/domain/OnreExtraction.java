@@ -27,7 +27,7 @@ public class OnreExtraction {
 		this.argument = argument;
 		this.relation = relation;
 		this.quantity_value = quantity_value;
-		this.quantity_value = quantity_modifier;
+		this.quantity_modifier = quantity_modifier;
 		this.quantity_unit = unit;
 	}
 

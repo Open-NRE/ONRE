@@ -1,3 +1,5 @@
 <(#is|was#VERB)<(nsubj#{rel}#NN)<(prep#of#IN)<(pobj#{arg}#NNP)>>(attr#{q_modifier}#CD)<(number#{q_value}#CD)>>>
-<(#has|have|had#VERB)<(dobj#{rel}#NN)<(prep#of#IN)<(pobj#{q_modifier}#CD)<(number#{q_value}#CD)>>>(nsubj#{arg}#NNP)>>
 <(#is|was#VERB)<(nsubj#{rel}#NN)<(prep#of#IN)<(pobj#{arg}#NNP|NN)>>(attr#{q_unit}#NN)<(num#{q_value}#CD)>>>
+
+<(#has|have|had#VERB)<(dobj#{rel}#NN)<(prep#of#IN)<(pobj#{q_modifier}#CD)<(number#{q_value}#CD)>>>(nsubj#{arg}#NNP)>>
+<(#has|have|had#VERB)<(dobj#{rel}#NN)<(prep#of#IN)<(pobj#{q_unit}#NN)<(nn#{q_modifier}#NN)(num#{q_value}#CD)>>>(nsubj#{arg}#NNP)>>
