@@ -51,7 +51,7 @@ is_VERB_5
   {relation}_NN_1
     of_IN_2
       {argument}_NNP_4
-        +++expand_nn+++_NNP_3
+        +++nn+++_NNP_3
     The_DT_0
   {q_unit}_NN_7
     {q_value}_CD_6
@@ -83,10 +83,10 @@ is_VERB_6
   {q_unit}_NN_8
     {q_value}_CD_7
   {relation}_NN_2
-    +++expand_amod+++_JJ_1
+    +++amod+++_JJ_1
     of_IN_3
       {argument}_NN_5
-        +++expand_nn+++_NN_4
+        +++nn+++_NN_4
     The_DT_0
 
 TreeSet(det(length_NN_2 -> The_DT_0), amod(length_NN_2 -> total_JJ_1), prep(length_NN_2 -> of_IN_3), pobj(of_IN_3 -> pool_NN_5), nn(pool_NN_5 -> swimming_NN_4), nsubj(is_VERB_6 -> length_NN_2), attr(is_VERB_6 -> kilometers_NN_8), punct(is_VERB_6 -> ._._9), num(kilometers_NN_8 -> 2_CD_7))
@@ -98,26 +98,64 @@ the total length of the Great Wall of China is 21,196.18 km.
 is_VERB_9
   ._._12
   {relation}_NN_2
-    +++expand_amod+++_JJ_1
+    +++amod+++_JJ_1
     of_IN_3
       {argument}_NNP_6
         the_DT_4
-        +++expand_prep-of+++_IN_7
-          +++expand_pobj+++_NNP_8
-        +++expand_nn+++_NNP_5
+        +++prep-of+++_IN_7
+          +++pobj+++_NNP_8
+        +++nn+++_NNP_5
     the_DT_0
   {q_unit}_NN_11
     {q_value}_CD_10
 
 TreeSet(det(length_NN_2 -> the_DT_0), amod(length_NN_2 -> total_JJ_1), prep(length_NN_2 -> of_IN_3), pobj(of_IN_3 -> Wall_NNP_6), det(Wall_NNP_6 -> the_DT_4), nn(Wall_NNP_6 -> Great_NNP_5), prep(Wall_NNP_6 -> of_IN_7), pobj(of_IN_7 -> China_NNP_8), nsubj(is_VERB_9 -> length_NN_2), attr(is_VERB_9 -> km_NN_11), punct(is_VERB_9 -> ._._12), num(km_NN_11 -> 21,196.18_CD_10))
 
+--------------------------------------------------------------------------------------------------------------------
 
+The total length of narrow guage was 2463 km.
 
+was_VERB_6
+  length_NN_2
+    total_JJ_1
+    of_IN_3
+      guage_NN_5
+        narrow_JJ_4
+    The_DT_0
+  ._._9
+  km_NN_8
+    2463_CD_7
 
+TreeSet(det(length_NN_2 -> The_DT_0), amod(length_NN_2 -> total_JJ_1), prep(length_NN_2 -> of_IN_3), pobj(of_IN_3 -> guage_NN_5), amod(guage_NN_5 -> narrow_JJ_4), nsubj(was_VERB_6 -> length_NN_2), attr(was_VERB_6 -> km_NN_8), punct(was_VERB_6 -> ._._9), num(km_NN_8 -> 2463_CD_7))
 
+--------------------------------------------------------------------------------------------------------------------
 
+Road Transport India has a total length of 42.3 lakh km.
 
+has_VERB_3
+  {relation}_NN_6
+    a_DT_4
+    +++amod+++_JJ_5
+    of_IN_7
+      {q_unit}_NN_10
+        {q_modifier}_NN_9
+        {q_value}_CD_8
+  {argument}_NNP_2
+    +++nn+++_NNP_1
+    +++nn+++_NNP_0
+  ._._11
 
+TreeSet(nn(India_NNP_2 -> Road_NNP_0), nn(India_NNP_2 -> Transport_NNP_1), nsubj(has_VERB_3 -> India_NNP_2), dobj(has_VERB_3 -> length_NN_6), punct(has_VERB_3 -> ._._11), det(length_NN_6 -> a_DT_4), amod(length_NN_6 -> total_JJ_5), prep(length_NN_6 -> of_IN_7), pobj(of_IN_7 -> km_NN_10), num(km_NN_10 -> 42.3_CD_8), nn(km_NN_10 -> lakh_NN_9))
+
+--------------------------------------------------------------------------------------------------------------------
+
+has_VERB_1
+  {argument}_NNP_0
+  {relation}_NN_3
+    a_DT_2
+    of_IN_4
+      {q_modifier}_CD_6
+        {q_value}_CD_5
 
 
 
