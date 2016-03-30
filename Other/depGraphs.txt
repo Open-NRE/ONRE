@@ -51,7 +51,7 @@ is_VERB_5
   {relation}_NN_1
     of_IN_2
       {argument}_NNP_4
-        +++expand+++_NNP_3
+        +++expand_nn+++_NNP_3
     The_DT_0
   {q_unit}_NN_7
     {q_value}_CD_6
@@ -83,28 +83,33 @@ is_VERB_6
   {q_unit}_NN_8
     {q_value}_CD_7
   {relation}_NN_2
-    total_JJ_1
+    +++expand_amod+++_JJ_1
     of_IN_3
       {argument}_NN_5
-        +++expand+++_NN_4
+        +++expand_nn+++_NN_4
     The_DT_0
 
 TreeSet(det(length_NN_2 -> The_DT_0), amod(length_NN_2 -> total_JJ_1), prep(length_NN_2 -> of_IN_3), pobj(of_IN_3 -> pool_NN_5), nn(pool_NN_5 -> swimming_NN_4), nsubj(is_VERB_6 -> length_NN_2), attr(is_VERB_6 -> kilometers_NN_8), punct(is_VERB_6 -> ._._9), num(kilometers_NN_8 -> 2_CD_7))
 
 --------------------------------------------------------------------------------------------------------------------
 
+the total length of the Great Wall of China is 21,196.18 km.
 
+is_VERB_9
+  ._._12
+  {relation}_NN_2
+    +++expand_amod+++_JJ_1
+    of_IN_3
+      {argument}_NNP_6
+        the_DT_4
+        +++expand_prep-of+++_IN_7
+          +++expand_pobj+++_NNP_8
+        +++expand_nn+++_NNP_5
+    the_DT_0
+  {q_unit}_NN_11
+    {q_value}_CD_10
 
-
-
-
-
-
-
-
-
-
-
+TreeSet(det(length_NN_2 -> the_DT_0), amod(length_NN_2 -> total_JJ_1), prep(length_NN_2 -> of_IN_3), pobj(of_IN_3 -> Wall_NNP_6), det(Wall_NNP_6 -> the_DT_4), nn(Wall_NNP_6 -> Great_NNP_5), prep(Wall_NNP_6 -> of_IN_7), pobj(of_IN_7 -> China_NNP_8), nsubj(is_VERB_9 -> length_NN_2), attr(is_VERB_9 -> km_NN_11), punct(is_VERB_9 -> ._._12), num(km_NN_11 -> 21,196.18_CD_10))
 
 
 

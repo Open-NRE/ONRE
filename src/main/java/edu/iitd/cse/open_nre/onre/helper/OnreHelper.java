@@ -5,7 +5,9 @@ package edu.iitd.cse.open_nre.onre.helper;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_Index;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
@@ -89,15 +91,15 @@ public class OnreHelper {
 	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
 		
-	    List<OnrePatternNode> expansions_argument = new ArrayList<>();
-		expansions_argument.add(node_relation);
+	    List<OnrePatternNode> expansions_relation = new ArrayList<>();
+		expansions_relation.add(node_relation);
 		for(OnrePatternNode child : node_relation.children) {
-			if(child.dependencyLabel.equals("amod")) expansions_argument.add(child);
+			if(child.dependencyLabel.equals("amod")) expansions_relation.add(child);
 		}
 		
-		Collections.sort(expansions_argument, new OnreComparator_PatternNode_Index());
+		Collections.sort(expansions_relation, new OnreComparator_PatternNode_Index());
 		StringBuilder sb = new StringBuilder("");
-		for (OnrePatternNode expansion : expansions_argument) {
+		for (OnrePatternNode expansion : expansions_relation) {
 			sb.append(expansion.word + " ");
         }
 		
@@ -109,11 +111,21 @@ public class OnreHelper {
 		
 	    List<OnrePatternNode> expansions_argument = new ArrayList<>();
 		expansions_argument.add(node_argument);
-		for(OnrePatternNode child : node_argument.children) {
-			if(child.dependencyLabel.equals("amod")) expansions_argument.add(child);
-			if(child.dependencyLabel.equals("nn")) expansions_argument.add(child);
-		}
 		
+		Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+		q_yetToExpand.add(node_argument);
+		while(!q_yetToExpand.isEmpty()) {
+			OnrePatternNode currNode = q_yetToExpand.remove();
+			
+			for(OnrePatternNode child : currNode.children) {
+				if(child.dependencyLabel.equals("amod")) { expansions_argument.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("nn")) { expansions_argument.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("prep") && child.word.equals("of")) { expansions_argument.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("pobj") && currNode.word.equals("of")) { expansions_argument.add(child); q_yetToExpand.add(child); }
+			}
+		}
+
+		//sorting the expansions & setting in the argument
 		Collections.sort(expansions_argument, new OnreComparator_PatternNode_Index());
 		StringBuilder sb = new StringBuilder("");
 		for (OnrePatternNode expansion : expansions_argument) {
