@@ -59,6 +59,47 @@ is_VERB_5
 
 TreeSet(det(height_NN_1 -> The_DT_0), prep(height_NN_1 -> of_IN_2), pobj(of_IN_2 -> Tower_NNP_4), nn(Tower_NNP_4 -> Eiffel_NNP_3), nsubj(is_VERB_5 -> height_NN_1), attr(is_VERB_5 -> feet_NN_7), punct(is_VERB_5 -> ._._8), num(feet_NN_7 -> 1063_CD_6))
 
+--------------------------------------------------------------------------------------------------------------------
+
+The length of pool is 2 kilometers.
+
+is_VERB_4
+  {relation}_NN_1
+    The_DT_0
+    of_IN_2
+      {argument}_NN_3
+  ._._7
+  {q_unit}_NN_6
+    {q_value}_CD_5
+
+TreeSet(det(length_NN_1 -> The_DT_0), prep(length_NN_1 -> of_IN_2), pobj(of_IN_2 -> pool_NN_3), nsubj(is_VERB_4 -> length_NN_1), attr(is_VERB_4 -> kilometers_NN_6), punct(is_VERB_4 -> ._._7), num(kilometers_NN_6 -> 2_CD_5))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

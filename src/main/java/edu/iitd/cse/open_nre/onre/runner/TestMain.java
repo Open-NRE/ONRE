@@ -25,7 +25,7 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "The height of Eiffel Tower is 1063 feet.";
+		String sentence = "The length of pool is 2 kilometers.";
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		//System.out.println("---Got depGraph");

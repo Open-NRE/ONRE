@@ -24,6 +24,7 @@ public class OnreHelper_pattern {
 
 		for (String configuredPattern : configuredPatterns) {
 			if(configuredPattern.trim().length()==0) continue;
+			//configuredPattern = configuredPattern.toUpperCase();
 			list_configuredPattern.add(convertPattern2PatternTree(configuredPattern));
         }
 		

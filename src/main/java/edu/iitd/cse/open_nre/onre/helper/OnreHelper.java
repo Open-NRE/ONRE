@@ -33,7 +33,7 @@ public class OnreHelper {
 	public static OnrePatternNode findPatternSubTree(OnrePatternNode patternNode_sentence, 
 			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction) {
 
-		if (patternNode_sentence.isEqualTo(patternNode_configured) 
+		if (patternNode_sentence.matches(patternNode_configured) 
 				&& matchChildren(patternNode_sentence, patternNode_configured, onreExtraction)) {
 			
 			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction);
@@ -53,7 +53,7 @@ public class OnreHelper {
 	private static boolean matchChildren(OnrePatternNode patternNode_sentence, 
 			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction) {
     	
-		if (patternNode_sentence.isEqualTo(patternNode_configured)) 
+		if (patternNode_sentence.matches(patternNode_configured)) 
 			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction);
 		else return false;
 		
