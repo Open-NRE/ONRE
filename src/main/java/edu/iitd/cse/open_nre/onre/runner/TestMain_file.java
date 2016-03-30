@@ -23,7 +23,7 @@ public class TestMain_file {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String inputFile = "data/in.txt";
+		String inputFile = "data/sentences.txt";
 		BufferedReader br = new BufferedReader(new FileReader(inputFile));
 
 		String line = br.readLine();

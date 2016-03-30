@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Queue;
 
 import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_Index;
+import edu.iitd.cse.open_nre.onre.constants.OnreExtractionPartType;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
@@ -23,12 +24,21 @@ public class OnreHelper {
 	
     private static void setExtractionPart(OnrePatternNode subTreeNode, OnrePatternNode patternNode_configured,
             OnreExtraction onreExtraction) {
-	    switch(patternNode_configured.word){
-	    	case "{rel}": onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    switch(OnreExtractionPartType.getType(patternNode_configured.word)) {
+	    	
+	    	case ARGUMENT: onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);  break;
+	    	case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case QUANTITY_VALUE: onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+			case UNKNOWN: break;
+	    		
+	    	/*case "{rel}": onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case "{q_value}": onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case "{q_modifier}": onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case "{q_unit}": onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case "{arg}": onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case "{arg}": onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;*/
 	    }
 	}
 	
@@ -140,8 +150,11 @@ public class OnreHelper {
     }
 	
 	public static void onreExtraction_dummyForNull(OnreExtraction onreExtraction) {
+		//TODO: 
 		if(onreExtraction.quantity_modifier == null) onreExtraction.quantity_modifier = new OnreExtractionPart();
 		if(onreExtraction.quantity_unit == null) onreExtraction.quantity_unit = new OnreExtractionPart();
+		
+		if(onreExtraction.relation_joint == null) onreExtraction.relation_joint = new OnreExtractionPart();
 	}
 	
 	

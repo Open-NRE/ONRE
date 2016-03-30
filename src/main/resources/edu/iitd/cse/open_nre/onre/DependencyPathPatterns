@@ -3,3 +3,5 @@
 
 <(#has|have|had#VERB)<(dobj#{rel}#NN)<(prep#of#IN)<(pobj#{q_modifier}#CD)<(number#{q_value}#CD)>>>(nsubj#{arg}#NNP)>>
 <(#has|have|had#VERB)<(dobj#{rel}#NN)<(prep#of#IN)<(pobj#{q_unit}#NN)<(nn#{q_modifier}#NN)(num#{q_value}#CD)>>>(nsubj#{arg}#NNP)>>
+
+<(#{rel}#VERB)<(nsubj#{rel_joint}#NN)<(num#{q_value}#CD)>(prep#in#IN)<(pobj#{arg}#NN)>>>

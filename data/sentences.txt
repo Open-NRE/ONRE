@@ -1,5 +1,11 @@
-The population of india is 1.2 billion  
-The population of urban india is 1.2 billion
-India has a population of 1.2 billion   
+The population of India is 1.2 billion
+The population of urban India is 1.2 billion
+India has a population of 1.2 billion
 The height of Tower is 1063 feet.
-The height of Eiffel Tower is 1063 feet.
+The height of Eiffel Tower is 1063 feet
+The length of pool is 2 kilometers.
+The length of swimming pool is 2 kilometers.
+The total length of swimming pool is 2 kilometers.
+the total length of the Great Wall of China is 21,196.18 km.
+Road Transport India has a total length of 42.3 lakh km.
+The level of urbanisation in India in 2001 was 28 per cent.
