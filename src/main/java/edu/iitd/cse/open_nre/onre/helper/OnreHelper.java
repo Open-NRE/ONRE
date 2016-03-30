@@ -82,15 +82,34 @@ public class OnreHelper {
 		
 		//TODO: imp-I feel we need to keep expanding(from children) unless not possible
 		
+		expandRelation(onreExtraction, patternNode_sentence);
 		expandArgument(onreExtraction, patternNode_sentence);
 	}
-
-	public static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		OnrePatternNode argument = OnreUtils.searchNodeInTree(onreExtraction.argument, patternNode_sentence);
+	
+	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions_argument = new ArrayList<>();
-		expansions_argument.add(argument);
-		for(OnrePatternNode child : argument.children) {
+		expansions_argument.add(node_relation);
+		for(OnrePatternNode child : node_relation.children) {
+			if(child.dependencyLabel.equals("amod")) expansions_argument.add(child);
+		}
+		
+		Collections.sort(expansions_argument, new OnreComparator_PatternNode_Index());
+		StringBuilder sb = new StringBuilder("");
+		for (OnrePatternNode expansion : expansions_argument) {
+			sb.append(expansion.word + " ");
+        }
+		
+		onreExtraction.relation.text = sb.toString().trim();
+    }
+
+	private static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+		OnrePatternNode node_argument = OnreUtils.searchNodeInTree(onreExtraction.argument, patternNode_sentence);
+		
+	    List<OnrePatternNode> expansions_argument = new ArrayList<>();
+		expansions_argument.add(node_argument);
+		for(OnrePatternNode child : node_argument.children) {
 			if(child.dependencyLabel.equals("amod")) expansions_argument.add(child);
 			if(child.dependencyLabel.equals("nn")) expansions_argument.add(child);
 		}

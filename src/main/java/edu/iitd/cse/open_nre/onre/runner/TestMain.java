@@ -25,7 +25,7 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "The length of pool is 2 kilometers.";
+		String sentence = "the total length of the Great Wall of China is 21,196.18 km.";
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		//System.out.println("---Got depGraph");

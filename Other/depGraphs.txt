@@ -51,7 +51,7 @@ is_VERB_5
   {relation}_NN_1
     of_IN_2
       {argument}_NNP_4
-        +++expand_pre_+++_NNP_3
+        +++expand+++_NNP_3
     The_DT_0
   {q_unit}_NN_7
     {q_value}_CD_6
@@ -73,6 +73,35 @@ is_VERB_4
     {q_value}_CD_5
 
 TreeSet(det(length_NN_1 -> The_DT_0), prep(length_NN_1 -> of_IN_2), pobj(of_IN_2 -> pool_NN_3), nsubj(is_VERB_4 -> length_NN_1), attr(is_VERB_4 -> kilometers_NN_6), punct(is_VERB_4 -> ._._7), num(kilometers_NN_6 -> 2_CD_5))
+
+--------------------------------------------------------------------------------------------------------------------
+
+The total length of swimming pool is 2 kilometers.
+
+is_VERB_6
+  ._._9
+  {q_unit}_NN_8
+    {q_value}_CD_7
+  {relation}_NN_2
+    total_JJ_1
+    of_IN_3
+      {argument}_NN_5
+        +++expand+++_NN_4
+    The_DT_0
+
+TreeSet(det(length_NN_2 -> The_DT_0), amod(length_NN_2 -> total_JJ_1), prep(length_NN_2 -> of_IN_3), pobj(of_IN_3 -> pool_NN_5), nn(pool_NN_5 -> swimming_NN_4), nsubj(is_VERB_6 -> length_NN_2), attr(is_VERB_6 -> kilometers_NN_8), punct(is_VERB_6 -> ._._9), num(kilometers_NN_8 -> 2_CD_7))
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
