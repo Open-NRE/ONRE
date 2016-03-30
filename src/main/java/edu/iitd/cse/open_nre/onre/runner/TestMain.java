@@ -25,7 +25,7 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "Road Transport India has a total length of 42.3 lakh km.";
+		String sentence = "The level of urbanisation in India in 2001 was 28 per cent.";
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		//System.out.println("---Got depGraph");

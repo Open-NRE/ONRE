@@ -120,8 +120,12 @@ public class OnreHelper {
 			for(OnrePatternNode child : currNode.children) {
 				if(child.dependencyLabel.equals("amod")) { expansions_argument.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("nn")) { expansions_argument.add(child); q_yetToExpand.add(child); }
+				
 				if(child.dependencyLabel.equals("prep") && child.word.equals("of")) { expansions_argument.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("pobj") && currNode.word.equals("of")) { expansions_argument.add(child); q_yetToExpand.add(child); }
+				
+				if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); }
 			}
 		}
 

@@ -149,6 +149,46 @@ TreeSet(nn(India_NNP_2 -> Road_NNP_0), nn(India_NNP_2 -> Transport_NNP_1), nsubj
 
 --------------------------------------------------------------------------------------------------------------------
 
+The density of population in India is 382 persons per sq km.
+
+is_VERB_6
+  density_NN_1
+    The_DT_0
+    of_IN_2
+      population_NN_3
+        in_IN_4
+          India_NNP_5
+  persons_NN_8
+    per_IN_9
+      km_NN_11
+        sq_NN_10
+    382_CD_7
+  ._._12
+
+TreeSet(det(density_NN_1 -> The_DT_0), prep(density_NN_1 -> of_IN_2), pobj(of_IN_2 -> population_NN_3), prep(population_NN_3 -> in_IN_4), pobj(in_IN_4 -> India_NNP_5), nsubj(is_VERB_6 -> density_NN_1), attr(is_VERB_6 -> persons_NN_8), punct(is_VERB_6 -> ._._12), num(persons_NN_8 -> 382_CD_7), prep(persons_NN_8 -> per_IN_9), pobj(per_IN_9 -> km_NN_11), nn(km_NN_11 -> sq_NN_10))
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
