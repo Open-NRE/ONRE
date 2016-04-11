@@ -109,6 +109,7 @@ public class OnreHelper {
 		expansions_relation.add(node_relation);
 		for(OnrePatternNode child : node_relation.children) {
 			if(child.dependencyLabel.equals("amod")) expansions_relation.add(child);
+			if(child.dependencyLabel.equals("nn")) expansions_relation.add(child);
 		}
 		
 		Collections.sort(expansions_relation, new OnreComparator_PatternNode_Index());

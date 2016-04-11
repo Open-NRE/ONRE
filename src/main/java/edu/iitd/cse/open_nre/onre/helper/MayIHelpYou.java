@@ -32,8 +32,8 @@ public class MayIHelpYou {
 		System.out.println(depGraph.text());
 		for (OnreExtraction onreExtraction : extrs) {
 			System.out.println(onreExtraction);
-			System.out.println();
 		}
+		System.out.println();
 		
 		//addDummyExtractions(extrs);
 		return javaList2ScalaSeq(extrs);
