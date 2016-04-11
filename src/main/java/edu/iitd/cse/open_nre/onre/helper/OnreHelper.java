@@ -103,7 +103,7 @@ public class OnreHelper {
 	}
 	
 	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
+		/*OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions_relation = new ArrayList<>();
 		expansions_relation.add(node_relation);
@@ -115,6 +115,33 @@ public class OnreHelper {
 		Collections.sort(expansions_relation, new OnreComparator_PatternNode_Index());
 		StringBuilder sb = new StringBuilder("");
 		for (OnrePatternNode expansion : expansions_relation) {
+			sb.append(expansion.word + " ");
+        }
+		
+		onreExtraction.relation.text = sb.toString().trim();*/
+		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
+		
+	    List<OnrePatternNode> expansions = new ArrayList<>();
+	    expansions.add(node_relation);
+		
+		Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+		q_yetToExpand.add(node_relation);
+		while(!q_yetToExpand.isEmpty()) {
+			OnrePatternNode currNode = q_yetToExpand.remove();
+			
+			for(OnrePatternNode child : currNode.children) {
+				if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("nn")) { expansions.add(child); q_yetToExpand.add(child); }
+				
+				if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions.add(child); q_yetToExpand.add(child); } 
+				if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions.add(child); q_yetToExpand.add(child); }
+			}
+		}
+
+		//sorting the expansions & setting in the argument
+		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
+		StringBuilder sb = new StringBuilder("");
+		for (OnrePatternNode expansion : expansions) {
 			sb.append(expansion.word + " ");
         }
 		

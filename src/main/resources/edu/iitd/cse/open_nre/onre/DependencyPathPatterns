@@ -1,1 +1,13 @@
-<(#is|was|were#VERB)<(attr#{q_unit}#NNP|NN)<(num#{q_value}#CD)>(nsubj#{rel}#NNP|NN)<(poss#{arg}#PRP\$)>>>
+<(#is|was|were#VERB)<(nsubj#{rel}#NN)<(prep#of#IN)<(pobj#{arg}#NNP|NN|PRP)>>(attr#{q_modifier}#CD)<(number#{q_value}#CD)>>>
+<(#is|was|were#VERB)<(nsubj#{rel}#NN)<(prep#of#IN)<(pobj#{arg}#NNP|NN|PRP)>>(attr#{q_unit}#NN)<(num#{q_value}#CD)>>>
+<(#has|have|had#VERB)<(dobj#{rel}#NN)<(prep#of#IN)<(pobj#{q_modifier}#CD)<(number#{q_value}#CD)>>>(nsubj#{arg}#NNP|NN|PRP)>>
+<(#has|have|had#VERB)<(dobj#{rel}#NN)<(prep#of#IN)<(pobj#{q_unit}#NN)<(nn#{q_modifier}#NN)(num#{q_value}#CD)>>>(nsubj#{arg}#NNP|NN|PRP)>>
+<(#{rel}#VERB)<(nsubj#{q_unit_objType}#NN)<(num#{q_value}#CD)>(prep#in#IN)<(pobj#{arg}#NNP|NNPRP)>>>
+<(#is|was|were#VERB)<(attr#{q_value}#CD)(nsubj#number#NN)<(prep#of#IN)<(pobj#{q_unit_objType}#NN)<(partmod#{rel}#VERB)<(prep#in#IN)<(pobj#{arg}#NNP|NN|PRP)>>>>>>>
+<(#is|was|were#VERB)<(nsubj#{arg}#NNP|NN|PRP)(acomp|advmod#{rel}#JJ|RB)<(npadvmod#{q_unit}#NN)<(num#{q_value}#CD)>>>>
+<(#has|have|had#VERB)<(nsubj#{arg}#NNP|NN|PRP)(dobj#{q_unit_objType}#NN)<(num#{q_value}#CD)>>>
+<(#has|have|had#VERB)<(nsubj#{arg}#NNP|NN|PRP)(dobj#{q_unit}#NN)<(num#{q_value}#CD)(prep#of#IN)<(pobj#{rel}#NN)>>>>
+<(#is|was|were#VERB)<(attr#{q_value}#CD)(nsubj#{rel}#NN)<(prep#of#IN)<(pobj#{arg}#NNP|NN|PRP)>>>>
+<(#is|was|were#VERB)<(attr#{q_unit}#NN)<(num#{q_value}#CD)(amod#{q_modifier}#JJ)>(nsubj#{rel}#NN)<(poss#{arg}#PRP\$)>>>
+<(##VERB)<(attr#{q_unit}#NNP|NN)<(num#{q_value}#CD)>(nsubj#{rel}#NNP|NN)<(poss#{arg}#PRP\$)>>>
+<(#{rel}#VERB)<(dobj#{q_unit_objType}#NNP|NN)<(num#{q_value}#CD)>(nsubj#{arg}#NNP|NN|PRP)>>
