@@ -1,0 +1,119 @@
+det(population_NN_1_4, The_DT_0_0); prep(population_NN_1_4, of_IN_2_15); pobj(of_IN_2_15, India_NNP_3_18); nsubj(is_VBZ_4_24, population_NN_1_4); attr(is_VBZ_4_24, billion_CD_6_31); number(billion_CD_6_31, 1.2_CD_5_27)
+
+is_VBZ_4
+  population_NN_1
+    The_DT_0
+    of_IN_2
+      India_NNP_3
+  billion_CD_6
+    1.2_CD_5
+
+
+det(population_NN_1_4, The_DT_0_0); prep(population_NN_1_4, of_IN_2_15); pobj(of_IN_2_15, India_NNP_3_18); nsubj(is_VBZ_4_24, population_NN_1_4); attr(is_VBZ_4_24, billion_CD_6_31); number(billion_CD_6_31, 1.2_CD_5_27)
+
+is_VBZ_4
+  billion_CD_6
+    1.2_CD_5
+  population_NN_1
+    India_NNP_3
+    The_DT_0
+
+
+(null_is_VERB)
+[
+	(attr_billion_CD)
+	[
+		(number_1.2_CD)
+		[]
+	], 
+	(nsubj_population_NN)
+	[
+		(null_India_NNP)
+		[], 
+		(det_The_DT)
+		[]
+	]
+]
+
+---------------------------------
+
+is_VBZ_9
+  length_NN_2
+    the_DT_0
+    total_JJ_1
+    of_IN_3
+      Wall_NNP_6
+        the_DT_4
+        Great_NNP_5
+        of_IN_7
+          China_NNP_8
+  km_NNS_11
+    21,196.18_CD_10
+  ._._12
+
+det(length_NN_2_10, the_DT_0_0); amod(length_NN_2_10, total_JJ_1_4); prep(length_NN_2_10, of_IN_3_17); pobj(of_IN_3_17, Wall_NNP_6_30); det(Wall_NNP_6_30, the_DT_4_20); nn(Wall_NNP_6_30, Great_NNP_5_24); prep(Wall_NNP_6_30, of_IN_7_35); pobj(of_IN_7_35, China_NNP_8_38); nsubj(is_VBZ_9_44, length_NN_2_10); attr(is_VBZ_9_44, km_NNS_11_57); punct(is_VBZ_9_44, ._._12_59); num(km_NNS_11_57, 21,196.18_CD_10_47)
+
+
+is_VBZ_9
+  length_NN_2
+    total_JJ_1
+    Wall_NNP_6
+      the_DT_4
+      Great_NNP_5
+      China_NNP_8
+    the_DT_0
+  km_NNS_11
+    21,196.18_CD_10
+  ._._12
+
+det(length_NN_2_10, the_DT_0_0); amod(length_NN_2_10, total_JJ_1_4); prep(length_NN_2_10, of_IN_3_17); pobj(of_IN_3_17, Wall_NNP_6_30); det(Wall_NNP_6_30, the_DT_4_20); nn(Wall_NNP_6_30, Great_NNP_5_24); prep(Wall_NNP_6_30, of_IN_7_35); pobj(of_IN_7_35, China_NNP_8_38); nsubj(is_VBZ_9_44, length_NN_2_10); attr(is_VBZ_9_44, km_NNS_11_57); punct(is_VBZ_9_44, ._._12_59); num(km_NNS_11_57, 21,196.18_CD_10_47)
+
+(null_is_VERB)
+[
+	(punct_._.)
+	[], 
+	(nsubj_length_NN)
+	[
+		(amod_total_JJ)
+		[], 
+		(null_Wall_NNP)
+		[
+			(det_the_DT)
+			[], 
+			(nn_Great_NNP)
+			[], 
+			(null_China_NNP)
+			[]
+		], 
+		(det_the_DT)
+		[]
+	], 
+	(attr_km_NN)
+	[
+		(num_21,196.18_CD)
+		[]
+	]
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

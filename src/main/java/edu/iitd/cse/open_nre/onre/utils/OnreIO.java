@@ -16,11 +16,18 @@ import java.util.List;
 public class OnreIO {
 	
 	public static List<String> readDepPatterns() throws IOException {
-		String depPatternsFile = "/home/harinder/Documents/IITD_MTP/ONRE/src/main/resources/edu/iitd/cse/open_nre/onre/DependencyPathPatterns"; //TODO: use relative path
+		/*InputStream inputStream = OnreIO.class.getResourceAsStream(OnreConst.FILE_DEP_PATTERNS);
+		
+		if(inputStream == null) {
+			System.err.println("ERROR :: ---Not able to read DepPath patterns...exiting---");
+			System.exit(1);
+		}*/ //TODO: check why not working
 			
+		String depPath = "/home/harinder/Documents/IITD_MTP/Open_nre/ONRE/src/main/resources/edu/iitd/cse/open_nre/onre/DependencyPathPatterns";
+				
 		List<String> list_patterns = new ArrayList<String>();
 		
-		BufferedReader br = new BufferedReader(new FileReader(depPatternsFile));
+		BufferedReader br = new BufferedReader(new FileReader(depPath));
 		String line = br.readLine();
 		while(line != null) {
 			list_patterns.add(line);
@@ -30,4 +37,5 @@ public class OnreIO {
 		br.close();
 		return list_patterns;
 	}
+	
 }

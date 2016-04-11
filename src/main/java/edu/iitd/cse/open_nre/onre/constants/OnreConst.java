@@ -20,5 +20,6 @@ public class OnreConst {
 
 	//file paths
 	public static final String FILE_PROPERTIES = "config.properties";
+	public static final String FILE_DEP_PATTERNS = "DependencyPathPatterns";
 
 }

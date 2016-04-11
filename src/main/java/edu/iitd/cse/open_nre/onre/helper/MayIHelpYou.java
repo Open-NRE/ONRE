@@ -29,8 +29,10 @@ public class MayIHelpYou {
 		//System.out.println("---getConfiguredPatterns");
 		List<OnreExtraction> extrs = getExtractions(onrePatternNode, list_configuredPattern);
 		//System.out.println("---getExtractions");
+		System.out.println(depGraph.text());
 		for (OnreExtraction onreExtraction : extrs) {
 			System.out.println(onreExtraction);
+			System.out.println();
 		}
 		
 		//addDummyExtractions(extrs);

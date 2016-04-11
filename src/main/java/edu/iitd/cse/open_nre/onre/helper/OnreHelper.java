@@ -27,9 +27,10 @@ public class OnreHelper {
 	    switch(OnreExtractionPartType.getType(patternNode_configured.word)) {
 	    	
 	    	case ARGUMENT: onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);  break;
-	    	case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	//case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
 	    	case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case QUANTITY_VALUE: onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 			case UNKNOWN: break;
@@ -91,11 +92,14 @@ public class OnreHelper {
 	
 	public static void expandExtraction(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		//TODO: expandExtraction | to be implemented
-		
+
 		//TODO: imp-I feel we need to keep expanding(from children) unless not possible
 		
-		expandRelation(onreExtraction, patternNode_sentence);
+		if(onreExtraction.relation != null) expandRelation(onreExtraction, patternNode_sentence);
+		else onreExtraction.relation = new OnreExtractionPart();
+		
 		expandArgument(onreExtraction, patternNode_sentence);
+		if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
 	}
 	
 	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
@@ -114,6 +118,24 @@ public class OnreHelper {
         }
 		
 		onreExtraction.relation.text = sb.toString().trim();
+    }
+	
+	private static void expandUnitObjType(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.quantity_unit_objType, patternNode_sentence);
+		
+	    List<OnrePatternNode> expansions_relation = new ArrayList<>();
+		expansions_relation.add(node_relation);
+		for(OnrePatternNode child : node_relation.children) {
+			if(child.dependencyLabel.equals("amod")) expansions_relation.add(child);
+		}
+		
+		Collections.sort(expansions_relation, new OnreComparator_PatternNode_Index());
+		StringBuilder sb = new StringBuilder("");
+		for (OnrePatternNode expansion : expansions_relation) {
+			sb.append(expansion.word + " ");
+        }
+		
+		onreExtraction.quantity_unit_objType.text = sb.toString().trim();
     }
 
 	private static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
@@ -134,8 +156,8 @@ public class OnreHelper {
 				if(child.dependencyLabel.equals("prep") && child.word.equals("of")) { expansions_argument.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("pobj") && currNode.word.equals("of")) { expansions_argument.add(child); q_yetToExpand.add(child); }
 				
-				if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); }
-				if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); }
+				//if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); } //TODO: not expanding on 'in'
+				//if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); }
 			}
 		}
 
@@ -154,7 +176,7 @@ public class OnreHelper {
 		if(onreExtraction.quantity_modifier == null) onreExtraction.quantity_modifier = new OnreExtractionPart();
 		if(onreExtraction.quantity_unit == null) onreExtraction.quantity_unit = new OnreExtractionPart();
 		
-		if(onreExtraction.relation_joint == null) onreExtraction.relation_joint = new OnreExtractionPart();
+		//if(onreExtraction.relation_joint == null) onreExtraction.relation_joint = new OnreExtractionPart();
 	}
 	
 	
