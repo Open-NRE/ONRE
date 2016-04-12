@@ -6,6 +6,7 @@ package edu.iitd.cse.open_nre.onre.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.knowitall.tool.parse.graph.DependencyNode;
 
 /**
@@ -53,12 +54,23 @@ public class OnrePatternNode {
 		//System.out.println(this.word);
 		//System.out.println(onrePatternNode.word);
 		//System.out.println();
+		if(!isValid(regexNode)) return false;
+		
 		if(!isMatchPosTag(regexNode)) return false;
 		if(!isMatchDepLabel(regexNode)) return false;
 		if(!isMatchWord(regexNode)) return false; 
 		return true;
 	}
 
+	private boolean isValid(OnrePatternNode regexNode) {
+		if(!(regexNode.word.startsWith("{") && regexNode.word.endsWith("}"))) return true;
+		
+		if(regexNode.word.equals("{q_value}") && !OnreUtils.isNumber(this.word)) return false;
+		if(!regexNode.word.equals("{q_value}") && OnreUtils.isNumber(this.word)) return false;
+		
+		return true;
+	}
+	
 	private boolean isMatchWord(OnrePatternNode regexNode) {
 		//TODO: null/empty checks for both this & that
 		if(this.word==null || this.word.equals("")) return true;

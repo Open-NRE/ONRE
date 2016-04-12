@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_depLabel;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
@@ -47,6 +48,11 @@ public class OnreUtils {
 		}
 		
 		return null;
+	}
+	
+	public static boolean isNumber(String str) {
+		Pattern numberPat = Pattern.compile("^[\\+-]?\\d+([,\\.]\\d+)*([eE]-?\\d+)?$");
+		return numberPat.matcher(str.toString()).find();
 	}
 	
 }

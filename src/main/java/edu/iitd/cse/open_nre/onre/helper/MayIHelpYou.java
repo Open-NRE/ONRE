@@ -44,9 +44,9 @@ public class MayIHelpYou {
     private static List<OnreExtraction> getExtractions(OnrePatternNode onrePatternNode, List<OnrePatternNode> list_configuredPattern) {
     	List<OnreExtraction> extrs = new ArrayList<>();
     	
-    	for (OnrePatternNode configuredPattern : list_configuredPattern) {
-	        OnreExtraction onreExtraction = getExtraction(onrePatternNode, configuredPattern);
-	        if(onreExtraction != null) extrs.add(onreExtraction);
+    	for (int i=0; i<list_configuredPattern.size(); i++) {
+	        OnreExtraction onreExtraction = getExtraction(onrePatternNode, list_configuredPattern.get(i));
+	        if(onreExtraction != null) {System.out.println(i+1); extrs.add(onreExtraction);}
         }
     	
     	return extrs;

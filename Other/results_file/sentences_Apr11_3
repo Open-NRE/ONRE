@@ -13,23 +13,23 @@ The population of urban India is 1.2 billion
 
 ::3
 India has a population of 1.2 billion
-(India ; population ; 1.2 billion ;  ; null ; null)
+(India ; population ; 1.2 billion ;   ; null ; null)
 
 ::4
 The height of Tower is 1063 feet.
-(Tower ; height ; 1063  ; feet ; null ; null)
+(Tower ; height ; 1063  ; feet  ; null ; null)
 
 ::5
 The height of Eiffel Tower is 1063 feet
-(Eiffel Tower ; height ; 1063  ; feet ; null ; null)
+(Eiffel Tower ; height ; 1063  ; feet  ; null ; null)
 
 ::6
 The length of pool is 2 kilometres.
-(pool ; length ; 2  ; kilometres ; null ; null)
+(pool ; length ; 2  ; kilometres  ; null ; null)
 
 ::7
 The length of swimming pool is 2 kilometres.
-(swimming pool ; length ; 2  ; kilometres ; null ; null)
+(swimming pool ; length ; 2  ; kilometres  ; null ; null)
 
 ::8
 The total length of swimming pool is 2 kilometres.
@@ -41,7 +41,7 @@ the total length of the Great Wall of China is 21,196.18 km.
 
 ::10
 Road Transport India has a total length of 42.3 lakh km.
-(Road Transport India ; total length ; 42.3 lakh ; km ; null ; null)
+(Road Transport India ; total length ; 42.3 lakh ; km  ; null ; null)
 
 ::11
 The level of urbanisation in India in 2001 was 28 per cent.

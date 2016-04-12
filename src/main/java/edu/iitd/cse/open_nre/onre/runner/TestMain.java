@@ -25,7 +25,8 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "They account for 14 percent of the total road length of the country.";
+		String sentence = "The National Highways constitute only 1.67 per cent of the total road length.";
+		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		//System.out.println("---Got depGraph");
@@ -33,6 +34,8 @@ public class TestMain {
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {
+    	sentence = preprocessing(sentence);
+    	
 	    //String cleaned = clean(sentence);
 		ClearTokenizer tokenizer = new ClearTokenizer();
 		ClearPostagger postagger = new ClearPostagger(tokenizer);
@@ -48,6 +51,11 @@ public class TestMain {
 		}
 		
 	    return depGraph;
+    }
+    
+    private static String preprocessing(String sentence) {
+    	sentence = sentence.replace("per cent", "percent");
+    	return sentence;
     }
 
 	/*private String clean(String line) {
