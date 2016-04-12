@@ -25,7 +25,7 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "The National Highways constitute only 1.67 per cent of the total road length.";
+		String sentence = "There are 79 provinces in the country.";
 		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);

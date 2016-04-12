@@ -45,7 +45,10 @@ public class MayIHelpYou {
     	List<OnreExtraction> extrs = new ArrayList<>();
     	
     	for (int i=0; i<list_configuredPattern.size(); i++) {
-	        OnreExtraction onreExtraction = getExtraction(onrePatternNode, list_configuredPattern.get(i));
+    		OnrePatternNode configuredPattern = list_configuredPattern.get(i);
+    		if(configuredPattern==null) continue;
+    		
+	        OnreExtraction onreExtraction = getExtraction(onrePatternNode, configuredPattern);
 	        if(onreExtraction != null) {System.out.println(i+1); extrs.add(onreExtraction);}
         }
     	

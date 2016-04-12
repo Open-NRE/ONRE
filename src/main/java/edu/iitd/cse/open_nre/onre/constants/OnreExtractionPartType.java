@@ -17,7 +17,7 @@ public enum OnreExtractionPartType {
 	//RELATION_JOINT("{rel_joint}"),
 	QUANTITY_UNIT("{q_unit}"),
 	QUANTITY_UNIT_PLUS("{q_unit_plus}"),
-	QUANTITY_UNIT_OBJTYPE("{q_unit_objType}"),
+	//QUANTITY_UNIT_OBJTYPE("{q_unit_objType}"),
 	QUANTITY_VALUE("{q_value}"),
 	QUANTITY_MODIFIER("{q_modifier}"),
 	UNKNOWN("{unknown}");

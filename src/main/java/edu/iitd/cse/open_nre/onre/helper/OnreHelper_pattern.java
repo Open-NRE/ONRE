@@ -23,7 +23,7 @@ public class OnreHelper_pattern {
 		List<String> configuredPatterns = OnreIO.readDepPatterns();
 
 		for (String configuredPattern : configuredPatterns) {
-			if(configuredPattern.trim().length()==0) continue;
+			if(configuredPattern.trim().length()==0) {list_configuredPattern.add(null); continue;}
 			//configuredPattern = configuredPattern.toUpperCase();
 			list_configuredPattern.add(convertPattern2PatternTree(configuredPattern));
         }

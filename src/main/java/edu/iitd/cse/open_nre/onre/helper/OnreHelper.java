@@ -30,7 +30,7 @@ public class OnreHelper {
 	    	//case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
+	    	//case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
 	    	case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case QUANTITY_VALUE: onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case QUANTITY_UNIT_PLUS: onreExtraction.quantity_unit_plus = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
@@ -101,7 +101,7 @@ public class OnreHelper {
 		
 		expandArgument(onreExtraction, patternNode_sentence);
 		
-		if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
+		//if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
 		if(onreExtraction.quantity_unit != null) expandUnit_setUnitPlus(onreExtraction, patternNode_sentence);
 		if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence);
 	}
@@ -112,6 +112,7 @@ public class OnreHelper {
 	    List<OnrePatternNode> expansions = new ArrayList<>();
 		expansions.add(node_relation);
 		for(OnrePatternNode child : node_relation.children) {
+			if(child.dependencyLabel.equals("amod")) expansions.add(child);
 			if(child.dependencyLabel.equals("hmod")) expansions.add(child);
 		}
 		
@@ -166,23 +167,27 @@ public class OnreHelper {
     }
 	
 	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		/*OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
+		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
 		
-	    List<OnrePatternNode> expansions_relation = new ArrayList<>();
-		expansions_relation.add(node_relation);
+	    List<OnrePatternNode> expansions = new ArrayList<>();
+	    expansions.add(node_relation);
 		for(OnrePatternNode child : node_relation.children) {
-			if(child.dependencyLabel.equals("amod")) expansions_relation.add(child);
-			if(child.dependencyLabel.equals("nn")) expansions_relation.add(child);
+			if(child.dependencyLabel.equals("amod")) expansions.add(child); 
+			if(child.dependencyLabel.equals("nn")) expansions.add(child); 
+			if(child.dependencyLabel.equals("advmod")) expansions.add(child); 
+			if(child.dependencyLabel.equals("hmod")) expansions.add(child); 
 		}
 		
-		Collections.sort(expansions_relation, new OnreComparator_PatternNode_Index());
+		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
 		StringBuilder sb = new StringBuilder("");
-		for (OnrePatternNode expansion : expansions_relation) {
+		for (OnrePatternNode expansion : expansions) {
 			sb.append(expansion.word + " ");
         }
 		
-		onreExtraction.relation.text = sb.toString().trim();*/
-		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
+		onreExtraction.relation.text = sb.toString().trim();
+		
+		
+		/*OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
 	    expansions.add(node_relation);
@@ -199,8 +204,8 @@ public class OnreHelper {
 				if(child.dependencyLabel.equals("advmod")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("hmod")) { expansions.add(child); q_yetToExpand.add(child); }
 				
-				if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions.add(child); q_yetToExpand.add(child); } 
-				if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions.add(child); q_yetToExpand.add(child); }
+				//if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions.add(child); q_yetToExpand.add(child); } 
+				//if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions.add(child); q_yetToExpand.add(child); }
 			}
 		}
 
@@ -211,10 +216,10 @@ public class OnreHelper {
 			sb.append(expansion.word + " ");
         }
 		
-		onreExtraction.relation.text = sb.toString().trim();
+		onreExtraction.relation.text = sb.toString().trim();*/
     }
 	
-	private static void expandUnitObjType(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+	/*private static void expandUnitObjType(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.quantity_unit_objType, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
@@ -231,7 +236,7 @@ public class OnreHelper {
         }
 		
 		onreExtraction.quantity_unit_objType.text = sb.toString().trim();
-    }
+    }*/
 
 	private static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		OnrePatternNode node_argument = OnreUtils.searchNodeInTree(onreExtraction.argument, patternNode_sentence);
