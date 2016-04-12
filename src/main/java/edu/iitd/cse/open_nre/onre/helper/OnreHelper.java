@@ -100,7 +100,49 @@ public class OnreHelper {
 		
 		expandArgument(onreExtraction, patternNode_sentence);
 		if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
+		if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence);
 	}
+	
+	private static void expandUnit(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+
+		if(!onreExtraction.quantity_unit.text.equals("percent")) return;
+		
+		OnrePatternNode node_quantity_unit = OnreUtils.searchNodeInTree(onreExtraction.quantity_unit, patternNode_sentence);
+		
+		OnrePatternNode node_prepOf = null;
+		for(OnrePatternNode child : node_quantity_unit.children) {
+			if(child.dependencyLabel.equals("prep") && child.word.equals("of")) node_prepOf = child;
+		}
+		
+		if(node_prepOf == null) return;
+		
+	    List<OnrePatternNode> expansions = new ArrayList<>();
+	    expansions.add(node_prepOf);
+		
+		Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+		q_yetToExpand.add(node_prepOf);
+		while(!q_yetToExpand.isEmpty()) {
+			OnrePatternNode currNode = q_yetToExpand.remove();
+			
+			for(OnrePatternNode child : currNode.children) {
+				expansions.add(child); q_yetToExpand.add(child);
+				//if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); }
+				//if(child.dependencyLabel.equals("nn")) { expansions.add(child); q_yetToExpand.add(child); }
+				
+				//if(child.dependencyLabel.equals("prep") && child.word.equals("of")) { expansions.add(child); q_yetToExpand.add(child); } 
+				//if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions.add(child); q_yetToExpand.add(child); }
+			}
+		}
+
+		//sorting the expansions & setting in the argument
+		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
+		StringBuilder sb = new StringBuilder("");
+		for (OnrePatternNode expansion : expansions) {
+			sb.append(expansion.word + " ");
+        }
+		
+		onreExtraction.quantity_unit_plus = new OnreExtractionPart(sb.toString().trim(), node_prepOf.index);
+    }
 	
 	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		/*OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);

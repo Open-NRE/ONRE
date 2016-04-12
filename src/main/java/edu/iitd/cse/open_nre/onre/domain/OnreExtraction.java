@@ -18,7 +18,7 @@ public class OnreExtraction {
 	public OnreExtractionPart	quantity_modifier;
 	public OnreExtractionPart	quantity_unit;
 	public OnreExtractionPart	quantity_unit_objType;
-	
+	public OnreExtractionPart	quantity_unit_plus;
 	public OnreExtractionPart	changeType;
 	public OnreExtractionPart	temporal;
 
@@ -49,7 +49,7 @@ public class OnreExtraction {
 				+ OnreConst.DELIMETER_EXTR
 		        + this.quantity_value + " " + this.quantity_modifier
 		        + OnreConst.DELIMETER_EXTR
-		        + this.quantity_unit
+		        + this.quantity_unit + " " + this.quantity_unit_plus
 		        + OnreConst.DELIMETER_EXTR
 		        + this.changeType
 		        + OnreConst.DELIMETER_EXTR
