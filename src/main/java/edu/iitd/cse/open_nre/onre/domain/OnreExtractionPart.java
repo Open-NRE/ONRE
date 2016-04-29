@@ -12,7 +12,7 @@ import edu.knowitall.collection.immutable.Interval;
 public class OnreExtractionPart {
 	public String text;
 	public Interval offsetInterval;
-	public int index; //TODO: required for expanding extraction
+	public int index; //required for expanding extraction
 	
 	public OnreExtractionPart() {
 		this.text = "";

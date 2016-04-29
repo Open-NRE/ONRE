@@ -1,0 +1,754 @@
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+I am here
+::1
+log4j:WARN No appenders could be found for logger (com.clearnlp.component.pos.EnglishPOSTagger).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+1
+The population of India is 1.2 billion
+(India ; population ; 1.2 billion  ; null ; null)
+
+::2
+1
+The population of urban India is 1.2 billion
+(urban India ; population ; 1.2 billion  ; null ; null)
+
+::3
+3
+13
+India has a population of 1.2 billion
+(India ; population ; 1.2 billion  ; null ; null)
+(India ; has ; null ; null ; null)
+
+::4
+1
+The height of Tower is 1063 feet.
+(Tower ; height ; 1063 feet  ; null ; null)
+
+::5
+1
+The height of Eiffel Tower is 1063 feet
+(Eiffel Tower ; height ; 1063 feet  ; null ; null)
+
+::6
+1
+The length of pool is 2 kilometres.
+(pool ; length ; 2 kilometres  ; null ; null)
+
+::7
+1
+The length of swimming pool is 2 kilometres.
+(swimming pool ; length ; 2 kilometres  ; null ; null)
+
+::8
+1
+The total length of swimming pool is 2 kilometres.
+(swimming pool ; total length ; 2 kilometres  ; null ; null)
+
+::9
+1
+the total length of the Great Wall of China is 21,196.18 km.
+(the Great Wall of China ; total length ; 21196.18 km  ; null ; null)
+
+::10
+3
+9
+13
+Road Transport India has a total length of 42.3 lakh km.
+(Road Transport India ; total length ; 42.3 lakh km  ; null ; null)
+(Road Transport India ; lakh km ; null ; null ; null)
+(Road Transport India ; has ; null ; null ; null)
+
+::11
+1
+The level of urbanisation in India in 2001 was 28 percent.
+(urbanisation ; level ; 28 percent  ; null ; null)
+
+::12
+5
+14
+4 people killed in Alabama helicopter crash
+(Alabama helicopter crash ; killed ; 4 people  ; null ; null)
+(4 people ; killed ; null ; null ; null)
+
+::13
+the number of people killed in Alabama helicopter crash is 4
+
+::14
+5
+14
+3,329 people died in plane crashes around the world
+(plane crashes ; died ; 3329 people  ; null ; null)
+(3,329 people ; died ; null ; null ; null)
+
+::15
+5
+14
+Nearly 1.3 million people die in road crashes each year.
+(road crashes ; die ; nearly 1.3 million people  ; null ; null)
+(million people ; die ; null ; null ; null)
+
+::16
+3
+9
+13
+India has 14,500 km of navigable waterways.
+(India ; km ; null ; null ; null)
+(India ; navigable waterways ; 14500 km  ; null ; null)
+(India ; has ; 14500 km  ; null ; null)
+
+::17
+13
+The National Highways constitute only 1.67 percent of the total road length
+(The National Highways ; constitute ; 1.67 percent  ; null ; null)
+
+::18
+5
+14
+164 people have died of cold in Delhi.
+(Delhi ; died ; 164 people  ; null ; null)
+(164 people ; died ; null ; null ; null)
+
+::19
+13
+The Vichy regime of Henri Pétain killed 65,000 French Jews
+(The Vichy regime of Henri Pétain ; killed ; null ; null ; null)
+
+::20
+20 of Americans think that the sun goes around the earth.
+
+::21
+14
+NAI is currently composed of 15 Lead Research Teams
+(NAI ; currently composed ; null ; null ; null)
+
+::22
+14
+50,000 people die of infectuous diseases every day.
+(50,000 people ; die ; null ; null ; null)
+
+::23
+13
+Yet in 1948, Arabs owned a mere 3 percent of so-called "Palestine".
+(Arabs ; owned ; 3 percent  ; null ; null)
+
+::24
+7
+This page is 30 kilobytes long
+(This page ; long ; 30 kilobytes  ; null ; null)
+
+::25
+7
+The page was 48 kilobytes long
+(The page ; long ; 48 kilobytes  ; null ; null)
+
+::26
+20 percent of the Polish clergy was killed by the Nazis
+
+::27
+13
+His more than 100 trips abroad have attracted enormous crowds
+(more 100 trips ; attracted ; null ; null ; null)
+
+::28
+13
+Abu Sufyan led a great confederacy of 10,000 men against Medina.
+(Abu Sufyan ; led ; null ; null ; null)
+
+::29
+13
+14
+Abu Sufyan hoping for revenge entered the Medina with 3,000 men.
+(Abu Sufyan ; entered ; null ; null ; null)
+(Abu Sufyan ; entered ; 3000 men  ; null ; null)
+
+::30
+1
+The total planned length of the system is 9,060 km
+(the system ; total planned length ; 9060 km  ; null ; null)
+
+::31
+11
+its culturable command area is 5.53 lakh hectares.
+(its ; culturable command area ; 5.53 lakh hectares  ; null ; null)
+
+::32
+the total population of Bharmaur sub-division was 39,113
+
+::33
+11
+Its mean monthly temperature in January remains 4°C
+(Its ; mean monthly temperature ; 4 °  ; null ; null)
+
+::34
+13
+Planning Commission of India identified 67 districts of the country prone to drought.
+(Planning Commission of India ; identified ; 67 districts  ; null ; null)
+
+::35
+5
+14
+139 factories were in operation.
+(operation ; were ; 139 factories  ; null ; null)
+(139 factories ; were ; null ; null ; null)
+
+::36
+::37
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'The country’s potential of wind power generation exceeds 50,000 megawatts' starting at 11
+13
+It has an ambitious programme to install 250 wind-driven turbines
+(It ; has ; null ; null ; null)
+
+::38
+Solar energy is 7 percent more effective than coal
+
+::39
+19
+There are 21 refineries in India as on June 2011
+(India ;  ; 21 refineries  ; null ; null)
+
+::40
+13
+14
+The Central Pollution Control Board (CPCB) in collaboration with State Pollution Control Boards has been monitoring water quality of national aquatic resources at 507 stations.
+(The Central Pollution Control Board ; monitoring ; null ; null ; null)
+(The Central Pollution Control Board ; monitoring ; 507 stations  ; null ; null)
+
+::41
+Of the total net irrigated area 76.1 percent in Punjab are irrigated through wells and tube wells.
+
+::42
+The mean annual flow in all the river basins in India is estimated to be 1,869 cubic km.
+
+::43
+In the country, there are about 10,360 rivers
+
+::44
+the total utilisable water resource in the country is only 1,122 cubic km.
+
+::45
+The availability from surface water and replenishable groundwater is 1,869 cubic km.
+
+::46
+::47
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Water Resources of India accounts for about 2.45 percent of world’s surface area' starting at 65
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'Approximately, 71 percent of the earth’s surface is covered with it' starting at 38
+::48
+13
+fresh water constitutes only about 3 percent of the total water
+(fresh water ; constitutes ; about 3 percent  ; null ; null)
+
+::49
+13
+More than 60 percent of the ownership holdings have a size smaller than one
+(More 60 percent of the ownership holdings ; have ; null ; null ; null)
+
+::50
+13
+India produces only about 3.2 percent coffee of the world
+(India ; produces ; about 3.2 percent coffee  ; null ; null)
+
+::51
+13
+it occupies only 2.4 percent of total cropped area in the country.
+(it ; occupies ; 2.4 percent  ; null ; null)
+
+::52
+13
+Cotton occupies about 4.7 percent of total cropped area in the country.
+(Cotton ; occupies ; about 4.7 percent  ; null ; null)
+
+::53
+13
+These two states together produce about 90 percent of total output of soyabean in the country.
+(These two states ; together produce ; about 90 percent  ; null ; null)
+
+::54
+13
+These oil seeds together occupy only 2.5 percent of total cropped area in the country.
+(These oil seeds ; together occupy ; 2.5 percent  ; null ; null)
+
+::55
+13
+India produces about 18.8 percent of the total groundnut production in the world
+(India ; produces ; about 18.8 percent  ; null ; null)
+
+::56
+13
+The country produces about 11 percent cereals of the world
+(The country ; produces ; about 11 percent cereals  ; null ; null)
+
+::57
+13
+India contributes 21.6 percent of rice production in the world
+(India ; contributes ; 21.6 percent  ; null ; null)
+
+::58
+19
+Greater Mumbai is the largest agglomeration with 16.4 million people.
+(million people ;  ; null ; null ; null)
+
+::59
+5
+14
+More than 21.0% of urban population lives in these mega cities.
+(these mega cities ; lives ; more than 21.0 %  ; null ; null)
+(More 21.0 % of urban population ; lives ; null ; null ; null)
+
+::60
+1
+Employment rate for educated youth is 25 percent.
+(educated youth ; Employment rate ; 25 percent  ; null ; null)
+
+::61
+14
+For India, it is estimated that its GDP was Rs. 3200 thousand crores
+(it ; estimated ; null ; null ; null)
+
+::62
+14
+3.8% of workers are engaged in household industries
+(3.8 % of workers ; engaged ; null ; null ; null)
+
+::63
+1
+About 54.6 percent of total working population are cultivators and agricultural labourers
+(total working population ; percent ; null ; null ; null)
+
+::64
+13
+India has 640,867 villages according to the Census 2011
+(India ; has ; 640867 villages  ; null ; null)
+
+::65
+1
+19
+The density of population in India is 382 persons per sq km.
+(population ; density ; 382 persons per sq km  ; null ; null)
+(sq km ;  ; 382 persons per sq km  ; null ; null)
+
+::66
+13
+14
+He remits Rs. 20,000 per year to his father in his native village.
+(He ; remits ; null ; null ; null)
+(He ; remits ; null ; null ; null)
+
+::67
+There were 19 international airports functioning in the country
+
+::68
+Haldia Port is located 105 km downstream from Kolkata.
+
+::69
+7
+The port is 20 km long
+(The port ; long ; 20 km  ; null ; null)
+
+::70
+13
+14
+At present, India has 12 major ports.
+(India ; has ; 12 major ports  ; null ; null)
+(India ; has ; null ; null ; null)
+
+::71
+::72
+----->java.lang.AssertionError: assumption failed: Could not find offset of ''s' in 'In 1950-51, India’s external trade was worth Rs.1,214 crore' starting at 17
+13
+In 2010, domestic movement involved 520.21 lakh passengers
+(domestic movement ; involved ; 520.21 lakh passengers  ; null ; null)
+
+::73
+13
+The authority manages 125 airports.
+(The authority ; manages ; 125 airports  ; null ; null)
+
+::74
+3
+9
+13
+Oceanic Routes India has a vast coastline of approximate 7,517 km, including islands.
+(Oceanic Routes India ; vast coastline ; 7517 km  ; null ; null)
+(Oceanic Routes India ; approximate km ; null ; null ; null)
+(Oceanic Routes India ; has ; null ; null ; null)
+
+::75
+14
+At present, 5,685 km of major rivers are navigable by mechanised flat bottom vessels.
+(5,685 km of major rivers ; are ; null ; null ; null)
+
+::76
+13
+It crosses 146 rivers
+(It ; crosses ; 146 rivers  ; null ; null)
+
+::77
+7
+It is 760 km long rail route
+(It ; long ; 760 km  ; null ; null)
+
+::78
+1
+The total length of narrow guage was 2463 km in 2011.
+(narrow guage ; total length ; 2463 km  ; null ; null)
+
+::79
+1
+The total length of broad gauge lines was 55188 km in 2011.
+(broad gauge lines ; total length ; 55188 km  ; null ; null)
+
+::80
+1
+The length of Indian Railways network is 64460 km
+(Indian Railways network ; length ; 64460 km  ; null ; null)
+
+::81
+14
+This road runs at an average altitude of 4,270 metres above the mean sea level.
+(This road ; runs ; null ; null ; null)
+
+::82
+14
+They account for 14 percent of the total road length of the country.
+(They ; account ; 14 percent  ; null ; null)
+
+::83
+13
+These constitute 4 percent of total road length in the country.
+(These ; constitute ; 4 percent  ; null ; null)
+
+::84
+9
+13
+Road Transport India has one of the largest road networks in the world with a total length of 42.3 lakh km
+(Road Transport India ; largest road networks ; one of the largest road networks  ; null ; null)
+(Road Transport India ; has ; one of the largest road networks  ; null ; null)
+
+::85
+3
+13
+Pakistan has a population of over 190 million
+(Pakistan ; population ; over 190 million  ; null ; null)
+(Pakistan ; has ; null ; null ; null)
+
+::86
+14
+19
+India is the second most populous country in the world, with over 1.277 billion people
+(India ; is ; 1.277 billion people  ; null ; null)
+(the world ;  ; null ; null ; null)
+
+::87
+11
+Its population growth rate is 1.2%
+(Its ; population growth rate ; 1.2 %  ; null ; null)
+
+::88
+14
+The United States emerged from 13 British colonies along the East Coast.
+(The United States ; emerged ; 13 british colonies  ; null ; null)
+
+::89
+1
+The total stock of foreign investment in Australia was $2.5 trillion in 2013
+(foreign investment ; total stock ; $ 2.5 trillion  ; null ; null)
+
+::90
+13
+Australian investment abroad totalled $1.6 trillion.
+(Australian investment ; abroad totalled ; $ 1.6 trillion  ; null ; null)
+
+::91
+13
+In 2013 alone, foreign investors injected $115 billion of direct investment into Australia
+(foreign investors ; injected ; $ 115 billion  ; null ; null)
+
+::92
+19
+Canada is the world's sixth-largest producer of electricity generated by nuclear power, producing 97 billion kWh in 2013.
+(electricity ;  ; null ; null ; null)
+
+::93
+14
+In 2007, Canadian per capita power consumption was among the highest in the world, with an average of 16,995 kWh per annum.
+(Canadian capita power consumption ; was ; null ; null ; null)
+
+::94
+14
+The number of fixed telephone lines is above 24 million
+(The number of fixed telephone lines ; is ; above 24 million  ; null ; null)
+
+::95
+19
+In 2012, there were 43 million internet users in Iran
+(Iran ;  ; 43 million internet users  ; null ; null)
+
+::96
+14
+19
+By the end of 2009, Iran's telecom market was the fourth-largest market in the region at $9.2 billion
+(telecom market ; was ; null ; null ; null)
+(the region ;  ; null ; null ; null)
+
+::97
+There were 1,200 registered information technology companies in 2002
+
+::98
+In 2000 there were 252 radios
+
+::99
+However, Pakistan's undocumented economy is estimated to be 36% of its overall economy
+
+::100
+19
+It is about 28 kilometres off the south-eastern coast of India with a population of about 20 million.
+(a population of million ;  ; about 28 kilometres  ; null ; null)
+
+::101
+5
+14
+Over 61 million people live in Italy as of 2012.
+(Italy ; live ; 61 million people  ; null ; null)
+(million people ; live ; null ; null ; null)
+
+::102
+13
+it stretches around 354 kilometres in length.
+(it ; stretches around ; 354 kilometres  ; null ; null)
+
+::103
+The highest mountain in England is Scafell Pike, which stands at around 978 metres (3,209 ft) in height.
+
+::104
+Stalin is said to have personally signed 40,000 death warrants of suspected opponents of the regime.
+
+::105
+13
+Stalin murdered an estimated 20 million people.
+(Stalin ; murdered ; estimated 20 million people  ; null ; null)
+
+::106
+14
+Approximately 21 million Soviets were killed in Operation Barbarossa
+(million Soviets ; killed ; null ; null ; null)
+
+::107
+3
+9
+13
+Greece has more than 14,880 kilometres of coastline.
+(Greece ; kilometres ; null ; null ; null)
+(Greece ; coastline ; more than 14880 kilometres  ; null ; null)
+(Greece ; has ; more than 14880 kilometres  ; null ; null)
+
+::108
+13
+14
+Mount Olympus forms the highest point in Greece at 2,917 m above sea level.
+(Mount Olympus ; forms ; null ; null ; null)
+(Mount Olympus ; forms ; 2917 m  ; null ; null)
+
+::109
+14
+Esphygmenou is composed of 117 Zealot monks
+(Esphygmenou ; composed ; null ; null ; null)
+
+::110
+3
+9
+13
+Pindus, the central mountain range, has an average elevation of 2,650 m.
+(Pindus ; average elevation ; null ; null ; null)
+(Pindus ; m. ; null ; null ; null)
+(Pindus ; has ; null ; null ; null)
+
+::111
+19
+The legendary Mount Olympus is the highest point in Greece at 2,911 m above sea level.
+(2,911 m ;  ; null ; null ; null)
+
+::112
+14
+19
+The highest point is Mount Apo on Mindanao at 2,954 m.
+(The highest point ; is ; null ; null ; null)
+(Mindanao ;  ; null ; null ; null)
+
+::113
+14
+The Republic of the Philippines, or more commonly known as the Philippines is an archipelagic nation consisting of 7,107 islands lying in the Western Pacific.
+(The Republic of the Philippines ; commonly known ; null ; null ; null)
+
+::114
+14
+The Republic of the Philippines consists of an archipelago of 7,107 islands
+(The Republic of the Philippines ; consists ; null ; null ; null)
+
+::115
+19
+As of 2002, there are 79 provinces in the country.
+(the country ;  ; 79 provinces  ; null ; null)
+
+::116
+14
+The Philippines consists of 17 regions which are further subdivided into 79 provinces.
+(The Philippines ; consists ; 17 regions  ; null ; null)
+
+::117
+18
+19
+There are a total of 112 cities in the Philippines.
+(the Philippines ;  ; 112 cities  ; null ; null)
+(112 cities ;  ; null ; null ; null)
+
+::118
+13
+2 players suffered career-ending injuries.
+(2 players ; suffered ; null ; null ; null)
+
+::119
+13
+In early 2004, Portugal had 10,475 million inhabitants.
+(Portugal ; had ; 10475 million inhabitants  ; null ; null)
+
+::120
+14
+To the north the landscape is mountainous, though Portugal's highest point is Mount Pico in the Azores at 2,351 m.
+(the landscape ; is ; null ; null ; null)
+
+::121
+19
+Japan's highest mountain is the famous Mount Fuji at 3,776 m .
+(3,776 m ;  ; null ; null ; null)
+
+::122
+13
+They killed approximately 130,000 people instantly
+(They ; killed instantly ; 130000 people  ; null ; null)
+
+::123
+13
+14
+The Soviet Union seized 4 islands north of Hokkaido at the end of WWII
+(The Soviet Union ; seized ; 4 islands  ; null ; null)
+(The Soviet Union ; seized ; null ; null ; null)
+
+::124
+11
+Its total area is at least 20,000 square km
+(Its ; total area ; 20000 square km  ; null ; null)
+
+::125
+The World Values Study of 2002 shows that 87 percent of Muslims (in nine countries) see democracy as the best choice.
+
+::126
+14
+Local government is organized in 450 municipalities of Finland.
+(Local government ; organized ; 450 municipalities  ; null ; null)
+
+::127
+14
+Finland consists of 6 provinces
+(Finland ; consists ; 6 provinces  ; null ; null)
+
+::128
+Finnish is spoken by 93 percent of the population
+
+::129
+5
+14
+The municipalities cooperate in 20 regions of Finland.
+(20 regions of Finland ; cooperate ; null ; null ; null)
+(The municipalities ; cooperate ; 20 regions  ; null ; null)
+
+::130
+14
+John Lennon's jukebox was sold at Christie's for 2,500 pounds.
+(jukebox ; sold ; 2500 pounds  ; null ; null)
+
+::131
+Hungary is 93,030 sq km
+
+::132
+19
+There are 2 million people in Budapest.
+(Budapest ;  ; 2 million people  ; null ; null)
+
+::133
+The highest point in Hungary is Kékes Mountain, which is called the blue mountain, and is 1014 metres.
+
+::134
+13
+14
+In the 2001 census only 190,000 people called themselves Roma
+(190,000 people ; called ; null ; null ; null)
+(190,000 people ; called ; null ; null ; null)
+
+::135
+14
+Ultimately, over 533,000 Jews in Hungary were killed during the Holocaust
+(533,000 Jews ; Ultimately killed ; null ; null ; null)
+
+::136
+14
+Hungary is subdivided administratively into 19 counties
+(Hungary ; subdivided administratively ; 19 counties  ; null ; null)
+
+::137
+14
+Hungary has been subdivided into 7 euro-regions.
+(Hungary ; subdivided ; 7 euro - regions  ; null ; null)
+
+::138
+14
+Each generation of humans acquires on average 100 novel mutations in their gene sequence
+(Each generation of humans ; acquires ; 100 novel mutations  ; null ; null)
+
+::139
+7
+Right now this article is over 60 paragraphs long.
+(this article ; long ; 60 paragraphs  ; null ; null)
+
+::140
+13
+She has had 13 number one singles in the United States
+(She ; had ; 13 number one singles  ; null ; null)
+
+::141
+5
+13
+14
+To date, Rainbow has sold 3 million copies in America
+(America ; sold ; null ; null ; null)
+(Rainbow ; sold ; 3 million copies  ; null ; null)
+(Rainbow ; sold ; null ; null ; null)
+
+::142
+13
+The country has 28 states each with its own State Government.
+(The country ; has ; 28 states  ; null ; null)
+
+::143
+13
+14
+The legislatures of the states and union territories elect 233 members to the Rajya Sabha
+(The legislatures of the states ; elect ; 233 members  ; null ; null)
+(The legislatures of the states ; elect ; null ; null ; null)
+
+::144
+Hitler wished to unite a protestant church of 28 different federations into one nationalist body.
+
+::145
+5
+14
+Approximately three million Muslims  and 100,000 Jews live in Germany.
+(Germany ; live ; three million muslims  ; null ; null)
+(million Muslims ; live ; null ; null ; null)
+
+::146
+16
+Germany is further subdivided into 438 Kreise
+(Germany ; further subdivided ; 438 kreise  ; null ; null)
+
+

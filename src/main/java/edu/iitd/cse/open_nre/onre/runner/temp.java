@@ -3,7 +3,6 @@ package edu.iitd.cse.open_nre.onre.runner;
 public class temp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		/*String regex = "nnp|NN";
 		regex.toUpperCase();
 		System.out.println(regex);

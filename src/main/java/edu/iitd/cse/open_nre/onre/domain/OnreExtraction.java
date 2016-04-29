@@ -14,13 +14,19 @@ public class OnreExtraction {
 	public OnreExtractionPart	argument;
 	public OnreExtractionPart	relation;
 	//public OnreExtractionPart	relation_joint; //TODO: removed for now - remove completely if not required
-	public OnreExtractionPart	quantity_value;
-	public OnreExtractionPart	quantity_modifier;
-	public OnreExtractionPart	quantity_unit;
+	//public OnreExtractionPart	quantity_value;
+	//public OnreExtractionPart	quantity_modifier;
+	//public OnreExtractionPart	quantity_unit;
 	//public OnreExtractionPart	quantity_unit_objType; //TODO: removed for now - remove completely if not required
-	public OnreExtractionPart	quantity_unit_plus;
+	public OnreExtractionPart	quantity_unit_plus; 
 	public OnreExtractionPart	changeType;
 	public OnreExtractionPart	temporal;
+	
+	public OnreExtractionPart	quantity; //for using Danroth's quantifier
+	
+	public OnreExtractionPart	quantity_percent; 
+	
+	public int	patternNumber;
 
 	public OnreExtraction() {
 	}
@@ -41,7 +47,7 @@ public class OnreExtraction {
 		//	relText = "[number of]" + " " + quantity_unit_objType.text + " " + relation.text;
 		//}
 		
-		return "(" 
+		/*return "(" 
 				+ this.argument 
 				+ OnreConst.DELIMETER_EXTR 
 				//+ this.relation_joint + " " 
@@ -49,11 +55,25 @@ public class OnreExtraction {
 				+ OnreConst.DELIMETER_EXTR
 		        + this.quantity_value + " " + this.quantity_modifier
 		        + OnreConst.DELIMETER_EXTR
-		        + this.quantity_unit + " " + this.quantity_unit_plus
+		        + this.quantity_unit 
+		        //+ " " + this.quantity_unit_plus
 		        + OnreConst.DELIMETER_EXTR
 		        + this.changeType
 		        + OnreConst.DELIMETER_EXTR
 		        + this.temporal
-		        + ")";
+		        + ")";*/
+		
+		return "(" 
+		+ this.argument 
+		+ OnreConst.DELIMETER_EXTR 
+		+ this.relation.text
+		+ OnreConst.DELIMETER_EXTR
+        + this.quantity
+        + this.quantity_unit_plus
+        + OnreConst.DELIMETER_EXTR
+        + this.changeType
+        + OnreConst.DELIMETER_EXTR
+        + this.temporal
+        + ")";
 	}
 }

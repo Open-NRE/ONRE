@@ -37,7 +37,20 @@ public class OnreUtils {
 		}
 	}
 	
-	public static OnrePatternNode searchNodeInTree(OnreExtractionPart onreExtractionPart, OnrePatternNode tree) {
+	public static OnrePatternNode searchNodeInTreeByText(String text, OnrePatternNode tree) {
+		Queue<OnrePatternNode> q_patternNode = new LinkedList<>();
+		q_patternNode.add(tree);
+		
+		while(!q_patternNode.isEmpty()) {
+			OnrePatternNode currNode = q_patternNode.remove();
+			if(currNode.word.equalsIgnoreCase(text)) return currNode;
+			q_patternNode.addAll(currNode.children);
+		}
+		
+		return null;
+	}
+	
+	public static OnrePatternNode searchNodeInTreeByIndex(OnreExtractionPart onreExtractionPart, OnrePatternNode tree) {
 		Queue<OnrePatternNode> q_patternNode = new LinkedList<>();
 		q_patternNode.add(tree);
 		

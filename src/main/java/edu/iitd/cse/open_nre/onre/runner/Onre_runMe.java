@@ -17,7 +17,7 @@ import edu.knowitall.tool.tokenize.ClearTokenizer;
  * @author harinder
  *
  */
-public class TestMain {
+public class Onre_runMe {
 	/**
 	 * @param args
 	 * @throws IOException 
@@ -25,7 +25,7 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String sentence = "There are 79 provinces in the country.";
+		String sentence = "for India, it is estimated that its GDP was Rs. 3200 thousand crores.";
 		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
@@ -34,7 +34,7 @@ public class TestMain {
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {
-    	sentence = preprocessing(sentence);
+    	//sentence = preprocessing(sentence);
     	
 	    //String cleaned = clean(sentence);
 		ClearTokenizer tokenizer = new ClearTokenizer();
@@ -53,10 +53,10 @@ public class TestMain {
 	    return depGraph;
     }
     
-    private static String preprocessing(String sentence) {
+    /*private static String preprocessing(String sentence) {
     	sentence = sentence.replace("per cent", "percent");
     	return sentence;
-    }
+    }*/
 
 	/*private String clean(String line) {
 		String cleaned = line;

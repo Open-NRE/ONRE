@@ -23,7 +23,7 @@ public class TestMain_file {
 	public static void main(String[] args) throws IOException {
 		System.out.println("I am here");
 
-		String inputFile = "data/sentences.txt";
+		String inputFile = "data/in_wiki.txt";
 		BufferedReader br = new BufferedReader(new FileReader(inputFile));
 
 		String line = br.readLine();
@@ -31,7 +31,7 @@ public class TestMain_file {
 		int i=0;
 		while(line != null) {
 			System.out.println("::" + (++i));
-			DependencyGraph depGraph = TestMain.getDepGraph(line);
+			DependencyGraph depGraph = Onre_runMe.getDepGraph(line);
 			if(depGraph != null) MayIHelpYou.runMe(depGraph);
 			line = br.readLine();
 		}

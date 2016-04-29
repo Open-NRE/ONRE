@@ -9,8 +9,10 @@ import java.util.List;
 
 import scala.collection.JavaConversions;
 import scala.collection.Seq;
+import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
+import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
 import edu.knowitall.tool.parse.graph.DependencyGraph;
 
 /**
@@ -21,17 +23,17 @@ public class MayIHelpYou {
 
     public static Seq<OnreExtraction> runMe(DependencyGraph depGraph) throws IOException {
 		
+    	OnreGlobals.sentence = depGraph.text();
+    	
 		DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
-		//System.out.println("---simplified graph");
-		OnrePatternNode onrePatternNode = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
-		//System.out.println("---convertGraph2PatternTree");
+		OnrePatternTree onrePatternTree = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
 		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
-		//System.out.println("---getConfiguredPatterns");
-		List<OnreExtraction> extrs = getExtractions(onrePatternNode, list_configuredPattern);
-		//System.out.println("---getExtractions");
+		List<OnreExtraction> extrs = getExtractions(onrePatternTree.root, list_configuredPattern);
+
 		System.out.println(depGraph.text());
 		for (OnreExtraction onreExtraction : extrs) {
-			System.out.println(onreExtraction);
+			if(quantityExists(onreExtraction)) 
+			{System.out.println(onreExtraction.patternNumber); System.out.println(onreExtraction);}
 		}
 		System.out.println();
 		
@@ -41,15 +43,25 @@ public class MayIHelpYou {
 		// System.out.println("You are running me :)");
 	}
     
+    private static boolean quantityExists(OnreExtraction onreExtraction) {
+    	if(onreExtraction.quantity == null) return false;
+    	if(onreExtraction.quantity.text == null) return false;
+    	
+    	if(onreExtraction.quantity.text.matches(".*\\d.*")) return true;
+    	
+    	return false;
+    }
+    
     private static List<OnreExtraction> getExtractions(OnrePatternNode onrePatternNode, List<OnrePatternNode> list_configuredPattern) {
     	List<OnreExtraction> extrs = new ArrayList<>();
     	
     	for (int i=0; i<list_configuredPattern.size(); i++) {
+    		//System.out.println("pattern: " + i);
     		OnrePatternNode configuredPattern = list_configuredPattern.get(i);
     		if(configuredPattern==null) continue;
     		
 	        OnreExtraction onreExtraction = getExtraction(onrePatternNode, configuredPattern);
-	        if(onreExtraction != null) {System.out.println(i+1); extrs.add(onreExtraction);}
+	        if(onreExtraction != null) {onreExtraction.patternNumber=i+1; extrs.add(onreExtraction);}
         }
     	
     	return extrs;

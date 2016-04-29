@@ -29,11 +29,12 @@ public class OnreHelper {
 	    	case ARGUMENT: onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);  break;
 	    	//case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction); break; //TODO: trying for Danroth's quantifier
+	    	//case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	//case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
-	    	case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY_VALUE: onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY_UNIT_PLUS: onreExtraction.quantity_unit_plus = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	//case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
+	    	//case QUANTITY_VALUE: onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; //TODO: shall commit this & remove q_value from everywhere
+	    	//case QUANTITY_UNIT_PLUS: onreExtraction.quantity_unit_plus = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 			case UNKNOWN: break;
 	    		
 	    	/*case "{rel}": onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
@@ -43,6 +44,22 @@ public class OnreHelper {
 	    	case "{arg}": onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;*/
 	    }
 	}
+    
+    private static void setQuantityExtractionPart(OnrePatternNode subTreeNode, OnreExtraction onreExtraction) {
+    	String quantity = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode);
+    	if(quantity == null) return;
+    	
+    	onreExtraction.quantity = new OnreExtractionPart(quantity);
+    	if(!quantity.contains("per cent") && !quantity.contains("percent")) return;
+    	
+    	//finding percent node
+    	OnrePatternNode node_percent = null;
+    	node_percent = OnreUtils.searchNodeInTreeByText("percent", subTreeNode);
+    	if(node_percent == null) node_percent = OnreUtils.searchNodeInTreeByText("cent", subTreeNode);
+    	if(node_percent == null) return;
+    	
+    	onreExtraction.quantity_percent = new OnreExtractionPart(node_percent.word, node_percent.index);
+    }
 	
 	public static OnrePatternNode findPatternSubTree(OnrePatternNode patternNode_sentence, 
 			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction) {
@@ -92,21 +109,17 @@ public class OnreHelper {
     }
 	
 	public static void expandExtraction(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		//TODO: expandExtraction | to be implemented
-
-		//TODO: imp-I feel we need to keep expanding(from children) unless not possible
-		
 		if(onreExtraction.relation != null) expandRelation(onreExtraction, patternNode_sentence);
 		else onreExtraction.relation = new OnreExtractionPart();
 		
 		expandArgument(onreExtraction, patternNode_sentence);
 		
 		//if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
-		if(onreExtraction.quantity_unit != null) expandUnit_setUnitPlus(onreExtraction, patternNode_sentence);
-		if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence);
+		if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
+		//if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence); //TODO: I think it's not required after using Danroth's quantifier..might be required?
 	}
 	
-	private static void expandUnit(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+	/*private static void expandUnit(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.quantity_unit, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
@@ -123,16 +136,14 @@ public class OnreHelper {
         }
 		
 		onreExtraction.quantity_unit.text = sb.toString().trim();
-    }
+    }*/
 	
-	private static void expandUnit_setUnitPlus(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+	private static void expandQuantity_percent(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 
-		if(!onreExtraction.quantity_unit.text.equals("percent")) return;
-		
-		OnrePatternNode node_quantity_unit = OnreUtils.searchNodeInTree(onreExtraction.quantity_unit, patternNode_sentence);
+		OnrePatternNode quantity_percent = OnreUtils.searchNodeInTreeByIndex(onreExtraction.quantity_percent, patternNode_sentence);
 		
 		OnrePatternNode node_prepOf = null;
-		for(OnrePatternNode child : node_quantity_unit.children) {
+		for(OnrePatternNode child : quantity_percent.children) {
 			if(child.dependencyLabel.equals("prep") && child.word.equals("of")) node_prepOf = child;
 		}
 		
@@ -163,11 +174,11 @@ public class OnreHelper {
 			sb.append(expansion.word + " ");
         }
 		
-		onreExtraction.quantity_unit_plus = new OnreExtractionPart(sb.toString().trim(), node_prepOf.index);
+		onreExtraction.quantity_unit_plus = new OnreExtractionPart(sb.toString().trim(), node_prepOf.index); 
     }
 	
 	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
+		OnrePatternNode node_relation = OnreUtils.searchNodeInTreeByIndex(onreExtraction.relation, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
 	    expansions.add(node_relation);
@@ -239,7 +250,7 @@ public class OnreHelper {
     }*/
 
 	private static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		OnrePatternNode node_argument = OnreUtils.searchNodeInTree(onreExtraction.argument, patternNode_sentence);
+		OnrePatternNode node_argument = OnreUtils.searchNodeInTreeByIndex(onreExtraction.argument, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
 		expansions.add(node_argument);
@@ -277,8 +288,8 @@ public class OnreHelper {
 	
 	public static void onreExtraction_dummyForNull(OnreExtraction onreExtraction) {
 		//TODO: 
-		if(onreExtraction.quantity_modifier == null) onreExtraction.quantity_modifier = new OnreExtractionPart();
-		if(onreExtraction.quantity_unit == null) onreExtraction.quantity_unit = new OnreExtractionPart();
+		//if(onreExtraction.quantity_modifier == null) onreExtraction.quantity_modifier = new OnreExtractionPart();
+		//if(onreExtraction.quantity_unit == null) onreExtraction.quantity_unit = new OnreExtractionPart();
 		
 		if(onreExtraction.quantity_unit_plus == null) onreExtraction.quantity_unit_plus = new OnreExtractionPart();
 		

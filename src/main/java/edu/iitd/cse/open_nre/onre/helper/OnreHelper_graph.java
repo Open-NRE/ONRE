@@ -10,6 +10,7 @@ import java.util.Set;
 import scala.collection.JavaConversions;
 import edu.iitd.cse.open_nre.onre.OnrePropertiesReader;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
+import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.knowitall.collection.immutable.graph.Graph;
 import edu.knowitall.collection.immutable.graph.Graph.Edge;
@@ -23,7 +24,6 @@ import edu.knowitall.tool.parse.graph.DependencyNode;
  */
 public class OnreHelper_graph {
 
-	// TODO: check if the function required
 	public static DependencyGraph simplifyGraph(DependencyGraph depGraph) {
 		DependencyGraph simplifiedDepGraph = depGraph;
 
@@ -47,12 +47,14 @@ public class OnreHelper_graph {
 		return simplifiedDepGraph;
 	}
 	
-	public static OnrePatternNode convertGraph2PatternTree(DependencyGraph depGraph) {
+	public static OnrePatternTree convertGraph2PatternTree(DependencyGraph depGraph) {
 		Map<DependencyNode, Map<DependencyNode,String>> depMap = getDependencyMap(depGraph);
 		DependencyNode start = getVertexWithNoIncoming(depGraph.graph());
 		OnrePatternNode onrePatternNode = convertGraph2PatternTree_helper(start, depGraph.graph(), depMap);
 		OnreUtils.sortPatternTree(onrePatternNode);
-		return onrePatternNode;
+		
+		OnrePatternTree onrePatternTree = new OnrePatternTree(depGraph.text(), onrePatternNode);
+		return onrePatternTree;
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -85,6 +87,7 @@ public class OnreHelper_graph {
 		for (Edge<DependencyNode> edge : outgoing_set) {
 			DependencyNode child_depNode = edge.dest();
 			OnrePatternNode child_patternNode = convertGraph2PatternTree_helper(child_depNode, graph, depMap);
+			//child_patternNode.parent = onrePatternNode;
 			child_patternNode.dependencyLabel = depMap.get(depNode).get(child_depNode);
 			onrePatternNode.children.add(child_patternNode);
         }
