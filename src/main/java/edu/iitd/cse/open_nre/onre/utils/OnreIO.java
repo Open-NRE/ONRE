@@ -6,6 +6,8 @@ package edu.iitd.cse.open_nre.onre.utils;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,29 +18,30 @@ import java.util.List;
  */
 public class OnreIO {
 	
-	/*public static List<String> readDepPatterns() throws IOException {
-		InputStream inputStream = OnreIO.class.getResourceAsStream(OnreConst.FILE_DEP_PATTERNS);
+	public static List<String> readFile(String filePath) throws IOException {
+		BufferedReader br = new BufferedReader(new FileReader(filePath));
 		
-		if(inputStream == null) {
-			System.err.println("ERROR :: ---Not able to read DepPath patterns...exiting---");
-			System.exit(1);
-		} //TODO: check why not working
-			
-		List<String> list_patterns = new ArrayList<String>();
+		List<String> lines = new ArrayList<>();
 		
-		BufferedReader br = new BufferedReader(new FileReader(depPath));
 		String line = br.readLine();
 		while(line != null) {
-			list_patterns.add(line);
+			if(!line.trim().isEmpty()) lines.add(line); 
 			line = br.readLine();
 		}
 		
 		br.close();
-		return list_patterns;
-	}*/
+		return lines;
+	}
 	
-	public static List<String> readFile(String filePath) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader(filePath));
+	public static List<String> readFile_classPath(String filePath) throws IOException {
+		InputStream in = OnreIO.class.getResourceAsStream(filePath);
+		
+		if(in == null) {
+			System.err.println("ERROR :: ---Not able to read DepPath patterns...exiting---");
+			System.exit(1);
+		}
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));
 		
 		List<String> lines = new ArrayList<>();
 		

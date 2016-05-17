@@ -21,7 +21,7 @@ public class OnreHelper_pattern {
 	
 	public static List<OnrePatternNode> getConfiguredPatterns() throws IOException {
 		List<OnrePatternNode> list_configuredPattern = new ArrayList<OnrePatternNode>();
-		List<String> configuredPatterns = OnreIO.readFile(OnreFilePaths.filePath_depPatterns);
+		List<String> configuredPatterns = OnreIO.readFile_classPath(OnreFilePaths.filePath_depPatterns);
 
 		for (String configuredPattern : configuredPatterns) {
 			if(configuredPattern.trim().length()==0) {list_configuredPattern.add(null); continue;}

@@ -13,11 +13,11 @@ public class OnreExtraction {
 	
 	public OnreExtractionPart	argument;
 	public OnreExtractionPart	relation;
-	//public OnreExtractionPart	relation_joint; //TODO: removed for now - remove completely if not required
+	//public OnreExtractionPart	relation_joint;
 	//public OnreExtractionPart	quantity_value;
 	//public OnreExtractionPart	quantity_modifier;
 	//public OnreExtractionPart	quantity_unit;
-	//public OnreExtractionPart	quantity_unit_objType; //TODO: removed for now - remove completely if not required
+	//public OnreExtractionPart	quantity_unit_objType;
 	public OnreExtractionPart	quantity_unit_plus; 
 	public OnreExtractionPart	changeType;
 	public OnreExtractionPart	temporal;
