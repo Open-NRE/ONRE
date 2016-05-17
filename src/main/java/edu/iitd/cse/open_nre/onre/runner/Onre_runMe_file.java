@@ -32,7 +32,7 @@ public class Onre_runMe_file {
 		//int i=0;
 		//while(line != null) {
 		for(int i=0;i<inputLines.size();i++){
-			System.out.println("::" + (++i));
+			System.out.println("::" + (i+1));
 			DependencyGraph depGraph = Onre_runMe.getDepGraph(inputLines.get(i));
 			if(depGraph != null) MayIHelpYou.runMe(depGraph);
 			//line = br.readLine();

@@ -23,12 +23,12 @@ public class Onre_runMe_jsonStrings {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		String filePath_input = "/home/harinder/Documents/IITD_MTP/Open_nre/ONRE_DS/data/sentences.txt";
+		String filePath_input = "/home/harinder/Documents/IITD_MTP/numericSentencesKiKhoj/CluewebSeUmeed/0004wb/0004wb-00.sentences_filtered";
 
 		List<String> inputJsonStrings = OnreIO.readFile(filePath_input+OnreConstants.SUFFIX_JSON_STRINGS);
 
 		for(int i=0;i<inputJsonStrings.size();i++){
-			System.out.println("::" + (++i));
+			System.out.println("::" + (i+1));
 			OnrePatternTree onrePatternTree = OnreHelper_json.getOnrePatternTree(inputJsonStrings.get(i));
 			//DependencyGraph depGraph = Onre_runMe.getDepGraph();
 			MayIHelpYou.runMe(onrePatternTree);

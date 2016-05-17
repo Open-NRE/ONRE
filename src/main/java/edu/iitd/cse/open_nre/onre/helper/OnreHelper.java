@@ -261,11 +261,15 @@ public class OnreHelper {
 			OnrePatternNode currNode = q_yetToExpand.remove();
 			
 			for(OnrePatternNode child : currNode.children) {
+				if(child.dependencyLabel.equals("poss")) { expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("possessive")) { expansions.add(child); q_yetToExpand.add(child); }
+				
 				if(child.dependencyLabel.equals("det")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("num")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("hmod")) { expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("npadvmod")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("nn")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				if(child.dependencyLabel.equals("prep") && child.word.equals("of")) { expansions.add(child); q_yetToExpand.add(child); }

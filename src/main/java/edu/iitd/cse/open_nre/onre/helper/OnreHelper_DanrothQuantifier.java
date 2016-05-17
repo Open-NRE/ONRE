@@ -68,7 +68,7 @@ public class OnreHelper_DanrothQuantifier {
 			String phrase = ((Quantity)quantObject).phrase;
 			
 			if(subTreeNode.offset >= quantSpan.start && subTreeNode.offset <= quantSpan.end) return phrase;
-			if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase;
+			//if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase; //TODO: required?
 		}
 		
 		return null;

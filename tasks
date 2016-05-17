@@ -1,0 +1,42 @@
+rather than using the complete danroth's phrase, we can simply use bound, value and unit
+	The cost of an initial scan is $8.00 per image.
+
+expaning arg on prep_in ? 
+	(As riverboat a matter of adjudications fact, the standard statistics share of online postoperative slot games tea payoff in the safety United States is a advanced whopping) 93%.
+	For example, the yearly rate of increase in Social Security retirement benefits for anyone born after 1943 is 8 percent.
+	Methanex's plants in Trinidad have a production capacity of 2.1 million tonnes of methanol per year making the country a major methanol production centre for Methanex.
+	The net projected expenditures for SSP participants in the absence of the program are $722,320.
+
+expanding arg on prep_for ? (already expanding on prep_of)
+	The usual oral dose of sulfasalazine for active ulcerative colitis is 3 to 4 grams daily in divided doses, which provides 1.2 to 1.6 grams of mesalamine to the colon.
+
+expanding arg on with?
+	The attrition rate for special education teachers with less than 5 years experience was up to 43% in 1993.
+
+recursive rel expansion
+	The house inhibition advantage for this harras bet is 1.29 percent.
+
+
+//if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase; //TODO: required?
+
+if(child.dependencyLabel.equals("npadvmod")) { expansions.add(child); q_yetToExpand.add(child); }
+
+if(child.dependencyLabel.equals("poss")) { expansions.add(child); q_yetToExpand.add(child); }
+if(child.dependencyLabel.equals("possessive")) { expansions.add(child); q_yetToExpand.add(child); }
+
+
+No software is 100% effective in preventing compromises or infections, and not all websites are safe.
+
+
+eg incorrect:
+	can't expand 'for' in quantity
+		Their tuition is $15,000 per year for 2 years but there are ADAGP internships you might get.	
+	can't expand 'in' in quantity
+		It has a portfolio of $500 billion in consumer and corporate loans outside the U.S.
+	difficult sentences
+		The cost of entire procedure when performed in Russia is no more then $3,500 per person.
+		The incidence of these abnormalities was 0.2%, 0.2%, 0.6%, and 2.3% for 10, 20, 40, and 80 mg, respectively.
+
+
+
+(70% current precision)
