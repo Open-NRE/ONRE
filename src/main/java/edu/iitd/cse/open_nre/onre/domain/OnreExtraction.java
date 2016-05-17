@@ -3,7 +3,7 @@
  */
 package edu.iitd.cse.open_nre.onre.domain;
 
-import edu.iitd.cse.open_nre.onre.constants.OnreConst;
+import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 
 /**
  * @author harinder
@@ -65,14 +65,14 @@ public class OnreExtraction {
 		
 		return "(" 
 		+ this.argument 
-		+ OnreConst.DELIMETER_EXTR 
+		+ OnreConstants.DELIMETER_EXTR 
 		+ this.relation.text
-		+ OnreConst.DELIMETER_EXTR
+		+ OnreConstants.DELIMETER_EXTR
         + this.quantity
         + this.quantity_unit_plus
-        + OnreConst.DELIMETER_EXTR
+        + OnreConstants.DELIMETER_EXTR
         + this.changeType
-        + OnreConst.DELIMETER_EXTR
+        + OnreConstants.DELIMETER_EXTR
         + this.temporal
         + ")";
 	}

@@ -23,9 +23,9 @@ public class Onre_runMe {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		System.out.println("I am here");
+		//System.out.println("I am here");
 
-		String sentence = "for India, it is estimated that its GDP was Rs. 3200 thousand crores.";
+		String sentence = "For India, it is estimated that its GDP was Rs. 3200 thousand crores.";
 		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);

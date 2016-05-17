@@ -22,6 +22,8 @@ public class OnrePatternNode {
 	public int index;
 	public int offset;
 	
+	public int level;
+	
 	public List<OnrePatternNode> children;
 	public OnrePatternNode parent;
 	

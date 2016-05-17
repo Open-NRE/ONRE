@@ -2,7 +2,7 @@
 
 <(#has|have|had#VERB)<(dobj#{rel}#NNP|NN)<(prep#of#IN)<(pobj#{quantity}#.+)>>(nsubj#{arg}#NNP|NN|PRP)>>
 
-<(#{rel}#VERB)<(nsubj#{quantity}#.+)(prep#in#IN)<(pobj#{arg}#NNP|NN|PRP)>>>
+
 
 <(#is|are|was|were#VERB)<(nsubj#{arg}#NNP|NN|PRP)(acomp|advmod#{rel}#JJ|RB)<(npadvmod#{quantity}#.+)>>>
 
@@ -10,8 +10,8 @@
 
 <(##VERB)<(attr|acomp#{quantity}#.+)(nsubj#{rel}#NNP|NN)<(poss#{arg}#PRP\$)>>>
 
-<(#{rel}#VERB)<(dobj#{quantity}#.+)(nsubj#{arg}#NNP|NN|PRP|DT)>>
-<(#{rel}#VERB)<(nsubj|nsubjpass#{arg}#NNP|NN|PRP)(prep##IN)<(pobj#{quantity}#.+)>>>
+
+
 
 <(#is|are|was|were#VERB)<(nsubj#{arg}#NNP|NN|PRP)(acomp#{rel}#VERB)<(prep##IN)<(pobj#{quantity}#.+)>>>>
 

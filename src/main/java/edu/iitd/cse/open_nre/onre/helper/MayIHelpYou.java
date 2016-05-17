@@ -23,14 +23,21 @@ public class MayIHelpYou {
 
     public static Seq<OnreExtraction> runMe(DependencyGraph depGraph) throws IOException {
 		
-    	OnreGlobals.sentence = depGraph.text();
+    	DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
+    	OnrePatternTree onrePatternTree = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
     	
-		DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
-		OnrePatternTree onrePatternTree = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
+    	return runMe(onrePatternTree);
+	}
+
+    public static Seq<OnreExtraction> runMe(OnrePatternTree onrePatternTree) throws IOException {
+    	if(onrePatternTree == null) return null;
+    	
+		OnreGlobals.sentence = onrePatternTree.sentence;
+		
 		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
 		List<OnreExtraction> extrs = getExtractions(onrePatternTree.root, list_configuredPattern);
 
-		System.out.println(depGraph.text());
+		System.out.println(OnreGlobals.sentence);
 		for (OnreExtraction onreExtraction : extrs) {
 			if(quantityExists(onreExtraction)) 
 			{System.out.println(onreExtraction.patternNumber); System.out.println(onreExtraction);}

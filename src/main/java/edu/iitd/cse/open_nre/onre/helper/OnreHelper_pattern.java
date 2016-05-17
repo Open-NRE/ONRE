@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
@@ -20,7 +21,7 @@ public class OnreHelper_pattern {
 	
 	public static List<OnrePatternNode> getConfiguredPatterns() throws IOException {
 		List<OnrePatternNode> list_configuredPattern = new ArrayList<OnrePatternNode>();
-		List<String> configuredPatterns = OnreIO.readDepPatterns();
+		List<String> configuredPatterns = OnreIO.readFile(OnreFilePaths.filePath_depPatterns);
 
 		for (String configuredPattern : configuredPatterns) {
 			if(configuredPattern.trim().length()==0) {list_configuredPattern.add(null); continue;}

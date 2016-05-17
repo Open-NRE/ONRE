@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import edu.iitd.cse.open_nre.onre.constants.OnreConst;
+import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 
 /**
  * @author harinder
@@ -29,7 +29,7 @@ public class OnrePropertiesReader {
 
 		try {
 
-			input = OnrePropertiesReader.class.getResourceAsStream(OnreConst.FILE_PROPERTIES);
+			input = OnrePropertiesReader.class.getResourceAsStream(OnreFilePaths.filePath_properties);
 			prop.load(input);
 		} catch (IOException ex) {
 			System.err.println(ex.getMessage());
