@@ -3,8 +3,10 @@
  */
 package edu.iitd.cse.open_nre.onre.utils;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.regex.Pattern;
@@ -66,6 +68,21 @@ public class OnreUtils {
 	public static boolean isNumber(String str) {
 		Pattern numberPat = Pattern.compile("^[\\+-]?\\d+([,\\.]\\d+)*([eE]-?\\d+)?$");
 		return numberPat.matcher(str.toString()).find();
+	}
+	
+	public static void listFilesForFolder(final File folder, List<String> files) {
+		if (!folder.isDirectory()) {
+			files.add(folder.getPath());
+			return;
+		}
+	    for (final File fileEntry : folder.listFiles()) {
+	        if (fileEntry.isDirectory()) {
+	            listFilesForFolder(fileEntry, files);
+	        } else {
+	        	String fileName = fileEntry.getPath();
+	        	if(fileName.charAt(fileName.length()-1)!='~') files.add(fileEntry.getPath());
+	        }
+	    }
 	}
 	
 }
