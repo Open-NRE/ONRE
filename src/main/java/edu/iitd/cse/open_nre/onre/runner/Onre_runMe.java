@@ -28,7 +28,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		//System.out.println("I am here");
 
-		String sentence = "Now at that temperature the velocity of sound in air is about 1 feet per second.";
+		String sentence = "The width of the expanded view is approximately 300,000 light years.";
 		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);

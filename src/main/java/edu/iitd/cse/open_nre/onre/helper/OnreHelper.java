@@ -279,13 +279,15 @@ public class OnreHelper {
 				if(child.dependencyLabel.equals("det")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("num")) { expansions.add(child); q_yetToExpand.add(child); }
 				
-				if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); }
+				/*if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); } //TODO: changing to .*mod
 				if(child.dependencyLabel.equals("hmod")) { expansions.add(child); q_yetToExpand.add(child); }
-				if(child.dependencyLabel.equals("npadvmod")) { expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("npadvmod")) { expansions.add(child); q_yetToExpand.add(child); }*/
+				
+				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
+				
 				if(child.dependencyLabel.equals("nn")) { expansions.add(child); q_yetToExpand.add(child); }
 				
-				if(child.dependencyLabel.equals("prep"))
-				{ expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("prep")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("pobj")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				//if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); } //TODO: not expanding on 'in'
