@@ -66,9 +66,24 @@ public class OnreHelper_DanrothQuantifier {
 			if(!(quantObject instanceof Quantity)) continue;
 			
 			String phrase = ((Quantity)quantObject).phrase;
+			//String phrase = ((Quantity)quantObject).bound + " " + 
+			//((Quantity)quantObject).value + " " + ((Quantity)quantObject).units;
 			
+			//if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase;
 			if(subTreeNode.offset >= quantSpan.start && subTreeNode.offset <= quantSpan.end) return phrase;
-			//if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase; //TODO: required?
+		}
+		
+		for (QuantSpan quantSpan : quantSpans) {
+			
+			Object quantObject = quantSpan.object;
+			if(!(quantObject instanceof Quantity)) continue;
+			
+			String phrase = ((Quantity)quantObject).phrase;
+			//String phrase = ((Quantity)quantObject).bound + " " + 
+			//((Quantity)quantObject).value + " " + ((Quantity)quantObject).units;
+			
+			if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase;
+			//if(subTreeNode.offset >= quantSpan.start && subTreeNode.offset <= quantSpan.end) return phrase;
 		}
 		
 		return null;
