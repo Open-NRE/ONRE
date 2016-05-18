@@ -6,15 +6,14 @@ package edu.iitd.cse.open_nre.onre.utils;
 import java.io.File;
 import java.util.Collections;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+import scala.collection.JavaConversions;
 import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_depLabel;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
-import scala.collection.JavaConversions;
 
 /**
  * @author harinder
@@ -70,7 +69,7 @@ public class OnreUtils {
 		return numberPat.matcher(str.toString()).find();
 	}
 	
-	public static void listFilesForFolder(final File folder, List<String> files) {
+	public static void listFilesForFolder(final File folder, Set<String> files) {
 		if (!folder.isDirectory()) {
 			files.add(folder.getPath());
 			return;

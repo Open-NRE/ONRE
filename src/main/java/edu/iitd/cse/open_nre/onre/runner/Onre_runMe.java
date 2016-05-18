@@ -18,6 +18,9 @@ import edu.knowitall.tool.tokenize.ClearTokenizer;
  *
  */
 public class Onre_runMe {
+	
+	static DependencyParser parser;
+	
 	/**
 	 * @param args
 	 * @throws IOException 
@@ -37,9 +40,7 @@ public class Onre_runMe {
     	//sentence = preprocessing(sentence);
     	
 	    //String cleaned = clean(sentence);
-		ClearTokenizer tokenizer = new ClearTokenizer();
-		ClearPostagger postagger = new ClearPostagger(tokenizer);
-		DependencyParser parser = new ClearParser(postagger);
+    	if(parser == null) parser = getParser();
 		
 		DependencyGraph depGraph = null;
 		
@@ -52,6 +53,13 @@ public class Onre_runMe {
 		
 	    return depGraph;
     }
+
+	private static DependencyParser getParser() {
+		ClearTokenizer tokenizer = new ClearTokenizer();
+		ClearPostagger postagger = new ClearPostagger(tokenizer);
+		DependencyParser parser = new ClearParser(postagger);
+		return parser;
+	}
     
     /*private static String preprocessing(String sentence) {
     	sentence = sentence.replace("per cent", "percent");
