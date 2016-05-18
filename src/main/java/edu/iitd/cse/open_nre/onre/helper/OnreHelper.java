@@ -182,12 +182,24 @@ public class OnreHelper {
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
 	    expansions.add(node_relation);
-		for(OnrePatternNode child : node_relation.children) {
+		/*for(OnrePatternNode child : node_relation.children) {
 			if(child.dependencyLabel.equals("amod")) expansions.add(child); 
 			if(child.dependencyLabel.equals("nn")) expansions.add(child); 
 			if(child.dependencyLabel.equals("advmod")) expansions.add(child); 
 			if(child.dependencyLabel.equals("hmod")) expansions.add(child); 
-		}
+		}*/
+	    Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+	    q_yetToExpand.add(node_relation);
+	    while(!q_yetToExpand.isEmpty())
+	    {
+	    	OnrePatternNode currNode = q_yetToExpand.remove();
+	    	for(OnrePatternNode child : currNode.children) {
+				if(child.dependencyLabel.equals("amod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				if(child.dependencyLabel.equals("nn")) {expansions.add(child); q_yetToExpand.add(child); } 
+				if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); } 
+			}
+	    }
 		
 		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
 		StringBuilder sb = new StringBuilder("");
@@ -272,8 +284,9 @@ public class OnreHelper {
 				if(child.dependencyLabel.equals("npadvmod")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("nn")) { expansions.add(child); q_yetToExpand.add(child); }
 				
-				if(child.dependencyLabel.equals("prep") && child.word.equals("of")) { expansions.add(child); q_yetToExpand.add(child); }
-				if(child.dependencyLabel.equals("pobj") && currNode.word.equals("of")) { expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("prep"))
+				{ expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("pobj")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				//if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); } //TODO: not expanding on 'in'
 				//if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); }
