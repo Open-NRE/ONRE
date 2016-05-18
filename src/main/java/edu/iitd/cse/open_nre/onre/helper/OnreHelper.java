@@ -29,11 +29,11 @@ public class OnreHelper {
 	    	case ARGUMENT: onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);  break;
 	    	//case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction); break; //TODO: trying for Danroth's quantifier
+	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction); break;
 	    	//case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	//case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
 	    	//case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	//case QUANTITY_VALUE: onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; //TODO: shall commit this & remove q_value from everywhere
+	    	//case QUANTITY_VALUE: onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	//case QUANTITY_UNIT_PLUS: onreExtraction.quantity_unit_plus = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 			case UNKNOWN: break;
 	    		
@@ -116,7 +116,7 @@ public class OnreHelper {
 		
 		//if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
 		if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
-		//if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence); //TODO: I think it's not required after using Danroth's quantifier..might be required?
+		//if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence);
 	}
 	
 	/*private static void expandUnit(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
