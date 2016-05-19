@@ -1,29 +1,30 @@
+-------------------------------17th May-------------
 
-rather than using the complete danroth's phrase, we can simply use bound, value and unit
+- rather than using the complete danroth's phrase, we can simply use bound, value and unit
 	The cost of an initial scan is $8.00 per image.
 
-expaning arg on prep_in ? 
+- expaning arg on prep_in ? 
 	(As riverboat a matter of adjudications fact, the standard statistics share of online postoperative slot games tea payoff in the safety United States is a advanced whopping) 93%.
 	For example, the yearly rate of increase in Social Security retirement benefits for anyone born after 1943 is 8 percent.
 	Methanex's plants in Trinidad have a production capacity of 2.1 million tonnes of methanol per year making the country a major methanol production centre for Methanex.
 	The net projected expenditures for SSP participants in the absence of the program are $722,320.
 
-expanding arg on prep_for ? (already expanding on prep_of)
+- expanding arg on prep_for ? (already expanding on prep_of)
 	The usual oral dose of sulfasalazine for active ulcerative colitis is 3 to 4 grams daily in divided doses, which provides 1.2 to 1.6 grams of mesalamine to the colon.
 
-expanding arg on with?
+- expanding arg on with?
 	The attrition rate for special education teachers with less than 5 years experience was up to 43% in 1993.
 
-recursive rel expansion
+- recursive rel expansion
 	The house inhibition advantage for this harras bet is 1.29 percent.
 
 
-//if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase; //TODO: required?
+- //if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase; //TODO: required?
 
-if(child.dependencyLabel.equals("npadvmod")) { expansions.add(child); q_yetToExpand.add(child); }
+- if(child.dependencyLabel.equals("npadvmod")) { expansions.add(child); q_yetToExpand.add(child); }
 
-if(child.dependencyLabel.equals("poss")) { expansions.add(child); q_yetToExpand.add(child); }
-if(child.dependencyLabel.equals("possessive")) { expansions.add(child); q_yetToExpand.add(child); }
+- if(child.dependencyLabel.equals("poss")) { expansions.add(child); q_yetToExpand.add(child); }
+- if(child.dependencyLabel.equals("possessive")) { expansions.add(child); q_yetToExpand.add(child); }
 
 
 No software is 100% effective in preventing compromises or infections, and not all websites are safe.
@@ -37,7 +38,30 @@ eg incorrect:
 	difficult sentences
 		The cost of entire procedure when performed in Russia is no more then $3,500 per person.
 		The incidence of these abnormalities was 0.2%, 0.2%, 0.6%, and 2.3% for 10, 20, 40, and 80 mg, respectively.
+	
+- (70% current precision) === 0004wb-00 <5200 sentences>
 
 
 
-(70% current precision)
+-------------------------------18th May-------------
+
+- (77% current precision) === 0004wb-00 <5200 sentences>
+
+.	and??? Zoo have the collection of some 957 animals and 119 species.
+.	and??? The University of Tennessee at Martin has a combined undergraduate and graduate enrollment of approximately 8,100 students.
+.	that? The maximum length of the predicate that the policy function can return is 2,000 bytes.
+.	that? The amount of carbon contained in that sediment is about 95 percent as much as the river transports during normal rains over the entire year.
+.	expaning on by?	The three living centers run by TLC have a total of 75 beds, and an estimated 105 youth rely on their services each year. 
+.	during?? The total number of flashes during a 30 second cycle in this combination is 190.
+
+****	marked T
+		In Germany, Austria, Switzerland, and the Czech Republic, they may have as much as 70 percent of the market, according to the estimates.
+			(they ; market ; 70 percent of the market ; null ; null)
+
+- (62% precision) === 0004wb-09 <6674 sentences>
+
+-------------------------------19th May-------------
+
+todo: removing the check - parent shall be a relation, while expandingQuantity - have a safe check to return if the expansion contains a relation word
+todo: check - As at December 31, 2011, the Company had approximately $1.5 billion of net debt, or $2.1 billion including preferred shares, Series 1 and 2, and convertible debt instruments.The net debt to Latest Twelve Month EBITDA ratio as of December 31, 2011 was 2.5 times as compared to 2.6 times as of December 31, 2010.
+todo: check % pe expand kyun ni hua - In addition, day rates for many units are about 50% of former norms.

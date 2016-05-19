@@ -28,7 +28,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		//System.out.println("I am here");
 
-		String sentence = "The width of the expanded view is approximately 300,000 light years.";
+		String sentence = "The effective tax rate for income from continuing operations in 2010 was 41.4%.";
 		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);

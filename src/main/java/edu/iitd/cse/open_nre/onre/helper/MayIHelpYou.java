@@ -13,6 +13,7 @@ import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.knowitall.tool.parse.graph.DependencyGraph;
 
 /**
@@ -39,8 +40,7 @@ public class MayIHelpYou {
 
 		System.out.println(OnreGlobals.sentence);
 		for (OnreExtraction onreExtraction : extrs) {
-			if(quantityExists(onreExtraction)) 
-			{System.out.println(onreExtraction.patternNumber); System.out.println(onreExtraction);}
+			if(OnreUtils.quantityExists(onreExtraction)) {System.out.println(onreExtraction.patternNumber); System.out.println(onreExtraction);}
 		}
 		System.out.println();
 		
@@ -49,15 +49,6 @@ public class MayIHelpYou {
 
 		// System.out.println("You are running me :)");
 	}
-    
-    private static boolean quantityExists(OnreExtraction onreExtraction) {
-    	if(onreExtraction.quantity == null) return false;
-    	if(onreExtraction.quantity.text == null) return false;
-    	
-    	if(onreExtraction.quantity.text.matches(".*\\d.*")) return true;
-    	
-    	return false;
-    }
     
     private static List<OnreExtraction> getExtractions(OnrePatternNode onrePatternNode, List<OnrePatternNode> list_configuredPattern) {
     	List<OnreExtraction> extrs = new ArrayList<>();

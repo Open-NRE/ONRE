@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 
 import scala.collection.JavaConversions;
 import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_depLabel;
+import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 
@@ -38,6 +39,15 @@ public class OnreUtils {
 		}
 	}
 	
+	public static boolean quantityExists(OnreExtraction onreExtraction) {
+	    	if(onreExtraction.quantity == null) return false;
+	    	if(onreExtraction.quantity.text == null) return false;
+	    	
+	    	if(onreExtraction.quantity.text.matches(".*\\d.*")) return true;
+	    	
+	    	return false;
+	}
+	
 	public static OnrePatternNode searchNodeInTreeByText(String text, OnrePatternNode tree) {
 		Queue<OnrePatternNode> q_patternNode = new LinkedList<>();
 		q_patternNode.add(tree);
@@ -49,6 +59,18 @@ public class OnreUtils {
 		}
 		
 		return null;
+	}
+	
+	public static boolean isIgnoreCaseMatch(String s1, String s2) {
+		return s1.toLowerCase().matches(s2.toLowerCase());
+	}
+	
+	public static boolean isIgnoreCaseIgnoreCommaIgnoreSpaceContains(String s1, String s2) {
+		return lowerTrimCommaSpace(s1).contains(lowerTrimCommaSpace(s2));
+	}
+
+	private static String lowerTrimCommaSpace(String s1) {
+		return s1.toLowerCase().trim().replace(",", "").replace(" ", "");
 	}
 	
 	public static OnrePatternNode searchNodeInTreeByIndex(OnreExtractionPart onreExtractionPart, OnrePatternNode tree) {

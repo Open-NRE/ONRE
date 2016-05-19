@@ -49,6 +49,7 @@ public class OnreHelper {
     	String quantity = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode);
     	if(quantity == null) return;
     	
+    	
     	onreExtraction.quantity = new OnreExtractionPart(quantity);
     	if(!quantity.contains("per cent") && !quantity.contains("percent")) return;
     	
@@ -114,10 +115,10 @@ public class OnreHelper {
 		
 		expandArgument(onreExtraction, patternNode_sentence);
 		
-		expandQuantity(onreExtraction,patternNode_sentence);
+		if(OnreUtils.quantityExists(onreExtraction)) expandQuantity(onreExtraction,patternNode_sentence);
 		
 		//if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
-		//if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
+		if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
 		//if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence);
 	}
 	
@@ -206,6 +207,7 @@ public class OnreHelper {
 			OnrePatternNode currNode = q_yetToExpand.remove();
 			
 			for(OnrePatternNode child : currNode.children) {
+				if(currNode.word.equals(",")) {q_yetToExpand.clear(); break;}
 				expansions.add(child); q_yetToExpand.add(child);
 			}
 		}
@@ -217,14 +219,13 @@ public class OnreHelper {
 			sb.append(expansion.word + " ");
         }
 		
-		String trimmedString = sb.toString().trim();
+		String quantity_unit_plus = sb.toString().trim();
 		
 		// If upon expansion, we include the argument, or the quantity itself, ignore
-		if(trimmedString.contains(onreExtraction.argument.text.trim())
-				|| (onreExtraction.quantity!=null && trimmedString.contains(onreExtraction.quantity.text.trim()))) return;
+		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
+		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.quantity.text)) return;
 		
-		onreExtraction.quantity_unit_plus = new OnreExtractionPart(trimmedString, node_prep.index);
-		
+		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
 		
 	}
 	
