@@ -114,8 +114,10 @@ public class OnreHelper {
 		
 		expandArgument(onreExtraction, patternNode_sentence);
 		
+		expandQuantity(onreExtraction,patternNode_sentence);
+		
 		//if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
-		if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
+		//if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
 		//if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence);
 	}
 	
@@ -176,6 +178,55 @@ public class OnreHelper {
 		
 		onreExtraction.quantity_unit_plus = new OnreExtractionPart(sb.toString().trim(), node_prepOf.index); 
     }
+	
+	private static void expandQuantity(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+		OnrePatternNode node_relation = OnreUtils.searchNodeInTreeByIndex(onreExtraction.relation, patternNode_sentence);
+		
+		OnrePatternNode node_prep = null;
+		String quantity = null;
+		
+		for(OnrePatternNode child : node_relation.children) {
+			if(child.dependencyLabel.equals("prep")) node_prep = child;
+			if(node_prep != null) continue;
+			quantity = OnreHelper_DanrothQuantifier.getQuantity(child);
+		}
+		
+		// If we have quantity on one subtree of the relation and a prep subtree on the other, expand the prep subtree
+		// For now,keeping it as part of the quantity, can think of moving it into a different field
+		
+		if(node_prep == null || quantity == null) return;
+		
+		
+		List<OnrePatternNode> expansions = new ArrayList<>();
+		expansions.add(node_prep);
+		
+		Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+		q_yetToExpand.add(node_prep);
+		while(!q_yetToExpand.isEmpty()) {
+			OnrePatternNode currNode = q_yetToExpand.remove();
+			
+			for(OnrePatternNode child : currNode.children) {
+				expansions.add(child); q_yetToExpand.add(child);
+			}
+		}
+		
+		//sorting the expansions & setting in the argument
+		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
+		StringBuilder sb = new StringBuilder("");
+		for (OnrePatternNode expansion : expansions) {
+			sb.append(expansion.word + " ");
+        }
+		
+		String trimmedString = sb.toString().trim();
+		
+		// If upon expansion, we include the argument, or the quantity itself, ignore
+		if(trimmedString.contains(onreExtraction.argument.text.trim())
+				|| (onreExtraction.quantity!=null && trimmedString.contains(onreExtraction.quantity.text.trim()))) return;
+		
+		onreExtraction.quantity_unit_plus = new OnreExtractionPart(trimmedString, node_prep.index);
+		
+		
+	}
 	
 	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		OnrePatternNode node_relation = OnreUtils.searchNodeInTreeByIndex(onreExtraction.relation, patternNode_sentence);
@@ -278,6 +329,7 @@ public class OnreHelper {
 				
 				if(child.dependencyLabel.equals("det")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("num")) { expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("neg")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				/*if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); } //TODO: changing to .*mod
 				if(child.dependencyLabel.equals("hmod")) { expansions.add(child); q_yetToExpand.add(child); }
