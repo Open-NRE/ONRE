@@ -60,7 +60,7 @@ public class OnrePatternNode {
 		//System.out.println(this.word);
 		//System.out.println(onrePatternNode.word);
 		//System.out.println();
-		if(!isValid(regexNode)) return false;
+		//if(!isValid(regexNode)) return false; //TODO: not required
 		
 		if(!isMatchPosTag(regexNode)) return false;
 		if(!isMatchDepLabel(regexNode)) return false;

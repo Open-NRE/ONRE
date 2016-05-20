@@ -28,7 +28,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		//System.out.println("I am here");
 
-		String sentence = "The effective tax rate for income from continuing operations in 2010 was 41.4%.";
+		String sentence = "3,329 people died in plane crashes around the world.";
 		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
