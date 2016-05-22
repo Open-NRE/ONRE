@@ -27,8 +27,7 @@ public class Onre_runMe {
 	 */
 	public static void main(String[] args) throws IOException {
 		//System.out.println("I am here");
-
-		String sentence = "3,329 people died in plane crashes around the world.";
+		String sentence = "In Iceland we still have about 10 % of the energy for space heating with direct electrical heating.";
 		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);

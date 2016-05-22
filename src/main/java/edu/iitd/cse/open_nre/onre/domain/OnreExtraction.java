@@ -19,12 +19,14 @@ public class OnreExtraction {
 	//public OnreExtractionPart	quantity_unit;
 	//public OnreExtractionPart	quantity_unit_objType;
 	public OnreExtractionPart	quantity_unit_plus; 
-	public OnreExtractionPart	changeType;
-	public OnreExtractionPart	temporal;
+	//public OnreExtractionPart	changeType;
+	//public OnreExtractionPart	temporal;
 	
 	public OnreExtractionPart	quantity; //for using Danroth's quantifier
 	
-	public OnreExtractionPart	quantity_percent; 
+	public OnreExtractionPart	quantity_percent;
+	
+	public OnreExtractionPart	extra_quantity_info; //giving extra info relating to the quantity
 	
 	public int	patternNumber;
 
@@ -71,9 +73,11 @@ public class OnreExtraction {
         + this.quantity
         + this.quantity_unit_plus
         + OnreConstants.DELIMETER_EXTR
+        + this.extra_quantity_info
+        /*+ OnreConstants.DELIMETER_EXTR
         + this.changeType
         + OnreConstants.DELIMETER_EXTR
-        + this.temporal
+        + this.temporal*/
         + ")";
 	}
 }

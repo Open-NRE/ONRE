@@ -29,7 +29,7 @@ public class OnreHelper {
 	    	case ARGUMENT: onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);  break;
 	    	//case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction); break;
+	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction, subTreeNode.index); break;
 	    	//case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	//case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
 	    	//case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
@@ -45,18 +45,20 @@ public class OnreHelper {
 	    }
 	}
     
-    private static void setQuantityExtractionPart(OnrePatternNode subTreeNode, OnreExtraction onreExtraction) {
+    private static void setQuantityExtractionPart(OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index) {
     	String quantity = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode);
     	if(quantity == null) return;
     	
     	
     	onreExtraction.quantity = new OnreExtractionPart(quantity);
-    	if(!quantity.contains("per cent") && !quantity.contains("percent")) return;
+    	onreExtraction.quantity.index = index;
+    	if(!quantity.contains("per cent") && !quantity.contains("percent") && !quantity.contains("%")) return;
     	
     	//finding percent node
     	OnrePatternNode node_percent = null;
     	node_percent = OnreUtils.searchNodeInTreeByText("percent", subTreeNode);
     	if(node_percent == null) node_percent = OnreUtils.searchNodeInTreeByText("cent", subTreeNode);
+    	if(node_percent == null) node_percent = OnreUtils.searchNodeInTreeByText("%", subTreeNode);
     	if(node_percent == null) return;
     	
     	onreExtraction.quantity_percent = new OnreExtractionPart(node_percent.word, node_percent.index);
@@ -177,55 +179,60 @@ public class OnreHelper {
 			sb.append(expansion.word + " ");
         }
 		
+		String quantity_unit_plus = sb.toString().trim();
+		
+		// If upon expansion, we include the argument, or the relation, ignore
+		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
+		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.relation.text)) return;
+		
 		onreExtraction.quantity_unit_plus = new OnreExtractionPart(sb.toString().trim(), node_prepOf.index); 
     }
 	
 	private static void expandQuantity(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		OnrePatternNode node_relation = OnreUtils.searchNodeInTreeByIndex(onreExtraction.relation, patternNode_sentence);
+		
+		OnrePatternNode argument_parent_node = OnreUtils.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
 		
 		OnrePatternNode node_prep = null;
-		String quantity = null;
-		
-		for(OnrePatternNode child : node_relation.children) {
+		for(OnrePatternNode child : argument_parent_node.children) {
 			if(child.dependencyLabel.equals("prep")) node_prep = child;
-			if(node_prep != null) continue;
-			quantity = OnreHelper_DanrothQuantifier.getQuantity(child);
-		}
-		
-		// If we have quantity on one subtree of the relation and a prep subtree on the other, expand the prep subtree
-		// For now,keeping it as part of the quantity, can think of moving it into a different field
-		
-		if(node_prep == null || quantity == null) return;
-		
-		
-		List<OnrePatternNode> expansions = new ArrayList<>();
-		expansions.add(node_prep);
-		
-		Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
-		q_yetToExpand.add(node_prep);
-		while(!q_yetToExpand.isEmpty()) {
-			OnrePatternNode currNode = q_yetToExpand.remove();
+			if(node_prep == null) continue;
 			
-			for(OnrePatternNode child : currNode.children) {
-				if(currNode.word.equals(",")) {q_yetToExpand.clear(); break;}
-				expansions.add(child); q_yetToExpand.add(child);
+			List<OnrePatternNode> expansions = new ArrayList<>();
+			expansions.add(node_prep);
+			
+			Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+			q_yetToExpand.add(node_prep);
+			while(!q_yetToExpand.isEmpty()) {
+				OnrePatternNode currNode = q_yetToExpand.remove();
+				
+				for(OnrePatternNode child1 : currNode.children) {
+					//if(currNode.word.equals(",")) {q_yetToExpand.clear(); break;}
+					expansions.add(child1); q_yetToExpand.add(child1);
+				}
 			}
+			
+			//sorting the expansions & setting in the argument
+			Collections.sort(expansions, new OnreComparator_PatternNode_Index());
+			StringBuilder sb = new StringBuilder("");
+			for (OnrePatternNode expansion : expansions) {
+				sb.append(expansion.word + " ");
+	        }
+			
+			String quantity_unit_plus = sb.toString().trim();
+			
+			// If upon expansion, we include the argument, or the quantity, or the relation, ignore
+			if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
+			if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.quantity.text)) return;
+			if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.relation.text)) return;
+			
+			/*int posOfComma = quantity_unit_plus.indexOf(',');
+			if(posOfComma != -1) {
+				quantity_unit_plus = quantity_unit_plus.substring(0,posOfComma-1);
+			}*/
+			
+			onreExtraction.extra_quantity_info = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
+			break;
 		}
-		
-		//sorting the expansions & setting in the argument
-		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
-		StringBuilder sb = new StringBuilder("");
-		for (OnrePatternNode expansion : expansions) {
-			sb.append(expansion.word + " ");
-        }
-		
-		String quantity_unit_plus = sb.toString().trim();
-		
-		// If upon expansion, we include the argument, or the quantity itself, ignore
-		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
-		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.quantity.text)) return;
-		
-		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
 		
 	}
 	

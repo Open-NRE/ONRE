@@ -23,8 +23,8 @@ public class Onre_runMe_jsonStrings {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		String filePath_input = "/home/harinder/Documents/IITD_MTP/numericSentencesKiKhoj/CluewebSeUmeed/0002wb_filtered/0002wb-14.sentences_filtered";
-		
+		String filePath_input = "/home/swarna/Desktop/nlp/project/ws/ONRE/data/0002wb-14.sentences_filtered";
+
 		List<String> inputJsonStrings = OnreIO.readFile(filePath_input+OnreConstants.SUFFIX_JSON_STRINGS);
 
 		for(int i=0;i<inputJsonStrings.size();i++){
