@@ -62,14 +62,14 @@ eg incorrect:
 
 -------------------------------19th May-------------
 
-todo: removing the check - parent shall be a relation, while expandingQuantity - have a safe check to return if the expansion contains a relation word
-todo: check - As at December 31, 2011, the Company had approximately $1.5 billion of net debt, or $2.1 billion including preferred shares, Series 1 and 2, and convertible debt instruments.The net debt to Latest Twelve Month EBITDA ratio as of December 31, 2011 was 2.5 times as compared to 2.6 times as of December 31, 2010.
-todo: check % pe expand kyun ni hua - In addition, day rates for many units are about 50% of former norms.
+- todo: removing the check - parent shall be a relation, while expandingQuantity - have a safe check to return if the expansion contains a relation word
+- todo: check - As at December 31, 2011, the Company had approximately $1.5 billion of net debt, or $2.1 billion including preferred shares, Series 1 and 2, and convertible debt instruments.The net debt to Latest Twelve Month EBITDA ratio as of December 31, 2011 was 2.5 times as compared to 2.6 times as of December 31, 2010.
+- todo: check % pe expand kyun ni hua - In addition, day rates for many units are about 50% of former norms.
 
 ------------------------------20th May----------------
 examples of sentences wherein we are not sure whether to attach the quantity_plus to argument or relation
 conjunction example wherein we are getting incorrect information
-move quantity_plus to a new field
-remove 'null' from the extractions
+- move quantity_plus to a new field
+- remove 'null' from the extractions
 try to improve precision = check if you need to remove a pattern or even having a new high precision patttern is fine
-remove quantity_plus part after the first comma
+??? remove quantity_plus part after the first comma
