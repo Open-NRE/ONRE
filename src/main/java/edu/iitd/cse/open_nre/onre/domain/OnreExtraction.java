@@ -26,7 +26,7 @@ public class OnreExtraction {
 	
 	public OnreExtractionPart	quantity_percent;
 	
-	public OnreExtractionPart	extra_quantity_info; //giving extra info relating to the quantity
+	public OnreExtractionPart	extra_quantity_info; /*giving extra info relating to the quantity*/
 	
 	public int	patternNumber;
 

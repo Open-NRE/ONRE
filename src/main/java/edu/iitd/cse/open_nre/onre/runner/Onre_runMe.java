@@ -27,12 +27,16 @@ public class Onre_runMe {
 	 */
 	public static void main(String[] args) throws IOException {
 		//System.out.println("I am here");
-		String sentence = "In Iceland we still have about 10 % of the energy for space heating with direct electrical heating.";
+		String sentence = "In january, the polulation of india was 1.2 billion.";
 		
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		//System.out.println("---Got depGraph");
-		if(depGraph != null) MayIHelpYou.runMe(depGraph);
+		Boolean isSeedFact = false;
+		if(args.length > 0)
+		isSeedFact = (args[0].equals("--seedFact"));
+		
+		if(depGraph != null) MayIHelpYou.runMe(depGraph, isSeedFact);
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {

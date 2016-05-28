@@ -14,5 +14,5 @@ public class OnreFilePaths {
 	public static final String filePath_properties = "config.properties";
 	
 	//ONRE_DS
-	public static String filePath_stopWords = "stopwords.txt";
+	public static String filePath_stopWords = "/home/swarna/Desktop/nlp/project/ws/ONRE_DS/data/stopwords.txt";
 }

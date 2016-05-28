@@ -23,15 +23,21 @@ public class Onre_runMe_jsonStrings {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		String filePath_input = "/home/swarna/Desktop/nlp/project/ws/ONRE/data/0002wb-14.sentences_filtered";
+		String filePath_input = "/home/swarna/Desktop/nlp/project/ws/ONRE/data/sentences.txt";
 
 		List<String> inputJsonStrings = OnreIO.readFile(filePath_input+OnreConstants.SUFFIX_JSON_STRINGS);
+		
+		Boolean isSeedFact = false;
+		if(args.length > 0)
+		isSeedFact = (args[0].equals("--seedFact"));
 
 		for(int i=0;i<inputJsonStrings.size();i++){
-			System.out.println("::" + (i+1));
+			if(!isSeedFact) {
+				System.out.println("::" + (i+1));
+			}
 			OnrePatternTree onrePatternTree = OnreHelper_json.getOnrePatternTree(inputJsonStrings.get(i));
 			//DependencyGraph depGraph = Onre_runMe.getDepGraph();
-			MayIHelpYou.runMe(onrePatternTree);
+			MayIHelpYou.runMe(onrePatternTree, isSeedFact);
 		}
 
 	}

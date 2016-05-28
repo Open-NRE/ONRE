@@ -15,6 +15,7 @@ import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
+import edu.illinois.cs.cogcomp.quant.standardize.Quantity;
 
 /**
  * @author harinder
@@ -23,13 +24,13 @@ import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 public class OnreHelper {
 	
     private static void setExtractionPart(OnrePatternNode subTreeNode, OnrePatternNode patternNode_configured,
-            OnreExtraction onreExtraction) {
+            OnreExtraction onreExtraction, Boolean isSeedFact) {
 	    switch(OnreExtractionPartType.getType(patternNode_configured.word)) {
 	    	
 	    	case ARGUMENT: onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);  break;
 	    	//case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction, subTreeNode.index); break;
+	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction, subTreeNode.index, isSeedFact); break;
 	    	//case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	//case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
 	    	//case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
@@ -45,10 +46,19 @@ public class OnreHelper {
 	    }
 	}
     
-    private static void setQuantityExtractionPart(OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index) {
-    	String quantity = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode);
+    private static void setQuantityExtractionPart(OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index, Boolean isSeedFact) {
+    	Object quantObject = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode, isSeedFact);
+    	if(quantObject == null) return;
+    	
+    	String quantity = ((Quantity)quantObject).phrase;
+    	
     	if(quantity == null) return;
     	
+    	if(isSeedFact) {
+    		onreExtraction.quantity = new OnreExtractionPart(((Quantity)quantObject).value.toString());
+    		onreExtraction.extra_quantity_info = new OnreExtractionPart(((Quantity)quantObject).units);
+    		return;
+    	}
     	
     	onreExtraction.quantity = new OnreExtractionPart(quantity);
     	onreExtraction.quantity.index = index;
@@ -65,30 +75,30 @@ public class OnreHelper {
     }
 	
 	public static OnrePatternNode findPatternSubTree(OnrePatternNode patternNode_sentence, 
-			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction) {
+			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction, Boolean isSeedFact) {
 
 		if (patternNode_sentence.matches(patternNode_configured) 
-				&& matchChildren(patternNode_sentence, patternNode_configured, onreExtraction)) {
+				&& matchChildren(patternNode_sentence, patternNode_configured, onreExtraction, isSeedFact)) {
 			
-			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction);
+			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction, isSeedFact);
 			return patternNode_sentence;
 		}
 
     	OnrePatternNode result = null;
     	
     	for (OnrePatternNode child : patternNode_sentence.children) {
-    		result = findPatternSubTree(child, patternNode_configured, onreExtraction);
-    		if (result != null && matchChildren(patternNode_sentence, result, onreExtraction)) return result;
+    		result = findPatternSubTree(child, patternNode_configured, onreExtraction, isSeedFact);
+    		if (result != null && matchChildren(patternNode_sentence, result, onreExtraction, isSeedFact)) return result;
     	}
 
     	return result;
     }
 	
 	private static boolean matchChildren(OnrePatternNode patternNode_sentence, 
-			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction) {
+			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction, Boolean isSeedFact) {
     	
 		if (patternNode_sentence.matches(patternNode_configured)) 
-			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction);
+			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction, isSeedFact);
 		else return false;
 		
     	if (patternNode_sentence.children.size() < patternNode_configured.children.size()) return false;
@@ -101,7 +111,7 @@ public class OnreHelper {
     		// Skip non-matching children in the tree.
     		while (index_sentence < patternNode_sentence.children.size()
     		      && !(result = matchChildren(patternNode_sentence.children.get(index_sentence), 
-    		    		  patternNode_configured.children.get(index_config), onreExtraction))) {
+    		    		  patternNode_configured.children.get(index_config), onreExtraction, isSeedFact))) {
     			index_sentence++;
     		}
 

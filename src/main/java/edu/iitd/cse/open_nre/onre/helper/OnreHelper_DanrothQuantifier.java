@@ -58,19 +58,19 @@ public class OnreHelper_DanrothQuantifier {
 		return quantifier.getSpans(text, true);
 	}
 
-	public static String getQuantity(OnrePatternNode subTreeNode) {
+	public static Object getQuantity(OnrePatternNode subTreeNode, Boolean isSeedFact) {
 		List<QuantSpan> quantSpans = getQuantitiesDanroth(OnreGlobals.sentence);
 		for (QuantSpan quantSpan : quantSpans) {
 			
 			Object quantObject = quantSpan.object;
 			if(!(quantObject instanceof Quantity)) continue;
 			
-			String phrase = ((Quantity)quantObject).phrase;
+			//String phrase = ((Quantity)quantObject).phrase;
 			//String phrase = ((Quantity)quantObject).bound + " " + 
 			//((Quantity)quantObject).value + " " + ((Quantity)quantObject).units;
 			
 			//if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase;
-			if(subTreeNode.offset >= quantSpan.start && subTreeNode.offset <= quantSpan.end) return phrase;
+			if(subTreeNode.offset >= quantSpan.start && subTreeNode.offset <= quantSpan.end) return quantObject;
 		}
 		
 		for (QuantSpan quantSpan : quantSpans) {
@@ -82,7 +82,7 @@ public class OnreHelper_DanrothQuantifier {
 			//String phrase = ((Quantity)quantObject).bound + " " + 
 			//((Quantity)quantObject).value + " " + ((Quantity)quantObject).units;
 			
-			if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return phrase;
+			if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return quantObject;
 			//if(subTreeNode.offset >= quantSpan.start && subTreeNode.offset <= quantSpan.end) return phrase;
 		}
 		
