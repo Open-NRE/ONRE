@@ -20,17 +20,17 @@ public class OnreExtractionPart {
 	}
 	
 	public OnreExtractionPart(String text, Interval offsetInterval) {
-		this.text = text;
+		this.text = text.trim();
 		this.offsetInterval = offsetInterval;
 	}
 	
 	public OnreExtractionPart(String text) {
-		this.text = text;
+		this.text = text.trim();
 		this.offsetInterval = new Interval(0, 0); //TODO: dummy offset
 	}
 	
 	public OnreExtractionPart(String text, int index) {
-		this.text = text;
+		this.text = text.trim();
 		this.index = index;
 		this.offsetInterval = new Interval(0, 0); //TODO: dummy offset
 	}

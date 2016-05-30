@@ -10,4 +10,7 @@ package edu.iitd.cse.open_nre.onre;
 public class OnreGlobals {
 	
 	public static String sentence;
+	
+	//arguments
+	public static boolean isSeedFact = false;
 }

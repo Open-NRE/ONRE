@@ -58,7 +58,7 @@ public class OnreHelper_DanrothQuantifier {
 		return quantifier.getSpans(text, true);
 	}
 
-	public static Object getQuantity(OnrePatternNode subTreeNode, Boolean isSeedFact) {
+	public static Object getQuantity(OnrePatternNode subTreeNode) {
 		List<QuantSpan> quantSpans = getQuantitiesDanroth(OnreGlobals.sentence);
 		for (QuantSpan quantSpan : quantSpans) {
 			

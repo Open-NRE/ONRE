@@ -22,36 +22,29 @@ import edu.knowitall.tool.parse.graph.DependencyGraph;
  */
 public class MayIHelpYou {
 
-    public static Seq<OnreExtraction> runMe(DependencyGraph depGraph, Boolean isSeedFact) throws IOException {
+    public static Seq<OnreExtraction> runMe(DependencyGraph depGraph) throws IOException {
 		
     	DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
     	OnrePatternTree onrePatternTree = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
     	
-    	return runMe(onrePatternTree, isSeedFact);
+    	return runMe(onrePatternTree);
 	}
 
-    public static Seq<OnreExtraction> runMe(OnrePatternTree onrePatternTree, Boolean isSeedFact) throws IOException {
+    public static Seq<OnreExtraction> runMe(OnrePatternTree onrePatternTree) throws IOException {
     	if(onrePatternTree == null) return null;
     	
 		OnreGlobals.sentence = onrePatternTree.sentence;
 		
 		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
-		List<OnreExtraction> extrs = getExtractions(onrePatternTree.root, list_configuredPattern, isSeedFact);
+		List<OnreExtraction> extrs = getExtractions(onrePatternTree.root, list_configuredPattern);
 		
-		if(!isSeedFact)
-		{
-			System.out.println(OnreGlobals.sentence);
-			for (OnreExtraction onreExtraction : extrs) {
-				if(OnreUtils.quantityExists(onreExtraction)) {System.out.println(onreExtraction.patternNumber); System.out.println(onreExtraction);}
-			}
-			System.out.println();
+		if(!OnreGlobals.isSeedFact) System.out.println(OnreGlobals.sentence);
+		
+		for (OnreExtraction onreExtraction : extrs) {
+			if(OnreUtils.quantityExists(onreExtraction)) {System.out.println(onreExtraction.patternNumber); System.out.println(onreExtraction);}
+		
 		}
-		else // don't need any extra prints, can directly use the file for learning patterns
-		{
-			for (OnreExtraction onreExtraction : extrs) {
-				if(OnreUtils.quantityExists(onreExtraction)) {System.out.println(onreExtraction);}
-			}
-		}
+		if(!OnreGlobals.isSeedFact) System.out.println();
 		
 		//addDummyExtractions(extrs);
 		return javaList2ScalaSeq(extrs);
@@ -59,7 +52,7 @@ public class MayIHelpYou {
 		// System.out.println("You are running me :)");
 	}
     
-    private static List<OnreExtraction> getExtractions(OnrePatternNode onrePatternNode, List<OnrePatternNode> list_configuredPattern, Boolean isSeedFact) {
+    private static List<OnreExtraction> getExtractions(OnrePatternNode onrePatternNode, List<OnrePatternNode> list_configuredPattern) {
     	List<OnreExtraction> extrs = new ArrayList<>();
     	
     	for (int i=0; i<list_configuredPattern.size(); i++) {
@@ -67,22 +60,20 @@ public class MayIHelpYou {
     		OnrePatternNode configuredPattern = list_configuredPattern.get(i);
     		if(configuredPattern==null) continue;
     		
-	        OnreExtraction onreExtraction = getExtraction(onrePatternNode, configuredPattern, isSeedFact);
+	        OnreExtraction onreExtraction = getExtraction(onrePatternNode, configuredPattern);
 	        if(onreExtraction != null) {onreExtraction.patternNumber=i+1; extrs.add(onreExtraction);}
         }
     	
     	return extrs;
     }
     
-    private static OnreExtraction getExtraction(OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured, Boolean isSeedFact) {
+    private static OnreExtraction getExtraction(OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured) {
     	OnreExtraction onreExtraction = new OnreExtraction();
-    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(patternNode_sentence, patternNode_configured, onreExtraction, isSeedFact);
+    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(patternNode_sentence, patternNode_configured, onreExtraction);
     	
     	if(subTree == null) return null;
     	
-    	if(!isSeedFact) {
-    		OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
-    	}
+    	if(!OnreGlobals.isSeedFact) OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
     	OnreHelper.onreExtraction_dummyForNull(onreExtraction);
     	
     	return onreExtraction;

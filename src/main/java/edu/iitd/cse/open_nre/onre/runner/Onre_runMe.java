@@ -5,6 +5,7 @@ package edu.iitd.cse.open_nre.onre.runner;
 
 import java.io.IOException;
 
+import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.helper.MayIHelpYou;
 import edu.knowitall.tool.parse.ClearParser;
 import edu.knowitall.tool.parse.DependencyParser;
@@ -32,11 +33,14 @@ public class Onre_runMe {
 		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		//System.out.println("---Got depGraph");
-		Boolean isSeedFact = false;
-		if(args.length > 0)
-		isSeedFact = (args[0].equals("--seedFact"));
+		Onre_runMe.setArguments(args);
 		
-		if(depGraph != null) MayIHelpYou.runMe(depGraph, isSeedFact);
+		if(depGraph != null) MayIHelpYou.runMe(depGraph);
+	}
+	
+	public static void setArguments(String[] args) {
+		if(args.length > 0)
+		OnreGlobals.isSeedFact = (args[0].equals("--seedFact")); //TODO: "--seedFact" shall be in a constants file
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {

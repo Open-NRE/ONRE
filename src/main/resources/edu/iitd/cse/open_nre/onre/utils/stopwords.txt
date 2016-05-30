@@ -1,3 +1,9 @@
+.
+,
+"
+;
+/
+:
 null
 a
 aboard

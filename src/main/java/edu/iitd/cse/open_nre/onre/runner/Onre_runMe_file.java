@@ -29,16 +29,14 @@ public class Onre_runMe_file {
 
 		//String line = br.readLine();
 		
-		Boolean isSeedFact = false;
-		if(args.length > 0)
-		isSeedFact = (args[0].equals("--seedFact"));
+		Onre_runMe.setArguments(args);
 		
 		//int i=0;
 		//while(line != null) {
 		for(int i=0;i<inputLines.size();i++){
 			System.out.println("::" + (i+1));
 			DependencyGraph depGraph = Onre_runMe.getDepGraph(inputLines.get(i));
-			if(depGraph != null) MayIHelpYou.runMe(depGraph, isSeedFact);
+			if(depGraph != null) MayIHelpYou.runMe(depGraph);
 			//line = br.readLine();
 		}
 		//br.close();
