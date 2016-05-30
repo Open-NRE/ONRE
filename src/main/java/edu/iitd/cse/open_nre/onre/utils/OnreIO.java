@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author harinder
@@ -61,4 +62,14 @@ public class OnreIO {
 		pw.close();
 	}
 	
+	public static void writeFileForMap(String filePath, Map<String, Integer> lines) throws IOException {
+		PrintWriter pw = new PrintWriter(filePath);
+		for (Map.Entry<String, Integer> entry : lines.entrySet()) {
+		    String key = entry.getKey();
+		    Object value = entry.getValue();
+		    pw.println(key);
+		    pw.println(value);
+		}
+		pw.close();
+	}
 }
