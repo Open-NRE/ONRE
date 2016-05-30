@@ -55,8 +55,8 @@ public class OnreHelper {
     	if(quantity == null) return;
     	
     	if(isSeedFact) {
-    		onreExtraction.quantity = new OnreExtractionPart(((Quantity)quantObject).value.toString());
-    		onreExtraction.extra_quantity_info = new OnreExtractionPart(((Quantity)quantObject).units);
+    		onreExtraction.quantity = new OnreExtractionPart(((Quantity)quantObject).value.toString().trim());
+    		onreExtraction.extra_quantity_info = new OnreExtractionPart(((Quantity)quantObject).units.trim());
     		return;
     	}
     	

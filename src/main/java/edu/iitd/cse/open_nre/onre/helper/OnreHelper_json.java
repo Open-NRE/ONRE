@@ -40,7 +40,7 @@ public class OnreHelper_json {
 				}
 			}
 		}catch(Exception e){
-			System.err.println("Exception: " + e.getMessage() + ": skipping-returning null");
+			//System.err.println("Exception: " + e.getMessage() + ": skipping-returning null");
 			return null;
 		}
 		
