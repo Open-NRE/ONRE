@@ -55,7 +55,7 @@ public class OnreHelper {
     	
     	if(quantity == null) return;
     	
-    	if(OnreGlobals.isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
+    	if(OnreGlobals.arg_isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
     		onreExtraction.quantity = new OnreExtractionPart(((Quantity)quantObject).value.toString());
     		onreExtraction.extra_quantity_info = new OnreExtractionPart(((Quantity)quantObject).units);
     		return;

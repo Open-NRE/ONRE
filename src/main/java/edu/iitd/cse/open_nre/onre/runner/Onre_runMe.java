@@ -39,8 +39,7 @@ public class Onre_runMe {
 	}
 	
 	public static void setArguments(String[] args) {
-		if(args.length > 0)
-		OnreGlobals.isSeedFact = (args[0].equals("--seedFact")); //TODO: "--seedFact" shall be in a constants file
+		if(args.length > 0) OnreGlobals.arg_isSeedFact = (args[0].equals("--seedFact")); //TODO: "--seedFact" shall be in a constants file
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {

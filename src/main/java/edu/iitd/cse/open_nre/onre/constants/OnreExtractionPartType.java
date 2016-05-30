@@ -24,7 +24,7 @@ public enum OnreExtractionPartType {
 	UNKNOWN("{unknown}");
 	
 	public String text;
-	public String value;
+	//public String value;
 	private static Map<String, OnreExtractionPartType> typeMap;
 	
 	private OnreExtractionPartType(String text) {

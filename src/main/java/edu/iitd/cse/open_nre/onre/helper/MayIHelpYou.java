@@ -38,13 +38,13 @@ public class MayIHelpYou {
 		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
 		List<OnreExtraction> extrs = getExtractions(onrePatternTree.root, list_configuredPattern);
 		
-		if(!OnreGlobals.isSeedFact) System.out.println(OnreGlobals.sentence);
+		if(!OnreGlobals.arg_isSeedFact) System.out.println(OnreGlobals.sentence);
 		
 		for (OnreExtraction onreExtraction : extrs) {
 			if(OnreUtils.quantityExists(onreExtraction)) {System.out.println(onreExtraction.patternNumber); System.out.println(onreExtraction);}
 		
 		}
-		if(!OnreGlobals.isSeedFact) System.out.println();
+		if(!OnreGlobals.arg_isSeedFact) System.out.println();
 		
 		//addDummyExtractions(extrs);
 		return javaList2ScalaSeq(extrs);
@@ -73,7 +73,7 @@ public class MayIHelpYou {
     	
     	if(subTree == null) return null;
     	
-    	if(!OnreGlobals.isSeedFact) OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
+    	if(!OnreGlobals.arg_isSeedFact) OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
     	OnreHelper.onreExtraction_dummyForNull(onreExtraction);
     	
     	return onreExtraction;
