@@ -29,3 +29,4 @@ object ReleaseSettings {
     extracted.runAggregated(publishSigned in Global in ref, st)
   }
 }
+
