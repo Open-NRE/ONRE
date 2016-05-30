@@ -38,7 +38,7 @@ public class OnreIO {
 		InputStream in = OnreIO.class.getResourceAsStream(filePath);
 		
 		if(in == null) {
-			System.err.println("ERROR :: ---Not able to read DepPath patterns...exiting---");
+			System.err.println("ERROR :: ---Not able to read " + filePath + "...exiting---");
 			System.exit(1);
 		}
 		
