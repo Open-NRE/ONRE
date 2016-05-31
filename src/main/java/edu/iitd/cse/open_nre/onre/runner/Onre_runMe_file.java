@@ -21,25 +21,17 @@ public class Onre_runMe_file {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		//System.out.println("I am here");
+		Onre_runMe.setArguments(args);
 
 		String filePath_inputSentences = "data/in_wiki.txt";
 		List<String> inputLines = OnreIO.readFile(filePath_inputSentences);
-		//BufferedReader br = new BufferedReader(new FileReader(inputFile));
 
-		//String line = br.readLine();
-		
-		Onre_runMe.setArguments(args);
-		
-		//int i=0;
-		//while(line != null) {
 		for(int i=0;i<inputLines.size();i++){
 			System.out.println("::" + (i+1));
 			DependencyGraph depGraph = Onre_runMe.getDepGraph(inputLines.get(i));
 			if(depGraph != null) MayIHelpYou.runMe(depGraph);
-			//line = br.readLine();
 		}
-		//br.close();
+
 	}
 
 }

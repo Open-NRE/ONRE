@@ -24,6 +24,6 @@ public class OnreConstants {
 	public static String SUFFIX_INVERTED_INDEX = "_invertedIndex";
 	public static String SUFFIX_JSON_STRINGS = "_jsonStrings";
 	public static String SUFFIX_LEARNED_DEP_PATTERNS = "_learnedDepPatterns";
-	public static String SUFFIX_SEED_FACTS = "_seedFacts";
+	public static String SUFFIX_FACTS = "_facts";
 
 }

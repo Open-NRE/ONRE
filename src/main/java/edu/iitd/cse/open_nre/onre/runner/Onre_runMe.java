@@ -27,19 +27,19 @@ public class Onre_runMe {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		//System.out.println("I am here");
-		String sentence = "In january, the polulation of india was 1.2 billion.";
+		Onre_runMe.setArguments(args);
+
+		String sentence = "There has been a 30% reduction in the past decade in reported U.S. cases of tuberculosis.";
 		
-		//String sentence = "The height of Tower is 1063 feet.";
 		DependencyGraph depGraph = getDepGraph(sentence);
-		//System.out.println("---Got depGraph");
+
 		Onre_runMe.setArguments(args);
 		
 		if(depGraph != null) MayIHelpYou.runMe(depGraph);
 	}
 	
 	public static void setArguments(String[] args) {
-		if(args.length > 0) OnreGlobals.arg_isSeedFact = (args[0].equals("--seedFact")); //TODO: "--seedFact" shall be in a constants file
+		if(args.length > 0) OnreGlobals.arg_isSeedFact = (args[0].equals("true")); //TODO: "shall have named arguments"
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {

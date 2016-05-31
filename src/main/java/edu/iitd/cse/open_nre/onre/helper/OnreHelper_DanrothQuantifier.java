@@ -54,8 +54,14 @@ public class OnreHelper_DanrothQuantifier {
 	}*/
 	
 	private static List<QuantSpan> getQuantitiesDanroth(String text) {
-		Quantifier quantifier = new Quantifier();
-		return quantifier.getSpans(text, true);
+		List<QuantSpan> quantSpans = null;
+		//try{
+			Quantifier quantifier = new Quantifier();
+			quantSpans = quantifier.getSpans(text, true);
+		//} catch(Exception e) {
+			//System.out.println("Exception in Danroth - continuing");
+		//}
+		return quantSpans;
 	}
 
 	public static Object getQuantity(OnrePatternNode subTreeNode) {

@@ -56,9 +56,9 @@ public class OnreIO {
 		return lines;
 	}
 	
-	public static void writeFile(String filePath, List<String> lines) throws IOException {
+	public static void writeFile(String filePath, List lines) throws IOException {
 		PrintWriter pw = new PrintWriter(filePath);
-		for (String string : lines) pw.println(string);
+		for (Object object : lines) pw.println(object.toString());
 		pw.close();
 	}
 	

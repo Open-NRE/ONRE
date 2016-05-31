@@ -1,6 +1,3 @@
-<(#is|are|was|were#VERB)<(nsubj#{rel}#NNP|NN)<(prep#of|for#IN)<(pobj#{arg}#NNP|NN|PRP)>>(attr#{quantity}#.+)>>
-<(#has|have|had#VERB)<(dobj#{rel}#NNP|NN)<(prep#of#IN)<(pobj#{quantity}#.+)>>(nsubj#{arg}#NNP|NN|PRP)>>
-<(#is|are|was|were#VERB)<(nsubj#{arg}#NNP|NN|PRP)(acomp|advmod#{rel}#JJ|RB)<(npadvmod#{quantity}#.+)>>>
-<(#has|have|had#VERB)<(nsubj#{arg}#NNP|NN|PRP)(dobj#{quantity}#.+)<(prep#of#IN)<(pobj#{rel}#NNP|NN)>>>>
-<(##VERB)<(attr|acomp#{quantity}#.+)(nsubj#{rel}#NNP|NN)<(poss#{arg}#PRP\$)>>>
-<(#is|are|was|were#VERB)<(nsubj#{arg}#NNP|NN|PRP)(acomp#{rel}#VERB)<(prep##IN)<(pobj#{quantity}#.+)>>>>
+<(#has|have|had#VERB)<(dobj#{rel}#NNP|NN)<(prep#of|for#IN)<(pobj#trillion#CD)<(quantmod#{quantity}#$)>>>(nsubj#{arg}#NNP|NN|PRP)>>
+<(#been#VERB)<(attr#{quantity}#NNP|NN)(nsubj#{rel}#NNP|NN)<(prep#of|for#IN)<(pobj#{arg}#NNP|NN|PRP)>>>>
+<(#is|are|was|were#VERB)<(advmod#{rel}#RB)<(npadvmod#{quantity}#NNP|NN)>(nsubj#IXIC#NNP|NN)<(nn#Index#NNP|NN)<(nn#{arg}#NNP|NN|PRP)>>>>
