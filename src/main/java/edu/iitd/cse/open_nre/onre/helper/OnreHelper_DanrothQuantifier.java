@@ -3,10 +3,13 @@
  */
 package edu.iitd.cse.open_nre.onre.helper;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.illinois.cs.cogcomp.quant.driver.QuantSpan;
 import edu.illinois.cs.cogcomp.quant.driver.Quantifier;
 import edu.illinois.cs.cogcomp.quant.standardize.Quantity;
@@ -17,8 +20,8 @@ import edu.illinois.cs.cogcomp.quant.standardize.Quantity;
  */
 public class OnreHelper_DanrothQuantifier {
 	
-	/*private static Double getQuantityValue(QuantSpan quantSpan) {
-		String phraseSplit[] = getQuantityPhrase(quantSpan).split(" ");
+	private static Double getQuantityValue(QuantSpan quantSpan) {
+		/*String phraseSplit[] = getQuantityPhrase(quantSpan).split(" ");
 		Double value = 0.0;;
 		
 		for(int i=0; i<phraseSplit.length; i++) {
@@ -33,25 +36,79 @@ public class OnreHelper_DanrothQuantifier {
 			if(value!=0.0) break;
 		}
 		
-		return value;
-	}*/
+		return value;*/
+		
+		return ((Quantity)(quantSpan.object)).value;
+	}
 	
-	/*private static String getQuantityPhrase(QuantSpan quantSpan) {
+	private static String getQuantityPhrase(QuantSpan quantSpan) {
 		return ((Quantity)(quantSpan.object)).phrase;
-	}*/
+	}
 	
-	/*private static Map<Double, String> getPhraseMap(String text) {
-		Map<Double, String> map_quantifiers_phrase = new HashMap<Double, String>();
+	private static String getQuantityUnit(QuantSpan quantSpan) {
+		return ((Quantity)(quantSpan.object)).units;
+	}
+	
+	private static String getValueFromPhrase(QuantSpan quantSpan) {
+		String phrase = getQuantityPhrase(quantSpan);
+		
+		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?
+		for (String word : phraseSplit) {
+			if(OnreUtils.isNumber(word)) return word;
+		}
+		
+		return null;
+	}
+	
+	private static String getUnitFromPhrase(QuantSpan quantSpan, String unit) {
+		if(unit.split(" ").length>1) return null; //TODO: ignoring multiwords unit as of now
+		
+		String phrase = getQuantityPhrase(quantSpan);
+
+		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?
+		for (String word : phraseSplit) {
+			if(unit.equalsIgnoreCase("us$")) {
+				if(word.equalsIgnoreCase("dollar")) return "dollar";
+				if(word.contains("$")) return "$";
+				if(word.equalsIgnoreCase("cents")) return "cents";
+			}
+			
+			if(unit.equalsIgnoreCase("percent")) {
+				if(word.contains("%")) return "%";
+			}
+			
+			if(word.equalsIgnoreCase(unit)) return unit;
+		}
+		
+		return null;
+	}
+	
+	public static Map<Double, String> getValueMap(String text) {
+		Map<Double, String> map_quantifiers_value = new HashMap<Double, String>();
 		
 		List<QuantSpan> quantSpans = getQuantitiesDanroth(text);
 		
 		for (QuantSpan quantSpan : quantSpans) {
 			if(!(quantSpan.object instanceof Quantity)) continue;
-			map_quantifiers_phrase.put(getQuantityValue(quantSpan), getQuantityPhrase(quantSpan));
+			map_quantifiers_value.put(getQuantityValue(quantSpan), getValueFromPhrase(quantSpan));
 		}
 		
-		return map_quantifiers_phrase;
-	}*/
+		return map_quantifiers_value;
+	}
+	
+	public static Map<String, String> getUnitMap(String text) {
+		Map<String, String> map_quantifiers_unit = new HashMap<String, String>();
+		
+		List<QuantSpan> quantSpans = getQuantitiesDanroth(text);
+		
+		for (QuantSpan quantSpan : quantSpans) {
+			if(!(quantSpan.object instanceof Quantity)) continue;
+			String unit = getQuantityUnit(quantSpan);
+			map_quantifiers_unit.put(OnreUtils.lowerTrim(unit), OnreUtils.lowerTrim(getUnitFromPhrase(quantSpan, unit)));
+		}
+		
+		return map_quantifiers_unit;
+	}
 	
 	private static List<QuantSpan> getQuantitiesDanroth(String text) {
 		List<QuantSpan> quantSpans = null;

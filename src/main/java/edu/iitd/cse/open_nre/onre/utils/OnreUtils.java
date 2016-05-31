@@ -77,6 +77,11 @@ public class OnreUtils {
 		return s1.toLowerCase().trim().replace(",", "").replace(" ", "");
 	}
 	
+	public static String lowerTrim(String s1) {
+		if(s1!=null) return s1.toLowerCase().trim();
+		return null;
+	}
+	
 	public static OnrePatternNode searchNodeInTreeByIndex(OnreExtractionPart onreExtractionPart, OnrePatternNode tree) {
 		Queue<OnrePatternNode> q_patternNode = new LinkedList<>();
 		q_patternNode.add(tree);

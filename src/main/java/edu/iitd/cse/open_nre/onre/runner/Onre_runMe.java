@@ -29,7 +29,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "There has been a 30% reduction in the past decade in reported U.S. cases of tuberculosis.";
+		String sentence = "Awarded Bids 100% Completion Rate Hi there, I am an expert in Excel Database solution also good in typing skill around 45 to 60 wpm.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 

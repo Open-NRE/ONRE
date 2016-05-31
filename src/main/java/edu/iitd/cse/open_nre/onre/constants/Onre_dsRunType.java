@@ -7,8 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum Onre_dsRunType {
-	TYPE1("type1"),//no value comparison, assuming single word unit, ignore if no unit
-	TYPE2("type2"),//value comparison as a string (exact matching - no partial), assuming single word unit, ignore if no unit
+	TYPE1("type1"),//no value comparison, ignore if multiwords unit or if no unit
+	TYPE2("type2"),//value comparison as a string (exact matching - no partial), ignore if multiwords unit or if no unit
+	TYPE3("type3"),//value comparison as a number (exact matching - no partial), ignore if multiwords unit or if no unit
 	DEFAULT("default"); //value comparison (partial matching), multiwords unit allowed
 	
 	public String text;
