@@ -83,17 +83,20 @@ Why repeating?
 - ONRE_DS - modify (prep#of#IN) to (prep#of|for#IN)
 
 ---------------------------31st May---------------------
-(pobj#{quantity}#NNP|NN) to (pobj#{quantity}#.+)
+- (pobj#{quantity}#NNP|NN) to (pobj#{quantity}#.+)
 (poss#{arg}#PRP$) to (poss#{arg}#PRP\$)
-imp: bina argument ke pattern kaise learn ho gya?????? :O :O :O
+- imp: bina argument ke pattern kaise learn ho gya?????? :O :O :O
 pattern mein root node mein deplabel ho to? 
 	<(ccomp#rose#VERB)<(advcl#declined#VERB)<(nsubj#income#NNP|NN)<(prep#in#IN)<(pobj#{quantity}#NNP|NN)>>>(nsubj#{rel}#NNP|NN)<(nn#{arg}#NNP|NN|PRP)>>>
-Why "prior to" didn't come?
+- Why "prior to" didn't come?
 	Prior to 2009, the highest historical rate of federal contribution to education had been 10 percent.
 	<(#been#VERB)<(attr#{quantity}#NNP|NN)(nsubj#{rel}#NNP|NN)<(prep#of|for#IN)<(pobj#{arg}#NNP|NN|PRP)>>>>
 	(federal contribution to education ; highest historical rate ; 10 percent ; null)
-Why not extended to 'that"
+- Why not extended to 'that"
 	The amount of Rainfall that has fallen since Midnight has been 0.0 millimeters of rain.
 	(Rainfall ; amount ; 0.0 millimeters ; null)
 Can we write a "HIGH PRECISION" pattern for this:
 	There has been a 30% reduction in the past decade in reported U.S. cases of tuberculosis.
+
+--------------------------2nd June-------------------
+Onre Extractions shall be a set rather a list - you will need to overload the equals for OnreExtraction

@@ -16,6 +16,8 @@ import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
 import edu.illinois.cs.cogcomp.quant.standardize.Quantity;
 
 /**
@@ -67,9 +69,9 @@ public class OnreHelper {
     	
     	//finding percent node
     	OnrePatternNode node_percent = null;
-    	node_percent = OnreUtils.searchNodeInTreeByText("percent", subTreeNode);
-    	if(node_percent == null) node_percent = OnreUtils.searchNodeInTreeByText("cent", subTreeNode);
-    	if(node_percent == null) node_percent = OnreUtils.searchNodeInTreeByText("%", subTreeNode);
+    	node_percent = OnreUtils_tree.searchNodeInTreeByText("percent", subTreeNode);
+    	if(node_percent == null) node_percent = OnreUtils_tree.searchNodeInTreeByText("cent", subTreeNode);
+    	if(node_percent == null) node_percent = OnreUtils_tree.searchNodeInTreeByText("%", subTreeNode);
     	if(node_percent == null) return;
     	
     	onreExtraction.quantity_percent = new OnreExtractionPart(node_percent.word, node_percent.index);
@@ -156,7 +158,7 @@ public class OnreHelper {
 	
 	private static void expandQuantity_percent(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 
-		OnrePatternNode quantity_percent = OnreUtils.searchNodeInTreeByIndex(onreExtraction.quantity_percent, patternNode_sentence);
+		OnrePatternNode quantity_percent = OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity_percent, patternNode_sentence);
 		
 		OnrePatternNode node_prepOf = null;
 		for(OnrePatternNode child : quantity_percent.children) {
@@ -193,19 +195,19 @@ public class OnreHelper {
 		String quantity_unit_plus = sb.toString().trim();
 		
 		// If upon expansion, we include the argument, or the relation, ignore
-		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
-		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.relation.text)) return;
+		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
+		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.relation.text)) return;
 		
 		onreExtraction.quantity_unit_plus = new OnreExtractionPart(sb.toString(), node_prepOf.index); 
     }
 	
 	private static void expandQuantity(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		
-		OnrePatternNode argument_parent_node = OnreUtils.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
+		OnrePatternNode argument_parent_node = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
 		
 		OnrePatternNode node_prep = null;
 		for(OnrePatternNode child : argument_parent_node.children) {
-			if(child.dependencyLabel.equals("prep")) node_prep = child;
+			if(child.dependencyLabel.equals("prep") || child.word.equalsIgnoreCase("prior")) node_prep = child;
 			if(node_prep == null) continue;
 			
 			List<OnrePatternNode> expansions = new ArrayList<>();
@@ -232,9 +234,9 @@ public class OnreHelper {
 			String quantity_unit_plus = sb.toString().trim();
 			
 			// If upon expansion, we include the argument, or the quantity, or the relation, ignore
-			if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
-			if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.quantity.text)) return;
-			if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.relation.text)) return;
+			if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
+			if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.quantity.text)) return;
+			if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.relation.text)) return;
 			
 			/*int posOfComma = quantity_unit_plus.indexOf(',');
 			if(posOfComma != -1) {
@@ -248,7 +250,7 @@ public class OnreHelper {
 	}
 	
 	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		OnrePatternNode node_relation = OnreUtils.searchNodeInTreeByIndex(onreExtraction.relation, patternNode_sentence);
+		OnrePatternNode node_relation = OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.relation, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
 	    expansions.add(node_relation);
@@ -264,10 +266,11 @@ public class OnreHelper {
 	    {
 	    	OnrePatternNode currNode = q_yetToExpand.remove();
 	    	for(OnrePatternNode child : currNode.children) {
-				if(child.dependencyLabel.equals("amod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				//if(child.dependencyLabel.equals("amod")) {expansions.add(child); q_yetToExpand.add(child); } 
 				if(child.dependencyLabel.equals("nn")) {expansions.add(child); q_yetToExpand.add(child); } 
-				if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
-				if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				//if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
 			}
 	    }
 		
@@ -336,7 +339,7 @@ public class OnreHelper {
     }*/
 
 	private static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		OnrePatternNode node_argument = OnreUtils.searchNodeInTreeByIndex(onreExtraction.argument, patternNode_sentence);
+		OnrePatternNode node_argument = OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.argument, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
 		expansions.add(node_argument);
