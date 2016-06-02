@@ -20,9 +20,11 @@ public class OnreConstants {
 	
 	//ONRE_DS
 	public static int MAX_DISTANCE_QUANTITY_UNIT = 3;
+	public static int PARTIAL_VALUE_MATCHING_THRESOLD = 0;
 	
 	public static String SUFFIX_INVERTED_INDEX = "_invertedIndex";
 	public static String SUFFIX_JSON_STRINGS = "_jsonStrings";
+	public static String SUFFIX_DANROTH_SPANS = "_quantSpans";
 	public static String SUFFIX_LEARNED_DEP_PATTERNS = "_learnedDepPatterns";
 	public static String SUFFIX_FACTS = "_facts";
 

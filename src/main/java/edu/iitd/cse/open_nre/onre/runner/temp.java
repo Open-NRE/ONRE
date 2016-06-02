@@ -1,36 +1,29 @@
 package edu.iitd.cse.open_nre.onre.runner;
 
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.Locale;
+import java.io.IOException;
+import java.util.List;
+
+import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
+import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpan;
+import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
+import edu.iitd.cse.open_nre.onre.helper.OnreHelper_json;
+import edu.iitd.cse.open_nre.onre.utils.OnreIO;
+
 
 public class temp {
 
-	public static void main(String[] args) throws ParseException {
-/*		String regex = "4$";
-		
-		
-		String s = "$";
-		System.out.println(regex.equals("$"));
-*/
-		
-	/*	String pattern = "<(#is|are|was|were#VERB)<(attr#{quantity}#NNP|NN)(nsubj#{rel}#NNP|NN)<(poss#{arg}#PRP$)>>>";
-		
-		pattern = pattern.replaceFirst("#\\{quantity\\}#.+\\)", "#{quantity}#.+)");
-		
-		System.out.println();*/
-		
-		NumberFormat format = NumberFormat.getInstance(Locale.US);
-
-        Number number = format.parse("1,038");
-        System.out.println(number); // or use number.doubleValue()
-		
-		//String s2 = "(pobj#{quantity}#.+)";"(attr#{quantity}#CD)"
-		
-		//System.out.println(s1.replaceFirst("(poss#\\{arg}#PRP$)", "(poss#{arg}#PRP\\$)"));
-		/*String s = "nsubj#{rel}#NN";
-		String[] kk = s.split("#");
-		System.out.println();*/
+	public static void main(String[] args) throws IOException {
+		List<String> jsonDanrothSpans = OnreIO.readFile("/home/harinder/Documents/IITD_MTP/Open_nre/ONRE_DS/data/temp_filtered"+OnreConstants.SUFFIX_DANROTH_SPANS);
+		for (String string : jsonDanrothSpans) {
+			Onre_dsDanrothSpans danrothSpans = (Onre_dsDanrothSpans)OnreHelper_json.getObjectFromJsonString(string, Onre_dsDanrothSpans.class);
+			
+			for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans) {
+				System.out.println(danrothSpan.phrase);
+				System.out.println(danrothSpan.value);
+				System.out.println(danrothSpan.unit);
+				System.out.println(danrothSpan.bound);
+			}
+		}
 	}
 
 }

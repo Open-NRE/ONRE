@@ -3,6 +3,8 @@
  */
 package edu.iitd.cse.open_nre.onre;
 
+import com.google.gson.Gson;
+
 import edu.iitd.cse.open_nre.onre.constants.Onre_dsRunType;
 
 /**
@@ -12,6 +14,8 @@ import edu.iitd.cse.open_nre.onre.constants.Onre_dsRunType;
 public class OnreGlobals {
 	
 	public static String sentence;
+	
+	public static Gson gson; //note: don't use it directly...call OnreHelper_json.getGson() instead
 	
 	//arguments-onre
 	public static boolean arg_isSeedFact = false;

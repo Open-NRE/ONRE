@@ -9,6 +9,8 @@ import java.util.Map;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
+import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpan;
+import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_number;
 import edu.illinois.cs.cogcomp.quant.driver.QuantSpan;
@@ -50,8 +52,23 @@ public class OnreHelper_DanrothQuantifier {
 		return ((Quantity)(quantSpan.object)).units;
 	}
 	
-	private static String getValueFromPhrase(QuantSpan quantSpan) {
+	private static String getQuantityBound(QuantSpan quantSpan) {
+		return ((Quantity)(quantSpan.object)).bound;
+	}
+	
+	/*private static String getValueFromPhrase(QuantSpan quantSpan) {
 		String phrase = getQuantityPhrase(quantSpan);
+		
+		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?
+		for (String word : phraseSplit) {
+			if(OnreUtils_number.isNumber(word)) return word;
+		}
+		
+		return null;
+	}*/
+	
+	private static String getValueFromPhrase(String phrase) {
+		//String phrase = getQuantityPhrase(quantSpan);
 		
 		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?
 		for (String word : phraseSplit) {
@@ -61,7 +78,7 @@ public class OnreHelper_DanrothQuantifier {
 		return null;
 	}
 	
-	private static String getUnitFromPhrase(QuantSpan quantSpan, String unit) {
+	/*private static String getUnitFromPhrase(QuantSpan quantSpan, String unit) {
 		if(unit.split(" ").length>1) return null; //TODO: ignoring multiwords unit as of now
 		
 		String phrase = getQuantityPhrase(quantSpan);
@@ -82,9 +99,30 @@ public class OnreHelper_DanrothQuantifier {
 		}
 		
 		return null;
+	}*/
+	
+	private static String getUnitFromPhrase(String phrase, String unit) {
+		if(unit.split(" ").length>1) return null; //TODO: ignoring multiwords unit as of now
+		
+		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?
+		for (String word : phraseSplit) {
+			if(unit.equalsIgnoreCase("us$")) {
+				if(word.equalsIgnoreCase("dollar")) return "dollar";
+				if(word.contains("$")) return "$";
+				if(word.equalsIgnoreCase("cents")) return "cents";
+			}
+			
+			if(unit.equalsIgnoreCase("percent")) {
+				if(word.contains("%")) return "%";
+			}
+			
+			if(word.equalsIgnoreCase(unit)) return unit;
+		}
+		
+		return null;
 	}
 	
-	public static Map<Double, String> getValueMap(String text) {
+	/*public static Map<Double, String> getValueMap(String text) {
 		Map<Double, String> map_quantifiers_value = new HashMap<Double, String>();
 		
 		List<QuantSpan> quantSpans = getQuantitiesDanroth(text);
@@ -97,9 +135,20 @@ public class OnreHelper_DanrothQuantifier {
 		}
 		
 		return map_quantifiers_value;
+	}*/
+	
+	public static Map<Double, String> getValueMap(String text, Onre_dsDanrothSpans danrothSpans) {
+		Map<Double, String> map_quantifiers_value = new HashMap<Double, String>();
+		
+		for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans) {
+			String valueFromPhrase = OnreUtils_string.lowerTrim(getValueFromPhrase(danrothSpan.phrase));
+			map_quantifiers_value.put(danrothSpan.value, valueFromPhrase);
+		}
+		
+		return map_quantifiers_value;
 	}
 	
-	public static Map<String, String> getUnitMap(String text) {
+	/*public static Map<String, String> getUnitMap(String text) {
 		Map<String, String> map_quantifiers_unit = new HashMap<String, String>();
 		
 		List<QuantSpan> quantSpans = getQuantitiesDanroth(text);
@@ -112,9 +161,20 @@ public class OnreHelper_DanrothQuantifier {
 		}
 		
 		return map_quantifiers_unit;
+	}*/
+	
+	public static Map<String, String> getUnitMap(String text, Onre_dsDanrothSpans danrothSpans) {
+		Map<String, String> map_quantifiers_unit = new HashMap<String, String>();
+		
+		for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans) {
+			String unitFromPhrase = OnreUtils_string.lowerTrim(getUnitFromPhrase(danrothSpan.phrase, danrothSpan.unit));
+			map_quantifiers_unit.put(danrothSpan.unit, unitFromPhrase);
+		}
+		
+		return map_quantifiers_unit;
 	}
 	
-	private static List<QuantSpan> getQuantitiesDanroth(String text) {
+	/*public static List<QuantSpan> getQuantitiesDanroth(String text) {
 		List<QuantSpan> quantSpans = null;
 		//try{
 			Quantifier quantifier = new Quantifier();
@@ -123,9 +183,38 @@ public class OnreHelper_DanrothQuantifier {
 			//System.out.println("Exception in Danroth - continuing");
 		//}
 		return quantSpans;
+	}*/
+	
+	public static Onre_dsDanrothSpans getQuantitiesDanroth(String text) {
+		List<QuantSpan> quantSpans = null;
+
+		Quantifier quantifier = new Quantifier();
+		quantSpans = quantifier.getSpans(text, true);
+
+		Onre_dsDanrothSpans danrothSpans = new Onre_dsDanrothSpans();
+		
+		for (QuantSpan quantSpan : quantSpans) {
+			if(!(quantSpan.object instanceof Quantity)) continue;
+			danrothSpans.quantSpans.add(getDanrothSpanFromQuantSpan(quantSpan));
+		}
+		
+		return danrothSpans;
 	}
 
-	public static Object getQuantity(OnrePatternNode subTreeNode) {
+	private static Onre_dsDanrothSpan getDanrothSpanFromQuantSpan(QuantSpan quantSpan) {
+		Onre_dsDanrothSpan danrothSpan = new Onre_dsDanrothSpan();
+		danrothSpan.phrase = OnreUtils_string.lowerTrim(getQuantityPhrase(quantSpan));
+		danrothSpan.value = getQuantityValue(quantSpan);
+		danrothSpan.bound = OnreUtils_string.lowerTrim(getQuantityBound(quantSpan));
+		danrothSpan.unit = OnreUtils_string.lowerTrim(getQuantityUnit(quantSpan));
+		
+		danrothSpan.start = quantSpan.start;
+		danrothSpan.end = quantSpan.end;
+		
+		return danrothSpan;
+	}
+
+	/*public static Object getQuantity(OnrePatternNode subTreeNode) {
 		List<QuantSpan> quantSpans = getQuantitiesDanroth(OnreGlobals.sentence);
 		for (QuantSpan quantSpan : quantSpans) {
 			
@@ -152,6 +241,16 @@ public class OnreHelper_DanrothQuantifier {
 			if(phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return quantObject;
 			//if(subTreeNode.offset >= quantSpan.start && subTreeNode.offset <= quantSpan.end) return phrase;
 		}
+		
+		return null;
+	}*/
+	
+	public static Onre_dsDanrothSpan getQuantity(OnrePatternNode subTreeNode, Onre_dsDanrothSpans danrothSpans) {
+		for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans)
+			if(subTreeNode.offset >= danrothSpan.start && subTreeNode.offset <= danrothSpan.end) return danrothSpan;
+		
+		for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans)
+			if(danrothSpan.phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return danrothSpan;
 		
 		return null;
 	}

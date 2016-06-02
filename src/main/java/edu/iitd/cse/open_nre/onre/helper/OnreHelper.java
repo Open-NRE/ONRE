@@ -15,10 +15,11 @@ import edu.iitd.cse.open_nre.onre.constants.OnreExtractionPartType;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
+import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpan;
+import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
-import edu.illinois.cs.cogcomp.quant.standardize.Quantity;
 
 /**
  * @author harinder
@@ -50,22 +51,22 @@ public class OnreHelper {
 	}
     
     private static void setQuantityExtractionPart(OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index) {
-    	Object quantObject = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode);
-    	if(quantObject == null) return;
+    	Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
+    	Onre_dsDanrothSpan danrothSpan = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode, danrothSpans);
+    	if(danrothSpan == null) return;
     	
-    	String quantity = ((Quantity)quantObject).phrase;
-    	
-    	if(quantity == null) return;
+    	String quantityPhrase = danrothSpan.phrase;
+    	if(quantityPhrase == null) return;
     	
     	if(OnreGlobals.arg_isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
-    		onreExtraction.quantity = new OnreExtractionPart(((Quantity)quantObject).value.toString());
-    		onreExtraction.extra_quantity_info = new OnreExtractionPart(((Quantity)quantObject).units);
+    		onreExtraction.quantity = new OnreExtractionPart(danrothSpan.value.toString());
+    		onreExtraction.extra_quantity_info = new OnreExtractionPart(danrothSpan.unit);
     		return;
     	}
     	
-    	onreExtraction.quantity = new OnreExtractionPart(quantity);
+    	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase);
     	onreExtraction.quantity.index = index;
-    	if(!quantity.contains("per cent") && !quantity.contains("percent") && !quantity.contains("%")) return;
+    	if(!quantityPhrase.contains("per cent") && !quantityPhrase.contains("percent") && !quantityPhrase.contains("%")) return;
     	
     	//finding percent node
     	OnrePatternNode node_percent = null;
@@ -357,7 +358,7 @@ public class OnreHelper {
 				if(child.dependencyLabel.equals("num")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("neg")) { expansions.add(child); q_yetToExpand.add(child); }
 				
-				/*if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); } //TODO: changing to .*mod
+				/*if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); } //TO-DO: changing to .*mod
 				if(child.dependencyLabel.equals("hmod")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("npadvmod")) { expansions.add(child); q_yetToExpand.add(child); }*/
 				
