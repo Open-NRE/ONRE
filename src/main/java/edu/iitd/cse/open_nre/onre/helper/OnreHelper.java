@@ -281,8 +281,8 @@ public class OnreHelper {
         }
 		
 		// If upon expansion, we include the quantity,or relation ignore
-		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.quantity.text)) return;
-		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.relation.text)) return;
+		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.quantity.text)) return;
+		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.relation.text)) return;
 		
 		onreExtraction.relation.text = sb.toString().trim();
 		
@@ -381,8 +381,8 @@ public class OnreHelper {
         }
 		
 		// If upon expansion, we include the quantity,or relation ignore
-		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.quantity.text)) return;
-		if(OnreUtils.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.relation.text)) return;
+		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.quantity.text)) return;
+		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.relation.text)) return;
 		
 		onreExtraction.argument.text = sb.toString().trim();
     }

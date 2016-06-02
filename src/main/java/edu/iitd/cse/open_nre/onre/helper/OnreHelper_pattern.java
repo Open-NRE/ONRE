@@ -11,7 +11,7 @@ import java.util.Stack;
 import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.utils.OnreIO;
-import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
 
 /**
  * @author harinder
@@ -34,7 +34,7 @@ public class OnreHelper_pattern {
 	
 	private static OnrePatternNode convertPattern2PatternTree(String pattern) {
 		OnrePatternNode onrePatternNode = convertPattern2PatternTree_helper(pattern);
-		OnreUtils.sortPatternTree(onrePatternNode);
+		OnreUtils_tree.sortPatternTree(onrePatternNode);
 		return onrePatternNode;
 	}
 	

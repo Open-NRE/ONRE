@@ -8,6 +8,7 @@ import java.util.List;
 
 import edu.iitd.cse.open_nre.onre.constants.OnreExtractionPartType;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
 import edu.knowitall.tool.parse.graph.DependencyNode;
 
 /**
@@ -88,7 +89,7 @@ public class OnrePatternNode {
 		
 		//if(this.word.equalsIgnoreCase(onrePatternNode.word)) return true;
 		//if(this.word.toLowerCase().matches(regexNode.word.toLowerCase())) return true;
-		if(OnreUtils.isIgnoreCaseMatch(this.word, regexNode.word)) return true;
+		if(OnreUtils_string.isIgnoreCaseMatch(this.word, regexNode.word)) return true;
 		
 		return false;
 	}
@@ -100,7 +101,7 @@ public class OnrePatternNode {
 		
 		//if(this.dependencyLabel.equalsIgnoreCase(regexNode.dependencyLabel)) return true;
 		//if(this.dependencyLabel.matches(regexNode.dependencyLabel)) return true;
-		if(OnreUtils.isIgnoreCaseMatch(this.dependencyLabel, regexNode.dependencyLabel)) return true;
+		if(OnreUtils_string.isIgnoreCaseMatch(this.dependencyLabel, regexNode.dependencyLabel)) return true;
 		
 		return false;
 	}
@@ -112,7 +113,7 @@ public class OnrePatternNode {
 		
 		//if(this.posTag.equalsIgnoreCase(regexNode.posTag)) return true;
 		//if(this.posTag.matches(regexNode.posTag)) return true;
-		if(OnreUtils.isIgnoreCaseMatch(this.posTag, regexNode.posTag)) return true;
+		if(OnreUtils_string.isIgnoreCaseMatch(this.posTag, regexNode.posTag)) return true;
 		
 		return false;
 	}
