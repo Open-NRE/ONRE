@@ -12,6 +12,7 @@ import edu.iitd.cse.open_nre.onre.OnrePropertiesReader;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
 import edu.knowitall.collection.immutable.graph.Graph;
 import edu.knowitall.collection.immutable.graph.Graph.Edge;
 import edu.knowitall.tool.parse.graph.Dependency;
@@ -51,7 +52,7 @@ public class OnreHelper_graph {
 		Map<DependencyNode, Map<DependencyNode,String>> depMap = getDependencyMap(depGraph);
 		DependencyNode start = getVertexWithNoIncoming(depGraph.graph());
 		OnrePatternNode onrePatternNode = convertGraph2PatternTree_helper(start, depGraph.graph(), depMap);
-		OnreUtils.sortPatternTree(onrePatternNode);
+		OnreUtils_tree.sortPatternTree(onrePatternNode);
 		
 		OnrePatternTree onrePatternTree = new OnrePatternTree(depGraph.text(), onrePatternNode);
 		return onrePatternTree;

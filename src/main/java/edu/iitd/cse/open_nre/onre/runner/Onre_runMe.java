@@ -4,8 +4,10 @@
 package edu.iitd.cse.open_nre.onre.runner;
 
 import java.io.IOException;
+import java.util.List;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
+import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.helper.MayIHelpYou;
 import edu.knowitall.tool.parse.ClearParser;
 import edu.knowitall.tool.parse.DependencyParser;
@@ -29,13 +31,18 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Awarded Bids 100% Completion Rate Hi there, I am an expert in Excel Database solution also good in typing skill around 45 to 60 wpm.";
+		String sentence = "Prior to 2009, the highest historical rate of federal contribution to education had been 10 percent.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 
 		Onre_runMe.setArguments(args);
 		
-		if(depGraph != null) MayIHelpYou.runMe(depGraph);
+		if(depGraph != null) {
+			List<OnreExtraction> extrs = MayIHelpYou.runMe(depGraph);
+			for (OnreExtraction onreExtraction : extrs) {
+				System.out.println(onreExtraction);
+			}
+		}
 	}
 	
 	public static void setArguments(String[] args) {

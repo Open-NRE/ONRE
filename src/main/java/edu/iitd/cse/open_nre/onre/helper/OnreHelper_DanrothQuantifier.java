@@ -9,7 +9,8 @@ import java.util.Map;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
-import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_number;
 import edu.illinois.cs.cogcomp.quant.driver.QuantSpan;
 import edu.illinois.cs.cogcomp.quant.driver.Quantifier;
 import edu.illinois.cs.cogcomp.quant.standardize.Quantity;
@@ -54,7 +55,7 @@ public class OnreHelper_DanrothQuantifier {
 		
 		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?
 		for (String word : phraseSplit) {
-			if(OnreUtils.isNumber(word)) return word;
+			if(OnreUtils_number.isNumber(word)) return word;
 		}
 		
 		return null;
@@ -90,7 +91,9 @@ public class OnreHelper_DanrothQuantifier {
 		
 		for (QuantSpan quantSpan : quantSpans) {
 			if(!(quantSpan.object instanceof Quantity)) continue;
-			map_quantifiers_value.put(getQuantityValue(quantSpan), getValueFromPhrase(quantSpan));
+			double value = getQuantityValue(quantSpan);
+			String valueFromPhrase = OnreUtils_string.lowerTrim(getValueFromPhrase(quantSpan));
+			map_quantifiers_value.put(value, valueFromPhrase);
 		}
 		
 		return map_quantifiers_value;
@@ -103,8 +106,9 @@ public class OnreHelper_DanrothQuantifier {
 		
 		for (QuantSpan quantSpan : quantSpans) {
 			if(!(quantSpan.object instanceof Quantity)) continue;
-			String unit = getQuantityUnit(quantSpan);
-			map_quantifiers_unit.put(OnreUtils.lowerTrim(unit), OnreUtils.lowerTrim(getUnitFromPhrase(quantSpan, unit)));
+			String unit = OnreUtils_string.lowerTrim(getQuantityUnit(quantSpan));
+			String unitFromPhrase = OnreUtils_string.lowerTrim(getUnitFromPhrase(quantSpan, unit));
+			map_quantifiers_unit.put(unit, unitFromPhrase);
 		}
 		
 		return map_quantifiers_unit;
