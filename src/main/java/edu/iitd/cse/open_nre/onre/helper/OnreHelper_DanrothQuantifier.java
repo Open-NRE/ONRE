@@ -3,16 +3,19 @@
  */
 package edu.iitd.cse.open_nre.onre.helper;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import edu.iitd.cse.open_nre.onre.OnreGlobals;
+import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpan;
 import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
-import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
+import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_number;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
 import edu.illinois.cs.cogcomp.quant.driver.QuantSpan;
 import edu.illinois.cs.cogcomp.quant.driver.Quantifier;
 import edu.illinois.cs.cogcomp.quant.standardize.Quantity;
@@ -253,5 +256,21 @@ public class OnreHelper_DanrothQuantifier {
 			if(danrothSpan.phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return danrothSpan;
 		
 		return null;
+	}
+	
+	public static List<Onre_dsDanrothSpans> getListOfDanrothSpans(String file) throws IOException {
+		List<String> jsonDanrothSpans = OnreIO.readFile(file+OnreConstants.SUFFIX_DANROTH_SPANS);
+		return getDanrothSpansFromJsonStrings(jsonDanrothSpans);
+	}
+	
+	private static List<Onre_dsDanrothSpans> getDanrothSpansFromJsonStrings(List<String> jsonDanrothSpans) {
+		List<Onre_dsDanrothSpans> listOfDanrothSpans = new ArrayList<>();
+		
+		for (String jsonDanrothSpan : jsonDanrothSpans) {
+			Onre_dsDanrothSpans danrothSpans = (Onre_dsDanrothSpans)OnreHelper_json.getObjectFromJsonString(jsonDanrothSpan, Onre_dsDanrothSpans.class);
+			listOfDanrothSpans.add(danrothSpans);
+		}
+		
+		return listOfDanrothSpans;
 	}
 }

@@ -14,7 +14,9 @@ import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
+import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
 import edu.iitd.cse.open_nre.onre.helper.MayIHelpYou;
+import edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier;
 import edu.iitd.cse.open_nre.onre.helper.OnreHelper_json;
 import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
@@ -42,13 +44,15 @@ public class Onre_runMe_jsonStrings {
 			if(!file.endsWith(OnreConstants.SUFFIX_JSON_STRINGS)) continue; //only jsonSuffix files are required
 			System.out.println("----------------------------------running file: " + file);
 			
-			List<String> inputJsonStrings = OnreIO.readFile(file);
+			List<String> inputJsonStrings_patternTree = OnreIO.readFile(file);
+			List<Onre_dsDanrothSpans> listOfDanrothSpans = OnreHelper_DanrothQuantifier.getListOfDanrothSpans(file.replaceAll("_jsonStrings", ""));
 			
-			for(int i=0;i<inputJsonStrings.size();i++) {
+			for(int i=0;i<inputJsonStrings_patternTree.size();i++) {
 				//if(!OnreGlobals.arg_isSeedFact) System.out.println("::" + (i+1));
-				OnrePatternTree onrePatternTree = OnreHelper_json.getOnrePatternTree(inputJsonStrings.get(i));
+				OnrePatternTree onrePatternTree = OnreHelper_json.getOnrePatternTree(inputJsonStrings_patternTree.get(i));
 				//DependencyGraph depGraph = Onre_runMe.getDepGraph();
-				List<OnreExtraction> extrs = MayIHelpYou.runMe(onrePatternTree);
+				
+				List<OnreExtraction> extrs = MayIHelpYou.runMe(onrePatternTree, listOfDanrothSpans.get(i));
 				
 				if(!OnreGlobals.arg_isSeedFact) {
 					for (OnreExtraction onreExtraction : extrs) {
@@ -69,7 +73,7 @@ public class Onre_runMe_jsonStrings {
 		//String filePath_input = "data/0000tw";
 
 		
-
+		System.out.println("==============Done===========");
 	}
 
 }

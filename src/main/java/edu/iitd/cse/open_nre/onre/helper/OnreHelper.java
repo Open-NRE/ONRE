@@ -28,13 +28,13 @@ import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
 public class OnreHelper {
 	
     private static void setExtractionPart(OnrePatternNode subTreeNode, OnrePatternNode patternNode_configured,
-            OnreExtraction onreExtraction) {
+            OnreExtraction onreExtraction, Onre_dsDanrothSpans danrothSpans) {
 	    switch(OnreExtractionPartType.getType(patternNode_configured.word)) {
 	    	
 	    	case ARGUMENT: onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);  break;
 	    	//case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction, subTreeNode.index); break;
+	    	case QUANTITY: setQuantityExtractionPart(subTreeNode, onreExtraction, subTreeNode.index, danrothSpans); break;
 	    	//case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
 	    	//case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
 	    	//case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
@@ -50,8 +50,8 @@ public class OnreHelper {
 	    }
 	}
     
-    private static void setQuantityExtractionPart(OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index) {
-    	Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
+    private static void setQuantityExtractionPart(OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index, Onre_dsDanrothSpans danrothSpans) {
+    	//Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
     	Onre_dsDanrothSpan danrothSpan = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode, danrothSpans);
     	if(danrothSpan == null) return;
     	
@@ -79,30 +79,30 @@ public class OnreHelper {
     }
 	
 	public static OnrePatternNode findPatternSubTree(OnrePatternNode patternNode_sentence, 
-			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction) {
+			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction, Onre_dsDanrothSpans danrothSpans) {
 
 		if (patternNode_sentence.matches(patternNode_configured) 
-				&& matchChildren(patternNode_sentence, patternNode_configured, onreExtraction)) {
+				&& matchChildren(patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans)) {
 			
-			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction);
+			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
 			return patternNode_sentence;
 		}
 
     	OnrePatternNode result = null;
     	
     	for (OnrePatternNode child : patternNode_sentence.children) {
-    		result = findPatternSubTree(child, patternNode_configured, onreExtraction);
-    		if (result != null && matchChildren(patternNode_sentence, result, onreExtraction)) return result;
+    		result = findPatternSubTree(child, patternNode_configured, onreExtraction, danrothSpans);
+    		if (result != null && matchChildren(patternNode_sentence, result, onreExtraction, danrothSpans)) return result;
     	}
 
     	return result;
     }
 	
 	private static boolean matchChildren(OnrePatternNode patternNode_sentence, 
-			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction) {
+			OnrePatternNode patternNode_configured, OnreExtraction onreExtraction, Onre_dsDanrothSpans danrothSpans) {
     	
 		if (patternNode_sentence.matches(patternNode_configured)) 
-			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction);
+			setExtractionPart(patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
 		else return false;
 		
     	if (patternNode_sentence.children.size() < patternNode_configured.children.size()) return false;
@@ -115,7 +115,7 @@ public class OnreHelper {
     		// Skip non-matching children in the tree.
     		while (index_sentence < patternNode_sentence.children.size()
     		      && !(result = matchChildren(patternNode_sentence.children.get(index_sentence), 
-    		    		  patternNode_configured.children.get(index_config), onreExtraction))) {
+    		    		  patternNode_configured.children.get(index_config), onreExtraction, danrothSpans))) {
     			index_sentence++;
     		}
 
@@ -195,11 +195,10 @@ public class OnreHelper {
 		
 		String quantity_unit_plus = sb.toString().trim();
 		
-		// If upon expansion, we include the argument, or the relation, ignore
-		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
-		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.relation.text)) return;
+		// If upon expansion, we include already included text - ignore
+		if(isAlreadyPresent(onreExtraction, quantity_unit_plus)) return;
 		
-		onreExtraction.quantity_unit_plus = new OnreExtractionPart(sb.toString(), node_prepOf.index); 
+		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prepOf.index); 
     }
 	
 	private static void expandQuantity(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
@@ -234,10 +233,8 @@ public class OnreHelper {
 			
 			String quantity_unit_plus = sb.toString().trim();
 			
-			// If upon expansion, we include the argument, or the quantity, or the relation, ignore
-			if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.argument.text)) return;
-			if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.quantity.text)) return;
-			if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(quantity_unit_plus, onreExtraction.relation.text)) return;
+			// If upon expansion, we include already included text - ignore
+			if(isAlreadyPresent(onreExtraction, quantity_unit_plus)) return;
 			
 			/*int posOfComma = quantity_unit_plus.indexOf(',');
 			if(posOfComma != -1) {
@@ -281,11 +278,11 @@ public class OnreHelper {
 			sb.append(expansion.word + " ");
         }
 		
-		// If upon expansion, we include the quantity,or relation ignore
-		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.quantity.text)) return;
-		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.relation.text)) return;
+		String str = sb.toString().trim();
+		// If upon expansion, we include already included text - ignore
+		if(isAlreadyPresent(onreExtraction, str)) return;
 		
-		onreExtraction.relation.text = sb.toString().trim();
+		onreExtraction.relation.text = str;
 		
 		
 		/*OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.relation, patternNode_sentence);
@@ -319,6 +316,16 @@ public class OnreHelper {
 		
 		onreExtraction.relation.text = sb.toString().trim();*/
     }
+
+	private static boolean isAlreadyPresent(OnreExtraction onreExtraction,	String str) {
+		if(onreExtraction==null) return false;
+		
+		if(onreExtraction.argument!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.argument.text)) return true;
+		if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.quantity.text)) return true;
+		if(onreExtraction.relation!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.relation.text)) return true;
+		
+		return false;
+	}
 	
 	/*private static void expandUnitObjType(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.quantity_unit_objType, patternNode_sentence);
@@ -381,11 +388,11 @@ public class OnreHelper {
 			sb.append(expansion.word + " ");
         }
 		
-		// If upon expansion, we include the quantity,or relation ignore
-		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.quantity.text)) return;
-		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(sb.toString(), onreExtraction.relation.text)) return;
+		String str = sb.toString().trim();
+		// If upon expansion, we include already included text - ignore
+		if(isAlreadyPresent(onreExtraction, str)) return;
 		
-		onreExtraction.argument.text = sb.toString().trim();
+		onreExtraction.argument.text = str;
     }
 	
 	public static void onreExtraction_dummyForNull(OnreExtraction onreExtraction) {

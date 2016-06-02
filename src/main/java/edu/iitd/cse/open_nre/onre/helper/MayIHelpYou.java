@@ -13,6 +13,7 @@ import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
+import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.knowitall.tool.parse.graph.DependencyGraph;
 
@@ -27,16 +28,18 @@ public class MayIHelpYou {
     	DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
     	OnrePatternTree onrePatternTree = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
     	
-    	return runMe(onrePatternTree);
+    	Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
+    	
+    	return runMe(onrePatternTree, danrothSpans);
 	}
 
-    public static List<OnreExtraction> runMe(OnrePatternTree onrePatternTree) throws IOException {
+    public static List<OnreExtraction> runMe(OnrePatternTree onrePatternTree, Onre_dsDanrothSpans danrothSpans) throws IOException {
     	if(onrePatternTree == null) return null;
     	
 		OnreGlobals.sentence = onrePatternTree.sentence;
 		
 		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
-		List<OnreExtraction> extrs = getExtractions(onrePatternTree, list_configuredPattern);
+		List<OnreExtraction> extrs = getExtractions(onrePatternTree, list_configuredPattern, danrothSpans);
 		
 		//if(!OnreGlobals.arg_isSeedFact) System.out.println(OnreGlobals.sentence);
 		
@@ -54,7 +57,7 @@ public class MayIHelpYou {
 		// System.out.println("You are running me :)");
 	}
     
-    private static List<OnreExtraction> getExtractions(OnrePatternTree onrePatternTree, List<OnrePatternNode> list_configuredPattern) {
+    private static List<OnreExtraction> getExtractions(OnrePatternTree onrePatternTree, List<OnrePatternNode> list_configuredPattern, Onre_dsDanrothSpans danrothSpans) {
     	List<OnreExtraction> extrs = new ArrayList<>();
     	
     	for (int i=0; i<list_configuredPattern.size(); i++) {
@@ -62,7 +65,7 @@ public class MayIHelpYou {
     		OnrePatternNode configuredPattern = list_configuredPattern.get(i);
     		if(configuredPattern==null) continue;
     		
-	        OnreExtraction onreExtraction = getExtraction(onrePatternTree.root, configuredPattern);
+	        OnreExtraction onreExtraction = getExtraction(onrePatternTree.root, configuredPattern, danrothSpans);
 	        if(onreExtraction != null && OnreUtils.quantityExists(onreExtraction)) {
 	        	onreExtraction.patternNumber=i+1;
 	        	onreExtraction.sentence = onrePatternTree.sentence;
@@ -73,9 +76,9 @@ public class MayIHelpYou {
     	return extrs;
     }
     
-    private static OnreExtraction getExtraction(OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured) {
+    private static OnreExtraction getExtraction(OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans) {
     	OnreExtraction onreExtraction = new OnreExtraction();
-    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(patternNode_sentence, patternNode_configured, onreExtraction);
+    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
     	
     	if(subTree == null) return null;
     	
