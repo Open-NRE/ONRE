@@ -28,6 +28,8 @@ public class MayIHelpYou {
     	DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
     	OnrePatternTree onrePatternTree = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
     	
+    	OnreGlobals.sentence = onrePatternTree.sentence;
+    	
     	Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
     	
     	return runMe(onrePatternTree, danrothSpans);
@@ -35,8 +37,6 @@ public class MayIHelpYou {
 
     public static List<OnreExtraction> runMe(OnrePatternTree onrePatternTree, Onre_dsDanrothSpans danrothSpans) throws IOException {
     	if(onrePatternTree == null) return null;
-    	
-		OnreGlobals.sentence = onrePatternTree.sentence;
 		
 		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
 		List<OnreExtraction> extrs = getExtractions(onrePatternTree, list_configuredPattern, danrothSpans);

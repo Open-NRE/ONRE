@@ -196,7 +196,7 @@ public class OnreHelper {
 		String quantity_unit_plus = sb.toString().trim();
 		
 		// If upon expansion, we include already included text - ignore
-		if(isAlreadyPresent(onreExtraction, quantity_unit_plus)) return;
+		if(isAlreadyPresent(onreExtraction, quantity_unit_plus, 2)) return;
 		
 		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prepOf.index); 
     }
@@ -234,7 +234,7 @@ public class OnreHelper {
 			String quantity_unit_plus = sb.toString().trim();
 			
 			// If upon expansion, we include already included text - ignore
-			if(isAlreadyPresent(onreExtraction, quantity_unit_plus)) return;
+			if(isAlreadyPresent(onreExtraction, quantity_unit_plus, 2)) return;
 			
 			/*int posOfComma = quantity_unit_plus.indexOf(',');
 			if(posOfComma != -1) {
@@ -280,7 +280,7 @@ public class OnreHelper {
 		
 		String str = sb.toString().trim();
 		// If upon expansion, we include already included text - ignore
-		if(isAlreadyPresent(onreExtraction, str)) return;
+		if(isAlreadyPresent(onreExtraction, str, 1)) return;
 		
 		onreExtraction.relation.text = str;
 		
@@ -317,12 +317,22 @@ public class OnreHelper {
 		onreExtraction.relation.text = sb.toString().trim();*/
     }
 
-	private static boolean isAlreadyPresent(OnreExtraction onreExtraction,	String str) {
-		if(onreExtraction==null) return false;
+	private static boolean isAlreadyPresent(OnreExtraction onreExtraction,	String str, int type) {
 		
-		if(onreExtraction.argument!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.argument.text)) return true;
-		if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.quantity.text)) return true;
-		if(onreExtraction.relation!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.relation.text)) return true;
+		switch(type) {
+		case 0: // expanding argument
+			if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.quantity.text)) return true;
+			if(onreExtraction.relation!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.relation.text)) return true;
+			break;
+		case 1: // expanding relation
+			if(onreExtraction.argument!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.argument.text)) return true;
+			if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.quantity.text)) return true;
+			break;
+		case 2: // expanding quantity
+			if(onreExtraction.argument!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.argument.text)) return true;
+			if(onreExtraction.relation!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.relation.text)) return true;
+			break;
+		}
 		
 		return false;
 	}
@@ -390,7 +400,7 @@ public class OnreHelper {
 		
 		String str = sb.toString().trim();
 		// If upon expansion, we include already included text - ignore
-		if(isAlreadyPresent(onreExtraction, str)) return;
+		if(isAlreadyPresent(onreExtraction, str, 0)) return;
 		
 		onreExtraction.argument.text = str;
     }
