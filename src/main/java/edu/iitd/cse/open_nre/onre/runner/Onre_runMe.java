@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Prior to 2009, the highest historical rate of federal contribution to education had been 10 percent.";
+		String sentence = "The cost of the house is 10 $ per sq km.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 

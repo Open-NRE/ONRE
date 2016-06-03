@@ -76,7 +76,7 @@ try to improve precision = check if you need to remove a pattern or even having 
 
 ---------------------------30th May---------------------
 filtered sentences mein "\C2" (special character) creating issue
-Why repeating?
+- Why repeating?
 	Determination of the antimicrobial activity of 29 clinically important compounds tested against fastidious HACEK group organisms.
 	(the antimicrobial activity of 29 clinically important compounds tested against fastidious HACEK group organisms ; Determination ; 29 clinically important compounds ; null)
 	<(dobj#{rel}#NNP|NN)<(prep#of#IN)<(pobj#{arg}#NNP|NN|PRP)<(prep#of#IN)<(pobj#{quantity}#NNP|NN)>>>>>
@@ -99,4 +99,6 @@ Can we write a "HIGH PRECISION" pattern for this:
 	There has been a 30% reduction in the past decade in reported U.S. cases of tuberculosis.
 
 --------------------------2nd June-------------------
-Onre Extractions shall be a set rather a list - you will need to overload the equals for OnreExtraction
+- Onre Extractions shall be a set rather a list - you will need to overload the equals for OnreExtraction
+why factQValue is getting changed (e.g. 0.99 from 1.0)
+test on previous 3 test file (0004wb_00, 0004wb_09, 0002wb_14) & commit the outputfiles (with annotations)

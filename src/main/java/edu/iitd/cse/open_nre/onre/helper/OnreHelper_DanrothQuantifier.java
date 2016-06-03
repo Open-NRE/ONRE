@@ -105,7 +105,12 @@ public class OnreHelper_DanrothQuantifier {
 	}*/
 	
 	private static String getUnitFromPhrase(String phrase, String unit) {
-		if(unit.split(" ").length>1) return null; //TODO: ignoring multiwords unit as of now
+		//if(unit.split(" ").length>1) return null; //TO-DO: ignoring multiwords unit as of now
+		
+		if(unit.split(" ").length>1) {
+			if(phrase.contains(unit)) return unit; //will be used only in case of type5
+			return null;
+		}
 		
 		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?
 		for (String word : phraseSplit) {
@@ -175,6 +180,16 @@ public class OnreHelper_DanrothQuantifier {
 		}
 		
 		return map_quantifiers_unit;
+	}
+	
+	public static Map<String, Onre_dsDanrothSpan> getUnitDanrothMap(String text, Onre_dsDanrothSpans danrothSpans) {
+		Map<String, Onre_dsDanrothSpan> map_quantifiers_unitDanroth = new HashMap<String, Onre_dsDanrothSpan>();
+		
+		for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans) {
+			map_quantifiers_unitDanroth.put(danrothSpan.unit, danrothSpan);
+		}
+		
+		return map_quantifiers_unitDanroth;
 	}
 	
 	/*public static List<QuantSpan> getQuantitiesDanroth(String text) {

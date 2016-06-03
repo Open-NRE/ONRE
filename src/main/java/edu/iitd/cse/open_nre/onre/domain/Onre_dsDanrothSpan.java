@@ -9,4 +9,9 @@ public class Onre_dsDanrothSpan {
 	
 	public int start;
 	public int end;
+	
+	@Override
+	public String toString() {
+		return this.bound + this.value + this.unit + "[" + this.phrase + "]";
+	}
 }
