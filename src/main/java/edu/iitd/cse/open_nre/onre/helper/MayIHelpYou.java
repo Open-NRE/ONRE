@@ -37,7 +37,8 @@ public class MayIHelpYou {
 
     public static List<OnreExtraction> runMe(OnrePatternTree onrePatternTree, Onre_dsDanrothSpans danrothSpans) throws IOException {
     	if(onrePatternTree == null) return null;
-		
+    	OnreGlobals.sentence = onrePatternTree.sentence;
+    	
 		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
 		List<OnreExtraction> extrs = getExtractions(onrePatternTree, list_configuredPattern, danrothSpans);
 		
