@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "The cost of the house is 10 $ per sq km.";
+		String sentence = "The cost of the house is 10 kg/meter.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 

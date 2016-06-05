@@ -18,4 +18,8 @@ public class OnreUtils_string {
 		if(s1!=null) return s1.toLowerCase().trim();
 		return null;
 	}
+	
+	public static String replacePer_centToPerCent(String str) {
+		return str.replace("per cent", "percent");
+	}
 }
