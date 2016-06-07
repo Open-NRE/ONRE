@@ -102,3 +102,10 @@ Can we write a "HIGH PRECISION" pattern for this:
 - Onre Extractions shall be a set rather a list - you will need to overload the equals for OnreExtraction
 why factQValue is getting changed (e.g. 0.99 from 1.0)
 test on previous 3 test file (0004wb_00, 0004wb_09, 0002wb_14) & commit the outputfiles (with annotations)
+
+--------------------------3rd June----------------------
+There are approximately 30,000 Class 5 switches in the market, and some 6,000 Class 4 and Tandem switches.
+1
+(the market ; Class switches ; approximately 30000 class 5 switches ; null) === T
+Why 5 didnot come in the rel.
+Check if the relation can have number/percent in the beginning

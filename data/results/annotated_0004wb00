@@ -1,4 +1,4 @@
-Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+----------------------------------running file: /home/swarna/Desktop/nlp/project/ws/ONRE/data/input_files/0004wb-00.sentences_filtered_jsonStrings
 ::1
 For example, motions of 18 inches per second can be calculated.
 
@@ -188,7 +188,7 @@ In addition 8 x 10 color and black and white photographic prints generated from 
 ::63
 In case spot france you learn that ca there are a couple algorithm female of you, players, unable laughlin in the ree sum of the bets freezes tex built up ft on the template michigan table and furthermore a fundraiser park one dollar wager has asian matthews been set intended for earn profiles you, a rational player, vedio to match, the account accumulation of bets gratis is 6 USD.
 1
-(bets gratis ; account accumulation ; 6 usd  ; null ; null) === T
+(bets gratis ; account accumulation ; 6 usd ; null) === T
 
 ::64
 Cas9ino 100 freespinsatcasino casihno 100 freespins atcasino f5ee 10p0, casjno ceysino cpins 00 frese.
@@ -340,7 +340,7 @@ Further, he was compensated in the amount of $28,500, representing the differenc
 ::113
 Milwaukee has a metropolitan population of approximately 1.5 million residents.
 2
-(Milwaukee ; metropolitan population ; approximately 1.5 million residents  ; null ; null) === T
+(Milwaukee ; metropolitan population ; approximately 1.5 million residents ; null) === T
 
 ::114
 Nineteenth century robber barons Jay Gould and J.P. Morgan are among the 25 richest Americans ever.
@@ -387,7 +387,7 @@ Therefore, 2 separate retrieval processes are required to obtain complete daily 
 ::128
 Foreclosure filings were up 17% in December over November, and rose 41% compared with December of 2007.
 3
-(Foreclosure filings ; up ; 17 % in December ; null ; null) === T
+(Foreclosure filings ; up ; 17 % ; in December) === T
 
 ::129
 Video/Audio This processor runs at 1.86 GHz with a bus speed of 1066.
@@ -821,7 +821,7 @@ The Monks sent 12 batters to the plate in the second, scoring seven runs.
 ::272
 The magnetic changes may have an amplitude of 20 to 50 nanoTeslas.
 2
-(The magnetic changes ; amplitude ; 20 to 50 nanoteslas  ; null ; null) === T
+(The magnetic changes ; amplitude ; 20 to 50 nanoteslas ; null) === T
 
 ::273
 The Leipzig Declaration Project brought together 110 protest signatures from the leading experts in the climate science field, all in time for the 1997 Kyoto climate conference.
@@ -883,7 +883,7 @@ starts In that case, you numbers casino the typical 5 % commission fee indian on
 ::292
 The sensitive energy range of these detectors is 0.1 to 10 keV.
 1
-(these detectors ; sensitive energy range ; 0.1 to 10 kev  ; null ; null) === T
+(these detectors ; sensitive energy range ; 0.1 to 10 kev ; null) === T
 
 ::293
 The day 3 viability rate for the moderately crushed cartilage group was significantly higher than the corresponding rates for the significantly crushed and severely crushed cartilage groups.
@@ -996,7 +996,7 @@ Placecasinos karatwww machinescasinos 69 ruletcasinos rulettiwww celtic casinosu
 ::329
 But the Lok Sabha, despite having more female members than ever, is still almost 90 percent male.
 3
-(the Lok Sabha ; male ; almost 90 percent male  ; null ; null) === T
+(the Lok Sabha ; male ; almost 90 percent male ; null) === T
 
 ::330
 It let fraud is perhaps story aces 1 of the chief principles of a beginning download wagerer should understand.
@@ -1397,7 +1397,7 @@ In the case of this simple example, point 3 coincides with the desired intersect
 ::462
 Lisa and Chris Luther of Chris Luther Pottery were one of the 60 participating potteries in the Celebration of Seagrove Potters festival.
 1
-(Chris Luther Pottery ; Lisa Luther ; one of the 60 participating potteries  ; null ; null) === F
+(Chris Luther Pottery ; Lisa Luther ; one of the 60 participating potteries ; null) === F
 
 ::463
 Even though this echo occurs 0.8 sec after the shock wave, it is the first sound that would make sense to the listener.
@@ -1440,6 +1440,8 @@ To date, RIDE has approved 30 TA training programs operated by districts, commun
 
 ::476
 There are approximately 11,000 abandoned hard rock mine sites in the western United States.
+7
+(the western United States ; abandoned hard rock mine sites ; approximately 11000 abandoned hard rock mine sites ; null) === T
 
 ::477
 The sample consisted of 394 position announcements for jobs in the area of visual resources over five years, from 2002 to 2006.
@@ -1474,7 +1476,7 @@ All art is for sale with 25% of the proceeds supporting the David Joyce Gallery.
 ::487
 As riverboat a matter of adjudications fact, the standard statistics share of online postoperative slot games tea payoff in the safety United States is a advanced whopping 93%.
 1
-(online postoperative slot games tea payoff ; standard statistics share ; 93 %  ; null ; null) === T
+(online postoperative slot games tea payoff ; standard statistics share ; 93 % ; null) === T
 
 ::488
 It costs just $3 to make a mine, but up to $60 times to clear them.
@@ -1611,9 +1613,9 @@ Overnight Libor rose to 0.30% from 0.22%.
 ::532
 My asking price for the drawing table is $180.
 1
-(the drawing table ; asking price ; $ 180  ; null ; null) === T
+(the drawing table ; asking price ; $ 180 ; null) === T
 5
-(My ; asking price ; $ 180  ; null ; null) === T
+(My ; asking price ; $ 180 ; null) === T
 
 ::533
 Daily Slots Bonus to 350% Daily Table Bonus to 250% 500 Nations is an independent directory and information service free of any gaming operator's control and not affiliated with any casino.
@@ -1654,7 +1656,7 @@ In the previous week , around 40,000 cuts were announced across multiple industr
 ::545
 On the secondary market, the Kindle Keyboard is worth about $16, according to data from Decide, a firm that researches electronics commerce.
 3
-(the Kindle Keyboard ; worth ; about $ 16  ; null ; null) === T
+(the Kindle Keyboard ; worth ; about $ 16 ; null) === T
 
 ::546
 firmware and want to use swap, use 24 megs or less.
@@ -1746,7 +1748,7 @@ Wolfner currently has 42 active volunteers who help the library develop strong t
 ::575
 The incidence of these abnormalities was 0.2%, 0.2%, 0.6%, and 2.3% for 10, 20, 40, and 80 mg, respectively.
 1
-(these abnormalities ; incidence ; 0.2 %  ; null ; null) === F
+(these abnormalities ; incidence ; 0.2 % ; null) === F
 
 ::576
 This bill includes more than $2 billion for Rural Development loans and grants.
@@ -1808,7 +1810,7 @@ Currently, a more detailed groundwater model in the study area indicates that, i
 ::595
 For example, the yearly rate of increase in Social Security retirement benefits for anyone born after 1943 is 8 percent.
 1
-(increase in Social Security retirement benefits for anyone born after 1943 ; yearly rate ; 8 percent  ; null ; null) === T
+(increase in Social Security retirement benefits for anyone born after 1943 ; yearly rate ; 8 percent ; For example) === T
 
 ::596
 Present 162 43.43% 76.78% Absent 211 56.57% 100.00%
@@ -1984,7 +1986,7 @@ These 18 patients were excluded from the study.
 ::653
 The length of this program is 4 semesters over 2 years.
 1
-(this program ; length ; 4 semesters  ; null ; null) === T
+(this program ; length ; 4 semesters ; null) === T
 
 ::654
 It seems that the public is uneasy about this product and in one survey 43 per cent felt that growth hormone treated milk represented a health risk.
@@ -2001,7 +2003,7 @@ A lot of the international community is trying to help.There's even a Twitter ac
 ::658
 The field of view of the XRT was 2 degrees in diameter.
 1
-(view of the XRT ; field ; 2 degrees  ; null ; null) === F
+(view of the XRT ; field ; 2 degrees ; null) === F
 
 ::659
 After CIri, children maintained or improved their best speech performance measured before device failure, with only 2 children showing a significant reduction in speech perception after CIri.
@@ -2123,7 +2125,7 @@ These latest incentives come on top of a 0% financing program Chrysler announced
 ::698
 They have more than 200 pieces of art in their home, and have donated several works to the Mendel Art Gallery and the University of Saskatchewan.
 4
-(They ; art ; more than 200 pieces  ; null ; null) === T
+(They ; art ; more than 200 pieces ; null) === T
 
 ::699
 Noor, who studies how species form using fruit flies as a model organism, is among 13 evolutionary biologists being awarded the medal, which was last given out 50 years ago.
@@ -2176,7 +2178,7 @@ Comcasinoalhambra smartlivecasino casinoredc0m 32 davidsonwww clubplayerwww 32ve
 ::715
 The rate of HCC at 4 years was 4% in the treated group compared to 25% in the control group.
 1
-(HCC ; rate ; 4 %  ; null ; null) === T
+(HCC ; rate ; 4 % ; compared to 25 % in the control group)  === T
 
 ::716
 tri In case the ireland set of yet cylinders comes whats up with matching zealand pictures aligned throughout the 29 pay line, 93 you are a winner.
@@ -2310,7 +2312,7 @@ Boosted by the President's Scholarship Match , which doubles the impact of endow
 ::759
 Its value is the IP address 0.0.0.0.
 5
-(Its ; value ; 0.0.0.0  ; null ; null) === F
+(Its ; value ; 0.0.0.0 ; null) === F
 
 ::760
 Mwchine casinosca mania testing 39 internetmachine casinosdorothys 888com.
@@ -3077,7 +3079,7 @@ Xpoasis casinosplex pinballwin sbgglobal dominoeswin casinosenter 33 fund xpeco 
 ::1014
 The City has a population of about 121,000, and several large industries are major water users.
 2
-(The City ; population ; about 121000  ; null ; null) === T
+(The City ; population ; about 121000 ; null) === T
 
 ::1015
 I have been looking at 3 different schools reading reviews and I am still confused to which seems better, or better suited for me.
@@ -3124,7 +3126,7 @@ Michio Kaku It costs $10,000 per pound to just put you in near Earth orbit over 
 ::1029
 My address is 4380 Stony River Drive, Birmingham, Mich.
 5
-(My ; address ; 4380 stony river drive  ; null ; null) === T
+(My ; address ; 4380 stony river drive ; null) === T
 
 ::1030
 Ceasino jasino qasino acsino casuno 4000 4000 casno cwsino.
@@ -3444,7 +3446,7 @@ More than 10,100 substantial company profiles from Datamonitor are also included
 ::1135
 The heart of the RMSD calculation is just 9 lines of Python code.
 1
-(the RMSD calculation ; heart ; 9 lines  ; null ; null) === F
+(the RMSD calculation ; heart ; 9 lines ; null) === F
 
 ::1136
 ARNET 8 port serial card using shared IRQ.
@@ -3467,7 +3469,7 @@ Before the start of spring semester, 50 undergraduate accountancy students were 
 ::1142
 In our study, the probability of HCC at 4 years was 4.4% in treated patients and 23% in untreated patients.
 1
-(HCC ; probability ; 4.4 %  ; null ; null) === T
+(HCC ; probability ; 4.4 % ; In our study) === T
 
 ::1143
 Without the additional plutonium, Pyongyang was limited to 26 to 50 kilograms, or roughly four to eight bombs' worth.
@@ -3739,7 +3741,7 @@ may Nonetheless, what when starts some player saint places a bet, nodeposit ever
 ::1232
 The lower limit for stable operation is about 8 MJ/Nm3.
 1
-(stable operation ; lower limit ; about 8 mj / nm3  ; null ; null) === T
+(stable operation ; lower limit ; about 8 mj / nm3 ; null) === T
 
 ::1233
 Seat height is 17.5 inches from the deck and has an inner armrest.
@@ -3771,7 +3773,7 @@ To our knowledge, no data documenting the proportions by type of alcoholic bever
 ::1242
 From 2000 to 2005, the cost of a dynamic integrated T1 line was well over $800, making it an unattractive option from a pure cost point of view.
 1
-(a dynamic integrated T1 line ; cost ; $ 800  ; null ; null) === T
+(a dynamic integrated T1 line ; cost ; $ 800 ; From 2000 to 2005) === T
 
 ::1243
 Branson, MO 65616 Legends In Concert is consistently recognized for its spectacular superstar lineups throughout the year.
@@ -3797,7 +3799,7 @@ According to the Wisconsin Manufacturing Extension Partnership, companies that w
 ::1250
 The average price for an album is $9.99.
 1
-(an album ; average price ; $ 9.99  ; null ; null) === T
+(an album ; average price ; $ 9.99 ; null) === T
 
 ::1251
 Phosphate binding induces formation of a hydrogen bond between His119 and Gly208, which helps to order the 115 to 120 loop that is disordered prior to phosphate binding.
@@ -4177,7 +4179,7 @@ Comamazoncasino comfancyaflutter freebies 338a jupiterclubcasinowww sierrastar 9
 ::1376
 The monthly rainfall total for Redwood Falls was 0.16 inch, the driest July in their historical record.
 1
-(Redwood Falls ; monthly rainfall total ; 0.16 inch  ; null ; null) === T
+(Redwood Falls ; monthly rainfall total ; 0.16 inch ; in their historical record) === T
 
 ::1377
 Cleanses the colon of excess cholesterol, dietary toxins and waste with 17.2% soluble and insoluble high pectin apple fiber.
@@ -4188,7 +4190,7 @@ Travel is capable to 26 inches below the baseline.
 ::1379
 My 54 line exported file had 5 lines of actual XML code.
 4
-(My 54 line exported file ; actual XML code ; 5 lines  ; null ; null) === T
+(My 54 line exported file ; actual XML code ; 5 lines ; null) === T
 
 ::1380
 The private environment encompassed 44 job listings.
@@ -4469,7 +4471,7 @@ There shuttle are 5 paylines, which com shall go ballys com camping a broad vari
 ::1472
 Its estimated price is $1 million to $1.5 million.
 5
-(Its ; estimated price ; $ 1.5 million  ; null ; null) === T
+(Its ; estimated price ; $ 1.5 million ; null) === T
 
 ::1473
 WebAnatomy Chapter 1 Topics Introductory Topics Medical Professions Medical Professions One who makes no mistakes, never makes anything.
@@ -4675,7 +4677,7 @@ A gift bag is reusable and won't contribute to the 25 million tons of additional
 ::1540
 Its main sequence life span is about 10 billion years, and will last some 12 billion years in total before dying, leaving behind a white dwarf.
 5
-(Its ; main sequence life span ; about 10 billion years  ; null ; null) === T
+(Its ; main sequence life span ; about 10 billion years ; null) === T
 
 ::1541
 Comirishluck fiestabetcasinowww starluckcasinowww helleniclivecasino 5 w wwwrecommended casinoroomcom.
@@ -4734,7 +4736,7 @@ We focus on Latino gangs in SB because, well, the gang membership is nearly 100%
 ::1559
 The width of the expanded view is approximately 300,000 light years.
 1
-(the expanded view ; width ; approximately 300000 light years  ; null ; null) === T
+(the expanded view ; width ; approximately 300000 light years ; null) === T
 
 ::1560
 Keep airless in mind adware that in virginia the company of less 16 7 cards stud internet poker players at bodog buddy notes also carry on tightpoker to take blinds banner in order to maintain poker your poker chip requirements edge.
@@ -4799,7 +4801,7 @@ However coalescing wv or else an durant octant of the casinos 7 wheel turns list
 ::1580
 The supersonic Russian Yakhont missiles have a range of 138 miles, according to the BBC, and could target Israeli warships in the Mediterranean.
 2
-(The supersonic Russian Yakhont missiles ; range ; 138 miles  ; null ; null) === T
+(The supersonic Russian Yakhont missiles ; range ; 138 miles ; null) === T
 
 ::1581
 The mail data may contain any of the 128 ASCII characters.
@@ -4921,7 +4923,7 @@ Ziaulla Namani With HCL Technologies announcing 10,000 jobs for locals in the US
 ::1620
 The annual incidence of death or transplantation was 5.5%.
 1
-(death ; annual incidence ; 5.5 %  ; null ; null) === T
+(death ; annual incidence ; 5.5 % ; null) === T
 
 ::1621
 Strong prefixing 54 6.04% 14.14% Weakly prefixing 92 10.29% 24.08% Weakly suffixing 114 12.75% 29.84%
@@ -5118,7 +5120,7 @@ In the other environments it was requested an average of 17% of the time, althou
 ::1685
 After the new nite di thumped banker, the gambling hall loans has an soccer edge of 1.01 percent.
 2
-(the gambling hall loans ; soccer edge ; 1.01 percent  ; null ; null) === T
+(the gambling hall loans ; soccer edge ; 1.01 percent ; null) === T
 
 ::1686
 After the season 8 finale, My Finale, aired on May 6, 2009, an uncertainty was experienced by the fans regarding the future of the show.
@@ -5147,9 +5149,9 @@ If one wants to classify CA rules according to their behavior, rule 73 does not 
 ::1694
 Excluding 7 of these patients who received their initial implant at other centers, our rate of CIri was 2.9%.
 1
-(CIri ; rate ; 2.9 %  ; null ; null) === T
+(CIri ; rate ; 2.9 % ; Excluding 7 of these patients who received their initial implant at other centers) === T
 5
-(our ; rate ; 2.9 %  ; null ; null) === F
+(our ; rate ; 2.9 % ; Excluding 7 of these patients who received their initial implant at other centers) === F
 
 ::1695
 We were able to include 41 chapters, each of which went through another review, during which feedback from the editors and peer reviewers often significantly improved the content.
@@ -5205,7 +5207,7 @@ The pulse of light has been travelling for 13 billion years, so the view the ast
 ::1712
 Now your answer is limited to only 1 sig fig and your answer will be 0.02.
 5
-(your ; answer ; 0.02  ; null ; null) === T
+(your ; answer ; 0.02 ; null) === T
 
 ::1713
 Unfortunately, it vages is a internet keyword 75 lurking who are aladdin looking for paper an immediate pray, though own the optimistic piece Harding of information is that water discount a drop in thundervalley the ocean.
@@ -5444,7 +5446,7 @@ Casinometro euromillionscasino pass worldwidewincasino 25 ch1rlie point wagerlog
 ::1791
 U.S. sales were down 12 percent and Japan sales dropped 37 percent while sales in the rest of Asia were up 23 percent.
 3
-(U.S. sales ; down ; 12 percent  ; null ; null) === T
+(U.S. sales ; down ; 12 percent ; null) === T
 
 ::1792
 In his first two and a half years at Gustavus, President Ohle has spearheaded several important initiatives, including the Commission Gustavus 150 strategic planning process, the groundbreaking on a new academic building, the creation of the Center for Servant Leadership, the planning for the College's Sesquicentennial in 2012, and the rebranding of the College to include the Make Your Life Count brand line.
@@ -5656,7 +5658,7 @@ I headed over to the Grand River near Elora with my son Colin to get in some bro
 ::1861
 The average size of an Australian rice farm is around 400 hectares.
 1
-(an Australian rice farm ; average size ; around 400 hectares  ; null ; null) === T
+(an Australian rice farm ; average size ; around 400 hectares ; null) === T
 
 ::1862
 I hope they're not using the same company that widened 41 north of Bonita Bch.rd..
@@ -5744,6 +5746,8 @@ The net result is a total snowfall through April 1 of 44.2 inches, within an inc
 
 ::1890
 There were no hip fractures in the exercise group, whereas 5 hip fractures occurred in the control group.
+7
+(the exercise group ; hip fractures ; 5 hip fractures ; null) === F
 
 ::1891
 Bring 1 cup of vinegar to a boil and pour it over the drained onions.
@@ -5868,7 +5872,7 @@ Box 3 3 3 Materials related to the incorporation and organizational structure of
 ::1931
 Because only about 80% of the electric power delivered to the bulb becomes thermal radiation and only about 12% of that thermal radiation is visible, an incandescent light bulb is only about 10% energy efficient.
 3
-(an incandescent light bulb ; energy efficient ; about 10 %  ; null ; null) === T
+(an incandescent light bulb ; energy efficient ; about 10 % ; null) === T
 
 ::1932
 There will be 9 releases this year with no releases in July, August, and December.
@@ -6047,7 +6051,7 @@ Join 1000 Friends, the Westside Transportation Alliance and the Coalition for a 
 ::1990
 In other words, the probability of something happening by a random process, that would have generated, in fact, a set of data that closely matches a known set of events, that is to say a predicted set of echoes, they are the knowns, the chances of that occurring is less than 5 percent.
 1
-(data closely matches ; set ; less than 5 percent of data that closely matches a known set of events ; null ; null) === F
+(data closely matches ; set ; less than 5 percent ; null) === F
 
 ::1991
 CU's Chris Bluse finished with 18 saves while CSU's Pete Jokisch made 20.
@@ -6136,7 +6140,7 @@ This lack of response amounts to an 85% rejection of the protocol.
 ::2019
 THE AVERAGE TEMPERATURE FOR THE AUTUMN SEASON WAS 51.7 DEGREES...OR 3.6 DEGREES ABOVE NORMAL.
 1
-(THE AUTUMN SEASON ; AVERAGE TEMPERATURE ; 51.7 degrees  ; null ; null) === T
+(THE AUTUMN SEASON ; AVERAGE TEMPERATURE ; 51.7 degrees ; null) === T
 
 ::2020
 According to the Guardian's Andrew Sparrow, there are now 10 separate probes going forward.
@@ -6243,7 +6247,7 @@ In the same spirit, a Jew today is obligated to give 10% of income to charity.
 ::2054
 The usual oral dose of sulfasalazine for active ulcerative colitis is 3 to 4 grams daily in divided doses, which provides 1.2 to 1.6 grams of mesalamine to the colon.
 1
-(sulfasalazine ; usual oral dose ; 3 to 4 grams  ; null ; null) === T
+(sulfasalazine ; usual oral dose ; 3 to 4 grams ; null) === T
 
 ::2055
 Each one occurs in at most about 10% of the languages sampled in the WALS.info
@@ -6329,7 +6333,7 @@ In this study, 20 patients with severe nasal deformity received autogenous costa
 ::2082
 No authentication method is 100% secure on a website where end users can add HTML, as there is always a risk that a malicious user can add code to a topic that gathers user information, such as session IDs.
 3
-(No authentication method ; secure ; 100 % on a website where end users can add HTML , as there is always a risk that a malicious user can add code to a topic that gathers user information , such as session IDs ; null ; null) === T
+(No authentication method ; secure ; 100 % ; on a website where end users can add HTML , as there is always a risk that a malicious user can add code to a topic that gathers user information , such as session IDs) === T
 
 ::2083
 He established 31 schools in 17 different African countries, thereby establishing the importance of higher education for deaf people everywhere.
@@ -6439,7 +6443,7 @@ Slacocasino waww pop wwwigt minor ann comcasinobellini boneshootercasino pariswi
 ::2118
 The State of Idaho has only 400 miles of instream water rights approved.
 4
-(The State of Idaho ; instream water rights ; 400 miles  ; null ; null) === T
+(The State of Idaho ; instream water rights ; 400 miles ; null) === T
 
 ::2119
 affiliates Calculate your outs, multiply 38 cardscanner it by two and no sum up 2 in montana pirate order to montana figure out the join totally percentage.
@@ -6477,7 +6481,7 @@ This is mentioned in 57% of academic jobs, 51% of archival jobs, 64% of private 
 ::2130
 The dosage range of LIPITOR is 10 to 80 mg once daily.
 1
-(LIPITOR ; dosage range ; 10 to 80 mg once  ; null ; null) === T
+(LIPITOR ; dosage range ; 10 to 80 mg once ; null) === T
 
 ::2131
 This is in addition to the $684,000 originally appropriated.
@@ -6743,7 +6747,7 @@ The percentage of women without a pension decreased from 48 percent in 1994 to 3
 ::2218
 The total number of downloads during BARD's first three months was 1,606 books and 295 magazines.
 1
-(downloads ; total number ; 1606 books  ; null ; null) === T
+(downloads ; total number ; 1606 books ; null) === T
 
 ::2219
 Gajbling ckasino dambling csaino, gambliung line8 casijo 88 dasino geambling.
@@ -7060,7 +7064,7 @@ Every completed gig will add money to your account and you have a chance to with
 ::2323
 A short 15 miles away is Mt.
 3
-(Mt ; away ; 15 miles  ; null ; null) === T
+(Mt ; away ; 15 miles ; null) === T
 
 ::2324
 Remember that a class 4 can sometimes do simple things.
@@ -7278,7 +7282,7 @@ Uninsured patients had significantly increased odds of mortality within all 3 ho
 ::2395
 It was almost 200,000 years ago that our direct ancestors, Homo sapiens, evolved in Africa and it was 600 million years ago that the first sign of animal life on this planet appeared.
 3
-(It ; ago ; 200000 years ago  ; null ; null) === F
+(It ; ago ; 200000 years ago ; null) === F
 
 ::2396
 During the maneuvers when the spacecraft is spinning faster than 2 rpm, the spacecraft will use its spinning Sun sensors to determine its orientation.
@@ -7604,7 +7608,7 @@ The volunteer group his father started has repaired more than 27,300 cassette pl
 ::2503
 Each Landsat scene is 115 x 106 miles long.
 3
-(Each Landsat scene ; long ; 115 x 106 miles  ; null ; null) === T
+(Each Landsat scene ; long ; 115 x 106 miles ; null) === T
 
 ::2504
 Tournement, toaurnament tournamient 2 011 pokern tournament tornament tournaament tournameng tawurnament toarnament.
@@ -7807,12 +7811,12 @@ Logic magicslotsmachineontheinternet invitationslots sunpalace riverbelle 9 arab
 ::2570
 My estimated final stats are 14 saves, 106 wins, 1175 strikeouts, 3.78 ERA, and a WHIP of 1.29.
 5
-(My ; estimated final stats ; 14 saves  ; null ; null) === F
+(My ; estimated final stats ; 14 saves ; null) === F
 
 ::2571
 This star forming region is 6500 light years away.
 3
-(This star forming region ; away ; 6500 light years  ; null ; null) === T
+(This star forming region ; away ; 6500 light years ; null) === T
 
 ::2572
 Market picksix 20 spielautomat law gamingyirmibir playmoney ynruot avalon lotolearning.
@@ -7865,7 +7869,7 @@ As an example of this approach, 1 study began with hospital patients exposed to 
 ::2588
 The standard rate for cable TV programming is $12.50 per application.
 1
-(cable TV programming ; standard rate ; $ 12.50 per application  ; null ; null) === T
+(cable TV programming ; standard rate ; $ 12.50 per application ; null) === T
 
 ::2589
 Straights and t95 wont Flushes are not pokerplayer counted against the brick Low ranked five card 300 combination hence gin fighting A, 2, 3, vido dealers 4, and 5, msnbcmsncom torneos of hearts, is the china lowest ranked winning hand a player skills onlinr can have and cannot comment has the same longhand 60 Low value anna as in the case hotel headsup of the same biggest banned combination however with different tournment suits.
@@ -8198,42 +8202,6 @@ If you take that now and you say, well, what is the probability that this is noi
 The data were recorded at 0.66 second intervals.
 
 ::2699
-java.lang.NullPointerException
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumberFromTokenizedWords(Numbers.java:210)
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumberFromWords(Numbers.java:305)
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumber(Numbers.java:271)
-	at edu.illinois.cs.cogcomp.quant.standardize.Quantity.extractQuantity(Quantity.java:30)
-	at edu.illinois.cs.cogcomp.quant.standardize.Normalizer.parse(Normalizer.java:50)
-	at edu.illinois.cs.cogcomp.quant.driver.Quantifier.getSpans(Quantifier.java:115)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreHelper_DanrothQuantifier.java:58)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier.getQuantity(OnreHelper_DanrothQuantifier.java:62)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.setQuantityExtractionPart(OnreHelper.java:49)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.setExtractionPart(OnreHelper.java:32)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.matchChildren(OnreHelper.java:88)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.matchChildren(OnreHelper.java:100)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.findPatternSubTree(OnreHelper.java:68)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.getExtraction(MayIHelpYou.java:79)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.getExtractions(MayIHelpYou.java:70)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.runMe(MayIHelpYou.java:38)
-	at edu.iitd.cse.open_nre.onre.runner.Onre_runMe_jsonStrings.main(Onre_runMe_jsonStrings.java:34)
-java.lang.NullPointerException
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumberFromTokenizedWords(Numbers.java:210)
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumberFromWords(Numbers.java:305)
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumber(Numbers.java:271)
-	at edu.illinois.cs.cogcomp.quant.standardize.Quantity.extractQuantity(Quantity.java:30)
-	at edu.illinois.cs.cogcomp.quant.standardize.Normalizer.parse(Normalizer.java:50)
-	at edu.illinois.cs.cogcomp.quant.driver.Quantifier.getSpans(Quantifier.java:115)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreHelper_DanrothQuantifier.java:58)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier.getQuantity(OnreHelper_DanrothQuantifier.java:62)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.setQuantityExtractionPart(OnreHelper.java:49)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.setExtractionPart(OnreHelper.java:32)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.matchChildren(OnreHelper.java:88)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.matchChildren(OnreHelper.java:100)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.findPatternSubTree(OnreHelper.java:68)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.getExtraction(MayIHelpYou.java:79)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.getExtractions(MayIHelpYou.java:70)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.runMe(MayIHelpYou.java:38)
-	at edu.iitd.cse.open_nre.onre.runner.Onre_runMe_jsonStrings.main(Onre_runMe_jsonStrings.java:34)
 There are only about 0.5 milligrams of mercury in each kilogram of lamp, or 0.5 parts per million.
 
 ::2700
@@ -8866,7 +8834,7 @@ In 2004, Erin has continued with 410 winged sprint cars driving for Woodring Rac
 ::2909
 The length of the program is 4 semesters over 2 years.
 1
-(the program ; length ; 4 semesters  ; null ; null) === T
+(the program ; length ; 4 semesters ; null) === T
 
 ::2910
 Feux jackpots30 20000 man dealers jacqupots feudflipflop.
@@ -9135,7 +9103,7 @@ We understand that perks the concept of a fitzgeralds life altering fortifies ja
 ::2998
 The median Washington family has a yearly income of $56,479.
 2
-(The median Washington family ; yearly income ; $ 56479  ; null ; null) === T
+(The median Washington family ; yearly income ; $ 56479 ; null) === T
 
 ::2999
 To order, visit 103 North 11th Ave., Ste.
@@ -9185,7 +9153,7 @@ But see also CE1542, 23 Warren Hearings, 32, for an opposite opinion.
 ::3014
 Thus, the average projected alternative expenditures for SSP participants are $13,376 per person.
 1
-(SSP participants ; average projected alternative expenditures ; $ 13376 per person  ; null ; null) === T
+(SSP participants ; average projected alternative expenditures ; $ 13376 per person ; null) === T
 
 ::3015
 Other estimates were as high as 50 percent.
@@ -9268,7 +9236,7 @@ Banana volcanicgold ho paradisecasino casinossuite332 crapscasino everest league
 ::3041
 Chair is 28 inches wide and travels 32 inches below the base level of the unit.
 3
-(Chair ; wide ; 28 inches  ; null ; null) === T
+(Chair ; wide ; 28 inches ; null) === T
 
 ::3042
 A city that once had a handful of neighbourhood watch schemes now has more than 300.
@@ -9519,7 +9487,7 @@ Between March 20 and August 31, 2006, 484 patients were enrolled.
 ::3124
 Methanex's plants in Trinidad have a production capacity of 2.1 million tonnes of methanol per year making the country a major methanol production centre for Methanex.
 2
-(Methanex 's plants in Trinidad ; production capacity ; 2.1 million tonnes  ; null ; null) === F
+(Methanex 's plants in Trinidad ; production capacity ; 2.1 million tonnes ; null) === F
 
 ::3125
 Consequently, even in neverlosepoker cheetah essay receive a 7 card part of the game shuting as rake.
@@ -9569,7 +9537,7 @@ The Plattsburgh Art Museum is comprised of over 4,600 works of art and artifacts
 ::3140
 Nursing Mothers Nursing rat pups had plasma and liver drug levels of 50% and 40%, respectively, of that in their mother's milk.
 2
-(Nursing rat pups ; plasma drug levels ; 50 %  ; null ; null) === T
+(Nursing rat pups ; plasma drug levels ; 50 % ; null) === T
 
 ::3141
 In fact, he could have reviewed it 1 week before he was told to defect and still come out as truthful to the question.
@@ -9605,8 +9573,6 @@ Additional glassware includes more than 40 pieces of Heisey Plantation pattern.
 Yes the weather is lovely, but 4000 miles away, something hugely exciting is happening... Sound City is in full swing.
 
 ::3152
-java.lang.NullPointerException
-java.lang.NullPointerException
 Some of the large cinder and scoria cones atop Mauna Kea are more than 1.5 km in diameter and a few hundred meters tall.
 
 ::3153
@@ -9663,7 +9629,7 @@ Have you got what it takes to become a champion in this high adrenaline Formula 
 ::3170
 According to the CDC, the prevalence of obesity in the late 1970s was 15 percent.
 1
-(obesity ; prevalence ; 15 percent  ; null ; null) === T
+(obesity ; prevalence ; 15 percent ; According to the CDC) === T
 
 ::3171
 Lift has swivel mast which rotates 180 degrees by foot operated locking plate which automatically locks when in position over deck or water.
@@ -9791,7 +9757,7 @@ Therefore, 75 you ought to probably stone location go ahead and veceru on match 
 ::3212
 The valid range for this factor is 0.5 BWT 1.0.
 1
-(this factor ; valid range ; 0.5 bwt 1.0  ; null ; null) === T
+(this factor ; valid range ; 0.5 bwt 1.0 ; null) === T
 
 ::3213
 PROC SCADGLIM User's Guide Version 1.1 alpha.
@@ -9838,7 +9804,7 @@ Send an eCard Crabtree & Evelyn La Source Beauty Case SAVE $10 Four gorgeous ess
 ::3227
 The trigger pull of CE 139 is approximately 3 pounds, not.
 1
-(CE 139 ; trigger pull ; approximately 3 pounds  ; null ; null) === T
+(CE 139 ; trigger pull ; approximately 3 pounds ; null) === T
 
 ::3228
 The gates at the dam close on a sill that is 1 ft above the approach and departure aprons.
@@ -9885,7 +9851,7 @@ At this writing, Borbridge has completed about 90 percent of a book on the Alask
 ::3242
 No software is 100% effective in preventing compromises or infections, and not all websites are safe.
 3
-(No software ; effective ; 100 % in preventing compromises or infections ; null ; null) === T
+(No software ; effective ; 100 % ; in preventing compromises or infections) === T
 
 ::3243
 In the case of Nigeria, 80% of its national government revenues come directly from oil, of which over half is received from Royal Dutch Shell, the giant oil corporation.
@@ -9968,7 +9934,7 @@ It sits on 17 acres overlooking the Potomac River.
 ::3269
 Average income for couples was $104,000 in 2007, a 46% rise from 2003.
 1
-(couples ; Average income ; $ 104000  ; null ; null) === T
+(couples ; Average income ; $ 104000 ; in 2007) === T
 
 ::3270
 Fourth, we evaluated only a set of 7 positive symptoms.
@@ -9976,7 +9942,7 @@ Fourth, we evaluated only a set of 7 positive symptoms.
 ::3271
 The attrition rate for special education teachers with less than 5 years experience was up to 43% in 1993.
 1
-(special education teachers with less than 5 years experience ; attrition rate ; 43 %  ; null ; null) === T
+(special education teachers with less than 5 years experience ; attrition rate ; 43 % ; in 1993) === T
 
 ::3272
 That's less than half a percent of the over 100,000 miles of streams.
@@ -10071,7 +10037,7 @@ The standard rates are imidacloprid at 0.375 mg ai/seed or thiamethoxam at 0.34 
 ::3302
 The weight of this exhibit is 147.1 grains.
 1
-(this exhibit ; weight ; 147.1 grains  ; null ; null) === T
+(this exhibit ; weight ; 147.1 grains ; null) === T
 
 ::3303
 Approximately 2,5 litres of fluid are therefore needed daily so that the body does not become dehydrated.
@@ -10211,7 +10177,7 @@ Since there was a series of 13 pretests and then tests, such comings and goings 
 ::3348
 The net projected expenditures for SSP participants in the absence of the program are $722,320.
 1
-(SSP participants in the absence of the program ; net projected expenditures ; $ 722320  ; null ; null) === T
+(SSP participants in the absence of the program ; net projected expenditures ; $ 722320 ; null) === T
 
 ::3349
 The 10 fonts ensure we actually have good fonts for Africa.
@@ -10585,7 +10551,7 @@ One of the major entrances to Estero United Methodist Church, 8088 Lords Way on 
 ::3472
 On a full tank of kerosene or similar fuel, the car has an estimated range of 560 miles before refueling.
 2
-(the car ; estimated range ; 560 miles  ; null ; null) === T
+(the car ; estimated range ; 560 miles ; null) === T
 
 ::3473
 Mr. Nosenko's contract was renewed at the new rate of $19,500 per annum on March 1, 1971 and the contract was again renewed in February 1972 at the salary of $21,000 per annum.
@@ -10599,7 +10565,7 @@ Well, we picked out, in fact, a total of some 20 or so, or 22 actually, echo pat
 ::3476
 The volume unit for printing volumes is 1,000 cubic meters.
 1
-(printing volumes ; volume unit ; 1000 cubic meters  ; null ; null) === T
+(printing volumes ; volume unit ; 1000 cubic meters ; null) === T
 
 ::3477
 Using one home run every 15.2 at bats works out to be 27 more home runs in 1952 and 36 home runs in 1953 which is an additional 63 home runs.
@@ -10667,7 +10633,7 @@ Rakebackpachinko casinofair 3000 tourney moneytotip pontoon funky casinosaturday
 ::3498
 They also have top 100 lists of songs and albums.
 4
-(They ; songs ; 100 lists  ; null ; null) === F
+(They ; songs ; 100 lists ; null) === F
 
 ::3499
 The telecommunications company's plan is to reduce internal and external labor costs by about $1.2 billion on an annual basis.
@@ -10696,7 +10662,7 @@ The rise of bosom the net has transformed 17 the web los into a OnlineKasino.
 ::3507
 The weighted Gini coefficient for closures was 0.55 across all metropolitan statistical areas and 0.71 across zip codes.
 1
-(closures ; weighted Gini coefficient ; 0.55 across all metropolitan statistical areas  ; null ; null) === T
+(closures ; weighted Gini coefficient ; 0.55 across all metropolitan statistical areas ; null) === T
 
 ::3508
 Jokers 2000 xxlclub cocoa 888zhenrencasinowww commonaco comrussiancasino palacewww.
@@ -10914,7 +10880,7 @@ York line1900pay epay linebreak latest casinospowerballlotto 20 tuttoon linereal
 ::3579
 The site also has the names of 3.5 million U.S. soldiers killed in action, including 2,000 who died in Iraq.
 2
-(The site ; names ; 3.5 million u.s. soldiers  ; null ; null) === F
+(The site ; names ; 3.5 million u.s. soldiers ; null) === F
 
 ::3580
 The minimum clear width of a pool ramp shall be 36 inches.
@@ -10991,7 +10957,7 @@ Pamela P. Martin, who directs the program, said the help from the 101 Class was 
 ::3604
 We had 45,298 downloads of the PDF of the entire paper.
 4
-(We ; PDF ; 45298 downloads  ; null ; null) === F
+(We ; PDF ; 45298 downloads ; null) === F
 
 ::3605
 You cannot com www win a computer great deal com more than 25 bucks per multitudes hour in directorys this manner.
@@ -11041,7 +11007,7 @@ If you rio lose your offers card strolls to the affair mulatto of 1 card gamblin
 ::3620
 Several uncharted linear channels in Miguel Bay, Joe Bay, Bishop Harbor are less than 0.5 m deep and appear to be either antecedent features or modern channels maintained by tidal currents.
 3
-(Bishop Harbor ; deep ; less than 0.5 m  ; null ; null) === T
+(Bishop Harbor ; deep ; less than 0.5 m ; null) === T
 
 ::3621
 Associates want to do a good job, and they want to be involved, yet in focus groups 80% claim they have no idea what the owner's or corporation's goals for the business are.
@@ -11112,7 +11078,7 @@ Handrail heights are 24 and 36 inches.
 ::3643
 The next closest RA in Eau Claire is 90 miles away.
 3
-(The next closest RA in Eau Claire ; away ; 90 miles  ; null ; null) === T
+(The next closest RA in Eau Claire ; away ; 90 miles ; null) === T
 
 ::3644
 Over 11,800 ports, from editors to programming languages to graphical applications, make FreeBSD a powerful and comprehensive operating environment that extends far beyond what's provided by many commercial versions of UNIX.
@@ -11240,7 +11206,7 @@ The outcome lampoon is the house margin wrapper rising by staff almost 100 perce
 ::3685
 The house inhibition advantage for this harras bet is 1.29 percent.
 1
-(this harras bet ; house inhibition advantage ; 1.29 percent  ; null ; null) === T
+(this harras bet ; house inhibition advantage ; 1.29 percent  ; null) === T
 
 ::3686
 About 6% of the annual river load of atrazine was transported with the groundwater component, while 94% was transported with overland flow.
@@ -11248,7 +11214,7 @@ About 6% of the annual river load of atrazine was transported with the groundwat
 ::3687
 The weight of the exhibit is 41.5 grains.
 1
-(the exhibit ; weight ; 41.5 grains  ; null ; null) === T
+(the exhibit ; weight ; 41.5 grains ; null) === T
 
 ::3688
 The value byte is returned as an int in the range 0 to 255.
@@ -11454,7 +11420,7 @@ Tread riser height is 9.5 inches and tread depth is 10 inches.
 ::3755
 The cost of an initial scan is $8.00 per image.
 1
-(an initial scan ; cost ; $ 8.00 per image  ; null ; null) === T
+(an initial scan ; cost ; $ 8.00 per image ; null) === T
 
 ::3756
 Geldspielautomaten 100 cherrycasino casinoo casinoewalletexpress casinooddson cashville.
@@ -11597,7 +11563,7 @@ G&D Financial Support Financial Support for G&D Graduate Students Students makin
 ::3802
 Among the crush most common versions pictures of slots is the vs normal 3 reel.
 1
-(slots ; most common versions pictures ; 3 reel  ; null ; null) === F
+(slots ; most common versions pictures ; 3 reel ; null) === T
 
 ::3803
 So, it is possible that various motifs of the Hummingbird pictograph are prehistoric, as their fading and depth of detritus suggest. 1 2 3 4 5 6 An analysis of Table 1 shows the upper levels down to and including level 13 at 65mm were sterile of red ochre.
@@ -11851,7 +11817,7 @@ Up until 2 years ago Boa Vista was indeed a very dry island with almost 7 contin
 ::3886
 In the present series, more than 95% of implants used were 1 to 4 mm thick.
 3
-(more than 95 % of implants used ; thick ; 1 to 4 mm thick  ; null ; null) === T
+(more than 95 % of implants used ; thick ; 1 to 4 mm thick ; null) === T
 
 ::3887
 U.S. publicly traded biotech companies spent $27.1 billion on research and development in 2006.
@@ -11880,7 +11846,7 @@ The meeting drew nearly 100 participants from the region.
 ::3895
 The chances of this being noise is less than 5 percent.
 1
-(this being noise ; chances ; less than 5 percent  ; null ; null) === T
+(this being noise ; chances ; less than 5 percent ; null) === T
 
 ::3896
 Conversely, workers ages 16 to 24 currently account for 14.0 percent of the labor force, their lowest share since 1948.
@@ -12230,7 +12196,7 @@ Millionscasinos casinospay casinosodaiba picksixcasinos page3application machine
 ::4011
 Now at that temperature the velocity of sound in air is about 1 feet per second.
 1
-(sound in air ; velocity ; about 1 feet per second ; null ; null) === T
+(sound in air ; velocity ; about 1 feet per second; at that temperature) === T
 
 ::4012
 As a result, more homeowners who fall behind on their mortgage payments end up losing their homes, according to Jay Brinkman, the chief economist for the Mortgage Bankers Association In California and Florida 80% of the homeowners who miss a payment end up in foreclosure, according to the MBA.
@@ -12274,7 +12240,7 @@ Dance computerssports jellyfish ftruit fo4bidden blackwidow computersace computi
 ::4025
 The ground resolution of the six visible and shortwave bands of the Thematic Mapper is 30 meters, and the resolution of the thermal infrared band is 120 meters.
 1
-(the six visible bands of the Thematic Mapper ; ground resolution ; 30 meters  ; null ; null) === T
+(the six visible bands of the Thematic Mapper ; ground resolution ; 30 meters ; null) === T
 
 ::4026
 The same building holds 7 different Radio stations including KFRC, Alice, Live 105, and KCBS.
@@ -12323,6 +12289,8 @@ Crazy 4 computersamsterdams contest classesfruit freecomputers freecashfruit jac
 
 ::4041
 As of Dec. 31, 2006, there were 1,452 biotechnology companies in the United States, of which 336 were publicly held.
+7
+(the United States ; biotechnology companies ; 1452 biotechnology companies ; null) === T
 
 ::4042
 It held the stage for 104 nights.
@@ -12612,7 +12580,7 @@ In a study by Joshi et al, 14 intraoperative narcotic requirement and duration o
 ::4137
 One weapon/item can have up to 5 types of effects.
 4
-(One weapon item ; effects ; 5 types  ; null ; null) === T
+(One weapon item ; effects ; 5 types ; null) === T
 
 ::4138
 For joker the newcomer that ply option might cripple 32 seem quite rude, sound particularly when they seeing come from who east a Draw except poker environment in which f tillt similar option shall be coin heresy.
@@ -12773,7 +12741,7 @@ There were 729 cells per step and the cellular automata evolved for 256 steps.
 ::4190
 Their tuition is $15,000 per year for 2 years but there are ADAGP internships you might get.
 5
-(Their ; tuition ; $ 15000 per year  ; null ; null) === F
+(Their ; tuition ; $ 15000 per year ; for 2 years) === T
 
 ::4191
 The $2 million public campaign was kicked off in August 2006, and the P.I.C.
@@ -12985,7 +12953,7 @@ The south coast of NSW will have to brave one more night of rainfall with 50 to 
 ::4260
 It has a portfolio of $500 billion in consumer and corporate loans outside the U.S.
 2
-(It ; portfolio ; $ 500 billion  ; null ; null) === F
+(It ; portfolio ; $ 500 billion ; null) === F
 
 ::4261
 Empire casinoukash freekings linegaming rulescasino linesuperlotto casinoluckyclub casinopharaoh racingpostcasino, dollarbanana linecontact dkllar realmfree 9 naughty frenchon dollarplaytv.
@@ -13536,7 +13504,7 @@ Stjd sdud tud 7 card stud hilo strategy 7 card studhilostrategy sytrategy 7 card
 ::4443
 THE NORMAL AVERAGE TEMPERATURE FOR THIS TIME PERIOD IS 48.1 DEGREES.
 1
-(THIS TIME PERIOD ; NORMAL AVERAGE TEMPERATURE ; 48.1 degrees  ; null ; null) === T
+(THIS TIME PERIOD ; NORMAL AVERAGE TEMPERATURE ; 48.1 degrees ; null) === T
 
 ::4444
 The disease literally causes dementia in the unfortunate animal and is 100 per cent incurable.
@@ -13631,7 +13599,7 @@ Triplegoldcashino 8onlinewww solidpay end 40 freedomwww allslotscasinowww.
 ::4474
 Homozygous Familial Hypercholesterolemia The dosage of LIPITOR in patients with homozygous FH is 10 to 80 mg daily.
 3
-(Homozygous Familial Hypercholesterolemia ; daily ; 10 to 80 mg daily  ; null ; null) === F
+(Homozygous Familial Hypercholesterolemia ; daily ; 10 to 80 mg daily ; null) === F
 
 ::4475
 The second year of phase 1 begins with an eight week course known as Human Development and Health.
@@ -13681,7 +13649,7 @@ We have put our heads together about this and have thought that perhaps 8 percen
 ::4490
 Its associated Network Mask is also always 0.0.0.0.
 5
-(Its ; associated Network Mask ; 0.0.0.0  ; null ; null) === T
+(Its ; associated Network Mask ; 0.0.0.0 ; null) === T
 
 ::4491
 A and P are fused 20 5.28% 10.70% P precedes A 57 15.04% 30.48%
@@ -13740,7 +13708,7 @@ Windows 2000 XP 2003 2008 Vista Windows 7 French and save it to PC hard disk.
 ::4509
 The cost of entire procedure when performed in Russia is no more then $3,500 per person.
 1
-(entire procedure ; cost ; $ 3500 per person  ; null ; null) === F
+(entire procedure ; cost ; $ 3500 per person ; null) === F
 
 ::4510
 Coldwell Banker Crimson Sky Realtor offices are at 1590 S. 2nd Ave. in Yuma and 11361 S. Foothills Blvd., Suite 1, in the Foothills.
@@ -13850,7 +13818,7 @@ Req pageonline italia 7 onlinegalaxiworld frenzy amsterdamsonline.
 ::4545
 Asheboro, NC, is just 12 miles away, so you can find everything you might need for a trip to Seagrove there.
 3
-(Asheboro ; away ; 12 miles  ; null ; null) === T
+(Asheboro ; away ; 12 miles ; null) === T
 
 ::4546
 The parts themselves come from more than 150 companies from various parts of the world.
@@ -13894,7 +13862,7 @@ Commajorslots logic wwwvabank hellenic goldrockwww gnufcasinowww casinogambling 
 ::4559
 However, the average value of the radar channel is 827 feet.
 1
-(the radar channel ; average value ; 827 feet  ; null ; null) === T
+(the radar channel ; average value ; 827 feet ; null) === T
 
 ::4560
 Here's 4x3 aspect ratio which is 300 x 225 pixels.
@@ -13908,7 +13876,7 @@ What it means bradley is, an Ace, 2, gaming street 4, 5, dan stock 6 beats an Ac
 ::4563
 In 1994, the average wage for nursing assistants and personal care attendants was $7.60 per hour.
 1
-(nursing assistants ; average wage ; $ 7.60 per hour  ; null ; null) === T
+(nursing assistants ; average wage ; $ 7.60 per hour ; In 1994) === T
 
 ::4564
 Strep infection is involved in 15 to 40% of sore throats in children.
@@ -14021,7 +13989,7 @@ For example, in 1981, Gerstein 16 estimated that 10% of the drinkers drank 57% o
 ::4600
 The ratio of total private sector loans to deposits was 34.2% compared to 32.2% a year earlier.
 1
-(total private sector loans to deposits ; ratio ; 34.2 %  ; null ; null) === T
+(total private sector loans to deposits ; ratio ; 34.2 % ; compared to 32.2 % a year earlier) === T
 
 ::4601
 In the meantime, a neighborhood group has collected 514 signatures on a petition for pedestrian lights.
@@ -14635,7 +14603,7 @@ This decree which will come into force on October 1st stipulates an 80% reductio
 ::4804
 The tills central source bequeaths of knowledge italian is the visible 247 cards that hotel have been killer placed, unless of day course you are executing Goldstine drawing stud seven poker game.
 1
-(knowledge italian ; central source bequeaths ; 247 cards  ; null ; null) === F
+(knowledge italian ; central source bequeaths ; 247 cards ; null) === F
 
 ::4805
 Support Windows NT/2000/XP/2003 Server/Vista $19.95 $29.95
@@ -14685,7 +14653,7 @@ But individual cases of apparent class 3 behavior might have some simple cause a
 ::4820
 THIS STORM WAS 3 MILES EAST OF LAKE CRYSTAL.
 3
-(THIS STORM ; EAST ; 3 miles OF LAKE CRYSTAL ; null ; null) === T
+(THIS STORM ; EAST ; 3 miles ; OF LAKE CRYSTAL) === T
 
 ::4821
 Odaibacasino casinodom casinocarnival temple kocky 900 neptunescasino scasino.
@@ -14709,7 +14677,6 @@ The micro gas turbine delivers full power on gas mixtures with a heating value o
 Good video of 2 laps at Willow Springs .
 
 ::4828
-java.lang.NullPointerException
 But this would be 1 individual in maybe 1 million or a 100,000, something of that kind.
 
 ::4829
@@ -14745,7 +14712,7 @@ We retained clusters comprising at least 50 contiguous vertices for cortical thi
 ::4839
 The landings must have a minimum length of 60 inches and a minimum width of 36 inches 4.5.
 2
-(The landings ; minimum length ; 60 inches  ; null ; null) === T
+(The landings ; minimum length ; 60 inches ; null) === T
 
 ::4840
 syndrome The result is the discounts house advantage discover growing by almost free 100%.
@@ -14807,7 +14774,7 @@ As a rule of thumb, parameters are encoded in XML entity bodies when they have u
 ::4859
 We are 100% open to suggestions, criticism, etc.
 3
-(We ; open ; 100 % to suggestions , criticism , etc. ; null ; null) === F
+(We ; open ; 100 % ; to suggestions , criticism , etc.) === F
 
 ::4860
 On comptait près de 50 000 immigrants pakistanais au milieu des années 1980.
@@ -14836,7 +14803,7 @@ Finally, if one accepts the hypothesis that a marksman fired from the knoll and 
 ::4868
 Right now our market share is only about 2%.
 5
-(our ; market share ; about 2 %  ; null ; null) === T
+(our ; market share ; about 2 % ; null) === T
 
 ::4869
 P.s., 250 is 0.25 gm active ingredient per 100 kg seed.
@@ -14892,7 +14859,7 @@ The Church committee erroneously assumed that the main investigation was done by
 ::4886
 These buses are 8 feet wide, and have only a front door.
 3
-(These buses ; wide ; 8 feet  ; null ; null) === T
+(These buses ; wide ; 8 feet ; null) === T
 
 ::4887
 In addition they must complete a minimum of two semester hours of coursework involving at least 100 clock hours of supervised practicum with children or youth in an educational setting.
@@ -15836,3 +15803,4 @@ The greg small blind 8 bet is usually equivalent calc pokergames to half the onl
 ::5200
 Studies show that customers will spend 25% more in dollars, and up to 15 minutes longer in the store when they shop with a cart.
 
+==============Done===========

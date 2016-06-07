@@ -264,11 +264,11 @@ public class OnreHelper {
 	    {
 	    	OnrePatternNode currNode = q_yetToExpand.remove();
 	    	for(OnrePatternNode child : currNode.children) {
-				//if(child.dependencyLabel.equals("amod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				if(child.dependencyLabel.equals("amod")) {expansions.add(child); q_yetToExpand.add(child); } 
 				if(child.dependencyLabel.equals("nn")) {expansions.add(child); q_yetToExpand.add(child); } 
-				//if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
-				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
-				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
+				//if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
 			}
 	    }
 		

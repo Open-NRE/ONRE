@@ -4,3 +4,4 @@
 <(#has|have|had#VERB)<(nsubj#{arg}#NNP|NN|PRP)(dobj#{quantity}#.+)<(prep#of#IN)<(pobj#{rel}#NNP|NN)>>>>
 <(##VERB)<(attr|acomp#{quantity}#.+)(nsubj#{rel}#NNP|NN)<(poss#{arg}#PRP\$)>>>
 <(#is|are|was|were#VERB)<(nsubj#{arg}#NNP|NN|PRP)(acomp#{rel}#VERB)<(prep##IN)<(pobj#{quantity}#.+)>>>>
+<(#is|are|was|were|been#VERB)<(attr#{rel}#NNP|NN)<(nn#{quantity}#.+)(prep#in#IN)<(pobj#{arg}#NNP|NN|PRP)>>>

@@ -1,4 +1,4 @@
-Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+----------------------------------running file: /home/swarna/Desktop/nlp/project/ws/ONRE/data/input_files/0004wb-09.sentences_filtered_jsonStrings
 ::1
 The configurations above instruct the router to assign an AD of 100 to EIGRP routes learned from 10.0.0.2 and OSPF routes learned from 10.0.0.6.
 
@@ -566,7 +566,7 @@ Poland also contains over 9,300 lakes, predominantly in the north of the country
 ::189
 For the year to date, bookstore sales are up 1.8 percent.
 3
-(bookstore sales ; up ; 1.8 percent  ; null ; null) === T
+(bookstore sales ; up ; 1.8 percent ; null) === T
 
 ::190
 Nearly 100 lawsuits were filed against the State of Queensland for injuries suffered by schoolchildren in the last financial year.
@@ -602,29 +602,9 @@ I needed bras and if they are 75% off for a high quality brand, yes I am going t
 Almost 9 per cent had suffered financial difficulties.
 
 ::201
-Citizen Lobbyists Participate in Lobby Day More than 85 Citizen Lobbyists attended Sierra Club's Lob by Day on March 25.
+Citizen Lobbyists Participate in Lobby Day More than 85 Citizen Lobbyists attended Sierra Club's Lobby Day on March 25.
 
 ::202
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumberFromTokenizedWords(Numbers.java:210)
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumberFromWords(Numbers.java:305)
-	at edu.illinois.cs.cogcomp.quant.standardize.Numbers.extractNumber(Numbers.java:271)
-	at edu.illinois.cs.cogcomp.quant.standardize.Quantity.extractQuantity(Quantity.java:30)
-	at edu.illinois.cs.cogcomp.quant.standardize.Normalizer.parse(Normalizer.java:50)
-	at edu.illinois.cs.cogcomp.quant.driver.Quantifier.getSpans(Quantifier.java:115)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreHelper_DanrothQuantifier.java:58)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier.getQuantity(OnreHelper_DanrothQuantifier.java:62)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.setQuantityExtractionPart(OnreHelper.java:49)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.setExtractionPart(OnreHelper.java:32)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.matchChildren(OnreHelper.java:88)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.matchChildren(OnreHelper.java:100)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.matchChildren(OnreHelper.java:100)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.findPatternSubTree(OnreHelper.java:68)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.findPatternSubTree(OnreHelper.java:77)
-	at edu.iitd.cse.open_nre.onre.helper.OnreHelper.findPatternSubTree(OnreHelper.java:77)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.getExtraction(MayIHelpYou.java:79)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.getExtractions(MayIHelpYou.java:70)
-	at edu.iitd.cse.open_nre.onre.helper.MayIHelpYou.runMe(MayIHelpYou.java:38)
-	at edu.iitd.cse.open_nre.onre.runner.Onre_runMe_jsonStrings.main(Onre_runMe_jsonStrings.java:34)
 In 628 Chosroes II was deposed and murdered by his son, Kavadh, and an inconclusive peace was made between the two exhausted empires.
 
 ::203
@@ -780,7 +760,7 @@ Supplement the rainfall if the amount totals less than 1 inch each week during t
 ::253
 With all but six precincts counted in unofficial totals, Fioretti had 67 percent of the vote to Haithcock's 33 percent.
 4
-(Fioretti ; vote ; 67 percent of the vote ; null ; null) === T
+(Fioretti ; vote ; 67 percent ; to Haithcock 's 33 percent) === T
 
 ::254
 Cost is an additional $100 per person per session which covers 2 topics.
@@ -794,7 +774,7 @@ I also noted that they did 2 sets of tests.
 ::257
 My house is very big 5 rooms 3 toilet, but I am living in only a small room.
 5
-(My ; house ; 5 rooms 3 toilet  ; null ; null) === F
+(My ; house ; 5 rooms 3 toilet ; null) === F
 
 ::258
 The total number of athletes at the the first modern Olympic Games , less than 250, seems small by modern standards, but the games were the largest international sports event ever held until that time.
@@ -1027,7 +1007,7 @@ A closer look at 100 micron shows, at 4' resolution, a wealth of brighter clumps
 ::334
 The larger states may have 83% of the nation's people, but they get nothing without the approval of the lightly populated states.
 4
-(The larger states ; people ; 83 %  ; null ; null) === F
+(The larger states ; people ; 83 % ; null) === F
 
 ::335
 There are currently about 2,400 turbines.
@@ -1080,7 +1060,7 @@ The 2000 census identifies more than 7,200 people of Russian or Ukrainian ancest
 ::351
 Every capital city, except Darwin and Hobart, has at least 40 per cent of students in private secondary schools.
 4
-(Every capital city except Darwin ; students ; 40 per cent of students in private secondary schools ; null ; null) === F
+(Every capital city except Darwin ; students ; 40 per cent ; null) === T
 
 ::352
 But only 6 of those have been identified to produce significant effects.
@@ -1385,7 +1365,7 @@ The Department is comprised of approximately 85 students, 60 faculty members, an
 ::452
 Imports from Canada were worth NZ$517 million in the year ending July 2011.
 3
-(Imports from Canada ; worth ; $ 517 million  ; null ; null) === T
+(Imports from Canada ; worth ; $ 517 million ; null) === T
 
 ::453
 I conned my dean into letting me hire a new faculty member, meaning that 17 people now did what 16 had done before.
@@ -1482,8 +1462,8 @@ The graduation rate in 2002 was alarmingly low, 51% of students compared to a na
 
 ::484
 The cumulative amount of funds that will be returned to the state in the first contract year from the 127 offices that have been awarded so far under the new bidding process is $688,383.
-1
-(funds returned to the state in the first contract year from the 127 offices awarded so far under the new bidding process ; cumulative amount ; $ 688383  ; null ; null) === T
+1 
+(funds returned to the state in the first contract year from the 127 offices awarded so far under the new bidding process ; cumulative amount ; $ 688383 ; null) === T
 
 ::485
 Just 42 percent of America's black males in the class of 2002 earned diplomas.
@@ -1494,7 +1474,7 @@ Senator Wong said Professor Garnaut's travel and accommodation expenses paid by 
 ::487
 And in the extended oil change market, which is about 10% of that, AMSOIL has far more of that share, about 80%, than Mobil 1 EP and Castrol Edge.
 4
-(AMSOIL ; share ; about 80 %  ; null ; null) === T
+(AMSOIL ; share ; about 80 % ; in the extended oil change market , which is about 10 % of that) === T
 
 ::488
 Oct 11 Crossing Guard Funeral held for first school crossing guard to be killed in the line of duty.
@@ -2054,7 +2034,7 @@ Dec 10 Hanukkah Dec 10 Dec 10 Myers Joan wraps up coverage of the Myers case wit
 ::673
 On the state's yardstick for measuring school performance, based on various test scores, the old Sac High had an Academic Performance Index of 568 the year it closed.
 2
-(the old Sac High ; Academic Performance Index ; 568 the year  ; null ; null) === F
+(the old Sac High ; Academic Performance Index ; 568 the year ; null) === F
 
 ::674
 In addition, 4,000 FAA employees have been sent home without pay in 35 states, the District of Columbia, and Puerto Rico.
@@ -2233,7 +2213,7 @@ You know, the one that doesn't come with the hot international girls with w 6 pa
 ::732
 I have chapter 30 of TFtCD almost done.
 2
-(I ; chapter ; 30 of tftcd almost of TFtCD almost done ; null ; null) === F
+(I ; chapter ; 30 of tftcd almost ; null) === F
 
 ::733
 It involves 5 FM generators which play notes randomly based on a root key and intervals defined by the user.
@@ -2535,7 +2515,7 @@ There are 2 Route 66 Museums along the route in Oklahoma and several other museu
 ::832
 Maine Wesleyan Seminary had a farm of 140 acres as well as a shop.
 2
-(Maine Wesleyan Seminary ; farm ; 140 acres  ; null ; null) === T
+(Maine Wesleyan Seminary ; farm ; 140 acres ; null) === T
 
 ::833
 He found that African Americans made up 13.5 percent of highway users and 15 percent of the speeders, but he found that they represented 35 percent of those stopped by police.
@@ -2558,7 +2538,7 @@ Graduates and researchers have acquired an international reputation manifested i
 ::839
 A black student with a 4.0 has, on average, 1.5 fewer friends of the same ethnicity than a white student with the same GPA.
 4
-(A black student with a 4.0 ; same ethnicity ; 1.5 fewer friends  ; null ; null) === F
+(A black student with a 4.0 ; same ethnicity ; 1.5 fewer friends ; null) === F
 
 ::840
 Nov 1 Child Abuse Linda does a generic child abuse piece as a sidebar to the kid killers story.
@@ -2914,7 +2894,7 @@ Manufacturers of motor vehicle parts and accessories, as well as the makers of i
 ::957
 Zoo have the collection of some 957 animals and 119 species.
 2
-(Zoo ; collection ; 957 animals  ; null ; null) === F
+(Zoo ; collection ; 957 animals ; null) === T
 
 ::958
 You can usually raise your 2 X 4 or 4 X 4 ATV approximately 2 inches if you have stock tires.
@@ -3171,7 +3151,7 @@ Find a job anywhere in the World through 40 jobsearch companies listed.
 ::1042
 Our time frame is 4,567 million years.
 5
-(Our ; time frame ; 4567 million years  ; null ; null) === T
+(Our ; time frame ; 4567 million years ; null) === T
 
 ::1043
 They are currently offered in 10 practical subjects such as media, construction and IT, with plans for seven more in coming years.
@@ -3341,7 +3321,7 @@ Today, US 1 goes along the 1957 US 1A alignment, and Route 130 follows the old U
 ::1098
 The $166 billion program is 45 years old, so it's had time to prove itself.
 3
-(The $ billion program ; old ; 45 years old  ; null ; null) === F
+(The $ billion program ; old ; 45 years old ; null) === F
 
 ::1099
 More than 575 species of wildlife More than 200 native species of freshwater fish More than 500 native species of saltwater fish ...balancing these species' needs with the needs of nearly 19 million residents and the millions of visitors who share the land and water with Florida's wildlife.
@@ -3616,7 +3596,7 @@ There are approximately 1.31 billion Muslims worldwide.
 ::1189
 Users with this status have a vote of 5 point.
 2
-(Users with this status ; vote ; 5 point  ; null ; null) === T
+(Users with this status ; vote ; 5 point ; null) === T
 
 ::1190
 Apparently, 90% of Philippine women currently formula feed their babies, and although that is a pitiful statistic, education is the key here, not prohibition of infant formula.
@@ -3636,7 +3616,7 @@ Between now and the middle of the century $30 is likely to be more typical of th
 ::1195
 The tragedy that happened to Maya and her family was completely 100% preventable had that driver driven in a proper fashion.
 3
-(The tragedy happened to Maya ; preventable ; 100 %  ; null ; null) === F
+(The tragedy happened to Maya ; preventable ; 100 % ; null) === T
 
 ::1196
 According to the prosecutor's version of what happened, Batson had killed the five Earll family members, stolen the Earll mules and driven them to Lake Charles, sold them for $45, then jumped on a train for Missouri.
@@ -3650,7 +3630,7 @@ The most thrilling rafting comes in May and June, when water levels are high and
 ::1199
 The estimated amount of money that will be returned to the state in the first contract year from the 158 offices that have been awarded so far under the new bidding process is $819,833.
 1
-(money ; estimated amount ; $ 819833  ; null ; null) === F
+(money ; estimated amount ; $ 819833 ; null) === F
 
 ::1200
 Most of the decline is due to expected 10% drop of activity on drycounty.com,
@@ -3956,7 +3936,6 @@ The results of these tests revealed a reduction in carbon deposits when zMAX was
 Between 1993 and 1978, their scores fell about 14 per cent.
 
 ::1301
-java.lang.NullPointerException
 The Chief Inspector was even harsher on the Key Stage 3 National Strategy, which cost 670 pounds million last year and aims to boost standards in the early years of secondary school.
 
 ::1302
@@ -4108,6 +4087,8 @@ At Season 2 prices, having Sicko on your slate would be like paying Foot Locker 
 
 ::1351
 There was a 15 per cent drop in student numbers at the University of Western Sydney, and a 2.5 per cent increase at Macquarie University and the University of Technology, Sydney.
+7
+(student numbers ; per cent drop ; 15 per cent drop ; at the University of Western Sydney) === T
 
 ::1352
 Application Unregistration for Handling PDU Types ........ 14 5. Definitions ................................................ 15 5.1.
@@ -4559,7 +4540,7 @@ We request HIFI spectroscopy to observe absorption lines of CO, CN, NH, H2O, and
 ::1501
 Harvard's is worth $35 billion which is more than the combined annual funding for all English universities.
 3
-(Harvard 's ; worth ; $ 35 billion  ; null ; null) === T
+(Harvard 's ; worth ; $ 35 billion ; null) === T
 
 ::1502
 One of Patrick's bills calls for lifting a state cap on charter schools in only those school districts that are among the lowest 10 percent of MCAS scores on a statewide basis, including Holyoke, Springfield and Chicopee.
@@ -4776,6 +4757,8 @@ Postgraduate Diploma Urban Design Research Project 36 credit points Urban Design
 
 ::1573
 By 1900, there were 25 canal companies in southwest Louisiana, operating on shares with the farmer.
+7
+(southwest Louisiana operating on shares with the farmer ; canal companies ; 25 canal companies ; null) === T
 
 ::1574
 Corporate Income/Franchise and Emergency Excise Taxes Interest Rate is Lowered to 4 Percent For the Period July 1, 2003, Through October 31, 2003 Corporate Income/Franchise and Emergency Excise Taxes Interest Rate Will Increase to 8 Percent For the Period November 1, 2003, Through December 31, 2003 Interest Rate on Deficiencies That Arose on or After January 1, 2000, Will Be Recalculated November 1, 2003 Amnesty From July 1, 2003, until October 31, 2003, an Amnesty Program will be in effect.
@@ -4801,7 +4784,7 @@ The returned name can be up to 30 bytes.
 ::1581
 The typical weight of a nesting green female sea turtle is around 300 pounds.
 1
-(a nesting green female sea turtle ; typical weight ; around 300 pounds  ; null ; null) === T
+(a nesting green female sea turtle ; typical weight ; around 300 pounds ; null) === T
 
 ::1582
 Sept 30 Editorial Sept 30 Bay Report After 6 years of studies the EPA issues it's report saying the Chesapeake Bay is not dead but that it needs big.
@@ -4893,7 +4876,7 @@ The largest fee hike this year was posted by Brisbane Girls' Grammar and East Br
 ::1611
 For example, Route 17 west of Hartford is now US 44, and Route 116 is part of today's Route 10.
 1
-(Hartford ; Route west ; 44  ; null ; null) === F
+(Hartford ; Route west ; 44 ; For example) === F
 
 ::1612
 Samsung SCX 4100 Scan Driver 2.02.17
@@ -4988,7 +4971,7 @@ A dozen years ago, 10% of students at Idaho State University had used computers 
 ::1642
 Sallie has $81.6 billion of student loans on its balance sheet and another $39 billion in trusts off its balance sheet.
 4
-(Sallie ; student loans ; $ 81.6 billion  ; null ; null) === T
+(Sallie ; student loans ; $ 81.6 billion ; null) === T
 
 ::1643
 Kennett says the comet may have destroyed 15 mammal species and might have left only a few surviving humans from North America's early Clovis culture.
@@ -5031,11 +5014,13 @@ Had my cold electrolyte drink ready every 3 miles.
 
 ::1656
 There are an estimated 5,000 adult transsexuals in Britain.
+7
+(Britain ; estimated adult transsexuals ; estimated 5000 adult transsexuals ; null) === T
 
 ::1657
 Males had a median income of $24,090 versus $20,115 for females.
 2
-(Males ; median income ; $ 24090 versus $ 20115  ; null ; null) === F
+(Males ; median income ; $ 24090 versus $ 20115 ; null) === F
 
 ::1658
 In conjunction with that study, Langevin announced the Foster Youth Financial Security Act, which deals with reports of high rates of identity theft among foster youth, including a study in California that found 50 percent of all children in the system may have been victims.
@@ -5223,7 +5208,7 @@ I used a large enough piece to make a backdrop for Stampfrancisco's 3 bare trees
 ::1719
 Users with this status have a vote of 3 point.
 2
-(Users with this status ; vote ; 3 point  ; null ; null) === T
+(Users with this status ; vote ; 3 point ; null) === T
 
 ::1720
 One dirt bike part that many bike owners change more frequently than others is the air filter, which runs at about $20.
@@ -5437,6 +5422,8 @@ then imagine what 10 clicks would do for you.
 
 ::1790
 At their peak in the early Sixties, there were more than 1,200 grammar schools in England.
+7
+(England ; grammar schools ; more than 1200 grammar schools ; null) === T
 
 ::1791
 Diseases that could be prevented with simple vaccines kill an additional 600,000 annually, while war, malnutrition and life in filthy slums send countless more parents and children to early graves.
@@ -5654,7 +5641,7 @@ He outlined how New Labour has committed Britain to cutting carbon emissions by 
 ::1862
 The median income for a household in the city was $23,483, and the median income for a family was $27,225.
 1
-(a household in the city ; median income ; $ 23483  ; null ; null) === T
+(a household in the city ; median income ; $ 23483 ; null) === T
 
 ::1863
 The percentage of male teachers in primary schools in England and Wales fell from 25 per cent in 1970 to 15.7 per cent in 2004.
@@ -5983,7 +5970,7 @@ Optimizing the engine management system's computing power in the quest for maxim
 ::1971
 The JFFS2 fs was 56% full last time it got stuck.
 3
-(The JFFS2 fs ; full ; 56 %  ; null ; null) === T
+(The JFFS2 fs ; full ; 56 % ; null) === T
 
 ::1972
 Try to set a system restore point before installing Epson Expression 1680 Artist Scan Server Utility 1.21E.
@@ -6300,7 +6287,7 @@ Per cortesia registratevi prima del 12 Novembre 2007.
 ::2076
 The maximum length of the predicate that the policy function can return is 2,000 bytes.
 1
-(the predicate return ; maximum length ; 2000 bytes  ; null ; null) === T
+(the predicate return ; maximum length ; 2000 bytes ; null) === T
 
 ::2077
 Mobile phones Analysis on Eito 99 data These data confirm the widespread notion of Italy's mobilemania.
@@ -6512,7 +6499,7 @@ It is 8,000 miles in diameter and holds a variety of environments on its surface
 ::2146
 The Northern boundary of this region is 60 degrees south.
 3
-(The Northern boundary of this region ; south ; 60 degrees  ; null ; null) === F
+(The Northern boundary of this region ; south ; 60 degrees ; null) === T
 
 ::2147
 But with air fares between Brisbane and Cairns as cheap as $129 one way, the Government could fly about seven people for free at the same price it pays to send a single Traveltrain passenger on the same journey.
@@ -6577,7 +6564,7 @@ In Maryland, scientists estimate that the change on the household dishwasher fro
 ::2167
 The Grant district is 37 percent white.
 3
-(The Grant district ; white ; 37 percent  ; null ; null) === T
+(The Grant district ; white ; 37 percent ; null) === T
 
 ::2168
 The university was ordered to allow her to retake the negotiation test, which she passed with 62 per cent instead of 46 per cent.
@@ -6614,6 +6601,8 @@ Saucers usually have Three of the SIF/IDF generators two shield generators which
 
 ::2179
 Snowmobiling is a $1 billion industry in Minnesota.
+7
+(Minnesota ; billion industry ; $ 1 billion industry ; null) === F
 
 ::2180
 Visy, renowned as one of the nation's greenest companies, has slammed the proposed scheme's cost of $20 on a tonne of emissions, in its response to the Government's emissions trading green paper.
@@ -7212,7 +7201,7 @@ After some 22 educational approaches were selected for testing, parent groups fr
 ::2378
 The ethnic makeup of the city is 34.1% Cuban , 22.3% African American , 5.6% Nicaraguan , 5.0% Haitian , and 3.3% Honduran .
 3
-(The ethnic makeup of the city ; Cuban ; 34.1 %  ; null ; null) === T
+(The ethnic makeup of the city ; Cuban ; 34.1 % ; null) === T
 
 ::2379
 These four games purchased separately would cost around $60, but as of the time of this writing, the average price being donated for the titles is $5.88.
@@ -7397,12 +7386,12 @@ Some of the firsts I was privileged to do wearing Vibram Fivefingers include the
 ::2439
 The old Nibletts oil field is 10 miles south of Welsh.
 3
-(The old Nibletts oil field ; south ; 10 miles of Welsh ; null ; null) === T
+(The old Nibletts oil field ; south ; 10 miles ; of Welsh) === T
 
 ::2440
 Preliminary estimates of retail sales were $405.4 billion in May 2008, compared to $395.5 billion in May 2007, an increase of 2.5 percent.
 1
-(retail sales ; Preliminary estimates ; $ 405.4 billion  ; null ; null) === T
+(retail sales ; Preliminary estimates ; $ 405.4 billion ; null) === T
 
 ::2441
 More than 1,000 independent schools are registered charities, meaning they are exempt from income tax and stamp duty and benefit from concessions on business rates and Vat.
@@ -7446,7 +7435,7 @@ Currently, 45,000 people in Arizona are enrolled in emergency AHCCCS, which allo
 ::2454
 By Elizabeth Knapp on Thursday, Sep 15, 2011 July retail sales at bookstores were down 4.2 percent compared to July 2010, according to preliminary figures recently released by the Bureau of the Census.
 3
-(2011 July retail sales at bookstores ; down ; 4.2 percent  ; null ; null) === F
+(2011 July retail sales at bookstores ; down ; 4.2 percent ; null) === F
 
 ::2455
 The pilot project, is one of only 19 in the nation and the first in Nevada.
@@ -7490,7 +7479,7 @@ With around 7 yards of rain a year the crops certainly grew like mad.
 ::2468
 OVER 200,000 WOMEN STRONG, MOST DOMESTIC WORKERS ARE PRIMARY INCOME EARNERS AND WORK HARD TO SUPPORT THEIR FAMILIES, WHILE MAKING IT POSSIBLE FOR THEIR EMPLOYERS TO GO TO WORK EVERYDAY.
 3
-(MOST DOMESTIC WORKERS ; STRONG ; 200000 women  ; null ; null) === F
+(MOST DOMESTIC WORKERS ; STRONG ; 200000 women ; null) === F
 
 ::2469
 tops the list with 1,045 Commercial and Advertising Photographers in the directory.
@@ -7864,7 +7853,7 @@ Now much of it is ashes thanks to raging fires across 800 square miles in seven 
 ::2592
 Cost of membership is $1,200 per year.
 1
-(membership ; Cost ; $ 1200 per year  ; null ; null) === T
+(membership ; Cost ; $ 1200 per year ; null) === T
 
 ::2593
 They found more bone fragments and human remains & the city medical examiner's office plans to extract DNA from the latest remains and try to match it against a database of the 2,749 people killed at the trade center on September 11, 2001.
@@ -7908,7 +7897,7 @@ On September 27th, 15 days after the World Trade Center attacks, at the request 
 ::2606
 The per capita income for the city was $15,128.
 1
-(the city ; per capita income ; $ 15128  ; null ; null) === T
+(the city ; per capita income ; $ 15128 ; null) === T
 
 ::2607
 The three races of the day were a huge success, raising $90,000.
@@ -8163,8 +8152,6 @@ The American Association of School Administrators has projected 275,000 layoffs 
 A Boston Globe study found that 91 percent of Harvard seniors graduated with honors, that means all As and a few Bs.
 
 ::2691
-java.lang.NullPointerException
-java.lang.NullPointerException
 Landfall is a thousand miles away from much of the long string of 1,200 islands, most of which are little more than thin, uninhabited atolls.
 
 ::2692
@@ -8305,7 +8292,7 @@ At a Fortitude Valley construction site, a freestanding wall collapsed on to a n
 ::2737
 The total of your order is $50 If you are happy with the total please click the purchase button now.
 1
-(your order ; total ; $ 50 if  ; null ; null) === T
+(your order ; total ; $ 50 if ; null) === T
 
 ::2738
 The segment data portion of a packet group represents up to 16 kilooctets of the segment specified in the message control block.
@@ -8907,7 +8894,7 @@ Books GEN 369.12 D2381 F636 Periodicals The Colonial Courier.
 ::2937
 The municipal dock is 1.5 miles away and there's no public transportation.
 3
-(The municipal dock ; away ; 1.5 miles  ; null ; null) === T
+(The municipal dock ; away ; 1.5 miles ; null) === T
 
 ::2938
 Figures show that the number of schools accused of amending their pupils' results rose from 101 in 2005 to 115 last year.
@@ -9032,7 +9019,7 @@ There are about 200 elves living in the old outpost, and all at least 600 years 
 ::2978
 On average, the total weight of an ATV snowblower is just over 200 lbs.
 1
-(an ATV snowblower ; total weight ; 200 lbs  ; null ; null) === T
+(an ATV snowblower ; total weight ; 200 lbs ; On average) === T
 
 ::2979
 Mr Miliband calls for tough measures to combat 'car use and ownership' with a 'substantial increase' in road tax, which currently costs a maximum of 210 pounds a year.
@@ -9502,7 +9489,7 @@ The Sun perked up in June and July, with a sizeable clump of 20 sunspots earlier
 ::3134
 But with energy use highest in the developed world, our target here is a 90 per cent reduction.
 5
-(our ; target here ; 90 per cent reduction  ; null ; null) === T
+(our ; target here ; 90 per cent reduction ; with energy use) === T
 
 ::3135
 Of the six campuses being considered for closure, Burbank, Loma Alta and San Rafael rank in the bottom 30 percent of elementary schools in the state on standardized tests.
@@ -9717,7 +9704,7 @@ Situated at an elevation of 4,200 metres above sea level, the Bhairavkunda area 
 ::3205
 Despite the academic performance of Washington's students, they have a graduation rate of 61 percent compared to the national average of 70 percent.
 2
-(they ; graduation rate ; 61 percent  ; null ; null) === T
+(they ; graduation rate ; 61 percent ; null) === T
 
 ::3206
 The school has formed a federation with a second academy, the Haberdashers' Aske's Knights Academy, that has opened on the site of the Malory School in Bromley, where only 15 per cent of pupils passed five good GCSEs NYC REARRANGING THE DECKCHAIRS ON THE TITANIC New York City Schools Chancellor Klein has redefined contraband as any token of love, gratitude, or holiday cheer, worth over five dollars retail, gifted to teachers by students and their parents.
@@ -9830,7 +9817,7 @@ Sept 15 Beyond the Mind's Eye Part one of series on computer graphics and how th
 ::3242
 Nationally, consumer prices are down 2.1% versus last year.
 3
-(consumer prices ; down ; 2.1 %  ; null ; null) === T
+(consumer prices ; down ; 2.1 % ; null) === T
 
 ::3243
 Oregon City, OR 97045 Housing
@@ -10129,7 +10116,7 @@ The film dealt with the problems of the 4.5 million persons who lived in slums o
 ::3341
 We have 2 tables of lace in life, costumes we are invented to remember and peonies we are frozen to solve aloft from.
 4
-(We ; lace ; 2 tables  ; null ; null) === F
+(We ; lace ; 2 tables ; null) === F
 
 ::3342
 A 1999 USA TODAY analysis of crash data and estimates from the National Highway Traffic Safety Administration and the Insurance Institute for Highway Safety found that, in the years since CAFE standards were mandated under the Energy Policy and Conservation Act of 1975, about 46,000 people have died in crashes that they would have survived if they had been traveling in bigger, heavier cars.
@@ -10392,7 +10379,7 @@ With almost 89% of its area forested, Maine turns out wood products from boats t
 ::3428
 The amount of carbon contained in that sediment is about 95 percent as much as the river transports during normal rains over the entire year.
 1
-(carbon ; amount ; about 95 percent  ; null ; null) === F
+(carbon ; amount ; about 95 percent ; null) === F
 
 ::3429
 He worked out how to overcome the inefficiencies with software, which he patented, and has already sold to 300 schools, to use as a supplement to NAPLAN.
@@ -10439,7 +10426,7 @@ Children brought up by their two parents are far less likely to have sex under 1
 ::3443
 The new Prius is 20 per cent more powerful than its predecessor, but only 10 per cent more fuel efficient.
 3
-(The new Prius ; more powerful ; 20 per cent more powerful than its predecessor ; null ; null) === T
+(The new Prius ; more powerful ; 20 per cent more powerful ; than its predecessor) === T
 
 ::3444
 Dec 16 Drunk call in ACLU questions new radio call in a drunk program set to start 12/17.
@@ -10861,7 +10848,7 @@ Much more here 11 December, 2007 EDUBLOGGER WANTED There are quite a lot of educ
 ::3583
 The global market for carbon reduction credits is worth more than $20 billion and booming.
 3
-(The global market for carbon reduction credits ; worth ; more than $ 20 billion  ; null ; null) === T
+(The global market for carbon reduction credits ; worth ; more than $ 20 billion ; null) === T
 
 ::3584
 Ends 2/13 US Only Enter for a chance to win $20 in Amazon.com
@@ -11097,7 +11084,7 @@ The only port of call on Consus is a small town called Feldan with a population 
 ::3661
 For example, the number of potential seats for the current school year claimed by schools was almost 30,000.
 1
-(potential seats for the current school year claimed ; number ; almost 30000  ; null ; null) === F
+(potential seats for the current school year claimed ; number ; almost 30000 ; For example) === T
 
 ::3662
 June 8 Peace Rally Local group announces its plans for huge anti nuclear demonstration at United Nations.
@@ -11171,7 +11158,7 @@ For example, cargo that moves through the Port of Cleveland alone supports nearl
 ::3685
 Each sphere is only 1200 feet across, and none of them have any life on them.
 3
-(Each sphere ; across ; 1200 feet  ; null ; null) === F
+(Each sphere ; across ; 1200 feet ; null) === F
 
 ::3686
 Enter to win $50 Cash and up to a $500 Donation to the Canadian Foodgrains Bank.
@@ -11209,7 +11196,7 @@ In 2000, execution tools accounted for 44% of the $5.1 billion market.
 ::3697
 Yet in 2005, the 15 members of the EU were 300 million tons of carbon dioxide away from meeting their Kyoto protocol objective, with the notable exception of the U.K., whose prime minister, Tony Blair, has implemented a stringent National Allocation Plan that meets with ambitious Kyoto goals.
 1
-(the EU ; members ; 300 million tons  ; null ; null) === F
+(the EU ; members ; 300 million tons ; in 2005) === F
 
 ::3698
 Sept 27 NCPAC NCPAC launches new Campaign against Paul Sarbanes.claiming he is losing labor support.
@@ -11307,7 +11294,7 @@ data ................................................... 23 7. Elements of Proce
 ::3729
 Electrical Transmission System Old and Wrinkly, Falling Down According to the Department of Energy, 70 percent of U.S. transmission lines are 25 years or older, 70 percent of power transformers are 25 years or older, and 60 percent of circuit breakers are more than 30 years old.
 1
-(U.S. transmission lines ; percent ; 25 years or older  ; null ; null) === F
+(U.S. transmission lines ; percent ; 25 years or older ; According to the Department of Energy) === F
 
 ::3730
 Supplements to wages and salaries...... 791.0 821.7 859.4 833.9 846.2 854.5 864.2 872.7 Proprietors' income with inventory valuation and capital consumption adjustments............................. 578.6 606.1 658.5 637.1 639.9 655.3 654.0 685.0 Rental income of persons with capital consumption adjustment.......... 130.2 137.4 145.9 147.0 148.6 148.8 139.0 147.3
@@ -11555,7 +11542,7 @@ Sleeps 4 1217 bay street Tybee Island, GA Nice 1 bedroom, 1 bath Tybee condo, ba
 ::3811
 The gospel of John YHWH behind the Greek words Kurious and theos are 2 times they based their Jehovah on one of these and added 4 making it 5 total.
 1
-(John YHWH ; gospel ; 2 times  ; null ; null) === F
+(John YHWH ; gospel ; 2 times ; null) === F
 
 ::3812
 For more information please see Creating an Offline Activity Assignment on page 3 of this document.
@@ -11709,6 +11696,8 @@ The practice is banned in 29 states, most recently in Delaware and Pennsylvania.
 
 ::3862
 There were over 300 such folk museums in the GDR.
+7
+(the GDR ; such folk museums ; 300 such folk museums ; null) === T
 
 ::3863
 The direct economic losses trended upward significantly over the past 24 yr.
@@ -11869,7 +11858,7 @@ For example, it authorizes $60 billion for carbon capture and sequestration proj
 ::3915
 This past year, for example, foreign applications to American graduate schools were down almost 30 percent.
 3
-(foreign applications to American graduate schools ; down ; almost 30 percent  ; null ; null) === T
+(foreign applications to American graduate schools ; down ; almost 30 percent ; null) === T
 
 ::3916
 Oct 14 Football NFL types gather at Hunt Valley to end strike.
@@ -12036,13 +12025,15 @@ Displaying 1 to 41 of 41 records Name County
 ::3970
 However, this figure is down 41.4% from June 2001.
 3
-(this figure ; down ; 41.4 % from June 2001 ; null ; null) === T
+(this figure ; down ; 41.4 % ; from June 2001) === T
 
 ::3971
 The D408SR is rated at 4 amps average, the Zimo at 3 amps and the Lenz LE230 at 2.5 amps.
 
 ::3972
 The proportion from public schools is 62 per cent in the House of Lords.
+7
+(the House of Lords ; per cent ; 62 per cent ; null) === F
 
 ::3973
 So, if the Earth was initially in a state of energy balance, and the rate of sunlight being absorbed by the Earth was exactly 240 Watts per sq.
@@ -12164,7 +12155,7 @@ Ireland is projected to reach 30% above 1990 levels by 2010, against an allowanc
 ::4012
 Users with this status have a vote of 1 point.
 2
-(Users with this status ; vote ; 1 point  ; null ; null) === T
+(Users with this status ; vote ; 1 point ; null) === T
 
 ::4013
 Oct 7 After School Center for after school care for kids are opening in the city.
@@ -12241,7 +12232,7 @@ Not 2 folds, one in heaven and one on earth.
 ::4037
 The total number of flashes during a 30 second cycle in this combination is 190.
 1
-(flashes ; total number ; 190  ; null ; null) === F
+(flashes ; total number ; 190 ; null) === F
 
 ::4038
 The number of infants enrolled in Women, Infants and Children, a nutritional service program, dropped from 46,327 children in October 2009 to 44,312 during the same month this year.
@@ -12396,7 +12387,7 @@ For 1996, the inclusion of software as a fixed asset added about $174 billion to
 ::4088
 The University of Tennessee at Martin has a combined undergraduate and graduate enrollment of approximately 8,100 students.
 2
-(The University of Tennessee at Martin ; combined undergraduate enrollment ; approximately 8100 students  ; null ; null) === F
+(The University of Tennessee at Martin ; combined undergraduate enrollment ; approximately 8100 students ; null) === F
 
 ::4089
 When Oxford University's ClimatePrediction.net project asked people to download and run climate models on their home computer, each with tiny differences from the next, the results came back between three degrees and 11 degrees warming, for a doubling of atmospheric CO2.
@@ -12682,6 +12673,8 @@ Dec 10 Coal Pier The new A.A. county executive is not worried about a loss in ta
 
 ::4183
 All it takes is a 1 or 2 percent change in global cloudiness and you can get this warming and cooling for decades upon decades, for a century.
+7
+(global cloudiness ; percent change ; 2 percent ; null) === T
 
 ::4184
 Further to this, we were surprised to find that 80% of the SBSers surveyed have taken the steps to install SP1 of SBS 2003, which offers the new and improved ISA 2004 firewall.
@@ -12713,7 +12706,7 @@ According to data published in 1991 by the Office of Technology Assessment, a 40
 ::4193
 Its tank size is 18 gallons.
 5
-(Its ; tank size ; 18 gallons  ; null ; null) === T
+(Its ; tank size ; 18 gallons ; null) === T
 
 ::4194
 In 2006, Mr. Delves Broughton reports, 42% of the HBS grads went to work in finance.
@@ -12823,7 +12816,7 @@ Today the inn's 15 cabins and rooms are by far the most gracious accommodations 
 ::4229
 Worldwide, reefs are worth $300 billion.
 3
-(reefs ; worth ; $ 300 billion  ; null ; null) === T
+(reefs ; worth ; $ 300 billion ; null) === T
 
 ::4230
 The FDA granted approval to 13 of the 20 abbreviated new drug applications it received for Meloxicam.
@@ -13092,7 +13085,7 @@ Jacksonville Public Library is making the 1945 Florida State Census more accessi
 ::4318
 Italian bond yields are back up over 7 per cent, and French and Spanish bonds are also under pressure.
 3
-(Italian bond yields ; up ; 7 per cent  ; null ; null) === T
+(Italian bond yields ; up ; 7 per cent ; null) === T
 
 ::4319
 It concludes that 400 million hectares, straddling 25 African countries, are suitable for farming.
@@ -13634,7 +13627,7 @@ It reaches 57 percent of all households in its market area daily and 63 percent 
 ::4498
 The selling prices index is up 11 points to an index of 62, with 66% of firms expecting to raise prices and 4% expecting to decrease them.
 3
-(The selling prices index ; up ; 11 points to an index of 62 , with 66 % of firms expecting to raise prices and 4 % expecting to decrease them ; null ; null) === T
+(The selling prices index ; up ; 11 points ; to an index of 62 , with 66 % of firms expecting to raise prices and 4 % expecting to decrease them) === T
 
 ::4499
 internet money profits LinkedIn Profits Exceed Wall Streets ExpectationsLinkedIn reported its fourth quarter profits jumped to about $7 million Thursday.
@@ -13888,7 +13881,7 @@ Hope to be out there riding for 24 hours next month and see if I can break 100 m
 ::4582
 Copies of the report are $7.00 each.
 1
-(the report ; Copies ; $ 7.00 each  ; null ; null) === T
+(the report ; Copies ; $ 7.00 each ; null) === T
 
 ::4583
 Oct 21 Drug Bust Cops raid southwest Baltimore garage Looking for PCP drug lab.arrest
@@ -13905,7 +13898,7 @@ About 300,000 Indians who belong to the Native American Church of North America,
 ::4587
 The cumulative amount of estimated funds that will be returned to the state in the first contract year from the 22 license offices that have been awarded so far is $117,827.
 1
-(estimated funds returned to the state in the first contract year from the 22 license offices awarded so far ; cumulative amount ; $ 117827  ; null ; null) === T
+(estimated funds returned to the state in the first contract year from the 22 license offices awarded so far ; cumulative amount ; $ 117827 ; null) === T
 
 ::4588
 Stunningly, just 17% of the current American population elects a majority of the U.S. Senate.
@@ -14111,7 +14104,7 @@ Measurements are 49 x 96 x 24 inches.
 ::4655
 Although I will consider speaking at no charge, my usual speaking fee is USD$12,000 plus expenses.
 5
-(my ; usual speaking fee ; usd $ 12000 plus expenses  ; null ; null) === T
+(my ; usual speaking fee ; usd $ 12000 plus expenses ; null) === T
 
 ::4656
 Nov 8 Xmas Mail Sally set wraps a piece on overseas Xmas mailing deadlines.
@@ -14236,7 +14229,7 @@ He told 500 business leaders that free enterprise and the values of openness and
 ::4696
 The three living centers run by TLC have a total of 75 beds, and an estimated 105 youth rely on their services each year.
 2
-(The three living centers run ; total ; 75 beds  ; null ; null) === F
+(The three living centers run ; total ; 75 beds ; null) === F
 
 ::4697
 This data was derived after conducting research which included 140.000 breastfeeding mothers.
@@ -14355,7 +14348,7 @@ Rule 47 of the Charter requires that only Olympic sports may be included in the 
 ::4735
 Dillard has the backing of 22 percent of downstate voters, but lags in his home base.
 2
-(Dillard ; backing ; 22 percent of downstate voters lags in his home base ; null ; null) === F
+(Dillard ; backing ; 22 percentof downstate voters lags in his home base ; null) === F
 
 ::4736
 We are at the marina as we had requested our mail be forwarded here, but it's reasonably priced and we may actually spend 2 nights.
@@ -14399,7 +14392,7 @@ Dec 27 Homicide Harold Howard found stabbed on 300 block of south Vincent street
 ::4749
 UND had 20.4 percent of graduates entering family medicine.
 4
-(UND ; graduates ; 20.4 percent of graduates entering family medicine ; null ; null) === T
+(UND ; graduates ; 20.4 percent ; null) === T
 
 ::4750
 From these beginnings the Sisters founded more than 40 schools in the dioceses of Wellington and Palmerston North and developed ministries throughout the two dioceses.
@@ -14473,7 +14466,7 @@ Got into Twin Lakes inbound feeling ready to run 40 more miles.
 ::4773
 Average maximum temperatures for Sydney in October are around 22 degrees.
 1
-(Sydney in October ; Average maximum temperatures ; around 22 degrees  ; null ; null) === T
+(Sydney in October ; Average maximum temperatures ; around 22 degrees ; null) === T
 
 ::4774
 Includes premiums from aged ineligibles enrolled in HI. 2 Includes recoveries of amounts reimbursed from the trust fund.
@@ -14562,7 +14555,7 @@ Nov 5 NFL Charities United way and other charities are hurting because pf NFL st
 ::4802
 My real revenue increase over what I've been seeing the past couple of months is up nearly 100%.
 3
-(My real revenue increase over ; up ; nearly 100 %  ; null ; null) === F
+(My real revenue increase over ; up ; nearly 100 % ; null) === F
 
 ::4803
 According to a quarterly report by the Joint Budget Legislative Committee, AHCCCS and DES verified the immigration status of 25,821 individuals between Jan. 1 and June 30, 2010 and found no instances of the use of fraudulent documents.
@@ -15038,7 +15031,7 @@ During this time period, the state's 4.225 percent sales tax will not be assesse
 ::4960
 The overall incidence of atrial fibrillation was 26.83%.
 1
-(atrial fibrillation ; overall incidence ; 26.83 %  ; null ; null) === T
+(atrial fibrillation ; overall incidence ; 26.83 % ; null) === T
 
 ::4961
 It received 12 Tony Award nominations, four Adelco Award nominations, one Drama Desk Award and eight additional nominations, 2 Lucille Lortel Award and one additional nomination, and six Outer Critics Circle Award nominations with one win.
@@ -15211,7 +15204,7 @@ High quality limestone was used for the outer casing, with some of the blocks we
 ::5017
 The University of Utah is the flagship public research institution in the state of Utah, and is one of 10 institutions that make up the Utah System of Higher Education .
 1
-(Utah ; University ; one of 10 institutions  ; null ; null) === F
+(Utah ; University ; one of 10 institutions ; null) === F
 
 ::5018
 The Healthy People 2020 exclusive breastfeeding goals are set for 44% at 3 months and 24% at 6 months.
@@ -15297,7 +15290,7 @@ Despite all the demagoguery and misrepresentations hurled at the MCRI, a CNN exi
 ::5045
 Our group was 2 irish, us, and many many norweigans.
 5
-(Our ; group ; 2 irish  ; null ; null) === T
+(Our ; group ; 2 irish ; null) === T
 
 ::5046
 Mr Honeyford thought that schools such as his own, the Drummond Middle School, where 95 per cent of the children were of Pakistani or Bangladeshi origin, were a disaster both for their pupils and for society as a whole.
@@ -15428,7 +15421,7 @@ According to New Scientist, IPCC scientists have long suspected aerosols, partic
 ::5088
 The number of criminology doctorates awarded was up 19.0 percent, to 25, while criminal justice doctorates were up 88.1 percent, to 79.
 1
-(criminology doctorates awarded ; number ; 19.0 percent  ; null ; null) === T
+(criminology doctorates awarded ; number ; 19.0 percent ; to 25) === T
 
 ::5089
 Oct 25 Medical Costs Local conference on rising medical costs and what the feds can do about it.
@@ -15976,7 +15969,7 @@ According to some US statistics, skin disorders comprise more than 35 percent of
 ::5270
 Elk Grove Unified, where one of the charter schools is located, is 32 percent white.
 3
-(Elk Grove Unified where located ; white ; 32 percent  ; null ; null) === F
+(Elk Grove Unified where located ; white ; 32 percent ; null) === F
 
 ::5271
 Yesterday the coalition published an analysis of seasonal climate predictions by NIWA over the past five years which found that the overall accuracy of the predictions was just 48 per cent.
@@ -15993,12 +15986,12 @@ pay anywhere from just under $3000 up to $11000.
 ::5275
 The Grant charter high school is 94.8 percent white, and the elementary schools are 99.1 percent white.
 3
-(The Grant charter high school ; white ; 94.8 percent  ; null ; null) === T
+(The Grant charter high school ; white ; 94.8 percent ; null) === T
 
 ::5276
 The net stock of private fixed assets owned by business was $18.6 trillion, the net stock of government fixed assets was $5.1 trillion, and the net stock of consumer durable goods was $2.4 trillion.
 1
-(government fixed assets ; net stock ; $ 5.1 trillion  ; null ; null) === T
+(government fixed assets ; net stock ; $ 5.1 trillion ; null) === T
 
 ::5277
 Fake recruiters with no contact details trying to get people to fax their docs to their 086 fax number.
@@ -16180,7 +16173,7 @@ The line ratios of water in the Spitzer spectral range suggest that water vapor 
 ::5336
 The maximum size of the output buffer is 32767 bytes.
 1
-(the output buffer ; maximum size ; 32767 bytes  ; null ; null) === T
+(the output buffer ; maximum size ; 32767 bytes ; null) === T
 
 ::5337
 Sept 8 Fair Neighborhood Some neighborhoods involved in city fair are upset over some change in rules.
@@ -16782,7 +16775,7 @@ Dec 17 Roadblock First night of Harford county's roadblock to find drunk drivers
 ::5536
 As of yesterday, the population of the world was 6.55 billion and, according to the US Census Bureau, will reach nine billion in 2042, although its rate of growth is declining sharply.
 1
-(the world ; population ; 6.55 billion and  ; null ; null) === T
+(the world ; population ; 6.55 billion and ; As of yesterday) === T
 
 ::5537
 The value len cannot be less than 1.
@@ -16796,7 +16789,7 @@ We anchored just past Snug Harbor in 10 feet of water.
 ::5540
 These deaths are 100 percent preventable, but only if we can get drivers to stop getting behind the wheel when they're impaired.
 3
-(These deaths ; preventable ; 100 percent  ; null ; null) === T
+(These deaths ; preventable ; 100 percent ; null) === T
 
 ::5541
 But Mr Miliband has required just a fortnight to decide that the 60 per cent reduction in greenhouse gas emissions to which the UK had previously signed up was insufficiently ambitious.
@@ -17200,7 +17193,7 @@ In a survey of nearly 3,000 Americans ages 8 to 24 conducted last year by Harris
 ::5674
 The new roller coaster is a lengthy 4,400 feet long and it boasts not one, but three separate launches.
 3
-(The new roller coaster ; long ; 4400 feet  ; null ; null) === T
+(The new roller coaster ; long ; 4400 feet ; null) === T
 
 ::5675
 Whether it's the federal student aid program, which hands out over $60 billion in grants a year, or the expenditure of billions on university research programs, taxpayers are increasingly required to fund the activities of universities and colleges regardless of the content and character of their programs.
@@ -17268,7 +17261,7 @@ La moyenne des avis date du 16 Mars 2011.
 ::5696
 Helios has a diameter of 950,000 miles and has a breathable atmosphere.
 2
-(Helios ; diameter ; 950000 miles  ; null ; null) === T
+(Helios ; diameter ; 950000 miles ; null) === T
 
 ::5697
 Oct 5 Tichnell Sentencing going on for Richard Tichnell accused of killing Garrett county sheriff file from Jan 14 1991.
@@ -17324,7 +17317,7 @@ More than 30% and the market was headed for a crash.
 ::5714
 Manufacturers Hungry for Tech U.S. manufacturing technology consumption in June was up 5.1 percent from May and 0.4 percent from June 2006, according to the latest numbers reported by companies participating in the United States Manufacturing Technology Consumption program.
 3
-(Manufacturers Hungry for Tech U.S. manufacturing technology consumption ; up ; 5.1 percent from May and 0.4 percent from June 2006 ; null ; null) === T
+(Manufacturers Hungry for Tech U.S. manufacturing technology consumption ; up ; 5.1 percent ; from May and 0.4 percent from June 2006) === T
 
 ::5715
 part 3 New shows available every Monday.
@@ -17782,7 +17775,7 @@ In Washington DC we have 285 Photographers in the directory, Many with White Hou
 ::5866
 The total Herschel observing time for the proposed programme is 12.8 h.
 1
-(the proposed programme ; total Herschel observing time ; 12.8 h  ; null ; null) === T
+(the proposed programme ; total Herschel observing time ; 12.8 h ; null) === T
 
 ::5867
 Ryan Starr had trouble getting out of her contract with RCA Records , but independently released a single My Religion , which sold 360,000 downloads via iTunes .
@@ -18303,7 +18296,7 @@ For my young nieces and nephews birthdays, i give a fun card with stickers, temp
 ::6039
 In 1889, two Ardoin brothers had 60 acres of rice ready for harvest near Welsh.
 4
-(two Ardoin brothers ; rice ready ; 60 acres  ; null ; null) === F
+(two Ardoin brothers ; rice ready ; 60 acres ; In 1889) === T
 
 ::6040
 Tables 9 and 10 present the net stock of residential fixed assets by type of owner, legal form of organization, and tenure group.
@@ -18374,7 +18367,7 @@ In accordance with Title 17 U.S.C.
 ::6062
 Gas engined Golfs have a starting tab of $17,490, and the better equipped TDI kicks off at $21,990.
 2
-(Golfs ; starting tab ; $ 17490  ; null ; null) === F
+(Golfs ; starting tab ; $ 17490 ; null) === F
 
 ::6063
 His chance of survival was put at no higher than 50%.
@@ -18520,7 +18513,7 @@ They have spent so much money on politics that they are seeking a $40 million lo
 ::6110
 The maximum size of the input buffer is 32767 bytes.
 1
-(the input buffer ; maximum size ; 32767 bytes  ; null ; null) === T
+(the input buffer ; maximum size ; 32767 bytes ; null) === T
 
 ::6111
 At least, if I disconnect that piglet, the lag goes away about 95% of the time.
@@ -18540,7 +18533,7 @@ The key point made in the report was not that nothing should be done to address 
 ::6116
 Mobil 1 only has 10% of the extended oil change interval market.
 4
-(Mobil 1 ; extended oil change interval market ; 1 only has 10 %  ; null ; null) === F
+(Mobil 1 ; extended oil change interval market ; 1 only has 10 % ; null) === F
 
 ::6117
 The United States led and 64 other Western nations followed in refusing to compete at the Moscow Olympics in 1980 , because of the Soviet invasion of Afghanistan , but 16 other Western nations did compete at the Moscow Olympics.
@@ -18695,7 +18688,7 @@ July 19 New Houses Baltimore is offering houses for 7 1/2 % mortgage and 3000 do
 ::6167
 King Academy has a current enrollment of 250 students and could comfortably handle 300.
 2
-(King Academy ; current enrollment ; 250 students  ; null ; null) === T
+(King Academy ; current enrollment ; 250 students ; null) === T
 
 ::6168
 The team is coached by Wu Xiaosong, and features 13 Chinese boxers and three internationals, from Brazil, Senegal and Ghana.
@@ -18888,6 +18881,8 @@ As a recent study in the scientific journal Nature notes, global greenhouse gas 
 
 ::6231
 While the number of October flights on offer within western Europe is two per cent higher this year, there has been a 12 per cent increase in the number of flights between eastern European countries.
+7
+(the number of flights between eastern European countries ; per cent increase ; 12 per cent increase ; null) === T
 
 ::6232
 A typical car return trip to a supermarket consumes about the same energy as nearly 100 bags.
@@ -19050,6 +19045,8 @@ Nov 5 Contact 2 Contact 2 gets county to fix driveway apron on new home.
 
 ::6285
 Since 2002, there has been a 10% increase in the number of church and Jewish primary schools in the top 500.
+7
+(the number of church ; % increase ; 10 % increase ; null) === T
 
 ::6286
 In the last two years, he's gotten $166 million net after he really applied himself and took his secret to its limits.
@@ -19138,7 +19135,7 @@ Books GEN 369.13 D445m Founded for the purpose of compiling the Roll, and of pre
 ::6314
 Now my audience was about 400 people.
 5
-(my ; audience ; about 400 people  ; null ; null) === T
+(my ; audience ; about 400 people ; null) === T
 
 ::6315
 The politicians have a huge amount to answer for over the past 50 to 60 years.'
@@ -19695,7 +19692,7 @@ An audience of about 120 persons from 14 countries heard a much more balanced ac
 ::6499
 Only New Mexico has more miles of Route 66 with 487 miles.
 4
-(Only New Mexico ; Route ; 487 miles  ; null ; null) === F
+(Only New Mexico ; Route ; 487 miles ; null) === F
 
 ::6500
 In a recent member poll by the American Automobile Association, 88% of respondents said they felt safer driving alongside large trucks now than they did 10 years ago.
@@ -19883,7 +19880,7 @@ Detroit crookedness again The FBI is investigating Detroit Public Schools for po
 ::6561
 Child had a 2 day hx of nausea/vomiting attributed to viral infection.
 4
-(Child ; nausea vomiting ; 2 day hx  ; null ; null) === T
+(Child ; nausea vomiting ; 2 day hx ; null) === T
 
 ::6562
 Looking at the personnel of eight federal agencies chosen at random, the GAO found that 463 employees showed up on the enrollment records of just three unaccredited schools.
@@ -19897,7 +19894,7 @@ And let's face it, $19.99 is a bit much.
 ::6565
 In Germany, Austria, Switzerland, and the Czech Republic, they may have as much as 70 percent of the market, according to the estimates.
 4
-(they ; market ; 70 percent of the market ; null ; null) === T
+(they ; market ; 70 percent ; In Germany , Austria , Switzerland , and the Czech Republic) === T
 
 ::6566
 The church had 2 services a sunday.
@@ -20226,3 +20223,4 @@ At least until the destruction of the First Temple in 586 B.C.E.
 ::6674
 The Census Bureau also adjusted its preliminary estimates of May 2007 figures upward slightly, from $1,101 million to $1,104 million, meaning bookstore sales in May 2007 decreased by 4.0 percent as compared to May 2006.
 
+==============Done===========
