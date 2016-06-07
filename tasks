@@ -84,7 +84,7 @@ filtered sentences mein "\C2" (special character) creating issue
 
 ---------------------------31st May---------------------
 - (pobj#{quantity}#NNP|NN) to (pobj#{quantity}#.+)
-(poss#{arg}#PRP$) to (poss#{arg}#PRP\$)
+- (poss#{arg}#PRP$) to (poss#{arg}#PRP\$)
 - imp: bina argument ke pattern kaise learn ho gya?????? :O :O :O
 pattern mein root node mein deplabel ho to? 
 	<(ccomp#rose#VERB)<(advcl#declined#VERB)<(nsubj#income#NNP|NN)<(prep#in#IN)<(pobj#{quantity}#NNP|NN)>>>(nsubj#{rel}#NNP|NN)<(nn#{arg}#NNP|NN|PRP)>>>

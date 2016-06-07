@@ -124,6 +124,18 @@ public class OnreHelper_DanrothQuantifier {
 				if(word.contains("%")) return "%";
 			}
 			
+			/*if(unit.equalsIgnoreCase("per cent")) {
+				if(word.contains("%")) return "%";
+			}
+			
+			if(unit.equalsIgnoreCase("per cent")) {
+				if(word.equals("percent")) return "percent";
+			}
+			
+			if(unit.equalsIgnoreCase("percent")) {
+				if(phrase.contains("per cent")) return "per cent";
+			}*/
+			
 			if(word.equalsIgnoreCase(unit)) return unit;
 		}
 		
@@ -176,17 +188,17 @@ public class OnreHelper_DanrothQuantifier {
 		
 		for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans) {
 			String unitFromPhrase = OnreUtils_string.lowerTrim(getUnitFromPhrase(danrothSpan.phrase, danrothSpan.unit));
-			map_quantifiers_unit.put(danrothSpan.unit, unitFromPhrase);
+			map_quantifiers_unit.put(OnreUtils_string.replacePer_centToPerCent(danrothSpan.unit), unitFromPhrase);
 		}
 		
 		return map_quantifiers_unit;
 	}
-	
+
 	public static Map<String, Onre_dsDanrothSpan> getUnitDanrothMap(String text, Onre_dsDanrothSpans danrothSpans) {
 		Map<String, Onre_dsDanrothSpan> map_quantifiers_unitDanroth = new HashMap<String, Onre_dsDanrothSpan>();
 		
 		for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans) {
-			map_quantifiers_unitDanroth.put(danrothSpan.unit, danrothSpan);
+			map_quantifiers_unitDanroth.put(OnreUtils_string.replacePer_centToPerCent(danrothSpan.unit), danrothSpan);
 		}
 		
 		return map_quantifiers_unitDanroth;
