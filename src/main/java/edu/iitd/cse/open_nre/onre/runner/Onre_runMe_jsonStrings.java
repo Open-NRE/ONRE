@@ -65,11 +65,11 @@ public class Onre_runMe_jsonStrings {
 					System.out.println();
 				}
 				
-				extrs_all.addAll(extrs);
+				if(extrs!=null) extrs_all.addAll(extrs);
 			}
 		}
 		
-		if(OnreGlobals.arg_isSeedFact) OnreIO.writeFile("data/out_facts_new", extrs_all);
+		if(OnreGlobals.arg_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts", extrs_all);
 			
 		
 		

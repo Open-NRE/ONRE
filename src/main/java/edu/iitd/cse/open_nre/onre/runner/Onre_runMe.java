@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "The cost of the house is 10 kg/meter.";
+		String sentence = "Warzone 2060 play information Warzone 2060 is a real time strategy game.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 
