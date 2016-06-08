@@ -46,7 +46,7 @@ public class Onre_runMe {
 	}
 	
 	public static void setArguments(String[] args) {
-		if(args.length > 0) OnreGlobals.arg_isSeedFact = (args[0].equals("true")); //TODO: "shall have named arguments"
+		if(args.length > 0) OnreGlobals.arg_onre_isSeedFact = (args[0].equals("true")); //TODO: "shall have named arguments"
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {

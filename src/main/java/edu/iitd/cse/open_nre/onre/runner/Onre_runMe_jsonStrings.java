@@ -54,11 +54,10 @@ public class Onre_runMe_jsonStrings {
 				
 				List<OnreExtraction> extrs = MayIHelpYou.runMe(onrePatternTree, listOfDanrothSpans.get(i));
 				
-				if(!OnreGlobals.arg_isSeedFact) {
+				if(!OnreGlobals.arg_onre_isSeedFact) {
 					System.out.println("::" + (i+1));
 					System.out.println(onrePatternTree.sentence);
 					for (OnreExtraction onreExtraction : extrs) {
-						//System.out.println(onreExtraction.sentence);
 						System.out.println(onreExtraction.patternNumber);
 						System.out.println(onreExtraction);
 					}
@@ -69,7 +68,7 @@ public class Onre_runMe_jsonStrings {
 			}
 		}
 		
-		if(OnreGlobals.arg_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts", extrs_all);
+		if(OnreGlobals.arg_onre_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts", extrs_all);
 			
 		
 		

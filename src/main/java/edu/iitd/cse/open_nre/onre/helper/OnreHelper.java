@@ -58,7 +58,7 @@ public class OnreHelper {
     	String quantityPhrase = danrothSpan.phrase;
     	if(quantityPhrase == null) return;
     	
-    	if(OnreGlobals.arg_isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
+    	if(OnreGlobals.arg_onre_isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
     		onreExtraction.quantity = new OnreExtractionPart(danrothSpan.value.toString());
     		onreExtraction.extra_quantity_info = new OnreExtractionPart(danrothSpan.unit);
     		return;
@@ -264,11 +264,11 @@ public class OnreHelper {
 	    {
 	    	OnrePatternNode currNode = q_yetToExpand.remove();
 	    	for(OnrePatternNode child : currNode.children) {
-				if(child.dependencyLabel.equals("amod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				//if(child.dependencyLabel.equals("amod")) {expansions.add(child); q_yetToExpand.add(child); } 
 				if(child.dependencyLabel.equals("nn")) {expansions.add(child); q_yetToExpand.add(child); } 
-				if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
-				if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
-				//if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
+				//if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
+				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
 			}
 	    }
 		
