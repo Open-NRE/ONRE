@@ -18,8 +18,11 @@ public class OnreGlobals {
 	public static Gson gson; //note: don't use it directly...call OnreHelper_json.getGson() instead
 	
 	//arguments-onre
-	public static boolean arg_isSeedFact = false;
+	public static boolean arg_onre_isSeedFact = false;
 	
 	//arguments-onreDS
-	public static Onre_dsRunType arg_runType = Onre_dsRunType.DEFAULT;
+	public static Onre_dsRunType arg_onreds_runType;
+	public static String arg_onreds_path_inputFolder;
+	public static String arg_onreds_path_facts;
+	public static double arg_onreds_partialMatchingThresholdPercent;
 }

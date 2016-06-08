@@ -83,7 +83,7 @@ public class MayIHelpYou {
     	
     	if(subTree == null) return null;
     	
-    	if(!OnreGlobals.arg_isSeedFact) OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
+    	if(!OnreGlobals.arg_onre_isSeedFact) OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
     	OnreHelper.onreExtraction_dummyForNull(onreExtraction);
     	
     	return onreExtraction;
