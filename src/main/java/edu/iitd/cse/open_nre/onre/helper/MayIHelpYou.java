@@ -4,8 +4,9 @@
 package edu.iitd.cse.open_nre.onre.helper;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import scala.collection.JavaConversions;
 import scala.collection.Seq;
@@ -23,7 +24,7 @@ import edu.knowitall.tool.parse.graph.DependencyGraph;
  */
 public class MayIHelpYou {
 
-    public static List<OnreExtraction> runMe(DependencyGraph depGraph) throws IOException {
+    public static Map<OnreExtraction, Integer> runMe(DependencyGraph depGraph) throws IOException {
 		
     	DependencyGraph simplifiedGraph = OnreHelper_graph.simplifyGraph(depGraph);
     	OnrePatternTree onrePatternTree = OnreHelper_graph.convertGraph2PatternTree(simplifiedGraph);
@@ -36,11 +37,11 @@ public class MayIHelpYou {
     	return runMe(onrePatternTree, danrothSpans, list_configuredPattern);
 	}
 
-    public static List<OnreExtraction> runMe(OnrePatternTree onrePatternTree, Onre_dsDanrothSpans danrothSpans, List<OnrePatternNode> list_configuredPattern) throws IOException {
+    public static Map<OnreExtraction, Integer> runMe(OnrePatternTree onrePatternTree, Onre_dsDanrothSpans danrothSpans, List<OnrePatternNode> list_configuredPattern) throws IOException {
     	if(onrePatternTree == null) return null;
     	OnreGlobals.sentence = onrePatternTree.sentence;
     	
-		List<OnreExtraction> extrs = getExtractions(onrePatternTree, list_configuredPattern, danrothSpans);
+    	Map<OnreExtraction, Integer> extrs = getExtractions(onrePatternTree, list_configuredPattern, danrothSpans);
 		
 		//if(!OnreGlobals.arg_isSeedFact) System.out.println(OnreGlobals.sentence);
 		
@@ -58,8 +59,8 @@ public class MayIHelpYou {
 		// System.out.println("You are running me :)");
 	}
     
-    private static List<OnreExtraction> getExtractions(OnrePatternTree onrePatternTree, List<OnrePatternNode> list_configuredPattern, Onre_dsDanrothSpans danrothSpans) {
-    	List<OnreExtraction> extrs = new ArrayList<>();
+    private static Map<OnreExtraction, Integer> getExtractions(OnrePatternTree onrePatternTree, List<OnrePatternNode> list_configuredPattern, Onre_dsDanrothSpans danrothSpans) {
+    	Map<OnreExtraction, Integer> extrs = new HashMap<OnreExtraction, Integer>();
     	
     	for (int i=0; i<list_configuredPattern.size(); i++) {
     		//System.out.println("pattern: " + i);
@@ -70,7 +71,7 @@ public class MayIHelpYou {
 	        if(onreExtraction != null && OnreUtils.quantityExists(onreExtraction)) {
 	        	onreExtraction.patternNumber=i+1;
 	        	onreExtraction.sentence = onrePatternTree.sentence;
-	        	extrs.add(onreExtraction);
+	        	extrs.put(onreExtraction, onreExtraction.patternNumber);
 	        }
         }
     	

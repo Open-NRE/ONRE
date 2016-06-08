@@ -28,7 +28,7 @@ public class OnreExtraction {
 	
 	public OnreExtractionPart	extra_quantity_info; /*giving extra info relating to the quantity*/
 	
-	public int	patternNumber;
+	public Integer	patternNumber;
 	public String sentence;
 
 	public OnreExtraction() {

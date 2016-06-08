@@ -6,7 +6,9 @@ package edu.iitd.cse.open_nre.onre.runner;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -55,19 +57,24 @@ public class Onre_runMe_jsonStrings {
 				//if(!OnreGlobals.arg_isSeedFact) System.out.println("::" + (i+1));
 				OnrePatternTree onrePatternTree = OnreHelper_json.getOnrePatternTree(inputJsonStrings_patternTree.get(i));
 				//DependencyGraph depGraph = Onre_runMe.getDepGraph();
-				List<OnreExtraction> extrs = MayIHelpYou.runMe(onrePatternTree, listOfDanrothSpans.get(i), list_configuredPattern);
+				Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(onrePatternTree, listOfDanrothSpans.get(i), list_configuredPattern);
+				
+				Map<String, Integer> uniq_extrs = new HashMap<String, Integer>();
+				for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
+					uniq_extrs.put(entry.getKey().toString(), entry.getValue());
+				}
 				
 				if(!OnreGlobals.arg_onre_isSeedFact) {
 					System.out.println("::" + (i+1));
 					System.out.println(onrePatternTree.sentence);
-					for (OnreExtraction onreExtraction : extrs) {
-						System.out.println(onreExtraction.patternNumber);
-						System.out.println(onreExtraction);
+					for (Map.Entry<String, Integer> entry : uniq_extrs.entrySet()) {
+						System.out.println(entry.getValue());
+						System.out.println(entry.getKey());
 					}
 					System.out.println();
 				}
 				
-				if(extrs!=null) extrs_all.addAll(extrs);
+				if(extrs!=null) extrs_all.addAll(extrs.keySet());
 			}
 		}
 		

@@ -5,6 +5,7 @@ package edu.iitd.cse.open_nre.onre.runner;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
@@ -38,8 +39,8 @@ public class Onre_runMe {
 		Onre_runMe.setArguments(args);
 		
 		if(depGraph != null) {
-			List<OnreExtraction> extrs = MayIHelpYou.runMe(depGraph);
-			for (OnreExtraction onreExtraction : extrs) {
+			Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(depGraph);
+			for (OnreExtraction onreExtraction : extrs.keySet()) {
 				System.out.println(onreExtraction);
 			}
 		}
