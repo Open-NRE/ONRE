@@ -31,15 +31,15 @@ public class MayIHelpYou {
     	OnreGlobals.sentence = onrePatternTree.sentence;
     	
     	Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
+    	List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
     	
-    	return runMe(onrePatternTree, danrothSpans);
+    	return runMe(onrePatternTree, danrothSpans, list_configuredPattern);
 	}
 
-    public static List<OnreExtraction> runMe(OnrePatternTree onrePatternTree, Onre_dsDanrothSpans danrothSpans) throws IOException {
+    public static List<OnreExtraction> runMe(OnrePatternTree onrePatternTree, Onre_dsDanrothSpans danrothSpans, List<OnrePatternNode> list_configuredPattern) throws IOException {
     	if(onrePatternTree == null) return null;
     	OnreGlobals.sentence = onrePatternTree.sentence;
     	
-		List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
 		List<OnreExtraction> extrs = getExtractions(onrePatternTree, list_configuredPattern, danrothSpans);
 		
 		//if(!OnreGlobals.arg_isSeedFact) System.out.println(OnreGlobals.sentence);

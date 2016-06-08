@@ -204,6 +204,7 @@ public class OnreHelper {
 	private static void expandQuantity(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		
 		OnrePatternNode argument_parent_node = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
+		if(argument_parent_node==null) return;
 		
 		OnrePatternNode node_prep = null;
 		for(OnrePatternNode child : argument_parent_node.children) {

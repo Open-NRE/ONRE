@@ -13,11 +13,13 @@ import java.util.TreeSet;
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
+import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
 import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
 import edu.iitd.cse.open_nre.onre.helper.MayIHelpYou;
 import edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier;
 import edu.iitd.cse.open_nre.onre.helper.OnreHelper_json;
+import edu.iitd.cse.open_nre.onre.helper.OnreHelper_pattern;
 import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 
@@ -46,13 +48,14 @@ public class Onre_runMe_jsonStrings {
 			
 			List<String> inputJsonStrings_patternTree = OnreIO.readFile(file);
 			List<Onre_dsDanrothSpans> listOfDanrothSpans = OnreHelper_DanrothQuantifier.getListOfDanrothSpans(file.replaceAll("_jsonStrings", ""));
+
+			List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
 			
 			for(int i=0;i<inputJsonStrings_patternTree.size();i++) {
 				//if(!OnreGlobals.arg_isSeedFact) System.out.println("::" + (i+1));
 				OnrePatternTree onrePatternTree = OnreHelper_json.getOnrePatternTree(inputJsonStrings_patternTree.get(i));
 				//DependencyGraph depGraph = Onre_runMe.getDepGraph();
-				
-				List<OnreExtraction> extrs = MayIHelpYou.runMe(onrePatternTree, listOfDanrothSpans.get(i));
+				List<OnreExtraction> extrs = MayIHelpYou.runMe(onrePatternTree, listOfDanrothSpans.get(i), list_configuredPattern);
 				
 				if(!OnreGlobals.arg_onre_isSeedFact) {
 					System.out.println("::" + (i+1));
