@@ -6,7 +6,7 @@ Rette, Gary SP 22 98 35 20 5 2.67 246.1 157 61 196 8 0 0 0 5 25 2 46.4 1.000 Sim
 ::2
 The repetitions for this job was 25%, which is about average.
 148
-(this job ; repetitions ; 25 % ; null)
+(this job ; repetitions ; 25 % ; null) === T
 
 ::3
 The second simulation shows that the net fiscal deficit per household would climb to $7,700.
@@ -137,7 +137,7 @@ Porcelain bath sinks cl cloisonne black with nickel vessel sink $1, fs chameleon
 ::45
 The success rate with this treatment is about 95 percent.
 7
-(success ; rate ; about 95 percent ; null)
+(success ; rate ; about 95 percent ; null) === F
 
 ::46
 You can choose from 15 different massages, a variety of skin care options, and salon services.
@@ -160,7 +160,7 @@ I transferred 260 pounds, or US$520 in my calculations.
 ::52
 The hotel is within 10 min drive to Xintiandi.520
 480
-(min ; drive ; within 10 min ; to Xintiandi.520)
+(min ; drive ; within 10 min ; to Xintiandi.520) === F
 
 ::53
 Among the most numerous group, Mexicans, Democrats lead Republicans by 22 points, with a large proportion of Mexicans claiming to be independents.
@@ -213,9 +213,9 @@ Jonathan invited me to come to a meeting at West Point this year comprised of 30
 ::69
 The cost is only $9.95 for each additional week, billed directly to your credit card on a monthly basis.
 32
-(your ; cost ; $ 9.95 ; null)
+(your ; cost ; $ 9.95 ; null) === F
 16
-(each additional week ; cost ; $ 9.95 ; null)
+(each additional week ; cost ; $ 9.95 ; null) === T
 
 ::70
 Foley Square is at the intersection of Centre Street and Pearl Street, two blocks south of 100 Centre Street.
@@ -265,16 +265,16 @@ Have 2 others to still deal with too.
 ::85
 The price of both ADAM and EVE in one order is $79.00 plus $6.00 shipping and handling.
 49
-(one order ; price ; $ 79.00 plus $ 6.00 ; null)
+(one order ; price ; $ 79.00 plus $ 6.00 ; null) === F
 95
-(ADAM ; price ; $ 79.00 plus $ 6.00 ; null)
+(ADAM ; price ; $ 79.00 plus $ 6.00 ; null) === F
 
 ::86
 Business output was about 78 percent of GDP in 1992.
 16
-(GDP ; Business output ; about 78 percent ; in 1992)
+(GDP ; Business output ; about 78 percent ; in 1992) === F
 7
-(Business ; output ; about 78 percentof GDP ; in 1992)
+(Business ; output ; about 78 percentof GDP ; in 1992) === T
 
 ::87
 This location is also three miles from Arlington International Racecourse and Deer Park Mall, six miles from Kemper Lakes Golf Course, 17 miles from the Grand Victoria Riverboat Casino, 18 miles from Allstate Arena, 20 miles form Brookfield ZOO, and 25 miles from Six Flags Great America and Gurnee Mills Outlet Mall.
@@ -345,7 +345,7 @@ I understand there will be about 20 Fairfax Interns in 2008.
 ::109
 The online dating industry is now worth $4 billion worldwide.
 231
-(The online dating industry ; worth $ billion worldwide ; $ 4 billion worldwide ; null)
+(The online dating industry ; worth $ billion worldwide ; $ 4 billion worldwide ; null) === T
 
 ::110
 posted 9 hrs ago I wouldn't pay it, that's a ridiculous amount of money all together IMO.
@@ -500,7 +500,7 @@ For fatal crashes occurring from midnight to 3 a.m., 78 percent involved alcohol
 ::160
 The previous owners had 2 black plastic earth machine things in the front yard....and I wanted them gone.
 35
-(The previous owners ; black ; 2 black plastic earth machine things ; in the front yard)
+(The previous owners ; black ; 2 black plastic earth machine things ; in the front yard) === T
 
 ::161
 But the level at which it causes this damage is 10 to 20 times higher than that which humans receive.
@@ -523,9 +523,9 @@ The figure shows that between March 1996 and March 2000, the foreign born grew b
 ::167
 A minimum 40 gallon aquarium, though a larger tank would be suggested if keeping several.
 480
-(40 gallon ; aquarium ; 40 gallon aquarium ; null)
+(40 gallon ; aquarium ; 40 gallon aquarium ; null) === F
 71
-(A ; aquarium ; 40 gallon aquarium ; null)
+(A ; aquarium ; 40 gallon aquarium ; null) === F
 
 ::168
 Also completed the survey on the freebie list today, for the $10.00 G/C to Amazon.
@@ -560,7 +560,7 @@ It will, however, never be within 2% of 50%, so the null hypothesis is always re
 ::178
 The guests are within 12 miles of the Walt Disney World Resort and Universal Studios, and only three miles from the Orlando International Airport.A complimentary airport shuttle service transports guests to and from the property.
 64
-(The guests ; within ; within 12 miles ; null)
+(The guests ; within ; within 12 miles ; null) === F
 
 ::179
 After you work a muscle group very hard, allow 3 to 6 days for recovery.
@@ -631,9 +631,9 @@ Researchers adjusted impeller diameters and shaft speeds to generate peripheral 
 ::201
 The $5 million contribution augments the approximately $10 million CIDA already allocates annually to the region.
 480
-(contribution ; augments ; $ 5 million contribution ; null)
+(contribution ; augments ; $ 5 million contribution ; null) === F
 71
-(The ; $ million contribution augments ; $ 5 million contribution ; null)
+(The ; $ million contribution augments ; $ 5 million contribution ; null) === F
 
 ::202
 Too bad, figure out a different system..... Deposited the 2 checks I had yesterday & did get my haircut.
@@ -740,7 +740,7 @@ I also tallied her student loan debt and realized she is only $451 away from get
 ::236
 The idbl/dbdrags are within 4 miles of each other.
 64
-(The idbl dbdrags ; within ; within 4 miles ; null)
+(The idbl dbdrags ; within ; within 4 miles ; null) === T
 
 ::237
 Bet'cha can't identify with 200 study patients taken from half a world away in a study conducted 2 years ago, whose results are probably skewed in favor of a positive outcome.
@@ -772,9 +772,9 @@ The unstoppable Drogba now has 25 goals this season with more than a dozen match
 ::246
 Israel, with a population density of 630 people per kilometer from the north to Beer Sheva.
 428
-(people ; population density ; 630 people per kilometer ; null)
+(people ; population density ; 630 people per kilometer ; null) === F
 24
-(population ; density ; 630 people per kilometer ; null)
+(population ; density ; 630 people per kilometer ; null) === F
 
 ::247
 Days like today when the first train taking workers up the mountain had to turn around at Clogwyn Station owing to 69 m.p.h.
@@ -797,7 +797,7 @@ We reject the notion that 36 people could not recognize the significance of this
 ::253
 The Georgia Aquarium, Coca Cola Factory, Turner Field, and Zoo Atlanta are all 25 miles or less from the hotel.
 7
-(Georgia ; Aquarium ; 25 miles or less ; null)
+(Georgia ; Aquarium ; 25 miles or less ; null) === F
 
 ::254
 You should make an opening offer of $19,000.
@@ -829,7 +829,7 @@ o In general, a refinery can accommodate only 1 harvester at a time.
 ::263
 Walt disney world was different on the block, with 28,000 reforms of jet ski repair manual fun.
 64
-(Walt disney world ; with ; 28000 reforms ; null)
+(Walt disney world ; with ; 28000 reforms ; null) === F
 
 ::264
 By 1995, they owned 43 radio stations and over 30 television stations in the theoretical principles of ethical issues facing media practitioners, the cases that follow.
@@ -930,7 +930,7 @@ Although the upper limit of mormal for total serum bilirubin is 1 mg/dL, jaundic
 ::296
 The Linux kernel is only 400 KB.
 7
-(Linux ; kernel ; 400 kb ; null)
+(Linux ; kernel ; 400 kb ; null) === F
 
 ::297
 In the summer of 1985 they published a statement acknowledging that there had been 856 severe earthquakes during the 2000 years preceding 1914.
@@ -971,7 +971,7 @@ To make a flower, you have to collect 7 trees.
 ::309
 The oldest sda health summit orlando computer engineers governed deletion are adequately greener than 40 symptoms old.
 3
-(The oldest sda health summit orlando computer engineers ; symptoms old ; greener than 40 symptoms old ; null)
+(The oldest sda health summit orlando computer engineers ; symptoms old ; greener than 40 symptoms old ; null) === F
 
 ::310
 In a Washington Post piece by the PLO's Marwan Barghouti, for example, he claimed Jews got 78% of all of the land, the standard Arab line.
@@ -1048,7 +1048,7 @@ In the UK and U.S., 25 to 30 years is typical.
 ::334
 This very long fantasy novel is about 199,000 words long and, as a printed book, runs to over 700 pages.
 100
-(This very long fantasy novel ; words long ; about 199000 words ; null)
+(This very long fantasy novel ; words long ; about 199000 words ; null) === T
 
 ::335
 They represent more than 50 charitable federations and funds serving more than 2,000 nonprofits nationwide.
@@ -1074,9 +1074,9 @@ Together with other progressive organizations, we aim to mobilize around 50,000 
 ::342
 The Harrison Manor House Hotel Hotel is my favorite 7 hotel in Lake Bluff.
 7
-(Harrison Manor House ; Hotel ; 7 hotel ; null)
+(Harrison Manor House ; Hotel ; 7 hotel ; null) === F
 207
-(Lake Bluff ; Harrison Manor House Hotel Hotel ; 7 hotel ; null)
+(Lake Bluff ; Harrison Manor House Hotel Hotel ; 7 hotel ; null) === F
 
 ::343
 Photos taken July 10th in a gravel pit, Meadow Lake Provincial Park, 550 km northwest of our home in Regina, SK.
@@ -1132,9 +1132,9 @@ What is 39 puzzling however is that majority of the managers are going through s
 ::360
 One 50 gram bag for $8.00 available.
 480
-(gram ; bag ; one 50 gram bag ; for $ 8.00 available)
+(gram ; bag ; one 50 gram bag ; for $ 8.00 available) === F
 24
-(gram ; bag ; $ 8.00 available ; null)
+(gram ; bag ; $ 8.00 available ; null) === F
 
 ::361
 That's 24 pieces of each length of 2x4 including 4 for each length for support at the end of the sheeting.
@@ -1145,7 +1145,7 @@ I would like $300 for it, But I would be willing to trade for an equivalent amou
 ::363
 Only 5 min away from the entrance to the Kruger National Park, our up market house offers the perfect base from where to explore the many attractions of the region.
 145
-(the entrance to the Kruger National Park offers ; min away ; 5 min ; from the entrance to the Kruger National Park , our up market house offers the perfect base from where to explore the many attractions of the region)
+(the entrance to the Kruger National Park offers ; min away ; 5 min ; from the entrance to the Kruger National Park , our up market house offers the perfect base from where to explore the many attractions of the region) === F
 
 ::364
 Breast feeding requires an extra 500 calories per day.
@@ -1219,7 +1219,7 @@ The CRMA is located at 410 Third Avenue in Cedar Rapids.
 ::387
 And 1 Corinthians talks about spiritual wisdom.
 480
-(1 Corinthians ; talks ; 1 corinthians talks ; about spiritual wisdom)
+(1 Corinthians ; talks ; 1 corinthians talks ; about spiritual wisdom) === F
 
 ::388
 This location is also four miles from Georgia International Horse Park, five miles from Stonecrest Shopping Mall, 10 miles from Stone Mountain Park, and 18 miles from the Georgia Dome and Turner Field.
@@ -1281,9 +1281,9 @@ For example, in the Los Angles CMSA, immigrants and their young children account
 ::407
 My share of the camp site for the weekend was $20.00.
 183
-(the camp site for the weekend ; share ; $ 20.00 ; null)
+(the camp site for the weekend ; share ; $ 20.00 ; null) === T
 5
-(My ; share ; $ 20.00 ; null)
+(My ; share ; $ 20.00 ; null) === T
 
 ::408
 I also have a SCSI adapter pc card for connecting up to 7 scsi devices.
@@ -1363,7 +1363,7 @@ By the close of the century Liverpool controlled over 41% of Europe's and 80% of
 ::433
 One company that used the syrup beginning in early 2005 was Qiqihar No. 2 Pharmaceutical, about 1,000 miles away in Heilongjiang Province in the northeast.
 70
-(the northeast ; company used ; 2 pharmaceutical ; null)
+(the northeast ; company used ; 2 pharmaceutical ; null) === F
 
 ::434
 I think it was about 10 feet by 10 feet, and all five of us plus Steve plus the two people using the other computer were packed in there.
@@ -1401,7 +1401,7 @@ Mile Post 49.1 This spot was originally a natural lake that was later dammed hig
 ::445
 In 1983, less than 1 percent of employees were subject to drug testing.
 64
-(less than 1 percent of employees ; In ; 1983 ; null)
+(less than 1 percent of employees ; In ; 1983 ; null) === F
 
 ::446
 He's Loki, the trickster of the Norse gods, a mythic figure who has been blamed for so many messes created by the criminals that Vash is out to thwart that there's a $300 million price on his head.
@@ -1439,9 +1439,9 @@ Ever widening circle It is estimated that the average person knows about 250 peo
 ::457
 The Holiday Inn Atlanta Northlake Hotel Hotel is my favorite 7 hotel in Atlanta.
 207
-(Atlanta ; Hotel ; 7 hotel ; null)
+(Atlanta ; Hotel ; 7 hotel ; null) === F
 7
-(Hotel ; Hotel ; 7 hotel ; null)
+(Hotel ; Hotel ; 7 hotel ; null) === F
 
 ::458
 Think this one is $15.00 Also finished up a product test this AM on email, another $6.00.
@@ -1650,7 +1650,7 @@ Additionally, the eMarketing Association manages the largest online network of m
 ::526
 Flower heads numerous, we measured a flower to 1 cm .ong
 118
-(a flower ; measured ; 1 cm ; null)
+(a flower ; measured ; 1 cm ; null) === T
 
 ::527
 Starts with 18 crew, 18 energy points.
@@ -1679,9 +1679,9 @@ It primarily has 2 sets each consisting of 6 pairs.
 ::535
 Typical luminous intensity is 4,000 4,500 and 5,000 mcd for the red, amber and yellow LEDs, respectively, while luminous flux for the white, warm white, blue and green LEDs is 25, 25, 6 and 25 lm, respectively.
 15
-(Typical luminous intensity ; respectively ; 5000 mcd ; null)
+(Typical luminous intensity ; respectively ; 5000 mcd ; null) === F
 16
-(the red LEDs ; Typical luminous intensity ; 5000 mcd ; null)
+(the red LEDs ; Typical luminous intensity ; 5000 mcd ; null) === F
 
 ::536
 Washington is home to more equestrian statues than any other city in the nation, and it's significant that perhaps only 10 out of 30 or more follow the convention.
@@ -1740,7 +1740,7 @@ Selfclean 6.62 Automatic Filter Selfclean type 6.62 is a new development especia
 ::554
 o A saboteur's projectile weapon has a maximum range of 2 spaces.
 2
-(A saboteur 's projectile weapon ; maximum range ; 2 spaces ; null)
+(A saboteur 's projectile weapon ; maximum range ; 2 spaces ; null) === T
 
 ::555
 Yale U. 23 Quatre preludes nostalgiques, pour piano.
@@ -1859,7 +1859,7 @@ Staying here, Guests may have a panoramic view of the ancient Bund, charming Hua
 ::593
 Alles is altijd tot in de puntjes geregeld en 100% betrouwbaar.
 64
-(Alles ; en ; 100 % betrouwbaar ; null)
+(Alles ; en ; 100 % betrouwbaar ; null) === F
 
 ::594
 He reported that the tenants in the apartment at 320 Boulevard are out, but for two, one who will be moving September 1, and one who is still looking.
@@ -1921,12 +1921,12 @@ So.........that meant a quick trip to the veggie plot & taking off the stones/bl
 ::613
 BBC World News is available in more than 200 countries worldwide.
 64
-(BBC World News ; in ; more than 200 countries ; null)
+(BBC World News ; in ; more than 200 countries ; null) === T
 
 ::614
 For our Club 48 members, unfortunately, in the face of this bankruptcy filing, you will no longer be able to redeem your points for rewards.
 82
-(our ; Club members ; 48 members ; null)
+(our ; Club members ; 48 members ; null) === F
 
 ::615
 The number of queries so far in 2009 is about 6 million, nearly what they were for all of 2008 and twice that for 2007.
@@ -1946,7 +1946,7 @@ This places the date of their original schism at about 279 CE.
 ::620
 For example, an order shipped from our warehouse in Pennsylvania to California may take 6 business days, to Kansas 4 business days, and to Maryland 2 business days.
 118
-(6 business days ; take ; 4 business days ; null)
+(6 business days ; take ; 4 business days ; null) === F
 
 ::621
 I get to treat 9 people to KC and support this important organization at the same time.
@@ -1975,7 +1975,7 @@ I've got all the rest of my chores done for the day........except anything on my
 ::629
 Sacramento International Airport is about 30 miles away.
 4
-(Sacramento International Airport ; miles away ; about 30 miles ; null)
+(Sacramento International Airport ; miles away ; about 30 miles ; null) === T
 
 ::630
 He estimated that startup costs will range be $133,000 to $201,000 and include the franchise fee, equipment, minimal building improvements, office supplies and accounting and legal fees.
@@ -2028,9 +2028,9 @@ I'm tentative about doing much, as I'm sure I'll forget to call & cancel these t
 ::646
 According to the U.S. dollar against the RMB in the year are translated at the exchange rate, the final conversion of the year the price of gold is 66.91 yuan per gram.
 214
-(gram ; price ; 66.91 yuan per gram ; null)
+(gram ; price ; 66.91 yuan per gram ; null) === F
 183
-(gold ; price ; 66.91 yuan per gram ; null)
+(gold ; price ; 66.91 yuan per gram ; null) === T
 
 ::647
 He can start the game with up to 30 mana cost of characters, and the rest are put in reserve, waiting to be summoned during play.
@@ -2101,7 +2101,7 @@ To illustrate what he said were favors that Regency obtained from Champaneri, St
 ::669
 For example, Kowairu, a skeleton fighter, has a power of 2 at level 1 and power 3 at level 2. If it kills an enemy when it is already at level 2, and the player has the Super card Wairudaa in his hand, it may level up to level 3, which has 5 power and thus can do 3 damage to the enemy master per turn.
 2
-(Kowairu ; power ; 2 ; null)
+(Kowairu ; power ; 2 ; null) === F
 
 ::670
 A poll taken by the Steinmetz Center of Tel Aviv University last week found that 68 percent of the public believed that, in order to reach a peace agreement, Israel should be less conciliatory with the Palestinians.
@@ -2112,7 +2112,7 @@ The third set is a compound plumb cut at 45 degrees on each side to fit nicely i
 ::672
 Cheers 9 Jon Obi Mikel is Jon Obi Mikel.
 7
-(Jon ; Mikel ; 9 jon obi mikel ; null)
+(Jon ; Mikel ; 9 jon obi mikel ; null) === F
 
 ::673
 Ideal for travelers in other we accept capitol one credit card website instantly the card we accept capitol one credit card website instantly a $250 credit you a round trip that most companies report way.
@@ -2132,14 +2132,14 @@ Paranthetical Note The story of Guest Gulkan is told in the sword and sorcery no
 ::678
 On June 9th the Athletics signed Carlos to a 4 Year extension at 12.7 million a year.
 118
-(Carlos ; signed ; 4 year extension ; null)
+(Carlos ; signed ; 4 year extension ; null) === F
 
 ::679
 Yale U. 2 First Nocturne for Piano.
 76
-(Piano ; Nocturne ; 2 first nocturne ; null)
+(Piano ; Nocturne ; 2 first nocturne ; null) === F
 38
-(First ; Nocturne ; 2 first nocturne ; for Piano)
+(First ; Nocturne ; 2 first nocturne ; for Piano) === F
 
 ::680
 This cleverly designed rocket with nose cone and fins will travel 20 to 30 feet into the air.
@@ -2201,12 +2201,12 @@ Police say some 1,800 weapons still remain to be recovered.
 ::699
 Try keeping the ship pointed 90 to 135 degrees away from the planet's core while applying continuous thrust.
 145
-(the planet 's core ; degrees away ; 90 to 135 degrees ; null)
+(the planet 's core ; degrees away ; 90 to 135 degrees ; null) === F
 
 ::700
 The price of admission is 95 million dollars.
 148
-(admission ; price ; 95 million dollars ; null)
+(admission ; price ; 95 million dollars ; null) === T
 
 ::701
 Take a short day trip into the San Francisco Bay area to visit attractions such as Ghirardelli Square and the Golden Gate Bridge or take a tour of Napa wineries only 17 miles away.
@@ -2262,7 +2262,7 @@ Did another online and received a $10 Amazon G/C.
 ::718
 Actually, child abuse increased 500 percent in the first ten years after abortion was legalized.
 412
-(child abuse ; Actually ; increased 500 percent ; in the first ten years after abortion was legalized)
+(child abuse ; Actually ; increased 500 percent ; in the first ten years after abortion was legalized) === F
 
 ::719
 They worked with massive funds, up to $800,000 in a country with less than a million people, funnelled through the Public Service International and the American Federation of State, County and Municipal Employees.
@@ -2348,7 +2348,7 @@ In this release we have resolved several critical issues, and stabilized the JSF
 ::746
 So, I changed the playback speed to 130%.
 118
-(the playback speed ; So changed ; 130 % ; null)
+(the playback speed ; So changed ; 130 % ; null) === F
 
 ::747
 In some places the mortality rate was something like 75%.
@@ -2371,9 +2371,9 @@ Were such a compressor to exist, the only heat added to the charge would be the 
 ::753
 If only excise taxes are considered, the average tax payment of illegal households is 69 percent that of all households.
 183
-(illegal households ; average tax payment ; 69 percent ; null)
+(illegal households ; average tax payment ; 69 percent ; null) === T
 7
-(tax ; payment ; 69 percent ; null)
+(tax ; payment ; 69 percent ; null) === F
 
 ::754
 To cut the side cut angle that goes against the hip, if you have a compound bevel and miter saw, cut the miter 47 degrees and the bevel at 22 1/2 degrees.
@@ -2414,7 +2414,7 @@ The NRC study also found that for those immigrants with more than a high school 
 ::766
 He will ask you to talk to Apprentice Luo, Bian Qing, Officer Su, Orchid Goddess and Pharmacist Dong. 2. Find these 5 people to get 5 Corn Riddles and they will also tell you the approximate number of Corn Grains you have.
 480
-(Apprentice ; Luo ; 5 corn ; null)
+(Apprentice ; Luo ; 5 corn ; null) === F
 
 ::767
 Permits you to use your 1394a cable with Firewire 800 devices/ports.
@@ -2515,7 +2515,7 @@ Yes I believe it is The Chinese Govt has STRICT control over EVERYTHING it's 1 B
 ::799
 The Oaks has 4 different spa vacation packages to choose from.
 35
-(The Oaks ; different ; 4 different spa vacation packages ; null)
+(The Oaks ; different ; 4 different spa vacation packages ; null) === F
 
 ::800
 This 3 Bedroom, 2 Bath Home Also Has New Siding &Windows on Beautiful Mature Property.
@@ -2535,7 +2535,7 @@ On December 30th we had our first over 1K day with 1032 visits, breaking out pre
 ::805
 People The population of Thailand is about 60 million.
 485
-(People ; population ; about 60 million ; null)
+(People ; population ; about 60 million ; null) === F
 
 ::806
 I will need to be somewhere in the 5 to 6 range for the Discus.
@@ -2546,7 +2546,7 @@ One startling finding was that women who had elective abortions had a 546% highe
 ::808
 KWR helped a local government to promote a $13 billion infrastructure development project emphasizing technology and air and sea transport.
 38
-(infrastructure development ; project ; $ 13 billion infrastructure development project ; null)
+(infrastructure development ; project ; $ 13 billion infrastructure development project ; null) === F
 
 ::809
 The atmospheric pressure is 1032 hPa.
@@ -2566,12 +2566,12 @@ with six homeruns and 23 runs batted in to go with an amazing .442
 ::814
 3d Ebook Cover And Marketing Graphics Generator Over 200 Different Cover Types With Photoshop Like Online Image Editor And Graphics And Image Library.
 480
-(Cover ; Types ; 200 different cover types ; With Photoshop Like Online Image Editor And Graphics And Image Library)
+(Cover ; Types ; 200 different cover types ; With Photoshop Like Online Image Editor And Graphics And Image Library) === F
 
 ::815
 For our higher time frame we like to use the 30 min chart and then drop down to the 5 min chart when conditions have been met on the 30 min chart.
 38
-(30 min ; chart ; 30 min chart ; null)
+(30 min ; chart ; 30 min chart ; null) === F
 
 ::816
 Michelle has completed many successful 12 week Challenges dramatically changing her body and life.
@@ -2591,7 +2591,7 @@ Assuming that is also true of the CPS, then the total illegal population stood a
 ::821
 Garcia, Freddy TOR 37.0 4.38 6 6 1 3 0 36 9 10.46 Halladay, Roy TOR 38.0 5.21 6 6 3 1 0 30 5 11.13 Litsch, Jesse TOR 26.1 3.08 4 4 2 1 0 22 11 12.30 Marcum, Shaun TOR 35.0 4.89 6 6 3 3 0 31 12 13.37 McGowan, Dustin TOR 34.1 6.29 6 6 1 4 0 29 12 14.42 Tallet, Brian TOR 18.2 4.34 16 0 1 0 0 19 6 9.16 Wolfe, Brian TOR 13.0 8.31 13 0 0 3 0 8 7 20.77
 480
-(10.46 Halladay ; Tallet ; 37.0 4.38 6 6 1 3 0 36 9 10.46 halladay ; null)
+(10.46 Halladay ; Tallet ; 37.0 4.38 6 6 1 3 0 36 9 10.46 halladay ; null) === F
 
 ::822
 Upon reading the description of my personality type, I was incredibly shocked how it was nearly 100% accurate.
@@ -2608,7 +2608,7 @@ Albert Pujols DH 4 1 1 0 0 1 0 0 .310
 ::826
 Yes, homeschooing is legal in all 50 states and many countries .
 64
-(homeschooing ; in ; 50 states ; null)
+(homeschooing ; in ; 50 states ; null) === F
 
 ::827
 Allen SEO Web Hosting Company Fast servers, managed hosting, Mulitple C Class IPs, latest PHP, MySQL and more as low as $9.95 per month.
@@ -2724,12 +2724,12 @@ From stainless steel mixing tanks and 500 gallon flavor vats to ingredient feede
 ::864
 Greger Users Browsing this Thread There are currently 1 users browsing this thread.
 153
-(Greger Users Browsing ; currently ; currently 1 users ; null)
+(Greger Users Browsing ; currently ; currently 1 users ; null) === F
 
 ::865
 His most recent race was a 6 furlong event at Delaware Park on October 19, where he finished 6th.
 5
-(His ; most recent race ; 6 furlong event ; on October 19 , where he finished 6th)
+(His ; most recent race ; 6 furlong event ; on October 19 , where he finished 6th) === T
 
 ::866
 The number of elderly Americans will soar from 38.6 million in 2007 to 71.5 million in 2030.
@@ -2782,7 +2782,7 @@ We were really impressed, it's definitely a 5 star hotel.
 ::882
 I need to set it to run on 230 VAC 50 HZ.
 480
-(VAC ; HZ ; 230 vac 50 hz ; null)
+(VAC ; HZ ; 230 vac 50 hz ; null) === F
 
 ::883
 they have everything on display that suit your budget and style. 1 total marks.
@@ -2895,7 +2895,7 @@ As Joe will no doubt point out, there were allegedly 4 young male passengers.
 ::919
 Hotel has a total of 172 rooms.
 2
-(Hotel ; total ; 172 rooms ; null)
+(Hotel ; total ; 172 rooms ; null) === F
 
 ::920
 And the Panamanian government, which bought the 46 barrels and used them to make cold medicine, also failed to detect the poison, officials said.
@@ -2930,7 +2930,7 @@ Drop by tablespoon 2 inches apart on a lightly greased cookie sheet.
 ::930
 All bedrooms have double beds that can esaily made into 2 single beds.
 35
-(All bedrooms ; double ; 2 single beds ; null)
+(All bedrooms ; double ; 2 single beds ; null) === F
 
 ::931
 In about the year 784 AUC , during the governorship of Pontius Pilate , Jesus went to Jerusalem , feeling that he had to make his message more widely heard, even if it were to cost him his life.
@@ -2947,7 +2947,7 @@ Amerada Hess, Keans other company, is a U.S. oil company with gas stations throu
 ::935
 Their hotel is now capable of housing 450 people in 100 rooms.
 110
-(Their hotel ; now ; 450 people ; null)
+(Their hotel ; now ; 450 people ; null) === F
 
 ::936
 That will cut over $100 from the bills.
@@ -3072,7 +3072,7 @@ Queen St. West has produced 4 winners from 5 to run, including stakes winner Pai
 ::976
 Free Updates & Specials 100% Privacy, No Spam.
 480
-(% ; Privacy ; 100 % ; null)
+(% ; Privacy ; 100 % ; null) === F
 
 ::977
 Collisions with fixed objects and noncollisions accounted for only 17 percent of all crashes, but they accounted for 39 percent of fatal crashes.
@@ -3080,12 +3080,12 @@ Collisions with fixed objects and noncollisions accounted for only 17 percent of
 ::978
 For her I would probably have to charge a total of 0.15 USD/word including proofreading.
 480
-(USD ; word ; 0.15 usd / word ; null)
+(USD ; word ; 0.15 usd / word ; null) === F
 
 ::979
 The hotel is also 25 miles from downtown Atlanta and 40 miles from Six Flags Theme Park.
 15
-(The hotel ; also ; 25 miles ; null)
+(The hotel ; also ; 25 miles ; null) === F
 
 ::980
 The number of uninsured persons in USA ages 18 to 65 in 2008 is over 36 million or 19.3% of the population, in all other industrial countries virtually everyone has health insurance, either from private companies with controlled premiums, or financed by taxes.
@@ -3114,7 +3114,7 @@ Tables 3 to 5 make clear that the pattern of immigrant settlement differs signif
 ::988
 The number of serious crimes reported compared to the total population in Shreveport, Louisiana, US, with 200,000 people, for instance is immensely higher than it is in Cairo, Egypt with 20 million people.
 64
-(The number of serious crimes reported compared to the total population in Shreveport ; with ; 200000 people ; null)
+(The number of serious crimes reported compared to the total population in Shreveport ; with ; 200000 people ; null) === F
 
 ::989
 This land is part of the extensive holdings of the Richardson family in the area, of which about 800 acres are old growth redwood and Douglas fir forest, which have been in their family for over 100 years.
@@ -3131,9 +3131,9 @@ In 2005 we sent 86 trucks a day 365 days of the year to Michigan.
 ::993
 Grease a 2 quart casserole dish.
 38
-(2 quart casserole ; dish ; 2 quart casserole dish ; null)
+(2 quart casserole ; dish ; 2 quart casserole dish ; null) === F
 71
-(a ; dish ; 2 quart casserole dish ; null)
+(a ; dish ; 2 quart casserole dish ; null) === F
 
 ::994
 Disposable income in the US is growing only 2% every year.
@@ -3201,14 +3201,14 @@ There are 3500 calories in a pound of fat.
 ::1015
 At about 90, I was out.
 64
-(I ; At ; about 90 ; null)
+(I ; At ; about 90 ; null) === 
 
 ::1016
 The tops of these islands are now 50 to 100 metres below sea level.
 148
-(these islands ; tops ; 50 to 100 metres ; null)
+(these islands ; tops ; 50 to 100 metres ; null) === 
 15
-(The tops of these islands ; now ; 50 to 100 metres ; null)
+(The tops of these islands ; now ; 50 to 100 metres ; null) === 
 
 ::1017
 The 5 posts in the Door represent grace and the 5 strategic paths into the Holy Place and Holy of Holies.
@@ -3273,7 +3273,7 @@ o A harvester can hold about 700 credits' worth of spice.
 ::1037
 Costs 1 energy point about every .36
 38
-(energy ; point ; 1 energy point ; about every .36)
+(energy ; point ; 1 energy point ; about every .36) === 
 
 ::1038
 He told me that if I still wanted to have the suction one day procedure, that I would have to have it done that day and it would instead cost me $395 instead of $350 that I had paid them, because 13.7 weeks is 14 weeks and required a completely different procedure.
@@ -3284,7 +3284,7 @@ any body who will be on it feel free to get in contact, may be good to meet up d
 ::1040
 When defense spending is included, their costs are only 46 percent those of other households.
 125
-(their ; costs ; 46 percent ; null)
+(their ; costs ; 46 percent ; null) === 
 
 ::1041
 okay, recreated the Batch 05 files for you, all into a single file.
@@ -3310,7 +3310,7 @@ Service to Hedge Cutter 33.00 1205.65 Vat 210.99 1416.64
 ::1048
 So if you send me your email for the need of a translator, I can send it to at least 70.000 university students or graduates of Turkey.
 118
-(it ; So send ; at least 70.000 university students or graduates ; null)
+(it ; So send ; at least 70.000 university students or graduates ; null) === 
 
 ::1049
 The far right column in Table 2 shows that illegal alien tax payments constitute about 0.9 percent of all taxes collected.
@@ -3456,7 +3456,7 @@ I'm getting 2 calls per week on the ad, and 1 appointment out of those.
 ::1096
 UMD has 17 native Minnesotans on the roster.
 35
-(UMD ; native ; 17 native minnesotans ; null)
+(UMD ; native ; 17 native minnesotans ; null) === 
 
 ::1097
 o The damage status bars under Fremen unit icons can only indicate damage in excess of 50 percent.
@@ -3479,9 +3479,9 @@ A hit does 2 points of damage.
 ::1103
 Photosensitive Water Photopolymer Printing Plate Uv Exposure hot stamping plate $39.99 Custom Order New Metal Letterpress Typesetting For Kensol, Kingsley Hot Stamping $25.00 Hot Foil Stamp printer Emboss invitation & business card Pvc material gilding $619.00 $10.00 Kingsley Machine Accessories For Hot Foil Stamping DataCard 295 Card Personalization System Id Card Embosser Printer w/Power Cord 7 Rolls 4 Inch Foil Kingsley Hot Stamp Machine Nos $19.99
 167
-(Kensol ; Typesetting ; $ 39.99 custom order ; null)
+(Kensol ; Typesetting ; $ 39.99 custom order ; null) === 
 480
-(Photosensitive Water Photopolymer Printing Plate Uv Exposure hot stamping plate ; Typesetting ; $ 39.99 custom order ; For Kensol)
+(Photosensitive Water Photopolymer Printing Plate Uv Exposure hot stamping plate ; Typesetting ; $ 39.99 custom order ; For Kensol) === 
 
 ::1104
 The table shows that legalization under Simulation 2 would increase costs by a total of $8,173 per household.
@@ -3600,7 +3600,7 @@ Josh Beckett P 0 0 0 0 0 0 0 0 .000
 ::1142
 The fee for a child of color newborn to three is $12,000.
 1
-(a child of color newborn to three ; fee ; $ 12000 ; null)
+(a child of color newborn to three ; fee ; $ 12000 ; null) === 
 
 ::1143
 The conference will bring together more than 1,000 participants to learn about the latest innovations, successful practices and strategies in winter operations and snowfighting techniques.
@@ -3608,7 +3608,7 @@ The conference will bring together more than 1,000 participants to learn about t
 ::1144
 It is about 5 English miles north of Sefuri and 4 English miles northwest of Rimuni.
 311
-(It ; English miles north ; about 5 english miles ; of Sefuri)
+(It ; English miles north ; about 5 english miles ; of Sefuri) === 
 
 ::1145
 release to be a stepping stone for JSF 2 support.
@@ -3634,11 +3634,11 @@ If an injury does result then the punishment is increased to a fine of $2,000 an
 ::1152
 For the nine months, net sales were $1,533.1 million, down $268.0 million, or 15% versus the prior nine month period including the impact of approximately $119 million of unfavorable currencies.
 153
-(net sales ; down $ million ; $ 1533.1 million ; For the nine months)
+(net sales ; down $ million ; $ 1533.1 million ; For the nine months) === 
 41
-(the nine months ; net sales ; $ 1533.1 million ; null)
+(the nine months ; net sales ; $ 1533.1 million ; null) === 
 26
-(net sales ; down $ million ; $ 1533.1 million ; null)
+(net sales ; down $ million ; $ 1533.1 million ; null) === 
 
 ::1153
 So, there is only 1 loop and 2 tails 1 long and 1 short.
@@ -3646,7 +3646,7 @@ So, there is only 1 loop and 2 tails 1 long and 1 short.
 ::1154
 Total of 3 sheets in VF condition.
 428
-(sheets ; Total ; 3 sheets ; null)
+(sheets ; Total ; 3 sheets ; null) === 
 
 ::1155
 So now I've got about 5 watches, all unique and perfectly wearable, just waiting to have new batteries.
@@ -3660,7 +3660,7 @@ In recent months, the dramatic increase in the price of fuel, and the necessity 
 ::1158
 Horse Lady coming to groom all 4 horses & go out for a trail ride.
 38
-(Horse ; Lady ; 4 horses ; null)
+(Horse ; Lady ; 4 horses ; null) === 
 
 ::1159
 There are many LED HDTV's with many different qualities like... 68 published 13 months ago The revolutionary Panasonic 103 inch plasma television set is out.
@@ -3857,7 +3857,7 @@ Production time We need about 5 working days for production plus the transport t
 ::1223
 great pics thanks for sharing, I love the ac/dc bike Users Browsing this Thread There are currently 1 users browsing this thread.
 153
-(great pics thanks for sharing love ; currently ; currently 1 users ; null)
+(great pics thanks for sharing love ; currently ; currently 1 users ; null) === 
 
 ::1224
 The worst is the campaign to get Americans to reduce fat intake to 30% of total calories.
@@ -3907,9 +3907,9 @@ As with Midway's earlier Doom 64 game, the password encryption scheme in N64 Qua
 ::1239
 The Tonle Sap is 160 km in length, and 36 km in width.
 207
-(length ; Tonle Sap ; 160 km ; null)
+(length ; Tonle Sap ; 160 km ; null) === 
 7
-(Tonle ; Sap ; 160 km ; null)
+(Tonle ; Sap ; 160 km ; null) === 
 
 ::1240
 The joint between the two is an equal miter that should be 15 degrees.
@@ -3920,7 +3920,7 @@ In Western Europe, Germany, France and Italy had more than 30,000 branches each.
 ::1242
 China, the most populous nation on earth, has a total land mass of 9.6 million square kilometers with a population density of just 116.
 2
-(China ; total land mass ; 9.6 million square kilometers ; null)
+(China ; total land mass ; 9.6 million square kilometers ; null) === 
 
 ::1243
 They do best in soft to medium, slightly acidic water with frequent water changes of about 10% a week.
@@ -3940,7 +3940,7 @@ The Flame, a joint project of Ukraine's Ministry of Foreign Affairs and the Ukra
 ::1248
 For anyone thats interested, I'll have my tuition goal of $3,600 completed with my next paycheck.
 6
-(I ; goal ; $ 3600 ; null)
+(I ; goal ; $ 3600 ; null) === 
 
 ::1249
 Bartolo Colon will make his next start, possibly his next 2 starts.
@@ -3993,7 +3993,7 @@ EzineArticles took a 90% hit in the value of its Google rankings.
 ::1265
 Ditton has 5220 metres of public footpaths and the contribution would be 10p per metre.
 117
-(Ditton ; public footpaths ; 5220 metres ; null)
+(Ditton ; public footpaths ; 5220 metres ; null) === 
 
 ::1266
 Less than 5 percent of asylum applicants are ever held in detention and those that are spend an average of less than three months in detention.
@@ -4049,7 +4049,7 @@ When become immediately products That 6502 341 day released primer excellent'rea
 ::1283
 Molitor was in the final year of his 2.1 million dollar per year contract and turns 39 in August while Daulton has two years remaining on his 1.3 millino dollar per year contract and does not turn 34 until next January.
 64
-(Molitor ; in ; 2.1 million dollar per year contract ; null)
+(Molitor ; in ; 2.1 million dollar per year contract ; null) === 
 
 ::1284
 As you can see, if you simply applied 8 pounds of seed out of the bag, you'd only be achieving 85 percent of target rate.
@@ -4063,7 +4063,7 @@ $10 off first purchase & free shipping in Canada.
 ::1287
 Directions Chicago Midway Airport is 29 miles North to the property.
 26
-(Directions Chicago Midway Airport ; miles North ; 29 miles ; to the property)
+(Directions Chicago Midway Airport ; miles North ; 29 miles ; to the property) === 
 
 ::1288
 Save up to $14.99 over other online flower services and 800 flower phone numbers that charge you to send birthday flowers.
@@ -4140,7 +4140,7 @@ In 2 separate bowls, soak the tree ears and the bean thread noodles in warm wate
 ::1312
 A collaborative effort funded by several grants, the site links consumers to about 150 of the county's 1,500 small family farms.
 218
-(consumers ; links ; about 150 of the county 's 1500 small family farms ; null)
+(consumers ; links ; about 150 of the county 's 1500 small family farms ; null) === 
 
 ::1313
 His records sold more than 100 million copies and he has more than a dozen gold and platinum records, including the first record ever certified gold.
@@ -4151,7 +4151,7 @@ Stool measures 14.5 inches wide x 14.5 inches deep x 26 inches high.
 ::1315
 Wez committed the patch to both PHP 5 branches following a lengthy review of his own.
 118
-(the patch ; committed ; 5 branches ; null)
+(the patch ; committed ; 5 branches ; null) === 
 
 ::1316
 The above photos were taken in July 3rd, edge of mixed woods, boreal forest, about 400 km north of our home in Regina, SK.
@@ -4165,9 +4165,9 @@ The Gazette for 1944 contained reports from 20 clubs.
 ::1319
 In total, the losses in this successful action were 145 officers and 2907 men killed, wounded or missing.
 49
-(this successful action ; losses ; 145 officers ; In total)
+(this successful action ; losses ; 145 officers ; In total) === 
 70
-(total ; losses ; 145 officers ; null)
+(total ; losses ; 145 officers ; null) === 
 
 ::1320
 I resisted planting the whole packet at once, my usual behavior.......and only put in 2 containers of greens.
@@ -4178,7 +4178,7 @@ This one said the charge was $13, but when I was done, they charged me $12.00.
 ::1322
 The corners are 8 layers thick where they attach to the legs.
 3
-(The corners ; layers thick ; 8 layers ; null)
+(The corners ; layers thick ; 8 layers ; null) === 
 
 ::1323
 o A soldier can fire only 1 shell per attack.
@@ -4216,7 +4216,7 @@ I facilitated / lead 4 workshops during the summit.
 ::1334
 It only went up to 40 miles per hour.
 37
-(It ; only ; 40 miles per hour ; null)
+(It ; only ; 40 miles per hour ; null) === 
 
 ::1335
 As 2 above, but you may also specify fonts, sizes, alignment, colours etc.
@@ -4305,7 +4305,7 @@ Up to 40,000 people took part in the demonstration which also declared support f
 ::1363
 0 0.04 0 J. Coombs .429/.429/.571 3 3 7 1 3 1 0 0 1 0 2 0 0 .434
 38
-(J. ; Coombs ; 0 0.04 0 j. coombs .429 / .429 / .571 3 3 7 1 3 1 0 0 1 0 2 0 0 .434 ; null)
+(J. ; Coombs ; 0 0.04 0 j. coombs .429 / .429 / .571 3 3 7 1 3 1 0 0 1 0 2 0 0 .434 ; null) === 
 
 ::1364
 We now have over 750 members and going strong.
@@ -4346,7 +4346,7 @@ And 4 taking the risk and using Di Santo for 45 ms an Ivanovic as well.
 ::1376
 This market had a positive return of 8.63%.
 2
-(This market ; positive return ; 8.63 % ; null)
+(This market ; positive return ; 8.63 % ; null) === 
 
 ::1377
 McVities profits collapsed from $92.9 million in 1992 to $57.1 million in 1995 and even in 1996 they had crept up only to $60.5 million.
@@ -4408,9 +4408,9 @@ Many 16 older undergraduates were employees first, focusing primarily on their j
 ::1396
 Phone charge of 0.75 AUD per pulse.
 428
-(AUD ; Phone charge ; 0.75 aud per pulse ; null)
+(AUD ; Phone charge ; 0.75 aud per pulse ; null) === 
 31
-(Phone ; charge ; 0.75 aud per pulse ; null)
+(Phone ; charge ; 0.75 aud per pulse ; null) === 
 
 ::1397
 Join Date Jul 2007 Thanked 126 Times in 95 Posts No advice on the masking Dan, but the helmet looks real cool.
@@ -4460,9 +4460,9 @@ over a yr thats 2640$ and i dont get back the 50% they normally pay until ive be
 ::1412
 1989 Original purchase of 640 acres for future Kill Creek Park, the District's third regional park.
 428
-(acres ; Original purchase ; 640 acres ; null)
+(acres ; Original purchase ; 640 acres ; null) === 
 243
-(future Kill Creek Park ; Original purchase ; 640 acres ; null)
+(future Kill Creek Park ; Original purchase ; 640 acres ; null) === 
 
 ::1413
 Grace periods vary but this new product which fees features interest rates buying a car or nearly 200 credit cards.
@@ -4470,7 +4470,7 @@ Grace periods vary but this new product which fees features interest rates buyin
 ::1414
 The Surefire G2Z CombatLight is 5.2 inches long and weighs 4.3 ounces.
 100
-(The Surefire G2Z CombatLight ; inches long ; 5.2 inches ; null)
+(The Surefire G2Z CombatLight ; inches long ; 5.2 inches ; null) === 
 
 ::1415
 In 1864 he went to Norway and has lived there since, on a farm of 227 acres.
@@ -4520,11 +4520,11 @@ While the economy in general received a severe setback with the end of the Sovie
 ::1430
 The high risk/high yield forecast has an average correlation of about 9% with actual prices, and slightly greater variability that the low risk/low yield forecast which has about an 80% correlation.
 9
-(The high risk high yield forecast ; % ; 80 % correlation ; null)
+(The high risk high yield forecast ; % ; 80 % correlation ; null) === 
 35
-(The high risk high yield forecast ; average ; 80 % correlation ; null)
+(The high risk high yield forecast ; average ; 80 % correlation ; null) === 
 2
-(The high risk high yield forecast ; average correlation ; about 9 % ; null)
+(The high risk high yield forecast ; average correlation ; about 9 % ; null) === 
 
 ::1431
 Nevertheless, the teaching institutions of our country have already graduated 26,294 African professionals and technicians.
@@ -4544,7 +4544,7 @@ Finally there are about 10 copies of the 20c.
 ::1436
 0 0 70 Le Moche, J. SP 26 81 61 5 0 3 3 18 7 1 1 .082
 480
-(Le ; Moche ; 0 0 70 le moche ; null)
+(Le ; Moche ; 0 0 70 le moche ; null) === 
 
 ::1437
 OSHA lists chloromethane as a Highly Hazardous Chemical under the Process Safety Management Standard at a threshold quantity of 15,000 pounds.
@@ -4690,11 +4690,11 @@ Treatment with Reminyl is usually started at a dose of 4 mg taken twice daily.
 ::1484
 As I said before, our rate for proofreading is US$ 0.03 per source word.
 214
-(source word ; rate ; $ 0.03 per source word ; null)
+(source word ; rate ; $ 0.03 per source word ; null) === 
 148
-(proofreading ; rate ; $ 0.03 per source word ; null)
+(proofreading ; rate ; $ 0.03 per source word ; null) === 
 5
-(our ; rate ; $ 0.03 per source word ; null)
+(our ; rate ; $ 0.03 per source word ; null) === 
 
 ::1485
 Flats Boat Poling 101 First, let me say there is no better way to approach and catch fish on shallow water flats or in shallow creeks, than to use a push pole, and pole quietly, in a flats boat until you are in casting range.
@@ -4750,7 +4750,7 @@ He was awarded 125,000 shares of IBM stock.
 ::1502
 Sid & Debbie Gragg PO Box 127 898 Coffey Rd.
 480
-(Coffey ; Rd ; 127 898 coffey rd ; null)
+(Coffey ; Rd ; 127 898 coffey rd ; null) === 
 
 ::1503
 Prasad Yendluri Revision 01.080 Prasad Yendluri Revision 01.081 23 August 2005 Changes related to resolution of Issue 136.
@@ -4827,7 +4827,7 @@ $8.95 Engraved Plaque Custom Wood Walnut 8x10 Blue Wave Recognition Military Gif
 ::1527
 The league is limited to 120 players.
 43
-(The league ; limited ; 120 players ; null)
+(The league ; limited ; 120 players ; null) === 
 
 ::1528
 Tapit has sired 40 starters who have made 116 combined starts, registering 22 wins, 24 seconds, 10 thirds, and $2,323,528.
@@ -4937,7 +4937,7 @@ being a hair in the air person 99% of that travel we have all 4 windows down, me
 ::1563
 The most striking feature of the H1N1 flu vaccine manufacturing process is the 1,200,000,000 chicken eggs required to make the 3 billion doses of vaccine that may be required worldwide.
 1
-(the H1N1 flu vaccine manufacturing process ; most striking feature ; 1200000000 chicken eggs ; null)
+(the H1N1 flu vaccine manufacturing process ; most striking feature ; 1200000000 chicken eggs ; null) === 
 
 ::1564
 But in the United States already 35% women and 31% men are obese.
@@ -4969,9 +4969,9 @@ More than 50 lawmakers announced support for the bill before it came up for a vo
 ::1573
 A Massive 75% Commission On Each Sale.
 480
-(% ; Commission ; 75 % ; On Each Sale)
+(% ; Commission ; 75 % ; On Each Sale) === 
 71
-(A ; Commission ; 75 % ; null)
+(A ; Commission ; 75 % ; null) === 
 
 ::1574
 No where is it written in stone that this 13 yr.
@@ -4985,7 +4985,7 @@ Even though he was gifted athletically, Michael had to work exceptionally hard t
 ::1577
 In just under two years we have grown the membership base to approximately 150 experts.
 118
-(the membership base ; grown ; approximately 150 experts ; null)
+(the membership base ; grown ; approximately 150 experts ; null) === 
 
 ::1578
 Only registered state and local governments can buy HUD properties for $1. HUD offers some of its properties to government agencies to support community programs.
@@ -5020,7 +5020,7 @@ It also uses 25 per cent less energy than other systems and reduces operating co
 ::1588
 The Surefire 10X Dominator is 9.5 inches long and weighs 20 ounce.
 3
-(The Surefire 10X Dominator ; inches long ; 9.5 inches ; null)
+(The Surefire 10X Dominator ; inches long ; 9.5 inches ; null) === 
 
 ::1589
 The manufacturing complex was doubled in size, incorporating 100,000 sq.
@@ -5091,7 +5091,7 @@ I also got the first season of Battlestar Gallactica and I just watched the 2 ho
 ::1611
 On the night, Clare and the Wolverines limited Colorado College to just 22 shots, no small feat considering the 36 the Tigers took the night before against Boston College, showing an ability to adapt their game as needed, even when facing dynamic talents like Jaden and Rylan Schwartz and their line mate Steven Schultz.
 218
-(Colorado College ; limited ; 22 shots ; null)
+(Colorado College ; limited ; 22 shots ; null) === 
 
 ::1612
 In online birthday card any given year, anywhere from 4% to 9% of online birthday card the dollars that a bank lends online birthday card to its credit card customers will never be repaid.
@@ -5099,7 +5099,7 @@ In online birthday card any given year, anywhere from 4% to 9% of online birthda
 ::1613
 At its peak its circulation was 30,000 copies, produced in 4 different languages and mailed to 87 countries.
 88
-(its ; circulation ; 30000 copies ; null)
+(its ; circulation ; 30000 copies ; null) === 
 
 ::1614
 Regards Thanked 76 Times in 60 Posts Hey Doc, I found this old beat up piece of Masonite in the studio.
@@ -5173,7 +5173,7 @@ Therefore, WCAG 1.0 has three checkpoints that cover this topic.
 ::1637
 As well as automatic on line inspection, operators will carry out a range of about 100 yards.
 295
-(operators ; range ; about 100 yards ; null)
+(operators ; range ; about 100 yards ; null) === 
 
 ::1638
 Hypoglycemia can occurs as a response to fasting for 12 to 14 hours or because of some stimulus called reactive hypoglycemia.
@@ -5199,7 +5199,7 @@ On average, air traffic controllers in the United States handle 64 million takeo
 ::1645
 The M2 Centurion is 5.6 inches long and weighs 5.8 ounces.
 231
-(The M2 Centurion ; inches long ; 5.6 inches ; null)
+(The M2 Centurion ; inches long ; 5.6 inches ; null) === 
 
 ::1646
 List the 4 steps by which this was done.
@@ -5246,7 +5246,7 @@ A committed philanthropist, Franklin used the experience to raise over $440,000 
 ::1660
 Chloroform has a toxic endpoint of 0.49 mg/L.
 2
-(Chloroform ; toxic endpoint ; 0.49 mg / ; null)
+(Chloroform ; toxic endpoint ; 0.49 mg / ; null) === 
 
 ::1661
 Ordering 100% Pure Okinawan Coral Calcium online, Their values create community and it radiates out into a wider community.
@@ -5341,7 +5341,7 @@ The overall visibility is 3000 meter.
 ::1691
 C, 6501 Antioch Rd., Merriam, KS and John Barkley Visitors' Center , 7900 Renner Rd., Lenexa , KS.
 38
-(C ; Rd ; 6501 antioch rd. ; null)
+(C ; Rd ; 6501 antioch rd. ; null) === 
 
 ::1692
 For those without such resources or dependents over the age of 18, there's always the tried and tested route of marrying a foreign national.
@@ -5367,7 +5367,7 @@ Anyway, it is not there now, and the problem is that I want to keep this tender 
 ::1699
 Of the 179 Associates reported as serving in the armed forces in September 1916, 93 per cent were of officer rank, as were 17 of the 18 who were killed in the war.
 64
-(93 per cent ; Of ; 179 associates ; null)
+(93 per cent ; Of ; 179 associates ; null) === 
 
 ::1700
 But I have learned from Bedouins and other Arabs, that about 5 miles south of Hunin, which is 6 miles north of Kedesh in Naphtali, the ancient Gamla should have stood on a mountain, according to a certain tradition.
@@ -5396,7 +5396,7 @@ To change the Name Servers of your domain name Login to your Control Panel. 1 Se
 ::1708
 His final salary was $3.5 million including bonuses.
 125
-(His ; final salary ; $ 3.5 million including bonuses ; null)
+(His ; final salary ; $ 3.5 million including bonuses ; null) === 
 
 ::1709
 if you are still hard up for a buyer in like a month, i'll prolly put out 150 bucks or so for it.
@@ -5467,7 +5467,7 @@ This potentially impacts every single woman seeking prenatal care because she ne
 ::1731
 On paper the dimensions are 2.20 meters high, 100cm wide and 90cm deep.
 3
-(the dimensions ; meters high ; 2.20 meters ; null)
+(the dimensions ; meters high ; 2.20 meters ; null) === 
 
 ::1732
 This Colorado teen has a 5 pitch repetoire highlighted by a sinker and a 94 MPH Fastball.
@@ -5484,18 +5484,18 @@ The longest was my sword and sorcery novel THE WITCHLORD AND THE WEAPONMASTER wh
 ::1736
 The Neue Nationalgalerie is at 50 Potsdamer Str.
 64
-(Nationalgalerie ; at ; 50 potsdamer str ; null)
+(Nationalgalerie ; at ; 50 potsdamer str ; null) === 
 
 ::1737
 Of the 107 million households in the United States, approximately 8.1 million use heating oil as their main heating fuel.
 428
-(the million households in the United States ; use heating oil ; 107 million households ; null)
+(the million households in the United States ; use heating oil ; 107 million households ; null) === 
 31
-(approximately million use ; oil ; 107 million households ; null)
+(approximately million use ; oil ; 107 million households ; null) === 
 76
-(the million households in the United States ; use heating oil ; approximately 8.1 million use heating oil ; as their main heating fuel)
+(the million households in the United States ; use heating oil ; approximately 8.1 million use heating oil ; as their main heating fuel) === 
 480
-(approximately million use ; oil ; approximately 8.1 million use heating oil ; as their main heating fuel)
+(approximately million use ; oil ; approximately 8.1 million use heating oil ; as their main heating fuel) === 
 
 ::1738
 Links to handouts and video recording will be emailed to all registered and paid users within 5 working days after the training.
@@ -5521,7 +5521,7 @@ Some time ago the Census Bureau estimated that some 280,000 immigrants living he
 ::1745
 About 12 percent of refugee households were in public housing with possibly another 12 percent on waiting lists for public housing or Section 8 housing.
 64
-(About 12 percent of refugee households ; in ; 8 housing ; null)
+(About 12 percent of refugee households ; in ; 8 housing ; null) === 
 
 ::1746
 The U.S. has laid out a welcome mat for other terrorists including General Hector Gramajo, accused of killing as many as 10,000 Guatemalan Indians, General Prosper Avril, a former dictator of Haiti and responsible for the torture of opposition leaders and Sintong Panjaitan, an Indonesian general, responsible for the 1991 Santa Cruz massacre in East Timor that killed hundreds.
@@ -5532,11 +5532,11 @@ In 1993, a Gang Peace Summit in Kansas City drew 164 gang members from 26 cities
 ::1748
 Our rate for the job is US$ 0.05 per source English word.
 125
-(Our ; rate ; $ 0.05 per source ; null)
+(Our ; rate ; $ 0.05 per source ; null) === 
 214
-(source ; rate ; $ 0.05 per source ; null)
+(source ; rate ; $ 0.05 per source ; null) === 
 42
-(the job ; rate ; $ 0.05 per source ; null)
+(the job ; rate ; $ 0.05 per source ; null) === 
 
 ::1749
 The hotel has 107 rooms and features a lounge, elevators, restaurant, coffee shop, non smoking rooms, meeting rooms, laundry service, garage parking, private fitness center, baggage hold, room service, and wake up calls.
@@ -5559,7 +5559,7 @@ Paint the fascia and the entire front door including the sidelights and door tri
 ::1755
 For estate tax purposes, the unified credit is $780,800 in 2007 and 2008, and $1,455,800 in 2009, which is equivalent to an applicable exclusion amount of $2 million in 2007 and 2008 and $3.5 million in 2009.
 96
-(estate tax purposes ; unified credit ; $ 780800 ; null)
+(estate tax purposes ; unified credit ; $ 780800 ; null) === 
 
 ::1756
 Only 9 percent of white suburbanites agree.
@@ -5687,7 +5687,7 @@ He crushed single A batters pitching 95.1 IP and allowed only 24 ERs but 15 unea
 ::1797
 Costs 8 energy points to issue a launch command.
 38
-(launch ; command ; 8 energy points ; null)
+(launch ; command ; 8 energy points ; null) === 
 
 ::1798
 The HS 81 T hedge trimmer offers cleaner cutting performance for everyday trimming, sculpting and growth control.
@@ -5791,7 +5791,7 @@ From Ithaca and points west, follow Rt 13 east and north and run into 281 by the
 ::1831
 The bore of the E4 cylinders was 4.710 inches, the stroke was 5.110 inches and the total displacement was 718 cubic inches.
 107
-(the E4 cylinders ; bore ; 4.710 inches ; null)
+(the E4 cylinders ; bore ; 4.710 inches ; null) === 
 
 ::1832
 Including the special items for reduced value of assets and for severance costs, AMR lost $1.448 billion, its second worst three months.
@@ -5811,7 +5811,7 @@ Owned 100% by employees with no outside funding allows us to operate without ext
 ::1837
 A Broad Picture of Tourism in Delhi 11.12 Tourism Data Relating to Tourist Facilities in Delhi 11.13 Tourism Services Providers 11.14 Opportunities in Delhi Tourism Sector 11.15
 428
-(Tourism in Delhi 11.12 ; Broad Picture ; 11.12 tourism data ; null)
+(Tourism in Delhi 11.12 ; Broad Picture ; 11.12 tourism data ; null) === 
 
 ::1838
 May have to consider lowering my price further, but at operating costs of only 10 bucks a day I think I must be the most competitive translation agency on the planet, and cannot understand how someone can underbid me.
@@ -5876,7 +5876,7 @@ I've used 297 KWH this billing period with about 6 days to go.
 ::1858
 The last time we hired for such a position the price tag was $13,000.
 7
-(price ; tag ; $ 13000 ; null)
+(price ; tag ; $ 13000 ; null) === 
 
 ::1859
 Among adults age 25 and above, 78 percent of those with a bachelor's degree or higher reported being in excellent or very good health in 2001, compared with 66 percent of those with some education beyond high school, 56 percent of high school completers, and 39 percent of those with less than a high school education.
@@ -6001,7 +6001,7 @@ If the estimated net fiscal drain of $2,736 a year that each illegal household i
 ::1899
 ... from $65 USD The Hilton Garden Inn Krakow is located in very close proximity to Wawel Castle, Jewish quarter, elegant old town and medieval market centre in a city ... The Novotel Krakow Bronowice is a hotel conveniently located near the city center.
 64
-(The Novotel Krakow Bronowice ; from ; 65 usd ; null)
+(The Novotel Krakow Bronowice ; from ; 65 usd ; null) === 
 
 ::1900
 The numbers aren't real good with my little program here, only 2 out of 6 have taken advantage of the offer & made enough money to move a step up on the ladder.
@@ -6138,7 +6138,7 @@ A year later, the U.S. Treasury Department charged Meister with violating U.S. l
 ::1944
 This location is also 500 meters from Hastings Street and Noosa Springs Golf Course, half a mile from Noosa National Park, two miles from Noosa River, and three miles from Eumundi markets.
 153
-(This location ; also ; 500 meters ; null)
+(This location ; also ; 500 meters ; null) === 
 
 ::1945
 2X Rewritable Discs in Jewel Case by Maxell in a 100 Lot.
@@ -6158,11 +6158,11 @@ As a foliar spray, Michigan State University recommends applying a mixture of 10
 ::1950
 Our membership roster is currently over 300 individual experts, 12 organizational memberships, over 45 police departments and the top educational institutions.
 15
-(Our membership roster ; currently ; 300 individual experts ; null)
+(Our membership roster ; currently ; 300 individual experts ; null) === 
 5
-(Our ; membership roster ; 300 individual experts ; null)
+(Our ; membership roster ; 300 individual experts ; null) === 
 7
-(membership ; roster ; 300 individual experts ; null)
+(membership ; roster ; 300 individual experts ; null) === 
 
 ::1951
 The microphone reproduces each center frequency really well, with no appreciable attenuation or amplification above 200 Hz.
@@ -6194,7 +6194,7 @@ After the kickoff moved, it rose to 26.8 percent of the time.
 ::1960
 Thanks, Amanda 12/28/99 In August of 1988 I was 18 yrs old and just graduated from a career center and high school.
 3
-(I ; yrs old ; 18 yrs old ; null)
+(I ; yrs old ; 18 yrs old ; null) === 
 
 ::1961
 A Game Of 3 Halves Game Description Represent your country in the finals of the rugby world cup and help them win.
@@ -6208,7 +6208,7 @@ the ring was created by famed jewelry designer, neil lane madonna s wedding band
 ::1964
 By default, wrapping is to 80 columns, but you may specify other widths.
 64
-(wrapping ; to ; 80 columns ; null)
+(wrapping ; to ; 80 columns ; null) === 
 
 ::1965
 They had 10 children, with 8 surviving at the time of the 1900 census.
@@ -6222,7 +6222,7 @@ The chronic poor form the largest proportion of the rural households at 37% comp
 ::1968
 Red Sox Fan 734 Red Sox Sign Bush, Rotation Set Today the Boston Red Sox signed SP David Bush to a 3 year contract worth a combined 17.1 Million dollars.
 118
-(SP David Bush ; Today signed ; 3 year contract ; null)
+(SP David Bush ; Today signed ; 3 year contract ; null) === 
 
 ::1969
 All this stuff bunched up here above 90 percent of American homes.
@@ -6233,7 +6233,7 @@ Four lines of the palm, which converge at the symbolic Gate, correspond to the 4
 ::1971
 If the player's House controls fewer than 25 friendly storage facilities when the code is invoked, then the code will also raise the total combined storage capacity of those facilities to 25,000 units.
 218
-(the total combined storage capacity of those facilities ; then also raise ; 25000 units ; null)
+(the total combined storage capacity of those facilities ; then also raise ; 25000 units ; null) === 
 
 ::1972
 The kids teeth on the crib and get it sticky somehow and it's ruined by the time they are old enough for a toddler bed. posted 6 hrs ago They do teeth on them but you can buy a teething bumper type thing to avoid your crib getting chewed up lol posted 6 hrs ago That was what I was thinking about, was them chewing and stuff.
@@ -6322,6 +6322,6 @@ As this meant the destruction of their improvements naturally no one removed any
 ::2000
 Ethernet Shield TFTP Bootloader alternative 1 bootloader to use the Arduino Ethernet Shield or the Arduino Ethernet Board with a bootloader that will allow upgrading the Firmware via TFTP.
 480
-(Ethernet Shield TFTP Bootloader ; alternative ; 1 bootloader ; null)
+(Ethernet Shield TFTP Bootloader ; alternative ; 1 bootloader ; null) === 
 
 ==============Done===========
