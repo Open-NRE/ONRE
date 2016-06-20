@@ -32,7 +32,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "India has 14,500 km of navigable waterways.";
+		String sentence = "Orders in the region grew from $225 million in 1990 to $1.65 billion in 1994.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 

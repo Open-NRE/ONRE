@@ -35,6 +35,8 @@ public class OnreUtils_tree {
 	}
 	
 	public static OnrePatternNode searchNodeInTreeByIndex(OnreExtractionPart onreExtractionPart, OnrePatternNode tree) {
+		if(onreExtractionPart==null) return null;
+		
 		Queue<OnrePatternNode> q_patternNode = new LinkedList<>();
 		q_patternNode.add(tree);
 		

@@ -59,7 +59,7 @@ public class MayIHelpYou {
 		// System.out.println("You are running me :)");
 	}
     
-    private static Map<OnreExtraction, Integer> getExtractions(OnrePatternTree onrePatternTree, List<OnrePatternNode> list_configuredPattern, Onre_dsDanrothSpans danrothSpans) {
+    private static Map<OnreExtraction, Integer> getExtractions(OnrePatternTree onrePatternTree, List<OnrePatternNode> list_configuredPattern, Onre_dsDanrothSpans danrothSpans) throws IOException {
     	Map<OnreExtraction, Integer> extrs = new HashMap<OnreExtraction, Integer>();
     	
     	for (int i=0; i<list_configuredPattern.size(); i++) {
@@ -98,7 +98,7 @@ public class MayIHelpYou {
     	return extrs;
     }
     
-    private static OnreExtraction getExtraction(OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans) {
+    private static OnreExtraction getExtraction(OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans) throws IOException {
     	OnreExtraction onreExtraction = new OnreExtraction();
     	OnrePatternNode subTree = OnreHelper.findPatternSubTree(patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
     	

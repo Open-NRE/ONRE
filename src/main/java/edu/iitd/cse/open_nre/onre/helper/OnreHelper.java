@@ -3,6 +3,7 @@
  */
 package edu.iitd.cse.open_nre.onre.helper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -12,11 +13,13 @@ import java.util.Queue;
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_Index;
 import edu.iitd.cse.open_nre.onre.constants.OnreExtractionPartType;
+import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpan;
 import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
+import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
@@ -65,7 +68,7 @@ public class OnreHelper {
     	}
     	
     	//onreExtraction.q_value =danrothSpan.value.toString(); //TO-DO: IMPORTANT-CHANGE:Don't extract if quantity value is present in the argument or relation
-    	onreExtraction.q_unit =danrothSpan.unit; //TODO: IMPORTANT-CHANGE:Don't extract if quantity unit is present in the argument
+    	onreExtraction.q_unit =danrothSpan.unit;
     	
     	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase);
     	onreExtraction.quantity.index = index;
@@ -128,7 +131,7 @@ public class OnreHelper {
     	return result;
     }
 	
-	public static void expandExtraction(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+	public static void expandExtraction(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) throws IOException {
 		if(onreExtraction.relation != null) expandRelation(onreExtraction, patternNode_sentence);
 		else onreExtraction.relation = new OnreExtractionPart();
 		
@@ -251,7 +254,7 @@ public class OnreHelper {
 		
 	}
 	
-	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+	private static void expandRelation(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) throws IOException {
 		OnrePatternNode node_relation = OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.relation, patternNode_sentence);
 		
 	    List<OnrePatternNode> expansions = new ArrayList<>();
@@ -275,6 +278,16 @@ public class OnreHelper {
 				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
 			}
 	    }
+	    
+	    //TODO: IMPORTANT-CHANGE:if the relation word is one of configured words(grew/increased/down), then expand it on prep
+	    /*List<String> expandOnPrep = OnreIO.readFile_classPath(OnreFilePaths.filePath_expandOnPrep);
+		if(expandOnPrep.contains(node_relation.word)) {
+			for(OnrePatternNode child : node_relation.children) {
+				if(!child.dependencyLabel.equals("prep")) continue;
+				if(OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity, child) == null) continue;
+				expansions.add(child); 
+			}
+		}*/
 		
 		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
 		StringBuilder sb = new StringBuilder("");
