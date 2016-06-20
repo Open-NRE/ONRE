@@ -30,6 +30,9 @@ public class OnreExtraction {
 	
 	public Integer	patternNumber;
 	public String sentence;
+	
+	//public String q_value; //TO-DO: IMPORTANT-CHANGE:Don't extract if quantity value is present in the argument or relation
+	public String q_unit; //TODO: IMPORTANT-CHANGE:Don't extract if quantity unit is present in the argument
 
 	public OnreExtraction() {
 	}

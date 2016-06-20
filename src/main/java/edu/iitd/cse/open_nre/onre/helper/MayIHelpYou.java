@@ -68,11 +68,31 @@ public class MayIHelpYou {
     		if(configuredPattern==null) continue;
     		
 	        OnreExtraction onreExtraction = getExtraction(onrePatternTree.root, configuredPattern, danrothSpans);
-	        if(onreExtraction != null && OnreUtils.quantityExists(onreExtraction)) {
-	        	onreExtraction.patternNumber=i+1;
-	        	onreExtraction.sentence = onrePatternTree.sentence;
-	        	extrs.put(onreExtraction, onreExtraction.patternNumber);
-	        }
+	        if(onreExtraction == null) continue;
+	        if(!OnreUtils.quantityExists(onreExtraction)) continue;
+	        	
+	        //TODO: IMPORTANT-CHANGE:Don't extract if quantity value is present in the argument or relation
+	        /*if(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text)!=null) {
+	       		if(onreExtraction.argument.text.contains(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text))) continue;
+	        	if(onreExtraction.relation.text.contains(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text))) continue;
+	        }*/
+	        
+	        //TODO: IMPORTANT-CHANGE:Don't extract if quantity unit is present in the argument
+	        /*if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
+        		if(onreExtraction.argument.text.contains(onreExtraction.q_unit)) continue;
+          	}*/
+	        
+	        //TODO: IMPORTANT-CHANGE:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
+	        /*if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
+	        	if(onreExtraction.relation.text.equals(onreExtraction.q_unit)) {
+	        		onreExtraction.quantity.text = onreExtraction.quantity.text.replace(onreExtraction.relation.text, "").trim();
+	        		onreExtraction.relation.text = "[number of] " + onreExtraction.relation.text;
+	        	}
+	        }*/
+	        
+        	onreExtraction.patternNumber=i+1;
+        	onreExtraction.sentence = onrePatternTree.sentence;
+        	extrs.put(onreExtraction, onreExtraction.patternNumber);
         }
     	
     	return extrs;

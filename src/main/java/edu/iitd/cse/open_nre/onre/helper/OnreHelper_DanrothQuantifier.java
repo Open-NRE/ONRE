@@ -70,7 +70,7 @@ public class OnreHelper_DanrothQuantifier {
 		return null;
 	}*/
 	
-	private static String getValueFromPhrase(String phrase) {
+	public static String getValueFromPhrase(String phrase) {
 		//String phrase = getQuantityPhrase(quantSpan);
 		
 		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?

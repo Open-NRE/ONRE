@@ -25,7 +25,11 @@ public class OnreHelper_pattern {
 
 		for (String configuredPattern : configuredPatterns) {
 			if(configuredPattern.trim().length()==0) {list_configuredPattern.add(null); continue;}
-			//configuredPattern = configuredPattern.toUpperCase();
+
+			//if(configuredPattern.contains("(nn#")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE:ignoring patterns with depLabel as nn (nn#)
+			//if(configuredPattern.contains("{arg}#dt")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE:ignoring patterns with {arg} postag as dt
+			//if(configuredPattern.contains("rel}#in)")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE:ignoring patterns with {rel} postag as IN
+			
 			list_configuredPattern.add(convertPattern2PatternTree(configuredPattern));
         }
 		

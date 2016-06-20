@@ -6,6 +6,7 @@ import java.util.List;
 import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpan;
 import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
+import edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier;
 import edu.iitd.cse.open_nre.onre.helper.OnreHelper_json;
 import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 
@@ -24,12 +25,19 @@ public class temp {
 				System.out.println(danrothSpan.bound);
 			}
 		}*/
-		String pattern = "<(##VERB)<(attr|acomp#{quantity}#.+)(nsubj#{rel}#NNP|NN)<(poss#{arg}#PRP$)>>>";
+		//String pattern = "<(#is|are|was|were#verb)<(attr#{quantity}#.+)(nsubj#{rel}#nnp|nn)<(nn#{arg}#dt)>>>";
 		//pattern = pattern.replace("poss#{arg}#PRP$)", "poss#{arg}#PRP\\$)");
 		//System.out.println(pattern);
 		
-		pattern = pattern.replaceFirst("poss#\\{arg\\}#PRP\\$\\)", "poss#{arg}#PRP\\\\\\$)");
-		System.out.println(pattern);
+		//System.out.println(pattern.contains("{arg}#dt"));
+		//System.out.println(OnreHelper_DanrothQuantifier.getValueFromPhrase(".361"));
+		
+		//System.out.println("abc".contains(""));
+		//pattern = pattern.replaceFirst("poss#\\{arg\\}#PRP\\$\\)", "poss#{arg}#PRP\\\\\\$)");
+		//System.out.println(pattern);
+		
+		System.out.println("2 terrapins".replace("terrapins", ""));
+		
 	}
 
 }

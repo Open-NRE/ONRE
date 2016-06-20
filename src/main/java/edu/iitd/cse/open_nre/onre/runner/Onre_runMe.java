@@ -32,7 +32,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Warzone 2060 play information Warzone 2060 is a real time strategy game.";
+		String sentence = "India has 14,500 km of navigable waterways.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 
@@ -41,6 +41,7 @@ public class Onre_runMe {
 		if(depGraph != null) {
 			Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(depGraph);
 			for (OnreExtraction onreExtraction : extrs.keySet()) {
+				System.out.println(onreExtraction.patternNumber);
 				System.out.println(onreExtraction);
 			}
 		}

@@ -64,6 +64,9 @@ public class OnreHelper {
     		return;
     	}
     	
+    	//onreExtraction.q_value =danrothSpan.value.toString(); //TO-DO: IMPORTANT-CHANGE:Don't extract if quantity value is present in the argument or relation
+    	onreExtraction.q_unit =danrothSpan.unit; //TODO: IMPORTANT-CHANGE:Don't extract if quantity unit is present in the argument
+    	
     	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase);
     	onreExtraction.quantity.index = index;
     	if(!quantityPhrase.contains("per cent") && !quantityPhrase.contains("percent") && !quantityPhrase.contains("%")) return;
