@@ -57,6 +57,31 @@ public class MayIHelpYou {
 		// System.out.println("You are running me :)");
 	}
     
+    private static boolean checkIfExtractionPartSimilar(String s1, String s2) {
+    	if(!s1.equals(null) && !s2.equals(null) && !s1.equals(s2)) return false;
+    	return true;
+    }
+    
+    private static boolean checkIfSimilarExtractionExists(OnreExtraction extr1, OnreExtraction extr2) {
+    	if(!checkIfExtractionPartSimilar(extr1.argument.text, extr2.argument.text)) return false;
+    	if(!checkIfExtractionPartSimilar(extr1.relation.text, extr2.relation.text)) return false;
+    	if(!checkIfExtractionPartSimilar(extr1.quantity.text, extr2.quantity.text)) return false;
+    	if(extr1.additional_info!=null && extr2.additional_info!=null 
+    			&& !checkIfExtractionPartSimilar(extr1.additional_info.text, extr2.additional_info.text)) return false;
+    	
+    	return true;
+    }
+    
+    private static int countNullFields(OnreExtraction onreExtraction) {
+    	int count = 0;
+    	if(onreExtraction.argument.text != null) count++;
+    	if(onreExtraction.relation.text != null) count++;
+    	if(onreExtraction.quantity.text != null) count++;
+    	if(onreExtraction.additional_info != null && onreExtraction.additional_info.text != null) count++;
+    	
+    	return count;
+    }
+    
     private static Map<OnreExtraction, Integer> getExtractions(OnrePatternTree onrePatternTree, List<OnrePatternNode> list_configuredPattern, Onre_dsDanrothSpans danrothSpans) throws IOException {
     	Map<OnreExtraction, Integer> extrs = new HashMap<OnreExtraction, Integer>();
     	
@@ -65,7 +90,7 @@ public class MayIHelpYou {
     		OnrePatternNode configuredPattern = list_configuredPattern.get(i);
     		if(configuredPattern==null) continue;
     		
-	        OnreExtraction onreExtraction = getExtraction(onrePatternTree.root, configuredPattern, danrothSpans);
+	        OnreExtraction onreExtraction = getExtraction(onrePatternTree, onrePatternTree.root, configuredPattern, danrothSpans);
 	        if(onreExtraction == null) continue;
 	        if(!OnreUtils.quantityExists(onreExtraction)) continue;
 	        	
@@ -90,15 +115,34 @@ public class MayIHelpYou {
 	        
         	onreExtraction.patternNumber=i+1;
         	onreExtraction.sentence = onrePatternTree.sentence;
-        	extrs.put(onreExtraction, onreExtraction.patternNumber);
+        	
+        	boolean isSimilarExtractionExists = false;
+        	OnreExtraction currExtraction = null;
+        	for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
+        		currExtraction = entry.getKey();
+        		if(checkIfSimilarExtractionExists(currExtraction, onreExtraction)) {
+        			isSimilarExtractionExists = true;
+        			break;
+        		}
+        	}
+        	
+        	if(!isSimilarExtractionExists) {
+        		extrs.put(onreExtraction, onreExtraction.patternNumber);
+        	}
+        	else {
+        		if(countNullFields(currExtraction) < countNullFields(onreExtraction)) {
+        			extrs.remove(currExtraction);
+        			extrs.put(onreExtraction, onreExtraction.patternNumber);
+        		}
+        	}
         }
     	
     	return extrs;
     }
     
-    private static OnreExtraction getExtraction(OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans) throws IOException {
+    private static OnreExtraction getExtraction(OnrePatternTree onrePatternTree, OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans) throws IOException {
     	OnreExtraction onreExtraction = new OnreExtraction();
-    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
+    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(onrePatternTree, patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
     	
     	if(subTree == null) return null;
     	

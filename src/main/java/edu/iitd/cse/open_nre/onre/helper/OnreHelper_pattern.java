@@ -118,10 +118,10 @@ public class OnreHelper_pattern {
 		//System.exit(1); //TODO: this shall be uncommented..commented due to "\C2" special char issue
 		return null;
 	}
-
+    
     private static boolean nodeFound(String word, OnrePatternNode currNode, Onre_dsDanrothSpan danrothSpan) {
 		if(currNode.word.equalsIgnoreCase(word) && currNode.offset>=danrothSpan.start && currNode.offset<=danrothSpan.end) return true;
-		
+    	
 		/*//compare as a number
 		try {
 			if(OnreUtils_number.str2Double(currNode.word).equals(OnreUtils_number.str2Double(word))) return true;
@@ -132,7 +132,7 @@ public class OnreHelper_pattern {
 		return false;
 	}
 
-    private static OnrePatternNode searchNode(OnrePatternTree onrePatternTree, String word) {
+    public static OnrePatternNode searchNode(OnrePatternTree onrePatternTree, String word) {
 		OnrePatternNode root = onrePatternTree.root;
 		
 		Queue<OnrePatternNode> myQ = new LinkedList<>();
@@ -156,6 +156,7 @@ public class OnreHelper_pattern {
 	
 
 	private static boolean nodeFound(String word, OnrePatternNode currNode) {
+		
 		if(currNode.word.equalsIgnoreCase(word)) return true;
 		
 		//compare as a number
