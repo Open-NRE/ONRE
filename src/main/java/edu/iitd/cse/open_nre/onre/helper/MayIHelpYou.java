@@ -8,8 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import scala.collection.JavaConversions;
-import scala.collection.Seq;
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
@@ -54,7 +52,7 @@ public class MayIHelpYou {
 		//addDummyExtractions(extrs);
 		//return javaList2ScalaSeq(extrs);
 		
-		return extrs;
+		return OnreUtils.sortMapByValue(extrs);
 
 		// System.out.println("You are running me :)");
 	}
@@ -72,23 +70,23 @@ public class MayIHelpYou {
 	        if(!OnreUtils.quantityExists(onreExtraction)) continue;
 	        	
 	        //TODO: IMPORTANT-CHANGE:Don't extract if quantity value is present in the argument or relation
-	        /*if(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text)!=null) {
+	        if(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text)!=null) {
 	       		if(onreExtraction.argument.text.contains(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text))) continue;
 	        	if(onreExtraction.relation.text.contains(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text))) continue;
-	        }*/
+	        }
 	        
 	        //TODO: IMPORTANT-CHANGE:Don't extract if quantity unit is present in the argument
-	        /*if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
+	        if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
         		if(onreExtraction.argument.text.contains(onreExtraction.q_unit)) continue;
-          	}*/
+          	}
 	        
 	        //TODO: IMPORTANT-CHANGE:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
-	        /*if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
+	        if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
 	        	if(onreExtraction.relation.text.equals(onreExtraction.q_unit)) {
 	        		onreExtraction.quantity.text = onreExtraction.quantity.text.replace(onreExtraction.relation.text, "").trim();
 	        		onreExtraction.relation.text = "[number of] " + onreExtraction.relation.text;
 	        	}
-	        }*/
+	        }
 	        
         	onreExtraction.patternNumber=i+1;
         	onreExtraction.sentence = onrePatternTree.sentence;
@@ -104,15 +102,14 @@ public class MayIHelpYou {
     	
     	if(subTree == null) return null;
     	
-    	if(!OnreGlobals.arg_onre_isSeedFact) OnreHelper.expandExtraction(onreExtraction, patternNode_sentence);
-    	OnreHelper.onreExtraction_dummyForNull(onreExtraction);
+    	OnreHelper.onreExtraction_postProcessing(patternNode_sentence, onreExtraction);
     	
     	return onreExtraction;
     }
 
-	private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {
+	/*private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {
 	    return JavaConversions.asScalaBuffer(list_java).toList();
-    }
+    }*/
 
 	/*private static void addDummyExtractions(List<OnreExtraction> extrs) {
 	    OnreExtraction extr1 = newExtr("Deadpool", "budget", "53", "$ million");

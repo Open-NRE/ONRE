@@ -26,7 +26,7 @@ public class OnreExtraction {
 	
 	public OnreExtractionPart	quantity_percent;
 	
-	public OnreExtractionPart	extra_quantity_info; /*giving extra info relating to the quantity*/
+	public OnreExtractionPart	additional_info; /*giving extra info relating to the quantity*/
 	
 	public Integer	patternNumber;
 	public String sentence;
@@ -69,7 +69,7 @@ public class OnreExtraction {
 		        + this.temporal
 		        + ")";*/
 		
-		return "(" 
+		/*return "(" 
 		+ this.argument 
 		+ OnreConstants.DELIMETER_EXTR 
 		+ this.relation.text
@@ -77,11 +77,27 @@ public class OnreExtraction {
         + this.quantity
         + this.quantity_unit_plus
         + OnreConstants.DELIMETER_EXTR
-        + this.extra_quantity_info
-        /*+ OnreConstants.DELIMETER_EXTR
+        + this.additional_info
+        + OnreConstants.DELIMETER_EXTR
         + this.changeType
         + OnreConstants.DELIMETER_EXTR
-        + this.temporal*/
-        + ")";
+        + this.temporal
+        + ")";*/
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("(");
+		sb.append(this.argument);
+		sb.append(OnreConstants.DELIMETER_EXTR);
+		sb.append(this.relation.text);
+		sb.append(OnreConstants.DELIMETER_EXTR);
+		sb.append(this.quantity);
+		sb.append(this.quantity_unit_plus);
+		if(this.additional_info!=null && this.additional_info.text!=null && !this.additional_info.text.isEmpty()) {
+			sb.append(OnreConstants.DELIMETER_EXTR);
+			sb.append(this.additional_info);
+		}
+		sb.append(")");
+		
+		return sb.toString();
 	}
 }

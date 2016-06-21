@@ -6,7 +6,7 @@ Rette, Gary SP 22 98 35 20 5 2.67 246.1 157 61 196 8 0 0 0 5 25 2 46.4 1.000 Sim
 ::2
 The repetitions for this job was 25%, which is about average.
 410
-(this job ; repetitions ; 25 % ; null) === T
+(this job ; repetitions ; 25 %) === T
 
 ::3
 The second simulation shows that the net fiscal deficit per household would climb to $7,700.
@@ -46,7 +46,7 @@ p. 135. it is clear upon review of letters and notes from Pais and Franqui that 
 ::14
 Smarty Jones has sired 18 runners who have made 36 total starts, recording 6 wins, 5 seconds, 3 thirds, and $366,006.
 51
-(Smarty Jones ; sired ; 18 runners ; null) === T
+(Smarty Jones ; sired ; 18 runners) === T
 
 ::15
 For example, over 60% of the households whose household head had no primary school education were below the poverty line in both 1997 and 2006.
@@ -75,7 +75,7 @@ But recently, he was robbed by the 7 vicious Plutos.
 ::23
 Net sales in the Household Products division decreased $69.1 million, down 13%, or $33 million, down 6% on a constant currency basis.
 237
-(Net sales in the Household Products division ; decreased down % ; $ 69.1 million ; null) === F
+(Net sales in the Household Products division ; decreased down % ; $ 69.1 million) === F
 
 ::24
 A player absorbs some of the life that his opponent loses, but often not so much as to change the usual pattern that the match is decided by the losing player taking 2 hits from attacks.
@@ -143,7 +143,7 @@ Porcelain bath sinks cl cloisonne black with nickel vessel sink $1, fs chameleon
 ::45
 The success rate with this treatment is about 95 percent.
 124
-(success ; rate ; about 95 percent ; null) === F
+(success ; rate ; about 95 percent) === F
 
 ::46
 You can choose from 15 different massages, a variety of skin care options, and salon services.
@@ -163,7 +163,7 @@ Latest Headlines by Chris Leone, Special To NASCAR commentary and driver picture
 ::51
 I transferred 260 pounds, or US$520 in my calculations.
 51
-(I ; transferred ; 260 pounds ; null) === T
+(I ; transferred ; 260 pounds) === T
 
 ::52
 The hotel is within 10 min drive to Xintiandi.520
@@ -173,9 +173,9 @@ The hotel is within 10 min drive to Xintiandi.520
 ::53
 Among the most numerous group, Mexicans, Democrats lead Republicans by 22 points, with a large proportion of Mexicans claiming to be independents.
 403
-(Democrats ; lead ; 22 points ; null) === T
+(Democrats ; lead ; 22 points) === T
 323
-(Republicans ; lead ; 22 points ; null) === F
+(Republicans ; lead ; 22 points) === F
 
 ::54
 Still, the men will fight for 10 medals while the women compete for three.
@@ -198,17 +198,17 @@ This revolutionary technology actually measures how far away your are from each 
 ::58
 You are allowed to claim 5 bottles of them randomly each time.
 290
-(them ; claim randomly time ; 5 bottles ; null) === F
+(them ; claim randomly time ; 5 bottles) === F
 
 ::59
 If the optional parameter regs was not passed or the length of the matched string is 0, this function returns 1. Changelog Version Description 4.1.0
 237
-(this function ; returns Changelog Version Description ; 1 ; null) === F
+(this function ; returns Changelog Version Description ; 1) === F
 
 ::60
 they cover the following 500/yr chiro 500 yr/massage 80% prescriptions 1000$ dental with a 25$ deductible once a yr.
 51
-(they ; cover ; 500 / yr chiro 500 yr / massage 80 % prescriptions 1000 $ ; null) === F
+(they ; cover ; 500 / yr chiro 500 yr / massage 80 % prescriptions 1000 $) === F
 
 ::61
 From 1995 until the summer of 2002 I labored at Morgan Stanley as an Associate Vice President where I actively managed a client and asset base worth approximately $20,000,000.
@@ -225,7 +225,7 @@ And so are 5,000 other applicants.
 ::65
 Anyway, my Rumanian girl has accumulated 450 addresses so far, busy finding more, and I hope to address them soon.
 51
-(my Rumanian girl ; accumulated so far ; 450 addresses ; null) === T
+(my Rumanian girl ; accumulated so far ; 450 addresses) === T
 
 ::66
 Belladonna in Scarlatina But, he also stated, that before he could publish this he must have 300 subscribers at one Friedrich d'or each, pledged to take the work, to each of whom he would give a quantity of the remedy with full directions for its proper use.
@@ -233,9 +233,9 @@ Belladonna in Scarlatina But, he also stated, that before he could publish this 
 ::67
 If you're an average car owner, your car and its needs take up about 18 percent of your budget.
 237
-(your car ; take ; about 18 percentof your budget ; null) === T
+(your car ; take ; about 18 percentof your budget) === T
 290
-(your budget ; take ; about 18 percent ; null) === F
+(your budget ; take ; about 18 percent) === F
 
 ::68
 Jonathan invited me to come to a meeting at West Point this year comprised of 30 people.
@@ -243,9 +243,9 @@ Jonathan invited me to come to a meeting at West Point this year comprised of 30
 ::69
 The cost is only $9.95 for each additional week, billed directly to your credit card on a monthly basis.
 454
-(each additional week ; cost ; $ 9.95 ; null) === T
+(each additional week ; cost ; $ 9.95) === T
 494
-(The cost ; only ; $ 9.95 ; null) === F
+(The cost ; only ; $ 9.95) === F
 
 ::70
 Foley Square is at the intersection of Centre Street and Pearl Street, two blocks south of 100 Centre Street.
@@ -271,7 +271,7 @@ About 2.1 quakes of this type occur each year on the average.
 ::77
 I had 2 terrapins which were very cute when they were small.
 237
-(I ; had ; 2 terrapins ; null) === T
+(I ; had ; 2 terrapins) === T
 
 ::78
 I received a total of 10 resumes for the position from the site and we have offered the position to one of those candidates.
@@ -297,11 +297,11 @@ Have 2 others to still deal with too.
 ::85
 The price of both ADAM and EVE in one order is $79.00 plus $6.00 shipping and handling.
 234
-(one order ; price ; $ 79.00 plus $ 6.00 ; null) === F
+(one order ; price ; $ 79.00 plus $ 6.00) === F
 450
-(shipping ; price ; $ 79.00 plus $ 6.00 ; null) === F
+(shipping ; price ; $ 79.00 plus $ 6.00) === F
 1
-(ADAM ; price ; $ 79.00 plus $ 6.00 ; null) === F
+(ADAM ; price ; $ 79.00 plus $ 6.00) === F
 
 ::86
 Business output was about 78 percent of GDP in 1992.
@@ -328,7 +328,7 @@ Grainger is a Fortune 500 company and a perennial member of Fortune magazines Mo
 ::92
 The Hispanic population surged by 58 percent between 1990 and 2000, largely through immigration.
 403
-(The Hispanic population ; surged ; 58 percent ; null) === T
+(The Hispanic population ; surged ; 58 percent) === T
 
 ::93
 Place the anchor bolts on 4 foot centers or less around the outside perimeter.
@@ -339,12 +339,12 @@ Ministry Watch is a very good tracking tool to evaluate the effectively of 500 n
 ::95
 Gallery 2 uses ffmpeg to create thumbnails of movie files.
 237
-(Gallery 2 ; uses ; 2 uses ffmpeg ; null) === F
+(Gallery 2 ; uses ; 2 uses ffmpeg) === F
 
 ::96
 If you are a member of the ABA reduce price by $50 PAYMENTS A deposit of $500 must accompany your registration.
 323
-(price ; reduce ; $ 50 payments ; null) === F
+(price ; reduce ; $ 50 payments) === F
 
 ::97
 They will show good detail up to about 200% magnification.
@@ -352,7 +352,7 @@ They will show good detail up to about 200% magnification.
 ::98
 As a result, workers' comp costs dropped by more than 10 percent.
 403
-(workers ' comp costs ; dropped ; more than 10 percent ; null) === T
+(workers ' comp costs ; dropped ; more than 10 percent) === T
 
 ::99
 U.S. researchers compared 110 people with Parkinson's disease and 358 people without the nervous system disorder.
@@ -391,7 +391,7 @@ I understand there will be about 20 Fairfax Interns in 2008.
 ::109
 The online dating industry is now worth $4 billion worldwide.
 55
-(The online dating industry ; worth $ billion worldwide ; $ 4 billion worldwide ; null) === T
+(The online dating industry ; worth $ billion worldwide ; $ 4 billion worldwide) === T
 
 ::110
 posted 9 hrs ago I wouldn't pay it, that's a ridiculous amount of money all together IMO.
@@ -426,9 +426,9 @@ Dryday 30 day Sparta Weather Forecast The unique 30 day chart on this site shows
 ::120
 I just saved her $252 per year.
 238
-(year ; just saved ; $ 252 per year ; null) === F
+(year ; just saved ; $ 252 per year) === F
 96
-(I ; just saved ; $ 252 per year ; null) === T
+(I ; just saved ; $ 252 per year) === T
 
 ::121
 It allows EEOC access to the restaurants to monitor whether the postings are there, and provides that Flipmeastack and Janhomammed will incur a fine of $1,000 per day if the posting is not up at all 17 restaurants.
@@ -515,9 +515,9 @@ Other estimates suggest that the world can support 33 billion people.
 ::147
 Ae C.C Sabathia has a 2.59 ERA and closer Rafael Betancourt has only allowed 4 runs so far.
 348
-(Sabathia ; C.C ; 2.59 era ; null) === F
+(Sabathia ; C.C ; 2.59 era) === F
 51
-(Ae C.C Sabathia ; has ; 2.59 era ; null) === T
+(Ae C.C Sabathia ; has ; 2.59 era) === T
 
 ::148
 The NHSA, with the support of it's member clubs convinced the New Hampshire state legislature to pass a bill requiring a person to either belong to a .NH not for profit snowmobile club or pay a $30.00 user fee, per machine, to register a snowmobile in the State of New Hampshire.
@@ -531,7 +531,7 @@ This first one was running a 15% off special, end of season deal.........
 ::151
 At the end of the second, Cooperstown trails 2 to 1. TOP OF THE THIRD R.J. Phillips hit an infield single to first base.
 404
-(Cooperstown ; trails ; 2 to 1 ; null) === F
+(Cooperstown ; trails ; 2 to 1) === F
 237
 (Cooperstown ; trails ; 2 to 1 ; At the end of the second) === T
 
@@ -550,7 +550,7 @@ In a study done in the Netherlands, it was found that for drinking one standard 
 ::156
 Orders in the region grew from $225 million in 1990 to $1.65 billion in 1994.
 404
-(Orders in the region ; grew ; $ 1.65 billion ; null) === F
+(Orders in the region ; grew ; $ 1.65 billion) === F
 
 ::157
 Also, pretend you had 15 values in the Where clause.
@@ -568,7 +568,7 @@ The previous owners had 2 black plastic earth machine things in the front yard..
 51
 (The previous owners ; had ; 2 black plastic earth machine things ; in the front yard) === T
 89
-(The previous owners ; black plastic earth machine things ; 2 black plastic earth machine things ; null) === T
+(The previous owners ; black plastic earth machine things ; 2 black plastic earth machine things) === T
 
 ::161
 But the level at which it causes this damage is 10 to 20 times higher than that which humans receive.
@@ -591,9 +591,9 @@ The figure shows that between March 1996 and March 2000, the foreign born grew b
 ::167
 A minimum 40 gallon aquarium, though a larger tank would be suggested if keeping several.
 451
-(A ; aquarium ; 40 gallon aquarium ; null) === F
+(A ; aquarium ; 40 gallon aquarium) === F
 73
-(40 gallon ; aquarium ; 40 gallon aquarium ; null) === F
+(40 gallon ; aquarium ; 40 gallon aquarium) === F
 
 ::168
 Also completed the survey on the freebie list today, for the $10.00 G/C to Amazon.
@@ -604,7 +604,7 @@ Yes, according to a study by Outsell of 7,000 knowledge workers.
 ::170
 Pressing and releasing the C button once will regenerate 2 points of energy.
 290
-(energy ; regenerate ; 2 points ; null) === F
+(energy ; regenerate ; 2 points) === F
 
 ::171
 He divided his piece into 11 parts.
@@ -620,7 +620,7 @@ By the end of that year the senior population of America will reach almost 49 mi
 ::174
 OEC Seminars for Business OEC produces nearly 100 training sessions each year.
 237
-(OEC Seminars for Business OEC ; produces ; nearly 100 training sessions ; null) === F
+(OEC Seminars for Business OEC ; produces ; nearly 100 training sessions) === F
 
 ::175
 The 0.1% levy will be introduced in August regardless of whether other European countries follow suit.
@@ -634,12 +634,12 @@ It will, however, never be within 2% of 50%, so the null hypothesis is always re
 ::178
 The guests are within 12 miles of the Walt Disney World Resort and Universal Studios, and only three miles from the Orlando International Airport.A complimentary airport shuttle service transports guests to and from the property.
 482
-(The guests ; within ; within 12 miles ; null) === F
+(The guests ; within ; within 12 miles) === F
 
 ::179
 After you work a muscle group very hard, allow 3 to 6 days for recovery.
 290
-(recovery ; allow ; 3 to 6 days ; null) === F
+(recovery ; allow ; 3 to 6 days) === F
 
 ::180
 As they are a schooling fish, they need to be kept in groups of at least 10 to fair well.
@@ -659,9 +659,9 @@ Young men are required to register with the Selective Service within thirty days
 ::185
 A WILSON 1936 Historical Records of Ramses III.
 175
-(Ramses III ; of ; 1936 historical records ; null) === F
+(Ramses III ; of ; 1936 historical records) === F
 163
-(Ramses ; III ; 1936 historical records ; null) === F
+(Ramses ; III ; 1936 historical records) === F
 
 ::186
 In total, 120,000 Lithuanians, 50,000 Latvians and 30,000 Estonians went to the gulag where the death rate was 51% per annum.
@@ -683,7 +683,7 @@ The club meets 7 Pm on the fourth Thursday of the month.
 ::191
 That night I drove 100 miles to tell him.
 51
-(I ; drove ; 100 miles ; null) === T
+(I ; drove ; 100 miles) === T
 
 ::192
 Ashley Cole and Bosingwa were once again, so good that it felt like we were playing more than 11 players on the pitch.
@@ -706,7 +706,7 @@ With the world population expected to increase to 9 billion in another 30 years,
 ::198
 PAGER is Estimated to cost a total of $1 billion, to which the state budget and local councils will contribute 55%, the rest being financed by international loans or donations.
 303
-(a ; total ; $ 1 billion ; null) === F
+(a ; total ; $ 1 billion) === F
 
 ::199
 He composes using a 12 note technique as well as electronic tape and sometimes even more conventional methods.
@@ -717,9 +717,9 @@ Researchers adjusted impeller diameters and shaft speeds to generate peripheral 
 ::201
 The $5 million contribution augments the approximately $10 million CIDA already allocates annually to the region.
 258
-(contribution ; augments ; $ 5 million contribution ; null) === F
+(contribution ; augments ; $ 5 million contribution) === F
 143
-(The ; $ million contribution augments ; $ 5 million contribution ; null) === F
+(The ; $ million contribution augments ; $ 5 million contribution) === F
 
 ::202
 Too bad, figure out a different system..... Deposited the 2 checks I had yesterday & did get my haircut.
@@ -745,19 +745,19 @@ It was formerly known as the Eckhouse, at the upper end of the Meatway and close
 ::209
 She lost 22 pounds of fat and went from a size 14/16 dress to a size 10 in her first Challenge, and dropped another 14 pounds in the photos above.
 237
-(She ; lost ; 22 pounds ; null) === T
+(She ; lost ; 22 pounds) === T
 290
-(fat ; lost ; 22 pounds ; null) === F
+(fat ; lost ; 22 pounds) === F
 
 ::210
 Slugger Carlos Beltran is 6th in the NL with 12 HR's and Kevin Youkilis has made a big impact with the Mets hitting .293
 144
-(Slugger ; Beltran ; 12 hr 's ; null) === F
+(Slugger ; Beltran ; 12 hr 's) === F
 
 ::211
 Our unique retail concept offers name brand merchandise at up to 60% off of department and specialty store prices every day.
 471
-(specialty store prices ; up ; 60 % ; null) === F
+(specialty store prices ; up ; 60 %) === F
 
 ::212
 BelTechExport, a Belarusian arms exporting company, against which the EU imposed economic sanctions in June, delivered night vision binoculars and laser pointers to Syria for a total amount of 1,569,750 Euro.
@@ -765,7 +765,7 @@ BelTechExport, a Belarusian arms exporting company, against which the EU imposed
 ::213
 The Jays Had 2 starters in the All Star game and 3 pitchers selected.
 51
-(The Jays ; Had ; 2 starters ; null) === T
+(The Jays ; Had ; 2 starters) === T
 
 ::214
 Leaves are alternate, linear, sessile, we measured a leaf at 8 cm long and 4 mm wide.
@@ -773,9 +773,9 @@ Leaves are alternate, linear, sessile, we measured a leaf at 8 cm long and 4 mm 
 ::215
 I average 150 plus presentations per year.
 237
-(I ; average ; 150 plus presentations per year ; null) === T
+(I ; average ; 150 plus presentations per year) === T
 238
-(year ; average ; 150 plus presentations per year ; null) === F
+(year ; average ; 150 plus presentations per year) === F
 
 ::216
 Roughly 900,000 tubes containing a poison used in some antifreeze products have turned up in hospitals for the mentally ill, prisons, juvenile detention centers and even some hospitals serving the general population.
@@ -840,7 +840,7 @@ I also tallied her student loan debt and realized she is only $451 away from get
 ::236
 The idbl/dbdrags are within 4 miles of each other.
 482
-(The idbl dbdrags ; within ; within 4 miles ; null) === T
+(The idbl dbdrags ; within ; within 4 miles) === T
 
 ::237
 Bet'cha can't identify with 200 study patients taken from half a world away in a study conducted 2 years ago, whose results are probably skewed in favor of a positive outcome.
@@ -873,16 +873,16 @@ I started out with a tad over $10,000 and todays total is $8,472.
 ::245
 The unstoppable Drogba now has 25 goals this season with more than a dozen matches yet to be played.
 237
-(The unstoppable Drogba ; now has yet ; 25 goals ; null) === F
+(The unstoppable Drogba ; now has yet ; 25 goals) === F
 
 ::246
 Israel, with a population density of 630 people per kilometer from the north to Beer Sheva.
 46
-(population ; density ; 630 people per kilometer ; null) === F
+(population ; density ; 630 people per kilometer) === F
 349
-(a ; density ; 630 people per kilometer ; null) === F
+(a ; density ; 630 people per kilometer) === F
 228
-(kilometer ; population density ; 630 people per kilometer ; null) === F
+(kilometer ; population density ; 630 people per kilometer) === F
 
 ::247
 Days like today when the first train taking workers up the mountain had to turn around at Clogwyn Station owing to 69 m.p.h.
@@ -896,7 +896,7 @@ Rivera, Saul WSN 26 .000 3 0 0 0 0 1 1 0 0 0 0 .000
 ::250
 XI, Lacan starts 2 chapters with this poem.
 237
-(Lacan ; XI starts ; 2 chapters ; null) === F
+(Lacan ; XI starts ; 2 chapters) === F
 
 ::251
 Gen. Anastasio Somoza hits up the CIA for a $10 million payoff, development loans, as the price of letting the Americans launch the Cuban exile invasion from Nicaragua.
@@ -907,7 +907,7 @@ We reject the notion that 36 people could not recognize the significance of this
 ::253
 The Georgia Aquarium, Coca Cola Factory, Turner Field, and Zoo Atlanta are all 25 miles or less from the hotel.
 208
-(Georgia ; Aquarium ; 25 miles or less ; null) === F
+(Georgia ; Aquarium ; 25 miles or less) === F
 
 ::254
 You should make an opening offer of $19,000.
@@ -923,12 +923,12 @@ The Vat Phou boat is a 34 metre long, 7.5 metre wide steel hulled teak barge, eq
 ::257
 Meet the 2012 Board of Trustees Board of Trustees members volunteer their time and talent to serve on the Kendal at Granville Board.
 290
-(Trustees Board of Trustees members ; Meet ; 2012 board ; null) === F
+(Trustees Board of Trustees members ; Meet ; 2012 board) === F
 
 ::258
 ELX groups applications into groups called launchpads ELX costs $79.95 which is somewhat high for a GNU/Linux distribution.
 237
-(ELX ; costs ; $ 79.95 which ; null) === F
+(ELX ; costs ; $ 79.95 which) === F
 
 ::259
 At this point in history, the tropical zodiac has drifted approximately 24 degrees away from the sidereal.
@@ -938,7 +938,7 @@ At this point in history, the tropical zodiac has drifted approximately 24 degre
 ::260
 But if the final result is a tie, you can take 5 coins back.
 237
-(you ; take back ; 5 coins ; null) === F
+(you ; take back ; 5 coins) === F
 
 ::261
 Most people were more impressed with Bader's 60 training strikeouts and electric fastball for workouts.
@@ -951,7 +951,7 @@ o In general, a refinery can accommodate only 1 harvester at a time.
 ::263
 Walt disney world was different on the block, with 28,000 reforms of jet ski repair manual fun.
 482
-(Walt disney world ; with ; 28000 reforms ; null) === F
+(Walt disney world ; with ; 28000 reforms) === F
 
 ::264
 By 1995, they owned 43 radio stations and over 30 television stations in the theoretical principles of ethical issues facing media practitioners, the cases that follow.
@@ -970,7 +970,7 @@ I tossed about 6 of the ladies out the door, hoping the others would follow, but
 ::268
 Casualties between 26 May and 14 June amounted to 4338 officers and men, of whom 2511 were missing.
 404
-(Casualties between 26 May ; amounted ; 4338 officers ; null) === F
+(Casualties between 26 May ; amounted ; 4338 officers) === F
 
 ::269
 Rafael Soriano P 0 0 0 0 0 0 0 0 .000
@@ -987,9 +987,9 @@ SIGCHI will provide a budget of $1000 from the Chair's discretionary fund for co
 ::273
 o A Deviator will fire only 1 missile per attack.
 51
-(A Deviator ; fire ; 1 missile per attack ; null) === T
+(A Deviator ; fire ; 1 missile per attack) === T
 238
-(attack ; fire ; 1 missile per attack ; null) === F
+(attack ; fire ; 1 missile per attack) === F
 
 ::274
 Bennett, Gary WSN 5 .125 8 1 0 0 0 3 1 0 0 1 0 .125
@@ -1003,7 +1003,7 @@ All the suites and 69 of the rooms have a magnificent, undisturbed view of the l
 ::277
 He did walk a scary 42 batters and only K'ed 76 batters.
 96
-(He ; walk ; 42 batters ; null) === T
+(He ; walk ; 42 batters) === T
 
 ::278
 Costs 6 energy points to fire.
@@ -1039,7 +1039,7 @@ My parents do not give me 16 credit cards with a max of $100,000.
 ::287
 The overall visibility is 2500 meter.
 264
-(visibility ; overall ; 2500 meter ; null) === F
+(visibility ; overall ; 2500 meter) === F
 
 ::288
 This figure has doubled in just a year, and InterEd estimates that the figure will reach 75 percent by the end of this year.
@@ -1068,7 +1068,7 @@ Although the upper limit of mormal for total serum bilirubin is 1 mg/dL, jaundic
 ::296
 The Linux kernel is only 400 KB.
 14
-(Linux ; kernel ; 400 kb ; null) === F
+(Linux ; kernel ; 400 kb) === F
 
 ::297
 In the summer of 1985 they published a statement acknowledging that there had been 856 severe earthquakes during the 2000 years preceding 1914.
@@ -1079,7 +1079,7 @@ o The Chmmr Avatar will arrive in the combat zone with 3 Zapsats.
 ::299
 it would only cost me $79.95 to use ELX on all computers at home.
 96
-(it ; only cost ; $ 79.95 ; null) === F
+(it ; only cost ; $ 79.95) === F
 
 ::300
 It is also worth emphasizing that XPath 1.0 explicitly requires that any element or attribute used in an XPath expression that does not have a namespace prefix must be treated as being namespace unqualified.
@@ -1111,7 +1111,7 @@ To make a flower, you have to collect 7 trees.
 ::309
 The oldest sda health summit orlando computer engineers governed deletion are adequately greener than 40 symptoms old.
 3
-(The oldest sda health summit orlando computer engineers ; symptoms old ; greener than 40 symptoms old ; null) === F
+(The oldest sda health summit orlando computer engineers ; symptoms old ; greener than 40 symptoms old) === F
 
 ::310
 In a Washington Post piece by the PLO's Marwan Barghouti, for example, he claimed Jews got 78% of all of the land, the standard Arab line.
@@ -1134,14 +1134,14 @@ there are 9 comments on this post.
 ::316
 US businesses will invest more than $1 billion this year on computer technology, just for customer service departments.
 287
-(customer service departments ; invest ; more than $ 1 billion this year ; null) === F
+(customer service departments ; invest ; more than $ 1 billion this year) === F
 237
 (US businesses ; invest ; more than $ 1 billion this year ; just for customer service departments) === T
 
 ::317
 Setting your Selling Price for the Digital Certificate Products is a mere 2 step process.
 295
-(process ; is ; 2 step process ; null) === F
+(process ; is ; 2 step process) === F
 
 ::318
 The city is frequented by 52 million tourists, annually.
@@ -1164,7 +1164,7 @@ A quarter of this core has been torn away for the past 35,000 years, now 350 mil
 ::324
 Leaves alternate on the stem, pinnate, we counted up to 23 leaflets.
 51
-(we ; counted ; 23 leaflets ; null) === T
+(we ; counted ; 23 leaflets) === T
 
 ::325
 The only value it defines is one of the sides, which equals 25 ft.
@@ -1196,12 +1196,12 @@ In the UK and U.S., 25 to 30 years is typical.
 ::334
 This very long fantasy novel is about 199,000 words long and, as a printed book, runs to over 700 pages.
 198
-(This very long fantasy novel ; words long ; about 199000 words ; null) === T
+(This very long fantasy novel ; words long ; about 199000 words) === T
 
 ::335
 They represent more than 50 charitable federations and funds serving more than 2,000 nonprofits nationwide.
 96
-(They ; represent ; more than 50 charitable federations ; null) === T
+(They ; represent ; more than 50 charitable federations) === T
 
 ::336
 Americans drive almost three trillion miles a year and in the process use about a billion gallons of motor oil and 40 percent of the world 's gasoline.
@@ -1224,9 +1224,9 @@ Together with other progressive organizations, we aim to mobilize around 50,000 
 ::342
 The Harrison Manor House Hotel Hotel is my favorite 7 hotel in Lake Bluff.
 208
-(Harrison Manor House ; Hotel ; 7 hotel ; null) === F
+(Harrison Manor House ; Hotel ; 7 hotel) === F
 464
-(The Harrison Manor House Hotel Hotel ; Lake Bluff ; 7 hotel ; null) === F
+(The Harrison Manor House Hotel Hotel ; Lake Bluff ; 7 hotel) === F
 
 ::343
 Photos taken July 10th in a gravel pit, Meadow Lake Provincial Park, 550 km northwest of our home in Regina, SK.
@@ -1234,7 +1234,7 @@ Photos taken July 10th in a gravel pit, Meadow Lake Provincial Park, 550 km nort
 ::344
 He has stolen 7 bases and posted a .415
 51
-(He ; stolen ; 7 bases ; null) === T
+(He ; stolen ; 7 bases) === T
 
 ::345
 There's another $2,500 coming when the estate is settled, but I consider that emergency fund money for when I do buy the house.
@@ -1260,7 +1260,7 @@ Getting out and walking back twenty yards, there sits an Olivaceous Trogon not 1
 ::352
 Xandros 2.0 installed on my desktop without any problems but would not install on my laptop.
 175
-(my desktop ; on ; 2.0 installed ; null) === F
+(my desktop ; on ; 2.0 installed) === F
 
 ::353
 As a result, over a thousand customers in 23 countries are currently benefiting from optimized document output environments, and are experiencing significant revenue savings.
@@ -1292,7 +1292,7 @@ One 50 gram bag for $8.00 available.
 258
 (gram ; bag ; one 50 gram bag ; for $ 8.00 available) === F
 38
-(gram ; bag ; $ 8.00 available ; null) === F
+(gram ; bag ; $ 8.00 available) === F
 
 ::361
 That's 24 pieces of each length of 2x4 including 4 for each length for support at the end of the sheeting.
@@ -1300,9 +1300,9 @@ That's 24 pieces of each length of 2x4 including 4 for each length for support a
 ::362
 I would like $300 for it, But I would be willing to trade for an equivalent amount of hardware.
 290
-(it ; like ; $ 300 ; null) === F
+(it ; like ; $ 300) === F
 51
-(I ; like ; $ 300 ; null) === F
+(I ; like ; $ 300) === F
 
 ::363
 Only 5 min away from the entrance to the Kruger National Park, our up market house offers the perfect base from where to explore the many attractions of the region.
@@ -1312,14 +1312,14 @@ Only 5 min away from the entrance to the Kruger National Park, our up market hou
 ::364
 Breast feeding requires an extra 500 calories per day.
 238
-(day ; requires ; 500 calories per day ; null) === F
+(day ; requires ; 500 calories per day) === F
 237
-(Breast feeding ; requires ; 500 calories per day ; null) === F
+(Breast feeding ; requires ; 500 calories per day) === F
 
 ::365
 The last ad we put up had 35 responses, even better than what we get from the newspaper.
 237
-(The last ad put ; had ; 35 responses ; null) === T
+(The last ad put ; had ; 35 responses) === T
 
 ::366
 A total of 200 to 300 mg of bilirubin is produced daily in the healthy adult.
@@ -1348,12 +1348,12 @@ The only area where I thought the recorder was lacking was in high frequencies, 
 ::374
 Five attacks on children in China over the last two months have left 17 dead and dozens injured, creating nationwide fears of copycat killings.
 237
-(Five attacks on children in China over the last two months ; left ; 17 dead and dozens ; null) === F
+(Five attacks on children in China over the last two months ; left ; 17 dead and dozens) === F
 
 ::375
 Lion Heart's 66 runners have made 175 total starts, recording 27 wins, 18 thirds, and $1,220,052.
 237
-(Lion Heart 's 66 runners ; made ; 175 total starts ; null) === T
+(Lion Heart 's 66 runners ; made ; 175 total starts) === T
 
 ::376
 So, since google is being so snotty, another plan I have is to approach advertisers directly, and charge them around a 150 bucks a year per link.
@@ -1370,9 +1370,9 @@ The product comes in 12.5 Kg.
 ::380
 Byakugan gives the clan member an almost complete 360 degree view of their surroundings.
 290
-(their surroundings ; gives ; 360 degree view ; null) === F
+(their surroundings ; gives ; 360 degree view) === F
 237
-(Byakugan ; gives ; 360 degree view ; null) === T
+(Byakugan ; gives ; 360 degree view) === T
 
 ::381
 Yet these disastrous shocks of 447 A.D. are not included in any of the earthquake catalogs the authors of this present work have had access to.
@@ -1401,7 +1401,7 @@ And 1 Corinthians talks about spiritual wisdom.
 258
 (1 Corinthians ; talks ; 1 corinthians talks ; about spiritual wisdom) === F
 175
-(spiritual wisdom ; about ; 1 corinthians talks ; null) === F
+(spiritual wisdom ; about ; 1 corinthians talks) === F
 
 ::388
 This location is also four miles from Georgia International Horse Park, five miles from Stonecrest Shopping Mall, 10 miles from Stone Mountain Park, and 18 miles from the Georgia Dome and Turner Field.
@@ -1409,9 +1409,9 @@ This location is also four miles from Georgia International Horse Park, five mil
 ::389
 Whether your site gets one hit per year or 1000 hits per day, you can help spread the light of reason just by linking to any page on the supersaturated sites.
 290
-(reason ; spread ; one hit per year or 1000 hits per day ; null) === F
+(reason ; spread ; one hit per year or 1000 hits per day) === F
 175
-(the supersaturated sites ; on ; one hit per year or 1000 hits per day ; null) === F
+(the supersaturated sites ; on ; one hit per year or 1000 hits per day) === F
 
 ::390
 This revolutionary technology actually measures how far away your are from each of the Tift County carrier's facilities and calculates with 99% accuracy the best price they can offer you.
@@ -1442,9 +1442,9 @@ In 1988, Harvard professor Carol Gilligan found that only 29% of teenage girls a
 ::398
 o A combat tank can fire only 1 cannon shell per attack.
 237
-(A combat tank ; fire ; 1 cannon shell per attack ; null) === T
+(A combat tank ; fire ; 1 cannon shell per attack) === T
 238
-(attack ; fire ; 1 cannon shell per attack ; null) === F
+(attack ; fire ; 1 cannon shell per attack) === F
 
 ::399
 Mod Breakdown 43 27 16 79% Secret Weapons Best Maps/Servers Best Maps and Best Servers are based on maps and servers on which you have played for at least 45 minutes.
@@ -1473,19 +1473,19 @@ For example, in the Los Angles CMSA, immigrants and their young children account
 ::407
 My share of the camp site for the weekend was $20.00.
 225
-(the camp site for the weekend ; share ; $ 20.00 ; null) === T
+(the camp site for the weekend ; share ; $ 20.00) === T
 5
-(My ; share ; $ 20.00 ; null) === T
+(My ; share ; $ 20.00) === T
 
 ::408
 I also have a SCSI adapter pc card for connecting up to 7 scsi devices.
 411
-(I ; card ; 7 scsi devices ; null) === F
+(I ; card ; 7 scsi devices) === F
 
 ::409
 Above photographs taken August 5th and August 9th, on the banks of the Red Deer River, Boreal Forest, 400 km north of our home in Regina, SK.
 87
-(our home in Regina ; km north ; 400 km ; null) === F
+(our home in Regina ; km north ; 400 km) === F
 
 ::410
 There is only a very narrow range of environmental conditions under which organisms... 85 by Patty Inglish, MS published 2 years ago Portsmouth, New Hampshire is among the Top 30 Cities for Jobs in America, even during a recession.
@@ -1493,7 +1493,7 @@ There is only a very narrow range of environmental conditions under which organi
 ::411
 Jacob McGee gave up the 5 Oriole runs with 4 being earned.
 237
-(Jacob McGee ; gave ; 5 oriole runs ; null) === T
+(Jacob McGee ; gave ; 5 oriole runs) === T
 
 ::412
 o 2 fighters are launched at a time.
@@ -1504,9 +1504,9 @@ U 5710 61 Vier Preludien U 5711 63 16 Etudes H No 10, En Forme d'une Valse, is a
 ::414
 We receive over 2.5 million hits per month.
 238
-(month ; receive ; 2.5 million hits per month ; null) === F
+(month ; receive ; 2.5 million hits per month) === F
 51
-(We ; receive ; 2.5 million hits per month ; null) === T
+(We ; receive ; 2.5 million hits per month) === T
 
 ::415
 See how often you end up at $15.
@@ -1531,14 +1531,14 @@ Liberty Head upper left corner block of eight, four wide by 2 high.
 ::421
 1998 County citizens approved $6 million in General Obligation Bonds to acquire land for a fourth regional park.
 237
-(1998 County citizens ; approved ; $ 6 million ; null) === T
+(1998 County citizens ; approved ; $ 6 million) === T
 458
 (1998 County citizens ; approved ; $ 6 million ; in General Obligation Bonds) === T
 
 ::422
 Over 100,000 Searches In Google Per Month.
 175
-(Google ; In ; 100000 searches ; null) === F
+(Google ; In ; 100000 searches) === F
 
 ::423
 Just 2 boys today, but still cooked like a short order cook for the morning shift.
@@ -1549,7 +1549,7 @@ Manganese does not occur in the environment as a pure metal, but is a component 
 ::425
 Almost $50.00 less per month than individual providers.
 175
-(month ; per ; $ 50.00 less per month ; null) === F
+(month ; per ; $ 50.00 less per month) === F
 
 ::426
 President Bush won an enormous 13 percent of the vote there in 2004 and some people believe that that was overstating his support.
@@ -1561,9 +1561,9 @@ President Bush won an enormous 13 percent of the vote there in 2004 and some peo
 ::427
 The car dealer is asking $25,000 for the car.
 290
-(the car ; asking ; $ 25000 ; null) === F
+(the car ; asking ; $ 25000) === F
 237
-(The car dealer ; asking ; $ 25000 ; null) === T
+(The car dealer ; asking ; $ 25000) === T
 
 ::428
 I started September with $361,876 and ended it with $358,025 of debt, paying off $3,851.
@@ -1577,9 +1577,9 @@ When they called my name I was terrified, I went in a room with 9 other women.
 ::431
 The paper industry uses approximately 20% of the annual U.S. production volume of polyacrylamides.
 290
-(the annual U.S. production volume of polyacrylamides ; uses ; approximately 20 % ; null) === F
+(the annual U.S. production volume of polyacrylamides ; uses ; approximately 20 %) === F
 237
-(The paper industry ; uses ; approximately 20 %of the annual U.S. production volume of polyacrylamides ; null) === T
+(The paper industry ; uses ; approximately 20 %of the annual U.S. production volume of polyacrylamides) === T
 
 ::432
 By the close of the century Liverpool controlled over 41% of Europe's and 80% of Britain's slave commerce.
@@ -1587,7 +1587,7 @@ By the close of the century Liverpool controlled over 41% of Europe's and 80% of
 ::433
 One company that used the syrup beginning in early 2005 was Qiqihar No. 2 Pharmaceutical, about 1,000 miles away in Heilongjiang Province in the northeast.
 294
-(the northeast ; company used ; 2 pharmaceutical ; null) === F
+(the northeast ; company used ; 2 pharmaceutical) === F
 494
 (One company used ; miles away ; 2 pharmaceutical ; in the northeast) === F
 
@@ -1600,19 +1600,19 @@ Over this period, employment of computer workers can be predictably modeled as l
 ::436
 Real jet stream 3 recumbent basically covers fixtures, greet up and undeveloped operations within or adjacent to the indirect property.
 237
-(Real jet stream 3 recumbent ; basically covers ; 3 recumbent basically covers fixtures ; null) === F
+(Real jet stream 3 recumbent ; basically covers ; 3 recumbent basically covers fixtures) === F
 
 ::437
 Grill, brushing with marinade and turning once, just until fish begins to flake when tested with a fork, allowing 5 to 6 minutes on each side.
 175
-(brushing with marinade each side ; on ; 5 to 6 minutes ; null) === F
+(brushing with marinade each side ; on ; 5 to 6 minutes) === F
 
 ::438
 If not, the family room also has 2 windows...and that wouldn't be a bad alternative.
 237
-(the family room ; also has ; 2 windows ; null) === T
+(the family room ; also has ; 2 windows) === T
 348
-(room ; family ; 2 windows ; null) === F
+(room ; family ; 2 windows) === F
 
 ::439
 I was in denial for 6 mo.
@@ -1629,7 +1629,7 @@ In the middle of the fifth, Bow Creek leads 2 to 1. BOTTOM OF THE FIFTH Ted Uhla
 ::443
 Adventures by Disney's 2009 destinations will also include 15 returning trips.
 51
-(Adventures by Disney 's 2009 destinations ; also include ; 15 returning trips ; null) === T
+(Adventures by Disney 's 2009 destinations ; also include ; 15 returning trips) === T
 
 ::444
 Mile Post 49.1 This spot was originally a natural lake that was later dammed higher, to provide additional storage for the Ames Power Plant near Ophir .
@@ -1637,7 +1637,7 @@ Mile Post 49.1 This spot was originally a natural lake that was later dammed hig
 ::445
 In 1983, less than 1 percent of employees were subject to drug testing.
 482
-(less than 1 percent of employees ; In ; 1983 ; null) === F
+(less than 1 percent of employees ; In ; 1983) === F
 
 ::446
 He's Loki, the trickster of the Norse gods, a mythic figure who has been blamed for so many messes created by the criminals that Vash is out to thwart that there's a $300 million price on his head.
@@ -1654,7 +1654,7 @@ Over time, said supervisor Ed Manara, trees that once stood 35 to 40 feet tall w
 ::450
 The 13th Bn, the Cheshires alone lost 19 officers and 395 men.
 51
-(The 13th Bn ; alone lost ; 19 officers ; null) === F
+(The 13th Bn ; alone lost ; 19 officers) === F
 
 ::451
 The Los Angeles International airport is approximately 38 miles from the hotel.
@@ -1665,7 +1665,7 @@ Villone, Ron WSN 51 .000 2 0 0 0 0 0 2 0 0 0 0 .000
 ::453
 There is a $25 charge for this.
 295
-(charge ; is ; $ 25 charge ; null) === T
+(charge ; is ; $ 25 charge) === T
 
 ::454
 Latest Headlines by BethAnne, Special To NASCAR commentary and driver pictures, 2011 NASCAR schedule, video, Bench Racing With Steve and Charlie I am the field producer/photographer of the syndicated radio show/website ON PIT ROW.
@@ -1679,9 +1679,9 @@ Ever widening circle It is estimated that the average person knows about 250 peo
 ::457
 The Holiday Inn Atlanta Northlake Hotel Hotel is my favorite 7 hotel in Atlanta.
 464
-(Hotel ; Atlanta ; 7 hotel ; null) === F
+(Hotel ; Atlanta ; 7 hotel) === F
 124
-(Hotel ; Hotel ; 7 hotel ; null) === F
+(Hotel ; Hotel ; 7 hotel) === F
 
 ::458
 Think this one is $15.00 Also finished up a product test this AM on email, another $6.00.
@@ -1707,7 +1707,7 @@ In comparison, in the March 2004 CPS there were 6.1 million immigrants who said 
 ::465
 I'll do $5 plus auctual shipping cost, or any offers accepted.
 237
-(I ; do ; $ 5 plus auctual shipping ; null) === T
+(I ; do ; $ 5 plus auctual shipping) === T
 
 ::466
 Washington Gas, which supplies natural gas to nearly 1 million customers in the Washington area, has not completed its winter forecasts.
@@ -1753,7 +1753,7 @@ At the end of the seventh, Toronto leads 13 to 0. TOP OF THE EIGHTH Bill Melton 
 237
 (Toronto ; leads ; 13 to 0 ; to 0) === F
 404
-(Toronto ; leads ; 13 to 0 ; null) === T
+(Toronto ; leads ; 13 to 0) === T
 
 ::480
 I don't know how many plants I'll have, but if I get more than 6, I'll be ahead of the game.
@@ -1800,14 +1800,14 @@ However, 85 crew members are lost when damage to the fire suppression system nec
 ::492
 Warning Some of the documents below have not been fully updated to take into account changes made in the 2.0 version of the Apache HTTP Server.
 175
-(the Apache HTTP Server ; of ; 2.0 version ; null) === F
+(the Apache HTTP Server ; of ; 2.0 version) === F
 439
-(Apache HTTP ; Server ; 2.0 version ; null) === F
+(Apache HTTP ; Server ; 2.0 version) === F
 
 ::493
 We drew 1,159,946 fans this year, which is less than fifteen thousand a game.
 51
-(We ; drew ; 1159946 fans this year ; null) === T
+(We ; drew ; 1159946 fans this year) === T
 
 ::494
 Airport pickup $30 COMBINED PROGRAM Perfect for those who need something more intensive or some type of specialized Spanish language instruction.
@@ -1832,12 +1832,12 @@ The earthquake in Afghanistan in 1956 claimed 220 lives according to some tables
 ::500
 $24.00 $25.00 20 Small assortment of third palm tree issues used, 3c value horizontal pair imperforate between, 7c value strip of three with badly misplaced perfs, cancels of Havre, Paris, New York.
 256
-(assortment ; Small ; $ 24.00 $ 25.00 20 small assortment of third palm tree issues ; null) === F
+(assortment ; Small ; $ 24.00 $ 25.00 20 small assortment of third palm tree issues) === F
 
 ::501
 By default it is set to 8 hours, but almost any decent production server will have been lowered to the 60 second range.
 76
-(it ; set ; 8 hours ; null) === T
+(it ; set ; 8 hours) === T
 
 ::502
 The official currency of the Republic of Croatia is the Kuna, which has 100 Lipa.
@@ -1851,7 +1851,7 @@ Some 25 km along this road , passing Hinjan village , you reach Abyane at the bo
 ::505
 H.R. 814 would amend the 1982 law to allow automatic citizenship for Amerasians who are present in the United States .
 237
-(H.R. 814 ; amend ; 1982 law ; null) === T
+(H.R. 814 ; amend ; 1982 law) === T
 
 ::506
 A few months ago, Apollo 14 astronaut Dr. Edgar Mitchell made an extraordinary statement while speaking to a group of people.
@@ -1903,7 +1903,7 @@ The following 12 People Power principles show you how to be a source of power fo
 ::521
 The atmospheric pressure is 1035 hPa.
 264
-(pressure ; atmospheric ; 1035 hpa ; null) === T
+(pressure ; atmospheric ; 1035 hpa) === T
 
 ::522
 The Honourable David C. Onley, Lieutenant Governor of Ontario, will invest Mr. Kaneff, alongside 29 other individuals, at the Investiture ceremony to be held on Thursday, January 27 at Queen's Park.
@@ -1920,7 +1920,7 @@ Additionally, the eMarketing Association manages the largest online network of m
 ::526
 Flower heads numerous, we measured a flower to 1 cm .ong
 404
-(we ; measured ; 1 cm ; null) === F
+(we ; measured ; 1 cm) === F
 
 ::527
 Starts with 18 crew, 18 energy points.
@@ -1946,16 +1946,16 @@ $2,000,000 was thrown into the deal and the Nationals accepted and destroyed the
 ::534
 It primarily has 2 sets each consisting of 6 pairs.
 51
-(It ; primarily has ; 2 sets ; null) === T
+(It ; primarily has ; 2 sets) === T
 
 ::535
 Typical luminous intensity is 4,000 4,500 and 5,000 mcd for the red, amber and yellow LEDs, respectively, while luminous flux for the white, warm white, blue and green LEDs is 25, 25, 6 and 25 lm, respectively.
 264
-(intensity ; luminous ; 5000 mcd ; null) === F
+(intensity ; luminous ; 5000 mcd) === F
 37
-(Typical luminous intensity ; respectively ; 5000 mcd ; null) === F
+(Typical luminous intensity ; respectively ; 5000 mcd) === F
 24
-(the red LEDs ; Typical luminous intensity ; 5000 mcd ; null) === F
+(the red LEDs ; Typical luminous intensity ; 5000 mcd) === F
 
 ::536
 Washington is home to more equestrian statues than any other city in the nation, and it's significant that perhaps only 10 out of 30 or more follow the convention.
@@ -1966,7 +1966,7 @@ Bob and Mary planned to work the business for ten years and then sell it for $1.
 ::538
 So, I'm getting the usual 24 that I paid for and 1 free surprise chick in the mail this week.
 237
-(I ; getting ; 24 ; null) === F
+(I ; getting ; 24) === F
 
 ::539
 The workshop was attended by 25 stakeholders from 6 African Countries, and 5 regional and international agencies working in the transport sector.
@@ -1979,7 +1979,7 @@ At the end of the sixth, Jacksonville leads 15 to 1. TOP OF THE SEVENTH John Don
 51
 (Jacksonville ; leads ; 15 to 1 ; to 1) === F
 404
-(Jacksonville ; leads ; 15 to 1 ; null) === T
+(Jacksonville ; leads ; 15 to 1) === T
 
 ::542
 Recently though, Arik Levinson of Georgetown University released a study showing that American manufacturers increased production by 70% while, simultaneously, reducing the production of primary pollutants by 58%.
@@ -1993,9 +1993,9 @@ I got her an 80GB drive for $100.00 USD.
 ::545
 The root, which is rich in starch, contains nearly 80 Calorie per 100 gm.
 51
-(The root is ; contains ; nearly 80 calorie per 100 gm ; null) === T
+(The root is ; contains ; nearly 80 calorie per 100 gm) === T
 238
-(100 gm ; contains ; nearly 80 calorie per 100 gm ; null) === F
+(100 gm ; contains ; nearly 80 calorie per 100 gm) === F
 
 ::546
 While U.S. exports peaked at $389 million in 1996, they have declined since then to $224 million thanks in large part to existing sanctions and European competition.
@@ -2024,7 +2024,7 @@ Selfclean 6.62 Automatic Filter Selfclean type 6.62 is a new development especia
 ::554
 o A saboteur's projectile weapon has a maximum range of 2 spaces.
 4
-(A saboteur 's projectile weapon ; maximum range ; 2 spaces ; null) === T
+(A saboteur 's projectile weapon ; maximum range ; 2 spaces) === T
 
 ::555
 Yale U. 23 Quatre preludes nostalgiques, pour piano.
@@ -2032,14 +2032,14 @@ Yale U. 23 Quatre preludes nostalgiques, pour piano.
 ::556
 The information contain in these care sheets represents only the opinions and husbandry advice of our members and therefore is not guaranteed to be 100% accurate.
 205
-(our ; care sheets ; 100 % ; null) === F
+(our ; care sheets ; 100 %) === F
 111
-(The information ; % accurate ; 100 % ; null) === F
+(The information ; % accurate ; 100 %) === F
 
 ::557
 If that were paid off, I'd have the $623 that used to go to that bill, plus $852 that goes to savings every month, for a total of $1475 per month.
 237
-(I ; have ; $ 623 ; null) === F
+(I ; have ; $ 623) === F
 
 ::558
 Alloys containing 80% or more zinc have been used in prehistoric artefacts, and this should be sufficiently pure to get a violent reaction with sulphur.
@@ -2050,7 +2050,7 @@ This order carried debt recovery the threat of a maximum $10,000 fine and a maxi
 ::560
 Facility 46 Eight Pieces for piano based on songs of Soviet Peoples.
 175
-(piano ; for ; 46 eight pieces ; null) === F
+(piano ; for ; 46 eight pieces) === F
 
 ::561
 Simply go to the feed configuration page and follow the 3 simple steps to grab the custom html code snippet and paste it into your own site.
@@ -2093,7 +2093,7 @@ It doesn't seem sensible that I could set the output level of this amp at 29, wh
 ::571
 The tank I placed them in has 6 serpea tetras and 8 zebra danios.
 89
-(The tank placed in ; serpea tetras ; 6 serpea ; null) === F
+(The tank placed in ; serpea tetras ; 6 serpea) === F
 
 ::572
 There must be at least 1 empty space directly adjacent to the palace in order for a saboteur to be deployed.
@@ -2130,7 +2130,7 @@ The only value it defines is the diagonal, which equals 50 ft.
 ::582
 Papa Yushchenko and the young Lord can point to a $43,000 mobile phone, a $162,000 automobile, and maybe even let poor people touch them.
 404
-(Papa Yushchenko ; point ; $ 43000 mobile phone ; null) === T
+(Papa Yushchenko ; point ; $ 43000 mobile phone) === T
 
 ::583
 The workers enquire to have occasionally affect the 60% jet ski me and ardent are queue macronutrients themselves at 20% deposit.
@@ -2147,7 +2147,7 @@ Cichlids have one nostril on each side while other fish have 2 sets.
 ::587
 Compared to the 13.1 million for the first decade of this century, the 1990s had less new immigration.
 175
-(the first decade of this century ; for ; 13.1 million ; null) === F
+(the first decade of this century ; for ; 13.1 million) === F
 
 ::588
 Up to 4 pieces of furniture will fit into 1 shipping container.
@@ -2158,9 +2158,9 @@ Spent a total of $792.98 between checks and cash expenditures for the month.
 ::590
 The Jews got 59% of the land.
 290
-(the land ; got ; 59 % ; null) === F
+(the land ; got ; 59 %) === F
 51
-(The Jews ; got ; 59 %of the land ; null) === T
+(The Jews ; got ; 59 %of the land) === T
 
 ::591
 For instance, the unemployment rate for these workers ranges from 12 percent for those with level two quantitative skills up to 20 percent for those with level one quantitative skills.
@@ -2171,7 +2171,7 @@ Staying here, Guests may have a panoramic view of the ancient Bund, charming Hua
 ::593
 Alles is altijd tot in de puntjes geregeld en 100% betrouwbaar.
 482
-(Alles ; en ; 100 % betrouwbaar ; null) === F
+(Alles ; en ; 100 % betrouwbaar) === F
 
 ::594
 He reported that the tenants in the apartment at 320 Boulevard are out, but for two, one who will be moving September 1, and one who is still looking.
@@ -2179,9 +2179,9 @@ He reported that the tenants in the apartment at 320 Boulevard are out, but for 
 ::595
 The family owns 60% of the group.
 290
-(the group ; owns ; 60 % ; null) === F
+(the group ; owns ; 60 %) === F
 237
-(The family ; owns ; 60 %of the group ; null) === T
+(The family ; owns ; 60 %of the group) === T
 
 ::596
 More Compare the Top 10 Web Hosts 2011.
@@ -2189,7 +2189,7 @@ More Compare the Top 10 Web Hosts 2011.
 ::597
 The atmospheric pressure is 1028 hPa.
 264
-(pressure ; atmospheric ; 1028 hpa ; null) === T
+(pressure ; atmospheric ; 1028 hpa) === T
 
 ::598
 Every year, U.S. businesses spend over $20 billion on marketing at trade shows, marketing plan for promotion and another $15 billion on proprietary corporate events.
@@ -2212,9 +2212,9 @@ The first 175 copies are made with an acetate cover and include a unique 45 rpm 
 ::604
 Each battery contains about 18 pounds of lead.
 237
-(Each battery ; contains ; about 18 pounds ; null) === F
+(Each battery ; contains ; about 18 pounds) === F
 290
-(lead ; contains ; about 18 pounds ; null) === F
+(lead ; contains ; about 18 pounds) === F
 
 ::605
 Kitchenette with 4 gas hobs, sink, small fridge/freezer, microwave oven.
@@ -2225,7 +2225,7 @@ After a few phone calls and some discussion we convinced the domain owner to shu
 ::607
 Ramah in the Mountain of Ephraim By Rabbi Joseph Schwarz, 1850 Ramah in the Mountain of Ephraim.
 175
-(Mountain ; in ; 1850 ramah ; null) === F
+(Mountain ; in ; 1850 ramah) === F
 
 ::608
 Experience 12 time World Champion Ken Climo throwing a backhand in 20x slow motion with graphics detailing the parts of the throw.
@@ -2239,7 +2239,7 @@ After lunch we sailed away from South East Island and headed up the east coast a
 ::611
 That barrel holds 50 gallons & has a hose hookup, as well as a faucet on it.
 237
-(That barrel ; holds ; 50 gallons ; null) === T
+(That barrel ; holds ; 50 gallons) === T
 
 ::612
 So.........that meant a quick trip to the veggie plot & taking off the stones/blocks and the 3 HUGE, really HUGE pieces of black plastic.
@@ -2247,16 +2247,16 @@ So.........that meant a quick trip to the veggie plot & taking off the stones/bl
 ::613
 BBC World News is available in more than 200 countries worldwide.
 482
-(BBC World News ; in ; more than 200 countries ; null) === T
+(BBC World News ; in ; more than 200 countries) === T
 
 ::614
 For our Club 48 members, unfortunately, in the face of this bankruptcy filing, you will no longer be able to redeem your points for rewards.
 271
-(our ; Club members ; 48 members ; null) === F
+(our ; Club members ; 48 members) === F
 175
-(face ; in ; 48 members ; null) === F
+(face ; in ; 48 members) === F
 320
-(Club 48 ; members ; 48 members ; null) === F
+(Club 48 ; members ; 48 members) === F
 
 ::615
 The number of queries so far in 2009 is about 6 million, nearly what they were for all of 2008 and twice that for 2007.
@@ -2278,7 +2278,7 @@ For example, an order shipped from our warehouse in Pennsylvania to California m
 287
 (example ; take ; 6 business days ; to Kansas 4 business days) === F
 404
-(an order shipped from our warehouse in Pennsylvania to California ; take ; 4 business days ; null) === F
+(an order shipped from our warehouse in Pennsylvania to California ; take ; 4 business days) === F
 51
 (an order shipped from our warehouse in Pennsylvania to California ; take ; 6 business days ; to Kansas 4 business days) === F
 
@@ -2313,7 +2313,7 @@ I've got all the rest of my chores done for the day........except anything on my
 ::629
 Sacramento International Airport is about 30 miles away.
 242
-(Sacramento International Airport ; miles away ; about 30 miles ; null) === T
+(Sacramento International Airport ; miles away ; about 30 miles) === T
 
 ::630
 He estimated that startup costs will range be $133,000 to $201,000 and include the franchise fee, equipment, minimal building improvements, office supplies and accounting and legal fees.
@@ -2352,9 +2352,9 @@ $38 $32 $28 $27 C2
 ::640
 o Any unit which fires 2 projectiles per attack will fire only 1 projectile per attack if it becomes 50% damaged.
 238
-(attack ; fire ; 1 projectile per attack ; null) === F
+(attack ; fire ; 1 projectile per attack) === F
 237
-(unit ; fire ; 1 projectile per attack ; null) === F
+(unit ; fire ; 1 projectile per attack) === F
 
 ::641
 It's just a tough break that you're already 12 games out of the wild card.
@@ -2368,7 +2368,7 @@ In Colombo arrests continue as police believe Black Tiger suicide bombers are hi
 ::644
 But even if 17 Alternative theories to human capital theory assert that additional education does not increase productivity, but rather that it is valuable for sorting out individuals with inherently low or high abilities or aptitudes.
 175
-(human capital theory assert ; to ; 17 alternative theories ; null) === F
+(human capital theory assert ; to ; 17 alternative theories) === F
 
 ::645
 I'm tentative about doing much, as I'm sure I'll forget to call & cancel these things during the 30 day trial period.
@@ -2376,9 +2376,9 @@ I'm tentative about doing much, as I'm sure I'll forget to call & cancel these t
 ::646
 According to the U.S. dollar against the RMB in the year are translated at the exchange rate, the final conversion of the year the price of gold is 66.91 yuan per gram.
 47
-(gram ; price ; 66.91 yuan per gram ; null) === F
+(gram ; price ; 66.91 yuan per gram) === F
 420
-(gold ; price ; 66.91 yuan per gram ; null) === T
+(gold ; price ; 66.91 yuan per gram) === T
 
 ::647
 He can start the game with up to 30 mana cost of characters, and the rest are put in reserve, waiting to be summoned during play.
@@ -2386,7 +2386,7 @@ He can start the game with up to 30 mana cost of characters, and the rest are pu
 ::648
 To recover the province of Antioch, which had been invaded by the infidels, the Templars could collect only 120 Knights and 1,000 serving brethren.
 51
-(the Templars ; collect ; 120 knights ; null) === T
+(the Templars ; collect ; 120 knights) === T
 
 ::649
 The influx of boys starts again this afternoon.........all 3 here this week end.
@@ -2397,7 +2397,7 @@ Abner Moon worked out by the month on a farm to earn $90 to pay towards the buil
 ::651
 My October goal is to pay off at least $1700 of our debt.
 290
-(our debt ; pay ; $ 1700 ; null) === F
+(our debt ; pay ; $ 1700) === F
 
 ::652
 Deaths in police custody In the 10 year period between 1997 and 2007 there have been over 530 deaths in police custody in England & Wales, as a result of police shootings or following contact with the police, and more than 320 deaths in police vehicle incidents.
@@ -2414,17 +2414,17 @@ FreeHotelSearch.com is one the Internet's most popular website s providing infor
 ::656
 It has 8 pages and is distributed widely throughout Buenos Aires.
 237
-(It ; has ; 8 pages ; null) === T
+(It ; has ; 8 pages) === T
 
 ::657
 I will post 2 series in each post.
 237
-(I ; post ; 2 series ; null) === F
+(I ; post ; 2 series) === F
 
 ::658
 o Any unit which fires 2 projectiles per attack can split its attack between 2 targets if one target is destroyed with the first projectile, and/or the attacking unit is given new orders before the second projectile is fired.
 237
-(Any unit fires ; split ; 2 projectiles per attack ; null) === F
+(Any unit fires ; split ; 2 projectiles per attack) === F
 
 ::659
 They do grits, buy 100% Pure Okinawan Coral Calcium from mexico.
@@ -2432,18 +2432,18 @@ They do grits, buy 100% Pure Okinawan Coral Calcium from mexico.
 ::660
 Jose Reyes has over 440 steals at only age 28.
 237
-(Jose Reyes ; has ; 440 steals ; null) === T
+(Jose Reyes ; has ; 440 steals) === T
 348
-(Reyes ; Jose ; 440 steals ; null) === F
+(Reyes ; Jose ; 440 steals) === F
 
 ::661
 Segment profit decreased $10.1 million, or 6%, to $162.6 million.
 404
-(Segment profit ; decreased ; $ 162.6 million ; null) === F
+(Segment profit ; decreased ; $ 162.6 million) === F
 237
 (Segment profit ; decreased ; $ 10.1 million ; to $ 162.6 million) === T
 458
-(Segment profit ; decreased ; $ 10.1 million ; null) === T
+(Segment profit ; decreased ; $ 10.1 million) === T
 
 ::662
 Try and do as many as you can for 3 sets, 1 minute between sets.
@@ -2463,7 +2463,7 @@ Jermaine Dye PH 1 0 0 0 0 0 0 0 .305
 ::667
 Gerber 8762 Black Cordura Sheath, Medium, fits 4 to 4.5 in.
 404
-(Gerber 8762 Black Cordura Sheath ; fits ; 4 to 4.5 ; null) === F
+(Gerber 8762 Black Cordura Sheath ; fits ; 4 to 4.5) === F
 237
 (Gerber 8762 Black Cordura Sheath ; fits ; 4 to 4.5 ; in) === F
 
@@ -2477,7 +2477,7 @@ For example, Kowairu, a skeleton fighter, has a power of 2 at level 1 and power 
 237
 (Kowairu ; has ; 5 power ; at level 2) === F
 233
-(Kowairu ; power ; 2 ; null) === F
+(Kowairu ; power ; 2) === F
 
 ::670
 A poll taken by the Steinmetz Center of Tel Aviv University last week found that 68 percent of the public believed that, in order to reach a peace agreement, Israel should be less conciliatory with the Palestinians.
@@ -2488,11 +2488,11 @@ The third set is a compound plumb cut at 45 degrees on each side to fit nicely i
 ::672
 Cheers 9 Jon Obi Mikel is Jon Obi Mikel.
 186
-(Mikel ; Mikel ; 9 jon obi mikel ; null) === F
+(Mikel ; Mikel ; 9 jon obi mikel) === F
 14
-(Jon ; Mikel ; 9 jon obi mikel ; null) === F
+(Jon ; Mikel ; 9 jon obi mikel) === F
 110
-(Jon Obi Mikel ; is ; 9 jon obi mikel ; null) === F
+(Jon Obi Mikel ; is ; 9 jon obi mikel) === F
 
 ::673
 Ideal for travelers in other we accept capitol one credit card website instantly the card we accept capitol one credit card website instantly a $250 credit you a round trip that most companies report way.
@@ -2512,14 +2512,14 @@ Paranthetical Note The story of Guest Gulkan is told in the sword and sorcery no
 ::678
 On June 9th the Athletics signed Carlos to a 4 Year extension at 12.7 million a year.
 404
-(the Athletics ; signed ; 4 year extension ; null) === F
+(the Athletics ; signed ; 4 year extension) === F
 
 ::679
 Yale U. 2 First Nocturne for Piano.
 175
-(Piano ; for ; 2 first nocturne ; null) === F
+(Piano ; for ; 2 first nocturne) === F
 83
-(Piano ; Nocturne ; 2 first nocturne ; null) === F
+(Piano ; Nocturne ; 2 first nocturne) === F
 258
 (First ; Nocturne ; 2 first nocturne ; for Piano) === F
 
@@ -2554,7 +2554,7 @@ The added income, splitting bills 3 ways instead of 2 ..........wow, that would 
 ::688
 I no longer want $300, but would still like to trade it for some hardware.
 237
-(I ; longer want ; $ 300 ; null) === F
+(I ; longer want ; $ 300) === F
 
 ::689
 Cordero, Chad WSN 34.2 4.15 39 0 2 4 26 30 13 9.35 Hernandez, Livan WSN 148.1 3.94 22 22 3 9 0 108 64 12.80 Loaiza, Esteban WSN 145.2 3.77 21 21 7 7 0 111 42 11.06
@@ -2589,12 +2589,12 @@ Police say some 1,800 weapons still remain to be recovered.
 ::699
 Try keeping the ship pointed 90 to 135 degrees away from the planet's core while applying continuous thrust.
 36
-(the planet 's core ; degrees away ; 90 to 135 degrees ; null) === F
+(the planet 's core ; degrees away ; 90 to 135 degrees) === F
 
 ::700
 The price of admission is 95 million dollars.
 420
-(admission ; price ; 95 million dollars ; null) === T
+(admission ; price ; 95 million dollars) === T
 
 ::701
 Take a short day trip into the San Francisco Bay area to visit attractions such as Ghirardelli Square and the Golden Gate Bridge or take a tour of Napa wineries only 17 miles away.
@@ -2611,12 +2611,12 @@ According to Karl Ungar, who directs the agency's activities in Eastern Europe, 
 ::705
 The traffic to the web site has also grown substantially from about 1.2 million hits per month to over 2 million hits per month.
 404
-(The traffic to the web site ; also grown substantially ; 2 million hits per month ; null) === F
+(The traffic to the web site ; also grown substantially ; 2 million hits per month) === F
 
 ::706
 Still only 1 bid in hand.
 175
-(hand ; in ; 1 bid ; null) === F
+(hand ; in ; 1 bid) === F
 
 ::707
 Tomorrow, more than 500 people will converge on Capitol Hill for our Arts Advocacy Day.
@@ -2624,14 +2624,14 @@ Tomorrow, more than 500 people will converge on Capitol Hill for our Arts Advoca
 ::708
 Motor vehicles emit 85 percent of the benzene in the air.
 290
-(the benzene in the air ; emit ; 85 percent ; null) === F
+(the benzene in the air ; emit ; 85 percent) === F
 237
-(Motor vehicles ; emit ; 85 percentof the benzene in the air ; null) === T
+(Motor vehicles ; emit ; 85 percentof the benzene in the air) === T
 
 ::709
 Otherwise, I'll still get at least $30.00 in rebates from each through the year.
 237
-(I ; get ; at least $ 30.00 ; null) === F
+(I ; get ; at least $ 30.00) === F
 
 ::710
 I didn't realize it, but here I am in the third week of July having only made 3 posts to this site.
@@ -2654,9 +2654,9 @@ Once you have found the right hotel in Eagar, you can instantly reserve it using
 ::716
 Altogether he submitted 32 names for confirmation.
 290
-(confirmation ; Altogether submitted ; 32 names ; null) === F
+(confirmation ; Altogether submitted ; 32 names) === F
 96
-(he ; submitted ; 32 names ; null) === F
+(he ; submitted ; 32 names) === F
 
 ::717
 Did another online and received a $10 Amazon G/C.
@@ -2664,7 +2664,7 @@ Did another online and received a $10 Amazon G/C.
 ::718
 Actually, child abuse increased 500 percent in the first ten years after abortion was legalized.
 175
-(the first ten years ; in ; increased 500 percent ; null) === F
+(the first ten years ; in ; increased 500 percent) === F
 
 ::719
 They worked with massive funds, up to $800,000 in a country with less than a million people, funnelled through the Public Service International and the American Federation of State, County and Municipal Employees.
@@ -2672,7 +2672,7 @@ They worked with massive funds, up to $800,000 in a country with less than a mil
 ::720
 Only 3 members of The Math but all he needed.
 175
-(The Math ; of ; 3 members ; null) === F
+(The Math ; of ; 3 members) === F
 
 ::721
 In 2001, distribution and marketing costs accounted for 46 percent of the cost of a gallon of heating oil.
@@ -2683,7 +2683,7 @@ Overall, about 26 percent of immigrant households use at least one major welfare
 ::723
 AS just used up her first 1,000 minutes, so I bought her another 1,000 at $107.40.
 51
-(AS ; just used ; 1000 minutes ; null) === F
+(AS ; just used ; 1000 minutes) === F
 
 ::724
 Such is the speed and energy Japan has.... 78 published 4 months ago stevennix2001's film previews and trailers for animated features you can expect to hear more about in 2012.
@@ -2694,7 +2694,7 @@ o Trooper units will launch rockets at targets which are up to 3 spaces away.
 ::726
 Glucobay 50 comes in packs of 90 tablets.
 175
-(packs of 90 tablets ; in ; 50 comes ; null) === F
+(packs of 90 tablets ; in ; 50 comes) === F
 
 ::727
 Months 7 & 8, after abortion may have been easier.
@@ -2717,7 +2717,7 @@ Far too many of us spend the majority of our time focusing on the 50% of what we
 ::733
 This is a 2 day, 16 hour course approved by Vetronix for their certification of those who complete the course as a CDR Toolkit Operator.
 295
-(course ; is ; 16 hour course ; null) === F
+(course ; is ; 16 hour course) === F
 
 ::734
 The chicken coop is getting a little closer to being totally framed up, there are 3 walls now up and the framework for the run is finished.
@@ -2743,7 +2743,7 @@ Atlanta offers plenty of highly recommended dance nightclubs, including MJQ Conc
 ::741
 The total number of registered homebuilt aircraft is increasing by about 1,000 per year, while the total number of accidents has stayed virtually the same.
 403
-(The total number of registered homebuilt aircraft ; increasing ; about 1000 per year ; null) === T
+(The total number of registered homebuilt aircraft ; increasing ; about 1000 per year) === T
 
 ::742
 The earthquake in Japan in 1923 caused a fire storm that killed 38,000 of the 143,000 victims.
@@ -2754,7 +2754,7 @@ Regards Gazurkoff 12 This host is not active yet.
 ::744
 The hotel also includes meeting rooms, magnificent terrace with bar, a relax area with Turkish Bath, Emotional Shower, and massage room.The hotel has 82 rooms, nine junior suites, three suites, and 27 lounge suites with kitchen corner and private entrance.
 51
-(a relax area with Turkish Bath ; has ; 82 rooms ; null) === F
+(a relax area with Turkish Bath ; has ; 82 rooms) === F
 
 ::745
 In this release we have resolved several critical issues, and stabilized the JSF 2.0 support.
@@ -2762,7 +2762,7 @@ In this release we have resolved several critical issues, and stabilized the JSF
 ::746
 So, I changed the playback speed to 130%.
 404
-(I ; So changed ; 130 % ; null) === F
+(I ; So changed ; 130 %) === F
 
 ::747
 In some places the mortality rate was something like 75%.
@@ -2773,9 +2773,9 @@ In some places the mortality rate was something like 75%.
 ::749
 And another end table, also oak.......plus the gentleman had found another table by the time I got to his house, so I got 3 gorgeous tables for a bit of a drive.
 287
-(a bit of a drive ; so got ; 3 gorgeous tables ; null) === F
+(a bit of a drive ; so got ; 3 gorgeous tables) === F
 96
-(I ; so got ; 3 gorgeous tables ; null) === F
+(I ; so got ; 3 gorgeous tables) === F
 
 ::750
 About 45 million pagers were in use nationwide in 1999.
@@ -2789,11 +2789,11 @@ Were such a compressor to exist, the only heat added to the charge would be the 
 ::753
 If only excise taxes are considered, the average tax payment of illegal households is 69 percent that of all households.
 225
-(illegal households ; average tax payment ; 69 percent ; null) === T
+(illegal households ; average tax payment ; 69 percent) === T
 123
-(tax ; payment ; 69 percent ; null) === F
+(tax ; payment ; 69 percent) === F
 264
-(payment ; average ; 69 percent ; null) === F
+(payment ; average ; 69 percent) === F
 
 ::754
 To cut the side cut angle that goes against the hip, if you have a compound bevel and miter saw, cut the miter 47 degrees and the bevel at 22 1/2 degrees.
@@ -2801,9 +2801,9 @@ To cut the side cut angle that goes against the hip, if you have a compound beve
 ::755
 o An ornithopter can fire only 1 rocket per attack.
 51
-(An ornithopter ; fire ; 1 rocket per attack ; null) === T
+(An ornithopter ; fire ; 1 rocket per attack) === T
 238
-(attack ; fire ; 1 rocket per attack ; null) === F
+(attack ; fire ; 1 rocket per attack) === F
 
 ::756
 The money will be used primarily to cover the shipping expenses for our next cargo containers holding those 700 personal computers that we have already prepared.
@@ -2838,7 +2838,7 @@ The NRC study also found that for those immigrants with more than a high school 
 ::766
 He will ask you to talk to Apprentice Luo, Bian Qing, Officer Su, Orchid Goddess and Pharmacist Dong. 2. Find these 5 people to get 5 Corn Riddles and they will also tell you the approximate number of Corn Grains you have.
 73
-(Apprentice ; Luo ; 5 corn ; null) === F
+(Apprentice ; Luo ; 5 corn) === F
 
 ::767
 Permits you to use your 1394a cable with Firewire 800 devices/ports.
@@ -2885,7 +2885,7 @@ In the states of Alabama, Delaware, Georgia, Maryland, and South Carolina, more 
 ::781
 Every refugee resettled in the United States is assigned to one of 10 Volags, adding to that agency's headcount and therefore federal cash allotment.
 76
-(Every refugee resettled in the United States ; assigned ; one of 10 volags ; null) === T
+(Every refugee resettled in the United States ; assigned ; one of 10 volags) === T
 
 ::782
 Buy 100% Pure Okinawan Coral Calcium online cod, They love where they live.
@@ -2893,12 +2893,12 @@ Buy 100% Pure Okinawan Coral Calcium online cod, They love where they live.
 ::783
 Cornell U & Rice U 94 10 Pieces for Piano.
 175
-(Piano ; for ; 94 10 pieces ; null) === F
+(Piano ; for ; 94 10 pieces) === F
 
 ::784
 Sorry, I'll pay the $70 rather than chance it.
 96
-(I ; pay ; $ 70 rather ; null) === F
+(I ; pay ; $ 70 rather) === F
 
 ::785
 From the inside of the box, screw through the 4 holes into the front.
@@ -2915,7 +2915,7 @@ plus with ease and swat a cool 40 HR without breaking a sweat.
 ::789
 The available refund under this plan declines by 2% for each of the first 25 months of occupancy.
 403
-(The available refund under this plan ; declines ; 2 % ; null) === F
+(The available refund under this plan ; declines ; 2 %) === F
 
 ::790
 but it is still 5 lower than around my house...... Will have to scout around for more coupons like I had last month.
@@ -2929,7 +2929,7 @@ In attendance were over 50 people from all across the country as well as from Sl
 ::793
 Hoffpauir is only 25, and only played 10 games in 2008.
 494
-(Hoffpauir ; only ; 25 ; null) === F
+(Hoffpauir ; only ; 25) === F
 
 ::794
 All it's sides are 12 inches.
@@ -2949,9 +2949,9 @@ Yes I believe it is The Chinese Govt has STRICT control over EVERYTHING it's 1 B
 ::799
 The Oaks has 4 different spa vacation packages to choose from.
 51
-(The Oaks ; has ; 4 different spa vacation packages ; null) === T
+(The Oaks ; has ; 4 different spa vacation packages) === T
 89
-(The Oaks ; different spa vacation packages choose ; 4 different spa vacation packages ; null) === F
+(The Oaks ; different spa vacation packages choose ; 4 different spa vacation packages) === F
 
 ::800
 This 3 Bedroom, 2 Bath Home Also Has New Siding &Windows on Beautiful Mature Property.
@@ -2965,7 +2965,7 @@ Pour into prepared pan. 4. Bake 15 to 20 minutes or until toothpick inserted in 
 ::803
 Despite a very strong economy, the immigrant population increased by only about 700,000, or 350,000 a year on average.
 403
-(the immigrant population ; increased ; about 700000 ; null) === F
+(the immigrant population ; increased ; about 700000) === F
 
 ::804
 On December 30th we had our first over 1K day with 1032 visits, breaking out previous record of 670.
@@ -2982,14 +2982,14 @@ One startling finding was that women who had elective abortions had a 546% highe
 ::808
 KWR helped a local government to promote a $13 billion infrastructure development project emphasizing technology and air and sea transport.
 62
-(infrastructure development ; project ; $ 13 billion infrastructure development project ; null) === F
+(infrastructure development ; project ; $ 13 billion infrastructure development project) === F
 57
-(a ; project ; $ 13 billion infrastructure development project ; null) === F
+(a ; project ; $ 13 billion infrastructure development project) === F
 
 ::809
 The atmospheric pressure is 1032 hPa.
 264
-(pressure ; atmospheric ; 1032 hpa ; null) === T
+(pressure ; atmospheric ; 1032 hpa) === T
 
 ::810
 ADVERTISING WITH THE ARC NETWORK With over 100,000 hits per month, there is no better place to advertise your products and services than the ARC Network.
@@ -3006,7 +3006,7 @@ with six homeruns and 23 runs batted in to go with an amazing .442
 ::814
 3d Ebook Cover And Marketing Graphics Generator Over 200 Different Cover Types With Photoshop Like Online Image Editor And Graphics And Image Library.
 175
-(Photoshop Like Online Image Editor ; With ; 200 different cover types ; null) === F
+(Photoshop Like Online Image Editor ; With ; 200 different cover types) === F
 49
 (Cover ; Types ; 200 different cover types ; With Photoshop Like Online Image Editor And Graphics And Image Library) === F
 44
@@ -3015,14 +3015,14 @@ with six homeruns and 23 runs batted in to go with an amazing .442
 ::815
 For our higher time frame we like to use the 30 min chart and then drop down to the 5 min chart when conditions have been met on the 30 min chart.
 57
-(the ; min chart ; 30 min chart ; null) === F
+(the ; min chart ; 30 min chart) === F
 62
-(30 min ; chart ; 30 min chart ; null) === F
+(30 min ; chart ; 30 min chart) === F
 
 ::816
 Michelle has completed many successful 12 week Challenges dramatically changing her body and life.
 51
-(Michelle ; completed ; 12 week ; null) === F
+(Michelle ; completed ; 12 week) === F
 
 ::817
 The tunes are selected at random from 5 possibilities.
@@ -3033,7 +3033,7 @@ On the way there you start thinking that it would be a mistake to offer them wha
 ::819
 One in an edition of 24 copies, signed by Susan Allix.
 175
-(an edition of 24 copies signed ; in ; one in an edition of 24 copies ; null) === F
+(an edition of 24 copies signed ; in ; one in an edition of 24 copies) === F
 
 ::820
 Assuming that is also true of the CPS, then the total illegal population stood at 10 million in March 2004.
@@ -3041,7 +3041,7 @@ Assuming that is also true of the CPS, then the total illegal population stood a
 ::821
 Garcia, Freddy TOR 37.0 4.38 6 6 1 3 0 36 9 10.46 Halladay, Roy TOR 38.0 5.21 6 6 3 1 0 30 5 11.13 Litsch, Jesse TOR 26.1 3.08 4 4 2 1 0 22 11 12.30 Marcum, Shaun TOR 35.0 4.89 6 6 3 3 0 31 12 13.37 McGowan, Dustin TOR 34.1 6.29 6 6 1 4 0 29 12 14.42 Tallet, Brian TOR 18.2 4.34 16 0 1 0 0 19 6 9.16 Wolfe, Brian TOR 13.0 8.31 13 0 0 3 0 8 7 20.77
 58
-(10.46 Halladay ; Tallet ; 37.0 4.38 6 6 1 3 0 36 9 10.46 halladay ; null) === F
+(10.46 Halladay ; Tallet ; 37.0 4.38 6 6 1 3 0 36 9 10.46 halladay) === F
 
 ::822
 Upon reading the description of my personality type, I was incredibly shocked how it was nearly 100% accurate.
@@ -3058,7 +3058,7 @@ Albert Pujols DH 4 1 1 0 0 1 0 0 .310
 ::826
 Yes, homeschooing is legal in all 50 states and many countries .
 482
-(homeschooing ; in ; 50 states ; null) === F
+(homeschooing ; in ; 50 states) === F
 
 ::827
 Allen SEO Web Hosting Company Fast servers, managed hosting, Mulitple C Class IPs, latest PHP, MySQL and more as low as $9.95 per month.
@@ -3090,7 +3090,7 @@ it was cool because i can see into 3 different towns from our bedroom, so it was
 ::836
 Secondly, only a mere 1% of abortions performed due to incest and rape.
 175
-(Secondly abortions performed due incest ; of ; 1 % ; null) === F
+(Secondly abortions performed due incest ; of ; 1 %) === F
 
 ::837
 Open 3 boxes and get one element from each one.
@@ -3101,7 +3101,7 @@ Got a phone call too this AM, one of those congrats types, I have won a stereo s
 ::839
 Dick then handed out $100 bills and everyone bought their National Park entry tickets and we proceeded through customs into the terminal to meet our guide Maurice.
 237
-(Dick ; then handed ; $ 100 bills ; null) === T
+(Dick ; then handed ; $ 100 bills) === T
 
 ::840
 The Chairman moved that item 12 be taken next to enable PC Graham Ford to return to his policing duties.
@@ -3115,7 +3115,7 @@ connecting 144,126 designers with customers seeking design services.
 ::843
 Mexican immigrants are thought to comprise 60 to 70 percent of the illegal alien population based on work done by the Urban Institute and former INS.
 290
-(the illegal alien population based on work done ; comprise ; 60 to 70 percent ; null) === F
+(the illegal alien population based on work done ; comprise ; 60 to 70 percent) === F
 
 ::844
 Drage earned the most points of any challenge participant in 2009, logging in just under 1,000 activity hours.
@@ -3129,9 +3129,9 @@ The player selects his party of 8 characters out of a pool of 40.
 ::847
 Combined, these three states represent about 40 percent of the H 1B visas for computer workers.
 237
-(these three states ; represent ; about 40 percentof the H 1B visas for computer workers ; null) === T
+(these three states ; represent ; about 40 percentof the H 1B visas for computer workers) === T
 290
-(the H 1B visas for computer workers ; represent ; about 40 percent ; null) === F
+(the H 1B visas for computer workers ; represent ; about 40 percent) === F
 
 ::848
 I do feel like I'm at a financial cross road right now & I don't need to pay anyone for a 3 day seminar to help me figure that out.
@@ -3142,7 +3142,7 @@ This order carried the threat of a maximum $10,000 fine and a maximum of ten yea
 ::850
 After a meal high in carbohydrate content, it may raise to 130 to 160 mg/dl.
 404
-(it ; raise ; 130 to 160 mg / dl ; null) === F
+(it ; raise ; 130 to 160 mg / dl) === F
 
 ::851
 From a national security standpoint, the issue of whether any of the remaining 47 poses a national security risk or simply should be removed is not clear.
@@ -3190,7 +3190,7 @@ From stainless steel mixing tanks and 500 gallon flavor vats to ingredient feede
 ::864
 Greger Users Browsing this Thread There are currently 1 users browsing this thread.
 500
-(Greger Users Browsing ; currently ; currently 1 users ; null) === F
+(Greger Users Browsing ; currently ; currently 1 users) === F
 
 ::865
 His most recent race was a 6 furlong event at Delaware Park on October 19, where he finished 6th.
@@ -3208,7 +3208,7 @@ His most recent race was a 6 furlong event at Delaware Park on October 19, where
 ::866
 The number of elderly Americans will soar from 38.6 million in 2007 to 71.5 million in 2030.
 404
-(The number of elderly Americans ; soar ; 38.6 million ; null) === F
+(The number of elderly Americans ; soar ; 38.6 million) === F
 
 ::867
 If you have 3 pages of one book, they can be combined into the complete book by right clicking one of the pages.
@@ -3240,12 +3240,12 @@ As a youth in Newton, Iowa, he engineered a burning of a massive cross which ter
 ::876
 Rivers of Palestine By Rabbi Joseph Schwarz, 1850 Rivers of Palestine.
 175
-(Palestine ; of ; 1850 rivers ; null) === F
+(Palestine ; of ; 1850 rivers) === F
 
 ::877
 However, if all prospective members do actually join, the market could increase to 160 million people.
 404
-(the market ; However increase ; 160 million people ; null) === F
+(the market ; However increase ; 160 million people) === F
 
 ::878
 Mitch Bouyer After splitting up his command, Custer retained five companies and about 210 men including Bouyer.
@@ -3262,7 +3262,7 @@ We were really impressed, it's definitely a 5 star hotel.
 ::882
 I need to set it to run on 230 VAC 50 HZ.
 73
-(VAC ; HZ ; 230 vac 50 hz ; null) === F
+(VAC ; HZ ; 230 vac 50 hz) === F
 
 ::883
 they have everything on display that suit your budget and style. 1 total marks.
@@ -3273,12 +3273,12 @@ This location is also 11 miles from Le Roy.
 ::885
 tak berapa pecaya orang lain ambik/guna, pasal dah 3 kali jatuh pasal orang lain gune.
 51
-(tak berapa pecaya orang ; lain ; 3 kali jatuh pasal orang lain gune ; null) === F
+(tak berapa pecaya orang ; lain ; 3 kali jatuh pasal orang lain gune) === F
 
 ::886
 Yale U. 31 Quatre romances pour piano seul.
 51
-(Yale U. 31 Quatre romances ; pour ; 31 quatre romances pour piano seul ; null) === F
+(Yale U. 31 Quatre romances ; pour ; 31 quatre romances pour piano seul) === F
 
 ::887
 Additionally, an overlapping 27% of young Americans are too fat to fit in the uniform, says the study.
@@ -3286,9 +3286,9 @@ Additionally, an overlapping 27% of young Americans are too fat to fit in the un
 ::888
 Extremely low maintenance and easy to set up, the 6.6 gallon Aquavista 500 only requires 10 minutes of maintenance per month.
 290
-(maintenance per month ; only requires ; 10 minutes ; null) === F
+(maintenance per month ; only requires ; 10 minutes) === F
 237
-(the 6.6 gallon ; only requires ; 10 minutes ; null) === F
+(the 6.6 gallon ; only requires ; 10 minutes) === F
 
 ::889
 I'm on a dead end street, no teenagers, 6 other homes, all but one retired couples or singles.
@@ -3296,7 +3296,7 @@ I'm on a dead end street, no teenagers, 6 other homes, all but one retired coupl
 ::890
 We have grown to over 100 paid members and are always looking for ways to strengthen and increase our membership.
 404
-(We ; grown ; 100 paid members ; null) === T
+(We ; grown ; 100 paid members) === T
 
 ::891
 According to a survey of 750 small business entrepreneurs from Discover Small Business Watch , 61 percent of the respondents said that they are willing to shell out their own money to lend liquidity to the business.
@@ -3310,12 +3310,12 @@ There is capittol we accept capitol one credit card website instantly are even m
 ::894
 Can fire 10 pairs of shots in a row if fuel is at maximum.
 290
-(shots in a row ; fire ; 10 pairs ; null) === F
+(shots in a row ; fire ; 10 pairs) === F
 
 ::895
 Our company runs 30 shops on Cape Cod.
 237
-(Our company ; runs ; 30 shops ; null) === F
+(Our company ; runs ; 30 shops) === F
 
 ::896
 Get 3 bids, compare/contrast, etc, then make an informed decision.
@@ -3341,7 +3341,7 @@ Level Description Comment 4 Secure 3 Safe 2 Neutral 1 Dangerous 0 Treacherous Ta
 ::903
 Quality Bicycle Products Inc. is recalling about 18,000 bicycle handlebar stems manufactured in mainland China and Taiwan because they can crack or break, causing the bicycle rider to fall and suffer injuries.
 237
-(Quality Bicycle Products Inc ; recalling ; about 18000 bicycle handlebar ; null) === F
+(Quality Bicycle Products Inc ; recalling ; about 18000 bicycle handlebar) === F
 
 ::904
 The ruins of this place are found close upon the sea, 6 miles south of Saida.
@@ -3384,7 +3384,7 @@ I asked mom what she thought the phone call was worth, she guessed $10.00.
 ::916
 a few clouds at a height of 213 meters and broken clouds at a height of 914 meters.
 413
-(clouds ; height ; 213 meters ; null) === T
+(clouds ; height ; 213 meters) === T
 
 ::917
 Most of this debt is owed to western governments with only around 20 per cent owed to Western banks, mostly Western European ones.
@@ -3395,7 +3395,7 @@ As Joe will no doubt point out, there were allegedly 4 young male passengers.
 ::919
 Hotel has a total of 172 rooms.
 233
-(Hotel ; total ; 172 rooms ; null) === F
+(Hotel ; total ; 172 rooms) === F
 
 ::920
 And the Panamanian government, which bought the 46 barrels and used them to make cold medicine, also failed to detect the poison, officials said.
@@ -3418,7 +3418,7 @@ Either way it they promised 60% cheaper rates than DSL.
 ::926
 The resort has 79 rooms equipped with air conditioning, elevators, disabled parking and facilities, lounges, bar, dining room, and 24 hour front desk.
 237
-(The resort ; has ; 79 rooms ; null) === T
+(The resort ; has ; 79 rooms) === T
 
 ::927
 The first quarter average was an economic expansion high of 1,749 million units.
@@ -3432,7 +3432,7 @@ Drop by tablespoon 2 inches apart on a lightly greased cookie sheet.
 ::930
 All bedrooms have double beds that can esaily made into 2 single beds.
 237
-(All bedrooms ; have ; 2 single beds ; null) === T
+(All bedrooms ; have ; 2 single beds) === T
 
 ::931
 In about the year 784 AUC , during the governorship of Pontius Pilate , Jesus went to Jerusalem , feeling that he had to make his message more widely heard, even if it were to cost him his life.
@@ -3449,7 +3449,7 @@ Amerada Hess, Keans other company, is a U.S. oil company with gas stations throu
 ::935
 Their hotel is now capable of housing 450 people in 100 rooms.
 249
-(Their hotel ; now ; 450 people ; null) === F
+(Their hotel ; now ; 450 people) === F
 
 ::936
 That will cut over $100 from the bills.
@@ -3522,7 +3522,7 @@ The unit is marked 117VAC 60 HZ.
 ::958
 The overall visibility is 8.0 kilometers.
 264
-(visibility ; overall ; 8.0 kilometers ; null) === T
+(visibility ; overall ; 8.0 kilometers) === T
 
 ::959
 Cut a piece of cardboard approx 8 x 13 inches.
@@ -3530,7 +3530,7 @@ Cut a piece of cardboard approx 8 x 13 inches.
 ::960
 Papyrus No. 6 appears on pp.
 175
-(pp ; on ; 6 appears ; null) === F
+(pp ; on ; 6 appears) === F
 
 ::961
 I've got like several gigs of all of your stuff over the past couple of years downloaded and I'm so grateful for it and it's all worked out so well but I don't want to see you go away and I just hope other people will sign up for a paypal account and even if it's only $3 send it, $5, $10 and if a few thousand people did it, we'd be paying for your broadband stuff and no problems, that would be great.
@@ -3555,7 +3555,7 @@ We are currently preparing to ship to Cuba's doctors and health care workers abo
 ::967
 with 2 HR and 40 RBI in 60 games at Syracuse.
 175
-(with 2 HR Syracuse ; at ; 60 games ; null) === F
+(with 2 HR Syracuse ; at ; 60 games) === F
 
 ::968
 Fuetsch will turn 90 next month.
@@ -3566,7 +3566,7 @@ Mitch knew the lay of the land that the 12 companies of the 7th Cavalry, under t
 ::970
 The overall visibility is 7.0 kilometers.
 264
-(visibility ; overall ; 7.0 kilometers ; null) === T
+(visibility ; overall ; 7.0 kilometers) === T
 
 ::971
 Includes a Multi Plier 600 Needlenose tool, an Exchage A Blade Sport Saw, a Maglite, Back Paxe, Fiskars Folding Spade, in a 600 denier polyester case.
@@ -3580,7 +3580,7 @@ Use 2 horsepower or larger compressor.
 ::974
 For many of the languages you mentioned I can charge around 0.08 USD/word, but I would need to see what material you need translated so that I can approach the translators and give you an exact quote.
 96
-(I ; charge ; 0.08 usd / word ; null) === T
+(I ; charge ; 0.08 usd / word) === T
 
 ::975
 Queen St. West has produced 4 winners from 5 to run, including stakes winner Paint Me Red.
@@ -3590,9 +3590,9 @@ Queen St. West has produced 4 winners from 5 to run, including stakes winner Pai
 ::976
 Free Updates & Specials 100% Privacy, No Spam.
 269
-(No ; Free ; 100 % ; null) === F
+(No ; Free ; 100 %) === F
 134
-(% ; Privacy ; 100 % ; null) === F
+(% ; Privacy ; 100 %) === F
 
 ::977
 Collisions with fixed objects and noncollisions accounted for only 17 percent of all crashes, but they accounted for 39 percent of fatal crashes.
@@ -3600,14 +3600,14 @@ Collisions with fixed objects and noncollisions accounted for only 17 percent of
 ::978
 For her I would probably have to charge a total of 0.15 USD/word including proofreading.
 303
-(a ; total ; 0.15 usd / word ; null) === F
+(a ; total ; 0.15 usd / word) === F
 73
-(USD ; word ; 0.15 usd / word ; null) === F
+(USD ; word ; 0.15 usd / word) === F
 
 ::979
 The hotel is also 25 miles from downtown Atlanta and 40 miles from Six Flags Theme Park.
 500
-(The hotel ; also ; 25 miles ; null) === F
+(The hotel ; also ; 25 miles) === F
 
 ::980
 The number of uninsured persons in USA ages 18 to 65 in 2008 is over 36 million or 19.3% of the population, in all other industrial countries virtually everyone has health insurance, either from private companies with controlled premiums, or financed by taxes.
@@ -3617,7 +3617,7 @@ And I transferred $120 from my checking to my savings for AS's retirement.
 287
 (AS 's retirement ; transferred ; $ 120 ; from my checking) === F
 237
-(I ; transferred ; $ 120 ; null) === T
+(I ; transferred ; $ 120) === T
 
 ::982
 He said his pastor also gets paid $50,000 salary per year.
@@ -3628,7 +3628,7 @@ Library of Congress 8 Four Preludes.
 ::984
 For the full meditation of the issue at hand, take 1 bath a day for 40 days or 1 bath a week for 40 weeks.
 287
-(40 days ; take day ; 1 bath a day ; null) === F
+(40 days ; take day ; 1 bath a day) === F
 
 ::985
 Of the 6,905 cases closed on the merits, 2.98 percent resulted in findings of unlawful discrimination.
@@ -3639,12 +3639,12 @@ Located in Evanston, this hotel is approximately 13 miles from both the Chicago 
 ::987
 Tables 3 to 5 make clear that the pattern of immigrant settlement differs significantly from state to state.
 365
-(Tables ; make clear ; tables 3 to 5 make ; null) === F
+(Tables ; make clear ; tables 3 to 5 make) === F
 
 ::988
 The number of serious crimes reported compared to the total population in Shreveport, Louisiana, US, with 200,000 people, for instance is immensely higher than it is in Cairo, Egypt with 20 million people.
 482
-(The number of serious crimes reported compared to the total population in Shreveport ; with ; 200000 people ; null) === F
+(The number of serious crimes reported compared to the total population in Shreveport ; with ; 200000 people) === F
 
 ::989
 This land is part of the extensive holdings of the Richardson family in the area, of which about 800 acres are old growth redwood and Douglas fir forest, which have been in their family for over 100 years.
@@ -3655,11 +3655,11 @@ I was told I could either have them mail me a 3 week extension, or go pick it up
 ::991
 engine was America's first 18 cylinder radial and produced a maximum of 2,500 hp.
 178
-(engine ; first cylinder radial ; 18 cylinder ; null) === F
+(engine ; first cylinder radial ; 18 cylinder) === F
 186
-(radial ; engine ; 18 cylinder ; null) === F
+(radial ; engine ; 18 cylinder) === F
 110
-(radial ; was ; 18 cylinder ; null) === F
+(radial ; was ; 18 cylinder) === F
 
 ::992
 In 2005 we sent 86 trucks a day 365 days of the year to Michigan.
@@ -3669,9 +3669,9 @@ In 2005 we sent 86 trucks a day 365 days of the year to Michigan.
 ::993
 Grease a 2 quart casserole dish.
 62
-(2 quart casserole ; dish ; 2 quart casserole dish ; null) === F
+(2 quart casserole ; dish ; 2 quart casserole dish) === F
 451
-(a ; dish ; 2 quart casserole dish ; null) === F
+(a ; dish ; 2 quart casserole dish) === F
 
 ::994
 Disposable income in the US is growing only 2% every year.
@@ -3688,7 +3688,7 @@ I used this programm because it was the first than i get and it worked for all d
 ::998
 Contains more than 1,000,000 conductive carbon fibers for effective record cleaning.
 290
-(effective record cleaning ; Contains ; 1000000 conductive carbon fibers ; null) === F
+(effective record cleaning ; Contains ; 1000000 conductive carbon fibers) === F
 
 ::999
 If the flow rate of any tip is 10 percent more or less than that of the manufacturer's specifications, recheck the output of that tip.
@@ -3696,7 +3696,7 @@ If the flow rate of any tip is 10 percent more or less than that of the manufact
 ::1000
 However, I did work 1 h on it.
 237
-(I ; However work ; 1 h ; null) === F
+(I ; However work ; 1 h) === F
 
 ::1001
 In the last 3 years, 90% of our international students pass the lab exam at the first attempt.
@@ -3707,9 +3707,9 @@ Potala consists of the White and Red palaces with more than 1000 rooms.
 ::1003
 They churn out 180,000 pints per day.
 51
-(They ; churn ; 180000 pints per day ; null) === 
+(They ; churn ; 180000 pints per day) === 
 238
-(day ; churn ; 180000 pints per day ; null) === 
+(day ; churn ; 180000 pints per day) === 
 
 ::1004
 Glucobay 50 contains acarbose which is one of a group of substances known as glucosidase inhibitors which are used to treat diabetes.
@@ -3720,16 +3720,16 @@ The only 100% way is to never have sex, but we know thats just not gonna happen.
 ::1006
 Jinmao Tower Buildings an 88 stories skyscraper in the LuJiaZui area, the tallest building in China is a 10 minute drive.
 110
-(drive ; is ; 10 minute ; null) === 
+(drive ; is ; 10 minute) === 
 178
-(the tallest building in China ; minute drive ; 10 minute ; null) === 
+(the tallest building in China ; minute drive ; 10 minute) === 
 186
-(drive ; tallest building ; 10 minute ; null) === 
+(drive ; tallest building ; 10 minute) === 
 
 ::1007
 /%3e %7b6%7d%3cbr /%3e%3cbr /%3e %3cinput type%3d%27textbox%27 style%3d%27width%3a200px%27 id%3d%27TextBox%27 style%3d%22border%3a solid 1px %23333%3b%22 /%3e %3cembed src%3d%22%7b2%7dImg/alert.wav%22 height%3d%220%22 width%3d%220%22 style%3d%22display%3a none%3b%22%3e%3c/embed%3e %3c/center%3e %3cbr /%3e %3ccenter%3e %3cbutton class%3d%22Button%22 onclick%3d%22GetRadWindow%28%29.ModalDialogCallBack%28document.getElementById%28%27TextBox%27%29.value%29%3b%22%3e
 256
-(% ; alert.wav ; 27 style % 3d % 27width % 3a200px % 27 id % 3d % 27textbox % 27 style % 3d % 22border % 3a ; null) === 
+(% ; alert.wav ; 27 style % 3d % 27width % 3a200px % 27 id % 3d % 27textbox % 27 style % 3d % 22border % 3a) === 
 
 ::1008
 Why pay store prices when you can buy 50% below store prices.
@@ -3757,14 +3757,14 @@ There are 3500 calories in a pound of fat.
 ::1015
 At about 90, I was out.
 482
-(I ; At ; about 90 ; null) === 
+(I ; At ; about 90) === 
 
 ::1016
 The tops of these islands are now 50 to 100 metres below sea level.
 1
-(these islands ; tops ; 50 to 100 metres ; null) === 
+(these islands ; tops ; 50 to 100 metres) === 
 500
-(The tops of these islands ; now ; 50 to 100 metres ; null) === 
+(The tops of these islands ; now ; 50 to 100 metres) === 
 
 ::1017
 The 5 posts in the Door represent grace and the 5 strategic paths into the Holy Place and Holy of Holies.
@@ -3787,7 +3787,7 @@ However, you will definitely have to upgrade to that 50 if you get two, because 
 ::1023
 o The counterthrust from the cannon's recoil after 1 firing is equal to 120% of the Druuge's maximum forward thrust speed.
 361
-(The counterthrust from the cannon 's recoil after 1 firing ; equal ; 120 %of the Druuge 's maximum forward thrust speed ; null) === 
+(The counterthrust from the cannon 's recoil after 1 firing ; equal ; 120 %of the Druuge 's maximum forward thrust speed) === 
 
 ::1024
 You have a little more time to arrange your schedule to see the remarkably good production of It's a Wonderful Life at Weaver Academy for the Performing and Visual Arts at 300 South Spring Street.
@@ -3846,7 +3846,7 @@ any body who will be on it feel free to get in contact, may be good to meet up d
 ::1040
 When defense spending is included, their costs are only 46 percent those of other households.
 91
-(their ; costs ; 46 percent ; null) === F
+(their ; costs ; 46 percent) === F
 
 ::1041
 okay, recreated the Batch 05 files for you, all into a single file.
@@ -3876,7 +3876,7 @@ Service to Hedge Cutter 33.00 1205.65 Vat 210.99 1416.64
 ::1048
 So if you send me your email for the need of a translator, I can send it to at least 70.000 university students or graduates of Turkey.
 96
-(I ; So send ; at least 70.000 university students or graduates ; null) === 
+(I ; So send ; at least 70.000 university students or graduates) === 
 
 ::1049
 The far right column in Table 2 shows that illegal alien tax payments constitute about 0.9 percent of all taxes collected.
@@ -3919,11 +3919,11 @@ Your Name Your Email Friend's Name Friend's Email Change Language 10 Latest Sear
 ::1059
 The average price per square metre of a 120 sq.m. apartment in Hong Kong was approximately US$12,599... ... the rest of the night between bed and bathroom.
 264
-(price ; average ; approximately us $ 12599 ; null) === 
+(price ; average ; approximately us $ 12599) === 
 494
-(The average price per square metre of a 120 sq.m apartment in Hong Kong ; approximately ; approximately us $ 12599 ; null) === 
+(The average price per square metre of a 120 sq.m apartment in Hong Kong ; approximately ; approximately us $ 12599) === 
 314
-(the rest of the night between bed ; average price ; approximately us $ 12599 ; null) === 
+(the rest of the night between bed ; average price ; approximately us $ 12599) === 
 
 ::1060
 Located high in the San Bernardino Mountains, just 90 minutes from Los Angeles, Lake Arrowhead Resort is a rejuvenating escape any day of the week, any time of the year.Here, you'll find every luxury in an exquisitely natural setting, 177 guest rooms and suites with views of the lake or mountains assure privacy without isolation.
@@ -3949,7 +3949,7 @@ He blanked the RedHawks one night later with 29 saves, including one of the cont
 ::1067
 COLLISION is currently delivered to over 1700 accident reconstructionists, police departments, engineers, and attorneys worldwide.
 76
-(COLLISION ; currently delivered worldwide ; 1700 accident reconstructionists ; null) === 
+(COLLISION ; currently delivered worldwide ; 1700 accident reconstructionists) === 
 
 ::1068
 We've done a great job in building this institution to $800,000.00 in assets with the help of all of you.
@@ -3972,14 +3972,14 @@ Regency had watched as the council allowed another firm to build signs along the
 ::1074
 A hit does 6 points of damage.
 51
-(A hit ; does ; 6 points ; null) === 
+(A hit ; does ; 6 points) === 
 290
-(damage ; does ; 6 points ; null) === 
+(damage ; does ; 6 points) === 
 
 ::1075
 Each Fremen unit will be either a single Fremen, or a grouped unit of 3 Fremen.
 156
-(Fremen ; unit ; 3 fremen ; null) === 
+(Fremen ; unit ; 3 fremen) === 
 
 ::1076
 Took the above photos in July 17th and 25th, sandy meadow and aspen woods, 30 km east of our home in Regina, SK.
@@ -3987,12 +3987,12 @@ Took the above photos in July 17th and 25th, sandy meadow and aspen woods, 30 km
 ::1077
 More than 300 associates worldwide with Engineering Design Centers in Taipei, China and Vancouver, BC.
 175
-(Engineering Design Centers in Taipei ; with ; more than 300 associates ; null) === 
+(Engineering Design Centers in Taipei ; with ; more than 300 associates) === 
 
 ::1078
 I'm happily married and 31 yrs old and still have the abortion thing in the back of my mind.
 408
-(I ; yrs old ; 31 yrs old ; null) === 
+(I ; yrs old ; 31 yrs old) === 
 
 ::1079
 Drogba and Shevchenko may not be 100% ready for tomorrow but it appears Sheva has a better chance of making it than Drogs.
@@ -4016,12 +4016,12 @@ The volume of fixed mortgage rate UK insurance business totalled $295bn in 2004 
 ::1084
 Actually the society has 350 members from the Republic of Slovakia, the Czech Republic and several other countries.
 237
-(the society ; Actually has ; 350 members ; null) === 
+(the society ; Actually has ; 350 members) === 
 
 ::1085
 You Save USD $ 14.00 Special Instructions
 96
-(You ; Save ; usd $ 14.00 special instructions ; null) === 
+(You ; Save ; usd $ 14.00 special instructions) === 
 
 ::1086
 This would mean a maximum of 1.5 million per century on the average.
@@ -4041,7 +4041,7 @@ Most of the previous 410 wells drilled were in the western coastal area, the eas
 ::1091
 I've got 2 windows in my room, which happens to be the room that gets the warmest.......so I am hoping I can get these to work in there.
 51
-(I ; got ; 2 windows ; null) === 
+(I ; got ; 2 windows) === 
 
 ::1092
 It was a painful realization for the more than 100 managers and developers on the project.
@@ -4055,14 +4055,14 @@ With 50 wounded safe on board, Captain Grant Prince Marsh sailed his magnificent
 ::1095
 I'm getting 2 calls per week on the ad, and 1 appointment out of those.
 237
-(I ; getting ; 2 calls per week ; null) === 
+(I ; getting ; 2 calls per week) === 
 238
-(week ; getting ; 2 calls per week ; null) === 
+(week ; getting ; 2 calls per week) === 
 
 ::1096
 UMD has 17 native Minnesotans on the roster.
 237
-(UMD ; has ; 17 native minnesotans ; null) === 
+(UMD ; has ; 17 native minnesotans) === 
 
 ::1097
 o The damage status bars under Fremen unit icons can only indicate damage in excess of 50 percent.
@@ -4082,14 +4082,14 @@ Said room mate person added another $150 to her rent due for Oct tonight.
 ::1102
 A hit does 2 points of damage.
 290
-(damage ; does ; 2 points ; null) === 
+(damage ; does ; 2 points) === 
 51
-(A hit ; does ; 2 points ; null) === 
+(A hit ; does ; 2 points) === 
 
 ::1103
 Photosensitive Water Photopolymer Printing Plate Uv Exposure hot stamping plate $39.99 Custom Order New Metal Letterpress Typesetting For Kensol, Kingsley Hot Stamping $25.00 Hot Foil Stamp printer Emboss invitation & business card Pvc material gilding $619.00 $10.00 Kingsley Machine Accessories For Hot Foil Stamping DataCard 295 Card Personalization System Id Card Embosser Printer w/Power Cord 7 Rolls 4 Inch Foil Kingsley Hot Stamp Machine Nos $19.99
 296
-(Kensol ; Typesetting ; $ 39.99 custom order ; null) === 
+(Kensol ; Typesetting ; $ 39.99 custom order) === 
 109
 (Photosensitive Water Photopolymer Printing Plate Uv Exposure hot stamping plate ; Typesetting ; $ 39.99 custom order ; For Kensol) === 
 
@@ -4099,7 +4099,7 @@ The table shows that legalization under Simulation 2 would increase costs by a t
 ::1105
 It boasts 2 Bedrooms and 2 Bathrooms.
 237
-(It ; boasts ; 2 bedrooms ; null) === 
+(It ; boasts ; 2 bedrooms) === 
 
 ::1106
 Have only sold 1 out of 37 listed.
@@ -4127,7 +4127,7 @@ His last outing was one of his best, as he finished 2nd at 5.5 furlongs at Calde
 ::1113
 Pro normally costs $40 but if you act fast you can get it for $29.95.
 51
-(Pro ; normally costs ; $ 40 but ; null) === 
+(Pro ; normally costs ; $ 40 but) === 
 
 ::1114
 Demoiselle 2 Femme, NFP , Chicago, IL.
@@ -4149,12 +4149,12 @@ For one the Focus 340 seems taller.
 ::1119
 Superb Program For Quick And Permanent Weight Loss I Lost 14 Pounds In One Week.
 237
-(I ; Superb Program Lost ; 14 pounds ; null) === 
+(I ; Superb Program Lost ; 14 pounds) === 
 
 ::1120
 Have cookies done already.......now we just need to get him packed this evening and I get 3 whole days without him.
 51
-(him ; packed ; 3 whole days ; null) === 
+(him ; packed ; 3 whole days) === 
 
 ::1121
 The 82 hour limit is probably designed to prevent a pilot from picking up open flying only to call in sick, which is well known, widely used, easy way to increase their pay.
@@ -4165,7 +4165,7 @@ Water is used as a bank of 812 identical sections, each of which is mixed and se
 ::1123
 o A single use of the laser system will never cost more than 4 fuel points, regardless of how many beams are released at the time of firing.
 237
-(A single use of the laser system ; cost regardless ; more than 4 fuel points ; null) === 
+(A single use of the laser system ; cost regardless ; more than 4 fuel points) === 
 
 ::1124
 A comparison of the U.S. and 13 other nations shows that, in all but three, residents got more of their calories from fat than we do.
@@ -4224,12 +4224,12 @@ Josh Beckett P 0 0 0 0 0 0 0 0 .000
 ::1142
 The fee for a child of color newborn to three is $12,000.
 420
-(a child of color newborn to three ; fee ; $ 12000 ; null) === 
+(a child of color newborn to three ; fee ; $ 12000) === 
 
 ::1143
 The conference will bring together more than 1,000 participants to learn about the latest innovations, successful practices and strategies in winter operations and snowfighting techniques.
 51
-(The conference ; bring ; more than 1000 participants ; null) === 
+(The conference ; bring ; more than 1000 participants) === 
 
 ::1144
 It is about 5 English miles north of Sefuri and 4 English miles northwest of Rimuni.
@@ -4264,9 +4264,9 @@ For the nine months, net sales were $1,533.1 million, down $268.0 million, or 15
 500
 (net sales ; down $ million ; $ 1533.1 million ; For the nine months) === 
 308
-(the nine months ; net sales ; $ 1533.1 million ; null) === 
+(the nine months ; net sales ; $ 1533.1 million) === 
 35
-(net sales ; down $ million ; $ 1533.1 million ; null) === 
+(net sales ; down $ million ; $ 1533.1 million) === 
 
 ::1153
 So, there is only 1 loop and 2 tails 1 long and 1 short.
@@ -4277,7 +4277,7 @@ Total of 3 sheets in VF condition.
 ::1155
 So now I've got about 5 watches, all unique and perfectly wearable, just waiting to have new batteries.
 51
-(I ; So now got ; about 5 watches ; null) === 
+(I ; So now got ; about 5 watches) === 
 
 ::1156
 The National Association for the Advancement of Fat Acceptance allies itself with this feminist angle, telling us that eating disorders kill 150,000 women a year.
@@ -4288,7 +4288,7 @@ In recent months, the dramatic increase in the price of fuel, and the necessity 
 ::1158
 Horse Lady coming to groom all 4 horses & go out for a trail ride.
 244
-(Horse ; Lady ; 4 horses ; null) === 
+(Horse ; Lady ; 4 horses) === 
 
 ::1159
 There are many LED HDTV's with many different qualities like... 68 published 13 months ago The revolutionary Panasonic 103 inch plasma television set is out.
@@ -4311,7 +4311,7 @@ and that costs about 15 cents a day.
 ::1165
 Thus declared Apollo 14 astronaut Edgar Mitchell on Saturday to more than 200 admirers.
 404
-(Apollo 14 astronaut Edgar Mitchell ; Thus declared ; more than 200 admirers ; null) === 
+(Apollo 14 astronaut Edgar Mitchell ; Thus declared ; more than 200 admirers) === 
 
 ::1166
 Order 100% Pure Okinawan Coral Calcium online c.o.d, Kudos to my planning team.
@@ -4336,12 +4336,12 @@ As of Sunday night, she still has $2 remaining in her account.
 ::1172
 o Mines will always take 2 Turns to complete.
 237
-(Mines ; always take ; 2 turns ; null) === 
+(Mines ; always take ; 2 turns) === 
 
 ::1173
 Indiana U. 88 Eight Pieces for Piano, 1955.
 175
-(Piano ; for ; 88 eight pieces ; null) === 
+(Piano ; for ; 88 eight pieces) === 
 
 ::1174
 The soundtrack is Dolby Digital 2.0 Stereo, remastered from the original mono audio stems.
@@ -4361,12 +4361,12 @@ promises to reduce the energy used by its products by 25%, and will force its su
 ::1179
 The Congressional Research Service cited 125 measures authorizing unilateral sanctions during this time period.
 237
-(The Congressional Research Service ; cited ; 125 measures ; null) === 
+(The Congressional Research Service ; cited ; 125 measures) === 
 
 ::1180
 Total costs could grow from $10.4 billion a year to $28.8 billion.
 404
-(Total costs ; grow ; $ 28.8 billion ; null) === 
+(Total costs ; grow ; $ 28.8 billion) === 
 
 ::1181
 They start at about $12.00 USD for juveniles, and $36.00 for an adult.
@@ -4374,7 +4374,7 @@ They start at about $12.00 USD for juveniles, and $36.00 for an adult.
 ::1182
 The verification service is limited to 3 panels.
 76
-(The verification service ; limited ; 3 panels ; null) === 
+(The verification service ; limited ; 3 panels) === 
 
 ::1183
 Mr. Beal said officials confiscated 5,877 remaining cases, each with 144 tubes, of the Springfresh brand.
@@ -4385,17 +4385,17 @@ Other hotel amenities include a swimming pool, restaurant, lounge, and meeting r
 ::1185
 95 and is available for distribution on time since Christmas... 95 published 4 years ago One of the biggest concerns of a plasma television buyer is burn in.
 175
-(time since Christmas ; on ; 95 ; null) === 
+(time since Christmas ; on ; 95) === 
 
 ::1186
 The company owns over 1,200 radio stations and over 30 television stations in the United States, among other media outlets in other countries.
 237
-(The company ; owns ; over 1200 radio stations ; null) === 
+(The company ; owns ; over 1200 radio stations) === 
 
 ::1187
 Raw Type 1 fonts with LaTeX.
 175
-(LaTeX ; with ; 1 fonts ; null) === 
+(LaTeX ; with ; 1 fonts) === 
 
 ::1188
 There are 3 levels of magnification.
@@ -4406,7 +4406,7 @@ It seems likely that the 2010 data will show roughly 13.1 million arrivals for t
 ::1190
 Over 300 pages on livestock and the environment.
 175
-(livestock ; on ; 300 pages ; null) === 
+(livestock ; on ; 300 pages) === 
 
 ::1191
 Our area shuttle will get you where you need to go within 5 miles of the hotel and our business center is always open for your convenience.
@@ -4414,7 +4414,7 @@ Our area shuttle will get you where you need to go within 5 miles of the hotel a
 ::1192
 Those same articles were sold to 1,000 thousand other website owners in your niche.
 76
-(Those same articles ; sold ; 1000 thousand other website owners ; null) === 
+(Those same articles ; sold ; 1000 thousand other website owners) === 
 
 ::1193
 Spread 3 tablespoons Mock Guacamole on each of 8 slices bread.
@@ -4422,7 +4422,7 @@ Spread 3 tablespoons Mock Guacamole on each of 8 slices bread.
 ::1194
 The pool could also be 30 by 40 feet, with a diagonal of 50 feet and an area of 1200 square feet.
 403
-(The pool ; also be ; 30 by 40 feet ; null) === 
+(The pool ; also be ; 30 by 40 feet) === 
 
 ::1195
 The debate over the state inspections is unfolding during the recall of 21.7 million pounds of hamburger produced by Topps Meat Co. of Elizabeth, N.J., because of E. coli contamination.
@@ -4445,7 +4445,7 @@ As I look at some of my adult kids, now raising families......most of them have 
 ::1201
 Each pixel represents 1 square kilometer.
 237
-(Each pixel ; represents ; 1 square kilometer ; null) === 
+(Each pixel ; represents ; 1 square kilometer) === 
 
 ::1202
 In this you greatly rejoice, though now for a little while, if need be, you have been grieved by various trials, 7. that the genuineness of your faith, being much more precious than gold that perishes, though it is tested by fire, may be found to praise, honor, and glory at the revelation of Jesus Christ, 8. whom having not seen you love.
@@ -4468,7 +4468,7 @@ It's not Beats by Dr. Dre absolutely 3 many weeks.
 ::1208
 One of my new theories is about technology, and how our life has changed... 58 published 39 hours ago Watching Live TV in your mobile and computer on the go is so fun.
 175
-(technology ; about ; 58 published 39 hours ; null) === 
+(technology ; about ; 58 published 39 hours) === 
 
 ::1209
 In fact this was one of the hemisphere's greatest slave revolts, as the Mambi army is estimated to have been up to 92% of African descent.
@@ -4500,7 +4500,7 @@ Victor Martinez C 3 1 0 0 0 0 0 0 .300
 ::1218
 The fundraising event, organized by the Rutgers Packaging Engineering Advisory Board, drew more than 100 participants including packaging industry executives, Rutgers officials and a large contingent of students.
 237
-(The fundraising event organized ; drew ; more than 100 participants ; null) === 
+(The fundraising event organized ; drew ; more than 100 participants) === 
 
 ::1219
 Sheet of 25 w/map of Sweden 38.
@@ -4511,23 +4511,23 @@ This revolutionary technology actually measures how far away your are from each 
 ::1221
 He makes $7,415 per hour more than the minimum wage.
 238
-(hour ; makes ; $ 7415 per hour more ; null) === 
+(hour ; makes ; $ 7415 per hour more) === 
 237
-(He ; makes ; $ 7415 per hour more ; null) === 
+(He ; makes ; $ 7415 per hour more) === 
 
 ::1222
 Production time We need about 5 working days for production plus the transport time.
 237
-(We ; Production time need ; about 5 working days ; null) === 
+(We ; Production time need ; about 5 working days) === 
 290
-(production ; need ; about 5 working days ; null) === 
+(production ; need ; about 5 working days) === 
 
 ::1223
 great pics thanks for sharing, I love the ac/dc bike Users Browsing this Thread There are currently 1 users browsing this thread.
 500
-(great pics thanks for sharing love ; currently ; currently 1 users ; null) === 
+(great pics thanks for sharing love ; currently ; currently 1 users) === 
 264
-(pics ; great ; currently 1 users ; null) === 
+(pics ; great ; currently 1 users) === 
 
 ::1224
 The worst is the campaign to get Americans to reduce fat intake to 30% of total calories.
@@ -4537,7 +4537,7 @@ Longtime Red Sox Tim Wakefield wanted 4.8 Million Dollars for 3 years.
 51
 (Longtime Red Sox Tim Wakefield ; wanted ; 4.8 million dollars ; for 3 years) === 
 287
-(3 years ; wanted ; 4.8 million dollars ; null) === 
+(3 years ; wanted ; 4.8 million dollars) === 
 
 ::1226
 When I was 13 years old I was raped by a 25 yr.
@@ -4573,7 +4573,7 @@ Over the past 32 years, the Beauty Ball has raised more than $24 million to bene
 237
 (the Beauty Ball ; raised ; more than $ 24 million ; in support of the Prematurity Awareness Campaign) === 
 458
-(the Beauty Ball ; raised ; more than $ 24 million ; null) === 
+(the Beauty Ball ; raised ; more than $ 24 million) === 
 
 ::1236
 The program begins with an informative talk with the naturalist and ends with a guided beach walk at 9 p.m.. Participation is limited to the first 25 people, due to government restrictions and the resort's commitment to responsible environmental education and conservation of the species.
@@ -4587,9 +4587,9 @@ As with Midway's earlier Doom 64 game, the password encryption scheme in N64 Qua
 ::1239
 The Tonle Sap is 160 km in length, and 36 km in width.
 464
-(The Tonle Sap ; length ; 160 km ; null) === 
+(The Tonle Sap ; length ; 160 km) === 
 123
-(Tonle ; Sap ; 160 km ; null) === 
+(Tonle ; Sap ; 160 km) === 
 
 ::1240
 The joint between the two is an equal miter that should be 15 degrees.
@@ -4600,7 +4600,7 @@ In Western Europe, Germany, France and Italy had more than 30,000 branches each.
 ::1242
 China, the most populous nation on earth, has a total land mass of 9.6 million square kilometers with a population density of just 116.
 4
-(China ; total land mass ; 9.6 million square kilometers ; null) === 
+(China ; total land mass ; 9.6 million square kilometers) === 
 
 ::1243
 They do best in soft to medium, slightly acidic water with frequent water changes of about 10% a week.
@@ -4614,7 +4614,7 @@ Tom explained and said that he'd decided to sell his business and would be happy
 ::1246
 which is a 32 bit dll, so you have to run IIS in 32 bit mode.
 110
-(dll ; is ; 32 bit ; null) === 
+(dll ; is ; 32 bit) === 
 
 ::1247
 The Flame, a joint project of Ukraine's Ministry of Foreign Affairs and the Ukrainian World Congress International Coordinating Committee, will originate in Australia and travel to 33 countries worldwide in an effort to raise Holodomor awareness.
@@ -4622,12 +4622,12 @@ The Flame, a joint project of Ukraine's Ministry of Foreign Affairs and the Ukra
 ::1248
 For anyone thats interested, I'll have my tuition goal of $3,600 completed with my next paycheck.
 7
-(I ; goal ; $ 3600 ; null) === 
+(I ; goal ; $ 3600) === 
 
 ::1249
 Bartolo Colon will make his next start, possibly his next 2 starts.
 51
-(Bartolo Colon ; make ; 2 starts ; null) === 
+(Bartolo Colon ; make ; 2 starts) === 
 
 ::1250
 But in recent months, the Glycerine Factory has advertised 99.5 percent pure glycerin on the Internet.
@@ -4669,9 +4669,9 @@ And it would be worth noting that Gore beat Bush among Latinos by 27 percentage 
 ::1261
 The industry consumes over 5 million barrels of oil per day worldwide, almost one tenth of all the oil used for transportation.
 290
-(oil per day ; consumes ; 5 million barrels ; null) === 
+(oil per day ; consumes ; 5 million barrels) === 
 51
-(The industry ; consumes ; 5 million barrels ; null) === 
+(The industry ; consumes ; 5 million barrels) === 
 
 ::1262
 The hotel's ballroom and 3 function rooms which are ideal for conferences and various banquet arrangements can cater in grand style for up to 300 people.
@@ -4685,11 +4685,11 @@ EzineArticles took a 90% hit in the value of its Google rankings.
 ::1265
 Ditton has 5220 metres of public footpaths and the contribution would be 10p per metre.
 385
-(Ditton ; public footpaths ; 5220 metres ; null) === 
+(Ditton ; public footpaths ; 5220 metres) === 
 51
-(Ditton ; has ; 5220 metres ; null) === 
+(Ditton ; has ; 5220 metres) === 
 290
-(public footpaths ; has ; 5220 metres ; null) === 
+(public footpaths ; has ; 5220 metres) === 
 
 ::1266
 Less than 5 percent of asylum applicants are ever held in detention and those that are spend an average of less than three months in detention.
@@ -4724,9 +4724,9 @@ If the 6.1 million immigrants who arrived after 2000 had not come, the average a
 ::1276
 GRI donated 11 acres of beautiful redwood forest near town, plus several hundred thousand dollars, to support the Gualala Community Arts Center, for which the community is rightly grateful.
 237
-(GRI ; donated ; 11 acres ; null) === 
+(GRI ; donated ; 11 acres) === 
 290
-(beautiful redwood forest near town ; donated ; 11 acres ; null) === 
+(beautiful redwood forest near town ; donated ; 11 acres) === 
 
 ::1277
 A 25 USD cleaning fee will be charged per night, not to exceed 150 USD.
@@ -4749,14 +4749,14 @@ When become immediately products That 6502 341 day released primer excellent'rea
 ::1283
 Molitor was in the final year of his 2.1 million dollar per year contract and turns 39 in August while Daulton has two years remaining on his 1.3 millino dollar per year contract and does not turn 34 until next January.
 482
-(Molitor ; in ; 2.1 million dollar per year contract ; null) === 
+(Molitor ; in ; 2.1 million dollar per year contract) === 
 
 ::1284
 As you can see, if you simply applied 8 pounds of seed out of the bag, you'd only be achieving 85 percent of target rate.
 237
-(you ; only achieving ; 85 percentof target rate ; null) === 
+(you ; only achieving ; 85 percentof target rate) === 
 290
-(target rate ; only achieving ; 85 percent ; null) === 
+(target rate ; only achieving ; 85 percent) === 
 
 ::1285
 Or check out the 24 hour forecast map , the 36 hour forecast map , or the 48 hour forecast map .
@@ -4764,7 +4764,7 @@ Or check out the 24 hour forecast map , the 36 hour forecast map , or the 48 hou
 ::1286
 $10 off first purchase & free shipping in Canada.
 175
-(first purchase ; off ; $ 10 off first purchase & free shipping ; null) === 
+(first purchase ; off ; $ 10 off first purchase & free shipping) === 
 
 ::1287
 Directions Chicago Midway Airport is 29 miles North to the property.
@@ -4807,7 +4807,7 @@ Kitchenette with gas 2 rings hob, sink, small fridge/freezer, hood, microwave.
 ::1299
 The hotel boasts 761 guest rooms in total.
 237
-(The hotel ; boasts ; 761 guest rooms ; null) === 
+(The hotel ; boasts ; 761 guest rooms) === 
 
 ::1300
 The Bellagio is a luxury hotel with an 18 ft ceiling and 2000 hand blown glass flowers in vibrant hues.
@@ -4821,13 +4821,13 @@ Yes, most of the flying public and ALL the airlines know the rules of the road r
 ::1303
 Once you have found the right hotel in Grand Canyon, you can instantly reserve it using our 100% Availability Guaranteed, 100% credit card secure online reservation booking engine.
 67
-(you ; right ; 100 % ; null) === 
+(you ; right ; 100 %) === 
 66
-(our ; right hotel ; 100 % ; null) === 
+(our ; right hotel ; 100 %) === 
 30
-(you ; secure ; 100 % ; null) === 
+(you ; secure ; 100 %) === 
 29
-(it ; secure ; 100 % ; null) === 
+(it ; secure ; 100 %) === 
 
 ::1304
 A flat brick dome, 30 m high at the peak, crowns the cylindrical structure.
@@ -4835,7 +4835,7 @@ A flat brick dome, 30 m high at the peak, crowns the cylindrical structure.
 ::1305
 o Colonies will always take 2 Turns to complete.
 237
-(Colonies ; always take ; 2 turns ; null) === 
+(Colonies ; always take ; 2 turns) === 
 
 ::1306
 Yidalah or Chirii, no doubt the village Kellah al Chire, 6 English miles southwest from Semunii.
@@ -4846,7 +4846,7 @@ Statistically this is the same as the 13.1 million from the 2010 CPS for the fir
 ::1308
 The suggested retail price is 3800 yen.
 264
-(price ; retail ; 3800 yen ; null) === 
+(price ; retail ; 3800 yen) === 
 
 ::1309
 It is about a 5 hour drive difference between the two, as I am told.
@@ -4860,24 +4860,24 @@ In 2 separate bowls, soak the tree ears and the bean thread noodles in warm wate
 ::1312
 A collaborative effort funded by several grants, the site links consumers to about 150 of the county's 1,500 small family farms.
 404
-(the site ; links ; about 150 of the county 's 1500 small family farms ; null) === 
+(the site ; links ; about 150 of the county 's 1500 small family farms) === 
 
 ::1313
 His records sold more than 100 million copies and he has more than a dozen gold and platinum records, including the first record ever certified gold.
 237
-(His records ; sold ; more than 100 million copies ; null) === 
+(His records ; sold ; more than 100 million copies) === 
 
 ::1314
 Stool measures 14.5 inches wide x 14.5 inches deep x 26 inches high.
 389
-(Stool ; inches deep inches high ; 26 inches ; null) === 
+(Stool ; inches deep inches high ; 26 inches) === 
 120
-(measures ; inches deep inches high ; 26 inches ; null) === 
+(measures ; inches deep inches high ; 26 inches) === 
 
 ::1315
 Wez committed the patch to both PHP 5 branches following a lengthy review of his own.
 404
-(Wez ; committed ; 5 branches ; null) === 
+(Wez ; committed ; 5 branches) === 
 
 ::1316
 The above photos were taken in July 3rd, edge of mixed woods, boreal forest, about 400 km north of our home in Regina, SK.
@@ -4888,14 +4888,14 @@ It's hooked that jet outdoors miami 75% of north americans are aggressively dehy
 ::1318
 The Gazette for 1944 contained reports from 20 clubs.
 237
-(The Gazette for 1944 ; contained ; 1944 contained reports ; null) === 
+(The Gazette for 1944 ; contained ; 1944 contained reports) === 
 
 ::1319
 In total, the losses in this successful action were 145 officers and 2907 men killed, wounded or missing.
 234
 (this successful action ; losses ; 145 officers ; In total) === 
 294
-(total ; losses ; 145 officers ; null) === 
+(total ; losses ; 145 officers) === 
 
 ::1320
 I resisted planting the whole packet at once, my usual behavior.......and only put in 2 containers of greens.
@@ -4906,26 +4906,26 @@ This one said the charge was $13, but when I was done, they charged me $12.00.
 ::1322
 The corners are 8 layers thick where they attach to the legs.
 86
-(The corners ; layers thick ; 8 layers ; null) === 
+(The corners ; layers thick ; 8 layers) === 
 
 ::1323
 o A soldier can fire only 1 shell per attack.
 238
-(attack ; fire ; 1 shell per attack ; null) === 
+(attack ; fire ; 1 shell per attack) === 
 51
-(A soldier ; fire ; 1 shell per attack ; null) === 
+(A soldier ; fire ; 1 shell per attack) === 
 
 ::1324
 The training will fulfill 6 of my 10 required hrs, it's free and they provide lunch.
 290
-(my 10 required hrs ; fulfill ; 6 of my 10 ; null) === 
+(my 10 required hrs ; fulfill ; 6 of my 10) === 
 237
-(The training ; fulfill ; 6 of my 10 ; null) === 
+(The training ; fulfill ; 6 of my 10) === 
 
 ::1325
 You have over 100,000 downloads now.
 237
-(You ; have now ; 100000 downloads ; null) === 
+(You ; have now ; 100000 downloads) === 
 
 ::1326
 In the summer of 2011 the government said that Ulen was using around 65% more land than the concession rights they had been given by the state.
@@ -4933,9 +4933,9 @@ In the summer of 2011 the government said that Ulen was using around 65% more la
 ::1327
 By 2025, it will grow to nearly 72 million.
 403
-(it ; grow ; 2025 ; null) === 
+(it ; grow ; 2025) === 
 404
-(it ; grow ; nearly 72 million ; null) === 
+(it ; grow ; nearly 72 million) === 
 
 ::1328
 Furthermore, attendees are invited to peruse behavior analytic books in our bookstore, which will offer more than 1,000 titles.
@@ -4988,7 +4988,7 @@ I downloaded PT 1 & 2 as well as bubbaicons.
 ::1344
 In Germany, there are 221 people per square kilometer.
 175
-(Germany ; In ; 221 people per square kilometer ; null) === 
+(Germany ; In ; 221 people per square kilometer) === 
 
 ::1345
 He does buy 300 minutes every 2 months for $30, which is basically what you're describing except we only purchase every other month.
@@ -5007,7 +5007,7 @@ The ChurchTuring thesis conjectures that there is little else in bloom and the C
 ::1349
 The massive vocabulary contains over 565,000 words and is one of the biggest around.
 237
-(The massive vocabulary ; contains ; 565000 words ; null) === 
+(The massive vocabulary ; contains ; 565000 words) === 
 
 ::1350
 A worm may also disappear when it becomes 50% damaged.
@@ -5044,11 +5044,11 @@ For the current quarter, total net sales decreased $69.2 million, or 6%, to $997
 51
 (total net sales ; decreased ; $ 69.2 million ; For the current quarter) === 
 404
-(total net sales ; decreased ; $ 997.5 million ; null) === 
+(total net sales ; decreased ; $ 997.5 million) === 
 287
-(the current quarter ; decreased ; $ 69.2 million ; null) === 
+(the current quarter ; decreased ; $ 69.2 million) === 
 458
-(total net sales ; decreased ; $ 69.2 million ; null) === 
+(total net sales ; decreased ; $ 69.2 million) === 
 
 ::1361
 Find the right treatment option for your ADHD child in this informational booklet written by a mother of 2 ADHD children.
@@ -5059,12 +5059,12 @@ Up to 40,000 people took part in the demonstration which also declared support f
 ::1363
 0 0.04 0 J. Coombs .429/.429/.571 3 3 7 1 3 1 0 0 1 0 2 0 0 .434
 258
-(J. ; Coombs ; 0 0.04 0 j. coombs .429 / .429 / .571 3 3 7 1 3 1 0 0 1 0 2 0 0 .434 ; null) === 
+(J. ; Coombs ; 0 0.04 0 j. coombs .429 / .429 / .571 3 3 7 1 3 1 0 0 1 0 2 0 0 .434) === 
 
 ::1364
 We now have over 750 members and going strong.
 237
-(We ; now have ; 750 members ; null) === 
+(We ; now have ; 750 members) === 
 
 ::1365
 So a base covered by 11 sequences, 10 of which state A and one of which states C would not be considered a problem and would not be found by the problem search.
@@ -5077,14 +5077,14 @@ In 2007, the NYPD stopped nearly 469,000 New Yorkers.
 ::1367
 A few months ago I began testing translators for all of Panasonic's work, and have been busy testing more than 800 translators into 37 languages.
 175
-(Panasonic 's work ; of ; 37 languages ; null) === 
+(Panasonic 's work ; of ; 37 languages) === 
 
 ::1368
 In the middle of the eleventh, Bow Creek leads 2 to 1. BOTTOM OF THE ELEVENTH Bobby Thompson came in to play Left Field.
 51
 (Bow Creek ; leads ; 2 to 1 ; In the middle of the eleventh) === 
 404
-(Bow Creek ; leads ; 2 to 1 ; null) === 
+(Bow Creek ; leads ; 2 to 1) === 
 
 ::1369
 Keep in mind that a juice drink that contains 10 percent fruit juice has less than two tablespoons of juice per cup.
@@ -5106,7 +5106,7 @@ The warm waters, clear blue skies, and 16 beaches make this hotel a pleasant pla
 ::1374
 Serenade to Music for 16 soloists and orchestra is to me a practically perfect work, although I have no idea how he could have improved it.
 175
-(me ; to ; 16 soloists ; null) === 
+(me ; to ; 16 soloists) === 
 
 ::1375
 And 4 taking the risk and using Di Santo for 45 ms an Ivanovic as well.
@@ -5114,12 +5114,12 @@ And 4 taking the risk and using Di Santo for 45 ms an Ivanovic as well.
 ::1376
 This market had a positive return of 8.63%.
 233
-(This market ; positive return ; 8.63 % ; null) === 
+(This market ; positive return ; 8.63 %) === 
 
 ::1377
 McVities profits collapsed from $92.9 million in 1992 to $57.1 million in 1995 and even in 1996 they had crept up only to $60.5 million.
 404
-(McVities profits ; collapsed ; $ 92.9 million ; null) === 
+(McVities profits ; collapsed ; $ 92.9 million) === 
 
 ::1378
 with 1 RBI in 7 games.
@@ -5127,7 +5127,7 @@ with 1 RBI in 7 games.
 ::1379
 Lind hit a huge 2 run shot to center field.
 51
-(Lind ; hit ; 2 run shot ; null) === 
+(Lind ; hit ; 2 run shot) === 
 
 ::1380
 The figure 8 races were neat also.
@@ -5165,7 +5165,7 @@ However, it remains true that in a match between two human players, the player w
 ::1391
 The new study included 14 patients who received care through group visits with their regular doctor over one year and 13 patients who received usual care.
 237
-(The new study ; included ; 14 patients ; null) === 
+(The new study ; included ; 14 patients) === 
 
 ::1392
 christopher n. sheap Here below the surface, within the Honydrop hive, the temperature was set at thranx norm and the internal humidity was raised to the appropriate 90 percent.
@@ -5182,9 +5182,9 @@ Many 16 older undergraduates were employees first, focusing primarily on their j
 ::1396
 Phone charge of 0.75 AUD per pulse.
 228
-(pulse ; Phone charge ; 0.75 aud per pulse ; null) === 
+(pulse ; Phone charge ; 0.75 aud per pulse) === 
 254
-(Phone ; charge ; 0.75 aud per pulse ; null) === 
+(Phone ; charge ; 0.75 aud per pulse) === 
 
 ::1397
 Join Date Jul 2007 Thanked 126 Times in 95 Posts No advice on the masking Dan, but the helmet looks real cool.
@@ -5195,7 +5195,7 @@ Join Date Jul 2007 Thanked 126 Times in 95 Posts No advice on the masking Dan, b
 ::1399
 Maroth signed to fill pitching void The Nationals sign 28 year old southpaw Mike Maroth to a two year deal, rumored to be around $3 million.
 120
-(southpaw ; year old ; 28 year old southpaw mike ; null) === 
+(southpaw ; year old ; 28 year old southpaw mike) === 
 
 ::1400
 He will be kept cool with 60 buckets of ice and fed fish.
@@ -5203,9 +5203,9 @@ He will be kept cool with 60 buckets of ice and fed fish.
 ::1401
 Between 1992 and 1999, he increased his muscle efficiency by 8 percent, a gain previously thought to be impossible.
 291
-(his muscle efficiency ; increased gain previously thought ; 8 percent ; null) === 
+(his muscle efficiency ; increased gain previously thought ; 8 percent) === 
 403
-(he ; increased gain previously thought ; 8 percent ; null) === 
+(he ; increased gain previously thought ; 8 percent) === 
 
 ::1402
 Benefit from easy access to the Metro Line 2 right around the corner.
@@ -5213,9 +5213,9 @@ Benefit from easy access to the Metro Line 2 right around the corner.
 ::1403
 Now every month I send $10 specifically for this program.
 287
-(this program ; Now month send ; $ 10 specifically ; null) === 
+(this program ; Now month send ; $ 10 specifically) === 
 96
-(I ; Now month send ; $ 10 specifically ; null) === 
+(I ; Now month send ; $ 10 specifically) === 
 
 ::1404
 There are as many as 13 other churches in New Jolfa as well.
@@ -5238,21 +5238,21 @@ Car Hire & Car Rental Hire4less offers information on car hire and car rental at
 ::1410
 KWR helped to support U.S. launch of a video arcade machine with worldwide sales of approximately $850 million through media relations and participation in relevant trade shows.
 175
-(media relations ; through ; approximately $ 850 million ; null) === 
+(media relations ; through ; approximately $ 850 million) === 
 316
-(sales ; worldwide ; approximately $ 850 million ; null) === 
+(sales ; worldwide ; approximately $ 850 million) === 
 
 ::1411
 over a yr thats 2640$ and i dont get back the 50% they normally pay until ive been back at work for 6 months.
 335
-(a yr s ; over ; 50 % ; null) === 
+(a yr s ; over ; 50 %) === 
 96
 (i ; nt get back ; 50 % ; over a yr that s 2640 $) === 
 
 ::1412
 1989 Original purchase of 640 acres for future Kill Creek Park, the District's third regional park.
 316
-(purchase ; Original ; 640 acres ; null) === 
+(purchase ; Original ; 640 acres) === 
 
 ::1413
 Grace periods vary but this new product which fees features interest rates buying a car or nearly 200 credit cards.
@@ -5260,7 +5260,7 @@ Grace periods vary but this new product which fees features interest rates buyin
 ::1414
 The Surefire G2Z CombatLight is 5.2 inches long and weighs 4.3 ounces.
 86
-(The Surefire G2Z CombatLight ; inches long ; 5.2 inches ; null) === 
+(The Surefire G2Z CombatLight ; inches long ; 5.2 inches) === 
 
 ::1415
 In 1864 he went to Norway and has lived there since, on a farm of 227 acres.
@@ -5277,9 +5277,9 @@ Milton Bradley LF 4 1 0 1 1 1 0 0 .294
 ::1419
 Instead of letting go one fifth of the work force, the firm reduces the hours of work for all its workers by 20%.
 403
-(the firm ; reduces ; 20 % ; null) === 
+(the firm ; reduces ; 20 %) === 
 291
-(the hours of work for all its workers ; reduces ; 20 % ; null) === 
+(the hours of work for all its workers ; reduces ; 20 %) === 
 
 ::1420
 According to her words, at present the number of died people, who had received burns during the explosion in Pinsk, makes up 5 people.
@@ -5289,7 +5289,7 @@ According to her words, at present the number of died people, who had received b
 ::1421
 This year organizers are projecting 75,000 participants and are offering $400,000 worth of prizes.
 237
-(organizers ; year projecting ; 75000 participants ; null) === 
+(organizers ; year projecting ; 75000 participants) === 
 
 ::1422
 It's far more versatile than N64 Quake or Saturn Quake, it allows at least 16 players in a networked game, allows new maps, graphics and sounds to be imported, gameplay can be recorded and played back, and PC Quake can be finely tuned to a player's personal preferences.
@@ -5318,20 +5318,20 @@ While the economy in general received a severe setback with the end of the Sovie
 ::1430
 The high risk/high yield forecast has an average correlation of about 9% with actual prices, and slightly greater variability that the low risk/low yield forecast which has about an 80% correlation.
 6
-(The high risk high yield forecast ; % ; 80 % correlation ; null) === 
+(The high risk high yield forecast ; % ; 80 % correlation) === 
 237
-(The high risk high yield forecast ; has ; 80 % correlation ; null) === 
+(The high risk high yield forecast ; has ; 80 % correlation) === 
 348
-(forecast ; high risk ; 80 % correlation ; null) === 
+(forecast ; high risk ; 80 % correlation) === 
 233
-(The high risk high yield forecast ; average correlation ; about 9 % ; null) === 
+(The high risk high yield forecast ; average correlation ; about 9 %) === 
 290
-(about 9 % ; has ; 80 % correlation ; null) === 
+(about 9 % ; has ; 80 % correlation) === 
 
 ::1431
 Nevertheless, the teaching institutions of our country have already graduated 26,294 African professionals and technicians.
 237
-(the teaching institutions of our country ; Nevertheless already graduated ; 26294 african professionals ; null) === 
+(the teaching institutions of our country ; Nevertheless already graduated ; 26294 african professionals) === 
 
 ::1432
 C, 6501 Antioch Rd, Merriam, KS.
@@ -5348,7 +5348,7 @@ Finally there are about 10 copies of the 20c.
 ::1436
 0 0 70 Le Moche, J. SP 26 81 61 5 0 3 3 18 7 1 1 .082
 244
-(Le ; Moche ; 0 0 70 le moche ; null) === 
+(Le ; Moche ; 0 0 70 le moche) === 
 
 ::1437
 OSHA lists chloromethane as a Highly Hazardous Chemical under the Process Safety Management Standard at a threshold quantity of 15,000 pounds.
@@ -5373,14 +5373,14 @@ Obviously the first option would be more expensive, adding around 30% to the cos
 ::1443
 A survey by a Moroccan association showed that 32.4% of lawsuits at the court of appeal of Rabat and Kenitra in 1995 deal with rape.
 290
-(lawsuits ; showed ; 32.4 % ; null) === 
+(lawsuits ; showed ; 32.4 %) === 
 51
-(A survey by a Moroccan association ; showed ; 32.4 %of lawsuits ; null) === 
+(A survey by a Moroccan association ; showed ; 32.4 %of lawsuits) === 
 
 ::1444
 $1700 for the whole place, including washing, all the paint and my outbuildings.
 175
-(the whole place including washing ; for ; $ 1700 ; null) === 
+(the whole place including washing ; for ; $ 1700) === 
 
 ::1445
 As a result, we estimate that veterans expenditures in 2002 were $3.98 billion.
@@ -5403,7 +5403,7 @@ Do water changes of 15 to 20% a week depending on bio load.
 ::1451
 Prasad Yendluri Revision 01.045 Applied Issue 134 to Section 9.1.4
 258
-(Applied ; Issue ; 01.045 applied issue 134 ; null) === 
+(Applied ; Issue ; 01.045 applied issue 134) === 
 
 ::1452
 There are more than 30 million African Americans in the US and only 1 million Cuban Americans, whose political life has been hijacked by a wealthy, racist extreme right minority.
@@ -5411,7 +5411,7 @@ There are more than 30 million African Americans in the US and only 1 million Cu
 ::1453
 There are actually only 212 different HTML colors.
 110
-(colors ; are actually ; 212 different html colors ; null) === 
+(colors ; are actually ; 212 different html colors) === 
 
 ::1454
 U.S. population growth is projected to be 1.1% in the next twenty years.
@@ -5430,12 +5430,12 @@ In the middle of the fourth, Bow Creek leads 2 to 1. BOTTOM OF THE FOURTH John K
 51
 (Bow Creek ; leads ; 2 to 1 ; In the middle of the fourth) === 
 404
-(Bow Creek ; leads ; 2 to 1 ; null) === 
+(Bow Creek ; leads ; 2 to 1) === 
 
 ::1459
 We currently offer 110 independent residences, 12 assisted living suites and 12 private skilled nursing rooms.
 96
-(We ; currently offer ; 110 independent residences ; null) === 
+(We ; currently offer ; 110 independent residences) === 
 
 ::1460
 It stands today at $2.8 billion, just a bit more than in 1993.
@@ -5452,12 +5452,12 @@ Nearly 800,000 children are reported missing each year in the U.S. Most are reco
 ::1464
 Authorizes the president to raise the debt ceiling by an additional $1.2 trillion to $1.5 trillion depending on the outcome of the joint committee recommendations.
 323
-(the debt ceiling ; raise ; $ 1.5 trillion ; null) === 
+(the debt ceiling ; raise ; $ 1.5 trillion) === 
 
 ::1465
 He describes 23 respiratory cases, 11 of them of allergic origin.
 51
-(He ; describes 11 ; 23 respiratory cases ; null) === 
+(He ; describes 11 ; 23 respiratory cases) === 
 
 ::1466
 In order for the Republicans to eliminate this deficit, Latino incomes would have to stand at well over $200,000 per year.
@@ -5468,7 +5468,7 @@ The IMF, for its part, predicts a 5.1% economic growth for the entire year 2000.
 ::1468
 He lost 28 pounds, took five inches off his waist, dropped his body fat 15 percentage points and dropped his cholesterol level by 66 points.
 237
-(He ; lost ; 28 pounds ; null) === 
+(He ; lost ; 28 pounds) === 
 
 ::1469
 According to this argument, high school graduates are paid less, both in real terms and 42 U.S. Economic Growth compared with college graduates, because they are less skilled than high school graduates of previous years.
@@ -5511,7 +5511,7 @@ Rajasir ABOUT THE AUTHOR The author has been teaching English Literature to Univ
 ::1481
 REBIRTH OF MOTHRA 2 also features some destruction scenes, more CGI effects, great underwater photography, and overall better script and production values.
 51
-(REBIRTH OF MOTHRA 2 ; also features ; 2 also features some destruction scenes ; null) === 
+(REBIRTH OF MOTHRA 2 ; also features ; 2 also features some destruction scenes) === 
 
 ::1482
 Of course, the much higher incomes in Simulation 1 partly reflect the longer time that all immigrants have lived in the United States and not simply the fact that they have legal status.
@@ -5522,11 +5522,11 @@ Treatment with Reminyl is usually started at a dose of 4 mg taken twice daily.
 ::1484
 As I said before, our rate for proofreading is US$ 0.03 per source word.
 47
-(source word ; rate ; $ 0.03 per source word ; null) === 
+(source word ; rate ; $ 0.03 per source word) === 
 225
-(proofreading ; rate ; $ 0.03 per source word ; null) === 
+(proofreading ; rate ; $ 0.03 per source word) === 
 252
-(our ; rate ; $ 0.03 per source word ; null) === 
+(our ; rate ; $ 0.03 per source word) === 
 
 ::1485
 Flats Boat Poling 101 First, let me say there is no better way to approach and catch fish on shallow water flats or in shallow creeks, than to use a push pole, and pole quietly, in a flats boat until you are in casting range.
@@ -5537,7 +5537,7 @@ He topped the poll with 33 percent of the votes cast till Friday.
 ::1487
 Costs 1 energy point per jump.
 238
-(jump ; Costs ; 1 energy point per jump ; null) === 
+(jump ; Costs ; 1 energy point per jump) === 
 
 ::1488
 o Only 1 saboteur can be active at a time.
@@ -5545,14 +5545,14 @@ o Only 1 saboteur can be active at a time.
 ::1489
 Bus is almost here, I'm going to grab 15 min of quiet time before my guy storms in here.
 290
-(quiet time ; grab ; 15 min ; null) === 
+(quiet time ; grab ; 15 min) === 
 
 ::1490
 o A trooper can fire only 1 shell or rocket per attack.
 238
-(attack ; fire ; 1 shell or rocket per attack ; null) === 
+(attack ; fire ; 1 shell or rocket per attack) === 
 51
-(A trooper ; fire ; 1 shell or rocket per attack ; null) === 
+(A trooper ; fire ; 1 shell or rocket per attack) === 
 
 ::1491
 In fact, about 59,000 new applications for asylum were made in 1997.
@@ -5589,12 +5589,12 @@ Costs 0 energy points to release a marine.
 ::1501
 He was awarded 125,000 shares of IBM stock.
 290
-(IBM stock ; awarded ; 125000 shares ; null) === 
+(IBM stock ; awarded ; 125000 shares) === 
 
 ::1502
 Sid & Debbie Gragg PO Box 127 898 Coffey Rd.
 144
-(Coffey ; Rd ; 127 898 coffey rd ; null) === 
+(Coffey ; Rd ; 127 898 coffey rd) === 
 
 ::1503
 Prasad Yendluri Revision 01.080 Prasad Yendluri Revision 01.081 23 August 2005 Changes related to resolution of Issue 136.
@@ -5605,12 +5605,12 @@ $7.50, but it'll just come out of the spending money I had for the next two week
 ::1505
 at 1 Length 37 This means that position 78 in the contig with xb54a3.s1
 175
-(1 Length 37 ; at ; 1 length 37 this means ; null) === 
+(1 Length 37 ; at ; 1 length 37 this means) === 
 
 ::1506
 Families have reported 365 deaths from the poison, 100 of which have been confirmed so far.
 237
-(Families ; reported ; 365 deaths ; null) === 
+(Families ; reported ; 365 deaths) === 
 
 ::1507
 I measured stem leaves to 7 cm long and 5 mm wide.
@@ -5630,9 +5630,9 @@ For illegals, we further assume that only 40 percent of those households that qu
 ::1512
 A hit does 1 point of damage.
 290
-(damage ; does ; 1 point ; null) === 
+(damage ; does ; 1 point) === 
 51
-(A hit ; does ; 1 point ; null) === 
+(A hit ; does ; 1 point) === 
 
 ::1513
 Compared with the original Model A, built 10 years before, the new engine with approximately the same weight and same displacement, developed one third more power, operated at 24 per cent more speed and had 3,000 per cent greater durability.
@@ -5654,7 +5654,7 @@ They matched the 20% off Bed, Bath & Beyond coupon.
 ::1518
 We deliver to more than 60 countries worldwide.
 404
-(We ; deliver worldwide ; more than 60 countries ; null) === 
+(We ; deliver worldwide ; more than 60 countries) === 
 
 ::1519
 Joe tried to duck or brace himself but it was on a highway and both cars were over 60 mph.
@@ -5662,7 +5662,7 @@ Joe tried to duck or brace himself but it was on a highway and both cars were ov
 ::1520
 In Portugal, where even heroin addicts are hospitalised rather than arrested, drug use has fallen by 50% as a result of legalisation.
 403
-(drug use ; fallen ; 50 % ; null) === 
+(drug use ; fallen ; 50 %) === 
 
 ::1521
 The other set is a navy blue corduroy overall with a white shirt trimmed in green, sold in sizes 3 through 9 months.
@@ -5685,12 +5685,12 @@ $8.95 Engraved Plaque Custom Wood Walnut 8x10 Blue Wave Recognition Military Gif
 ::1527
 The league is limited to 120 players.
 17
-(The league ; limited ; 120 players ; null) === 
+(The league ; limited ; 120 players) === 
 
 ::1528
 Tapit has sired 40 starters who have made 116 combined starts, registering 22 wins, 24 seconds, 10 thirds, and $2,323,528.
 237
-(Tapit ; sired ; 40 starters ; null) === 
+(Tapit ; sired ; 40 starters) === 
 
 ::1529
 Although it's pretty easy to run through the game in cheat mode and write down passwords at the end of every level, I wanted uniform passwords that started the player with everything, including 200% armor, on every map at every Skill.
@@ -5704,12 +5704,12 @@ Latest Birkenstocks are on nearly 50% discount now.
 ::1532
 I had 2 but they are very nippy as an adult and it killed the other one that I had.
 96
-(I ; had ; 2 but ; null) === 
+(I ; had ; 2 but) === 
 
 ::1533
 PhotoPoint is also intended for professional use to create advertisements for company products and services with photographic images, corporate logos, music and frame schemes using 150 different special effects.
 163
-(company ; products ; 150 different special effects ; null) === 
+(company ; products ; 150 different special effects) === 
 
 ::1534
 During the same period, the number of seizures of mislabeled, defective, and dangerous products has declined by 44%. 2. FDA headquarters officials have routinely rejected the enforcement recommendations of career field staff.
@@ -5741,7 +5741,7 @@ Each of his 1000 arms has an eye in the palm.
 ::1543
 Today the company has about 700 employees and is headed by Tomas and Ignacio Osborne.
 51
-(the company ; Today has ; about 700 employees ; null) === 
+(the company ; Today has ; about 700 employees) === 
 
 ::1544
 He's gone through 5 injuries since '08 and since '08 he has never hit more than 25 homers, 89 RBIs, and a .268
@@ -5785,14 +5785,14 @@ Ingredients 15 cups peeled, thinly sliced potatoes 5 cans cream of mushroom soup
 ::1557
 We got to see the new grandbaby too yesterday, he now weighs 11 lbs and is doing pretty well.
 237
-(he ; now weighs ; 11 lbs ; null) === 
+(he ; now weighs ; 11 lbs) === 
 
 ::1558
 Production time We need about 1 working days for production plus the transport time.
 96
-(We ; Production time need ; about 1 working days ; null) === 
+(We ; Production time need ; about 1 working days) === 
 290
-(production ; need ; about 1 working days ; null) === 
+(production ; need ; about 1 working days) === 
 
 ::1559
 Tallet, Brian TOR 84.1 4.27 66 0 3 6 0 53 31 12.59 Vermilyea, Jamie TOR 0.2 0.00 1 0 0 0 0 0 0 0.00 Wells, Randy TOR 6.2 1.35 3 0 0 0 0 11 1 10.80 Wolfe, Brian TOR 13.0 8.31 13 0 0 3 0 8 7 20.77
@@ -5811,15 +5811,15 @@ being a hair in the air person 99% of that travel we have all 4 windows down, me
 ::1563
 The most striking feature of the H1N1 flu vaccine manufacturing process is the 1,200,000,000 chicken eggs required to make the 3 billion doses of vaccine that may be required worldwide.
 1
-(the H1N1 flu vaccine manufacturing process ; most striking feature ; 1200000000 chicken eggs ; null) === 
+(the H1N1 flu vaccine manufacturing process ; most striking feature ; 1200000000 chicken eggs) === 
 295
-(eggs ; is ; 1200000000 chicken eggs ; null) === 
+(eggs ; is ; 1200000000 chicken eggs) === 
 264
-(feature ; most striking ; 1200000000 chicken eggs ; null) === 
+(feature ; most striking ; 1200000000 chicken eggs) === 
 178
-(The most striking feature of the H1N1 flu vaccine manufacturing process ; chicken eggs required ; 1200000000 chicken eggs ; null) === 
+(The most striking feature of the H1N1 flu vaccine manufacturing process ; chicken eggs required ; 1200000000 chicken eggs) === 
 186
-(eggs ; most striking feature ; 1200000000 chicken eggs ; null) === 
+(eggs ; most striking feature ; 1200000000 chicken eggs) === 
 
 ::1564
 But in the United States already 35% women and 31% men are obese.
@@ -5855,7 +5855,7 @@ A Massive 75% Commission On Each Sale.
 258
 (% ; Commission ; 75 % ; On Each Sale) === 
 451
-(A ; Commission ; 75 % ; null) === 
+(A ; Commission ; 75 %) === 
 44
 (Commission ; Massive ; 75 % ; On Each Sale) === 
 
@@ -5871,7 +5871,7 @@ Even though he was gifted athletically, Michael had to work exceptionally hard t
 ::1577
 In just under two years we have grown the membership base to approximately 150 experts.
 404
-(we ; grown ; approximately 150 experts ; null) === 
+(we ; grown ; approximately 150 experts) === 
 
 ::1578
 Only registered state and local governments can buy HUD properties for $1. HUD offers some of its properties to government agencies to support community programs.
@@ -5879,7 +5879,7 @@ Only registered state and local governments can buy HUD properties for $1. HUD o
 ::1579
 with 17 HR in 117 games at AA last season.
 175
-(AA ; at ; 117 games ; null) === 
+(AA ; at ; 117 games) === 
 
 ::1580
 These articles may have up to six figures or tables, and may cite up to 40 references.
@@ -5905,12 +5905,12 @@ I know there are only 6 divisions.
 ::1587
 It also uses 25 per cent less energy than other systems and reduces operating costs by up to 30 per cent.
 51
-(It ; also uses ; 25 per cent less energy ; null) === 
+(It ; also uses ; 25 per cent less energy) === 
 
 ::1588
 The Surefire 10X Dominator is 9.5 inches long and weighs 20 ounce.
 133
-(The Surefire 10X Dominator ; inches long ; 9.5 inches ; null) === 
+(The Surefire 10X Dominator ; inches long ; 9.5 inches) === 
 
 ::1589
 The manufacturing complex was doubled in size, incorporating 100,000 sq.
@@ -5924,7 +5924,7 @@ Of these, 8,267,000, or 17 percent, were African Americans.
 ::1592
 Currently each member represents just under 700,000 voters.
 51
-(each member ; Currently represents ; under 700000 voters ; null) === 
+(each member ; Currently represents ; under 700000 voters) === 
 
 ::1593
 He's also scored 29 runs, 10 more than the next closest person.
@@ -5932,7 +5932,7 @@ He's also scored 29 runs, 10 more than the next closest person.
 ::1594
 For example, pork tenderloin slow cooker recipes ic analysis shows that approximately 70% of the Canadian Forces.
 287
-(example ; shows ; approximately 70 %that of the Canadian Forces ; null) === 
+(example ; shows ; approximately 70 %that of the Canadian Forces) === 
 290
 (the Canadian Forces ; shows ; approximately 70 % ; For example) === 
 51
@@ -5956,7 +5956,7 @@ Because for a brief period maybe of 1 to 5 years you had very little inter gang 
 ::1600
 Depending on the soil depth and type of substrate, loads can vary from 15 lbs/sf to 50 lbs/sf.
 404
-(loads ; vary ; 50 lbs / sf ; null) === 
+(loads ; vary ; 50 lbs / sf) === 
 
 ::1601
 Over 16,000 people attend the conference, which is the largest vision research meeting in the world.
@@ -5976,7 +5976,7 @@ About 65 percent of the world's carbon monoxide is caused by motor vehicles.
 ::1606
 The program targets 31,000 water points that will give access to drinking water to 11 million inhabitants.
 237
-(The program ; targets ; 31000 water points ; null) === 
+(The program ; targets ; 31000 water points) === 
 
 ::1607
 You hope that your boss will give you a 10 percent increase in pay.
@@ -5993,7 +5993,7 @@ I also got the first season of Battlestar Gallactica and I just watched the 2 ho
 ::1611
 On the night, Clare and the Wolverines limited Colorado College to just 22 shots, no small feat considering the 36 the Tigers took the night before against Boston College, showing an ability to adapt their game as needed, even when facing dynamic talents like Jaden and Rylan Schwartz and their line mate Steven Schultz.
 404
-(Clare ; limited ; 22 shots ; null) === 
+(Clare ; limited ; 22 shots) === 
 
 ::1612
 In online birthday card any given year, anywhere from 4% to 9% of online birthday card the dollars that a bank lends online birthday card to its credit card customers will never be repaid.
@@ -6001,12 +6001,12 @@ In online birthday card any given year, anywhere from 4% to 9% of online birthda
 ::1613
 At its peak its circulation was 30,000 copies, produced in 4 different languages and mailed to 87 countries.
 91
-(its ; circulation ; 30000 copies ; null) === 
+(its ; circulation ; 30000 copies) === 
 
 ::1614
 Regards Thanked 76 Times in 60 Posts Hey Doc, I found this old beat up piece of Masonite in the studio.
 175
-(60 Posts ; in ; 76 times ; null) === 
+(60 Posts ; in ; 76 times) === 
 
 ::1615
 I didn't want to be 15 with a child, I made my choice...true, the embryo didn't have a choice at life, but I barely begun to live myself.
@@ -6041,24 +6041,24 @@ We only add about an eigth of a cup to each 5 gallon bucket.
 ::1625
 o An undamaged quad can fire up to 2 shells per attack.
 238
-(attack ; fire ; 2 shells per attack ; null) === 
+(attack ; fire ; 2 shells per attack) === 
 51
-(An undamaged quad ; fire ; 2 shells per attack ; null) === 
+(An undamaged quad ; fire ; 2 shells per attack) === 
 
 ::1626
 For one I would have to charge 0.13 and the other 0.17 USD/word.
 276
-(word ; other ; 0.17 usd / word ; null) === 
+(word ; other ; 0.17 usd / word) === 
 
 ::1627
 Writers are paid $10 per article plus revenue sharing.
 238
-(article ; paid ; $ 10 per article plus revenue sharing ; null) === 
+(article ; paid ; $ 10 per article plus revenue sharing) === 
 
 ::1628
 Then, in just 10 years from 1945 to 1954, the number leaped to 21 quakes measuring 7 or over.
 404
-(the number ; Then leaped ; 21 quakes ; null) === 
+(the number ; Then leaped ; 21 quakes) === 
 
 ::1629
 The Sports Zone Grill features sports programs on 20 TVs connected to seven sports Satellite feeds.
@@ -6084,7 +6084,7 @@ Using the results from the methodology described above, we are able to estimate 
 ::1636
 Therefore, WCAG 1.0 has three checkpoints that cover this topic.
 51
-(WCAG 1.0 ; Therefore has ; 1.0 has three checkpoints ; null) === 
+(WCAG 1.0 ; Therefore has ; 1.0 has three checkpoints) === 
 
 ::1637
 As well as automatic on line inspection, operators will carry out a range of about 100 yards.
@@ -6095,7 +6095,7 @@ Hypoglycemia can occurs as a response to fasting for 12 to 14 hours or because o
 ::1639
 Last year at this time we were approaching 150 individual members.
 96
-(we ; Last year approaching ; 150 individual members ; null) === 
+(we ; Last year approaching ; 150 individual members) === 
 
 ::1640
 Tina D. Great PR Newsletter Sign up for the Great PR newsletter and get our free 7 day Crash Course in Public Relations.
@@ -6103,9 +6103,9 @@ Tina D. Great PR Newsletter Sign up for the Great PR newsletter and get our free
 ::1641
 I spent $30 for a copay for a medical test & $5.13 for medicine.
 96
-(I ; spent ; $ 30 ; null) === 
+(I ; spent ; $ 30) === 
 287
-(a copay for a medical test ; spent ; $ 30 ; null) === 
+(a copay for a medical test ; spent ; $ 30) === 
 
 ::1642
 I would go to any length to succeed, and 2 pounds soon turned into 20 pounds.
@@ -6113,7 +6113,7 @@ I would go to any length to succeed, and 2 pounds soon turned into 20 pounds.
 ::1643
 Reds earned 12 Oscar nominations, winning three, and losing the Best Picture statuette that was so widely expected that Beatty only gave a partial speech while accepting for Best Director.
 237
-(Reds ; earned ; 12 oscar nominations ; null) === 
+(Reds ; earned ; 12 oscar nominations) === 
 
 ::1644
 On average, air traffic controllers in the United States handle 64 million takeoffs and landings a year.
@@ -6123,7 +6123,7 @@ On average, air traffic controllers in the United States handle 64 million takeo
 ::1645
 The M2 Centurion is 5.6 inches long and weighs 5.8 ounces.
 198
-(The M2 Centurion ; inches long ; 5.6 inches ; null) === 
+(The M2 Centurion ; inches long ; 5.6 inches) === 
 
 ::1646
 List the 4 steps by which this was done.
@@ -6164,17 +6164,17 @@ about 1 year ago boosh Definitely, I will before 1.7 comes out.
 ::1658
 In stereo mode, the 1602 would deliver 300 watts into the 4x10 and 300 watts into the 2x10.
 175
-(the 2x10 ; into ; 1602 would deliver 300 watts ; null) === 
+(the 2x10 ; into ; 1602 would deliver 300 watts) === 
 
 ::1659
 A committed philanthropist, Franklin used the experience to raise over $440,000 for Wounded Warrior Project.
 287
-(Wounded Warrior Project ; raise ; $ 440000 ; null) === 
+(Wounded Warrior Project ; raise ; $ 440000) === 
 
 ::1660
 Chloroform has a toxic endpoint of 0.49 mg/L.
 233
-(Chloroform ; toxic endpoint ; 0.49 mg / ; null) === 
+(Chloroform ; toxic endpoint ; 0.49 mg /) === 
 
 ::1661
 Ordering 100% Pure Okinawan Coral Calcium online, Their values create community and it radiates out into a wider community.
@@ -6182,7 +6182,7 @@ Ordering 100% Pure Okinawan Coral Calcium online, Their values create community 
 ::1662
 State Farm charges $3034 a year for a policy with a $250 deductible and coverage of $250,000 per person and $500,000 per accident.
 287
-(a policy with a $ 250 deductible ; charges ; $ 3034 a year ; null) === 
+(a policy with a $ 250 deductible ; charges ; $ 3034 a year) === 
 237
 (State Farm ; charges ; $ 3034 a year ; for a policy with a $ 250 deductible and coverage of $ 250,000 per person and $ 500,000 per accident) === 
 
@@ -6233,7 +6233,7 @@ I'm mailing out a $2.00 rebate for some alcohol I bought on Friday...we needed P
 ::1677
 We had taken 2 cars, so she went home to walk my dog & I went to work.
 96
-(We ; taken ; 2 cars ; null) === 
+(We ; taken ; 2 cars) === 
 
 ::1678
 Shopping when we accept capitol one credit card website instantly make $3 000 in travel can use virtual cwpitol.
@@ -6256,7 +6256,7 @@ Release is announced for January 2007, and the price will be around 35 USD.
 ::1684
 The average annual income, per person, is about $1200.
 264
-(income ; average ; about $ 1200 ; null) === 
+(income ; average ; about $ 1200) === 
 
 ::1685
 In the middle of the ninth, Bow Creek leads 18 to 1. BOTTOM OF THE NINTH Marty Perez grounded to the second baseman.
@@ -6274,7 +6274,7 @@ Most restaurants serve at least in theory be simulated by a set of values of the
 ::1688
 And you pay 150 pounds for all their photocopying and you take it away and you take all of these press clippings and you write it into a book.
 287
-(their photocopying ; pay ; 150 pounds ; null) === 
+(their photocopying ; pay ; 150 pounds) === 
 237
 (you ; pay ; 150 pounds ; for all their photocopying) === 
 
@@ -6284,12 +6284,12 @@ Soon up went the cry of 'whale', as ahead of the ship a Humpback blew, and by th
 ::1690
 The overall visibility is 3000 meter.
 264
-(visibility ; overall ; 3000 meter ; null) === 
+(visibility ; overall ; 3000 meter) === 
 
 ::1691
 C, 6501 Antioch Rd., Merriam, KS and John Barkley Visitors' Center , 7900 Renner Rd., Lenexa , KS.
 62
-(C ; Rd ; 6501 antioch rd. ; null) === 
+(C ; Rd ; 6501 antioch rd.) === 
 
 ::1692
 For those without such resources or dependents over the age of 18, there's always the tried and tested route of marrying a foreign national.
@@ -6315,7 +6315,7 @@ Anyway, it is not there now, and the problem is that I want to keep this tender 
 ::1699
 Of the 179 Associates reported as serving in the armed forces in September 1916, 93 per cent were of officer rank, as were 17 of the 18 who were killed in the war.
 482
-(93 per cent ; Of ; 179 associates ; null) === 
+(93 per cent ; Of ; 179 associates) === 
 
 ::1700
 But I have learned from Bedouins and other Arabs, that about 5 miles south of Hunin, which is 6 miles north of Kedesh in Naphtali, the ancient Gamla should have stood on a mountain, according to a certain tradition.
@@ -6344,18 +6344,18 @@ To change the Name Servers of your domain name Login to your Control Panel. 1 Se
 ::1708
 His final salary was $3.5 million including bonuses.
 252
-(His ; final salary ; $ 3.5 million including bonuses ; null) === 
+(His ; final salary ; $ 3.5 million including bonuses) === 
 50
 (His ; final salary ; $ 3.5 million including bonuses ; including bonuses) === 
 264
-(salary ; final ; $ 3.5 million including bonuses ; null) === 
+(salary ; final ; $ 3.5 million including bonuses) === 
 
 ::1709
 if you are still hard up for a buyer in like a month, i'll prolly put out 150 bucks or so for it.
 237
-(i ; prolly put so ; 150 bucks ; null) === 
+(i ; prolly put so ; 150 bucks) === 
 287
-(it ; prolly put so ; 150 bucks ; null) === 
+(it ; prolly put so ; 150 bucks) === 
 
 ::1710
 He appeared in 321 games and had a season's worth of at bats, 487.
@@ -6384,7 +6384,7 @@ If you were to drink only Green Tea and water for a 40 day period, you'd detoxif
 ::1718
 Private parking at the extra price of 15,00 euros per car per day.
 413
-(parking ; extra price ; 1500 euros per car per day ; null) === 
+(parking ; extra price ; 1500 euros per car per day) === 
 
 ::1719
 All classes will be in groups with a maximum 6 students per class, 20 lessons per week.
@@ -6398,14 +6398,14 @@ Can launch 20 limpets in a row if fuel is at maximum.
 ::1722
 The astaxanthin killed 8 of 12 newer sores, and yes, I stopped taking it a couple times and the sores started growing back each time, so astaxanthin was the effective agent.
 237
-(The astaxanthin ; killed ; 8 of 12 newer sores ; null) === 
+(The astaxanthin ; killed ; 8 of 12 newer sores) === 
 290
-(12 newer sores ; killed ; 8 of 12 newer sores ; null) === 
+(12 newer sores ; killed ; 8 of 12 newer sores) === 
 
 ::1723
 Overseas Customer Unit Saturdays 0900 hrs. to 1200 hrs.
 175
-(1200 hrs ; to ; 0900 hrs. ; null) === 
+(1200 hrs ; to ; 0900 hrs.) === 
 
 ::1724
 Omni Hotels This historic property has been a Boston fixture since 1856, and has recently undergone a $70 million renovation.
@@ -6431,16 +6431,16 @@ This potentially impacts every single woman seeking prenatal care because she ne
 ::1731
 On paper the dimensions are 2.20 meters high, 100cm wide and 90cm deep.
 3
-(the dimensions ; meters high ; 2.20 meters ; null) === 
+(the dimensions ; meters high ; 2.20 meters) === 
 
 ::1732
 This Colorado teen has a 5 pitch repetoire highlighted by a sinker and a 94 MPH Fastball.
 348
-(teen ; Colorado ; 5 pitch repetoire ; null) === 
+(teen ; Colorado ; 5 pitch repetoire) === 
 237
-(This Colorado teen ; has ; 5 pitch repetoire ; null) === 
+(This Colorado teen ; has ; 5 pitch repetoire) === 
 89
-(This Colorado teen ; pitch repetoire highlighted ; 5 pitch repetoire ; null) === 
+(This Colorado teen ; pitch repetoire highlighted ; 5 pitch repetoire) === 
 
 ::1733
 My face says I want 8 million cycles a second but my reduced time frame and money already spent says 75 may just work.
@@ -6454,14 +6454,14 @@ The longest was my sword and sorcery novel THE WITCHLORD AND THE WEAPONMASTER wh
 ::1736
 The Neue Nationalgalerie is at 50 Potsdamer Str.
 482
-(Nationalgalerie ; at ; 50 potsdamer str ; null) === 
+(Nationalgalerie ; at ; 50 potsdamer str) === 
 
 ::1737
 Of the 107 million households in the United States, approximately 8.1 million use heating oil as their main heating fuel.
 175
-(their main heating fuel ; as ; approximately 8.1 million use heating oil ; null) === 
+(their main heating fuel ; as ; approximately 8.1 million use heating oil) === 
 160
-(approximately million use ; oil ; 107 million households ; null) === 
+(approximately million use ; oil ; 107 million households) === 
 296
 (the million households in the United States ; use heating oil ; approximately 8.1 million use heating oil ; as their main heating fuel) === 
 244
@@ -6491,7 +6491,7 @@ Some time ago the Census Bureau estimated that some 280,000 immigrants living he
 ::1745
 About 12 percent of refugee households were in public housing with possibly another 12 percent on waiting lists for public housing or Section 8 housing.
 482
-(About 12 percent of refugee households ; in ; 8 housing ; null) === 
+(About 12 percent of refugee households ; in ; 8 housing) === 
 
 ::1746
 The U.S. has laid out a welcome mat for other terrorists including General Hector Gramajo, accused of killing as many as 10,000 Guatemalan Indians, General Prosper Avril, a former dictator of Haiti and responsible for the torture of opposition leaders and Sintong Panjaitan, an Indonesian general, responsible for the 1991 Santa Cruz massacre in East Timor that killed hundreds.
@@ -6504,21 +6504,21 @@ In 1993, a Gang Peace Summit in Kansas City drew 164 gang members from 26 cities
 ::1748
 Our rate for the job is US$ 0.05 per source English word.
 252
-(Our ; rate ; $ 0.05 per source ; null) === 
+(Our ; rate ; $ 0.05 per source) === 
 47
-(source ; rate ; $ 0.05 per source ; null) === 
+(source ; rate ; $ 0.05 per source) === 
 85
-(the job ; rate ; $ 0.05 per source ; null) === 
+(the job ; rate ; $ 0.05 per source) === 
 
 ::1749
 The hotel has 107 rooms and features a lounge, elevators, restaurant, coffee shop, non smoking rooms, meeting rooms, laundry service, garage parking, private fitness center, baggage hold, room service, and wake up calls.
 51
-(The hotel ; has ; 107 rooms ; null) === 
+(The hotel ; has ; 107 rooms) === 
 
 ::1750
 You need to pay 500 silver for each cake recipe.
 287
-(each cake recipe ; pay ; 500 silver ; null) === 
+(each cake recipe ; pay ; 500 silver) === 
 
 ::1751
 $46 $44 $43 $43 57 55 53 52 66 64 62 61 42 40 39 38
@@ -6526,7 +6526,7 @@ $46 $44 $43 $43 57 55 53 52 66 64 62 61 42 40 39 38
 ::1752
 Last July, price was 90 $/barrel.
 314
-(Last July ; price ; 90 $ / barrel ; null) === 
+(Last July ; price ; 90 $ / barrel) === 
 
 ::1753
 Heat 4 tablespoons olive oil in a large stockpot over medium heat.
@@ -6539,7 +6539,7 @@ For estate tax purposes, the unified credit is $780,800 in 2007 and 2008, and $1
 264
 (credit ; unified ; $ 780800 ; For estate tax purposes) === 
 308
-(estate tax purposes ; unified credit ; $ 780800 ; null) === 
+(estate tax purposes ; unified credit ; $ 780800) === 
 
 ::1756
 Only 9 percent of white suburbanites agree.
@@ -6583,7 +6583,7 @@ Household Products For the quarter, net sales were $468.0 million, down $69.1 mi
 ::1769
 Lake Shawnee and Washburn University are ten miles away, Heartland Park Raceway is 13 miles, Lawrence is 25 miles, and Kansas City is 85 miles from the hotel.
 185
-(Kansas City ; Lawrence ; 25 miles ; null) === 
+(Kansas City ; Lawrence ; 25 miles) === 
 
 ::1770
 $60.00 Challenge High Speed Quoins, 6ea.
@@ -6597,9 +6597,9 @@ I can be your penpal i am georg8594 f 31 have 4 kids of my own.
 ::1773
 Home delivery prices have also gone up by 10 percent.
 398
-(Home delivery prices ; up ; 10 percent ; null) === 
+(Home delivery prices ; up ; 10 percent) === 
 403
-(Home delivery prices ; also gone ; 10 percent ; null) === 
+(Home delivery prices ; also gone ; 10 percent) === 
 
 ::1774
 ... from $71 USD Welcome to the new Holiday Inn Kansas City SE Waterpark, located near Interstate 70 & Interstate 435, across the street from Truman Sports Complex, home ... Hampton Inn Kansas City/Liberty is an award winning 'Circle of Excellence' hotel.
@@ -6612,9 +6612,9 @@ Maya has 25 words in her vocabulary at 16 months.
 ::1776
 The national average was 1,509 this year.
 314
-(this year ; national average ; 1509 this year ; null) === 
+(this year ; national average ; 1509 this year) === 
 264
-(average ; national ; 1509 this year ; null) === 
+(average ; national ; 1509 this year) === 
 
 ::1777
 They have been in a 125 tank.
@@ -6625,7 +6625,7 @@ Ogden watched the Ravens' tight end, Shannon Sharpe, catch a pass and run 96 yar
 ::1779
 There are approximately 15,000 English words.
 110
-(words ; are ; approximately 15000 english words ; null) === 
+(words ; are ; approximately 15000 english words) === 
 
 ::1780
 Banner Ads Careerlink.com averages 200,000 unique visitors per week, making us one of the most visited websites in the region.
@@ -6654,14 +6654,14 @@ questions This is irregularly 1 of the main priceless pay procure a merchants ch
 ::1788
 The kid is a freak and is only 17. Anderlecht want around 10 million pounds for him and heres why.
 287
-(him ; want ; 10 million pounds ; null) === 
+(him ; want ; 10 million pounds) === 
 237
 (Anderlecht ; want ; 10 million pounds ; for him) === 
 
 ::1789
 The female promptly picks up 10 to 12 fertilized eggs to carry her mouth.
 404
-(The female ; promptly picks ; 10 to 12 fertilized eggs ; null) === 
+(The female ; promptly picks ; 10 to 12 fertilized eggs) === 
 51
 (The female ; promptly picks ; 10 to 12 fertilized eggs ; to 12 fertilized eggs) === 
 
@@ -6689,14 +6689,14 @@ He crushed single A batters pitching 95.1 IP and allowed only 24 ERs but 15 unea
 ::1797
 Costs 8 energy points to issue a launch command.
 49
-(launch ; command ; 8 energy points ; null) === 
+(launch ; command ; 8 energy points) === 
 
 ::1798
 The HS 81 T hedge trimmer offers cleaner cutting performance for everyday trimming, sculpting and growth control.
 51
-(The HS 81 T hedge trimmer ; offers ; 81 t hedge trimmer offers cleaner cutting performance ; null) === 
+(The HS 81 T hedge trimmer ; offers ; 81 t hedge trimmer offers cleaner cutting performance) === 
 290
-(everyday trimming ; offers ; 81 t hedge trimmer offers cleaner cutting performance ; null) === 
+(everyday trimming ; offers ; 81 t hedge trimmer offers cleaner cutting performance) === 
 
 ::1799
 line while htting 15 home runs and driving in 56.
@@ -6763,7 +6763,7 @@ The normal weekly hours of work and wages are reduced at least 20% and not more 
 ::1817
 He'll probably pay around $200 for a nice round of golf, but he will be reimbursed $33,390 for that round.
 287
-(a nice round of golf ; probably pay ; $ 200 ; null) === 
+(a nice round of golf ; probably pay ; $ 200) === 
 96
 (He ; probably pay ; $ 200 ; for a nice round of golf) === 
 
@@ -6809,9 +6809,9 @@ From Ithaca and points west, follow Rt 13 east and north and run into 281 by the
 ::1831
 The bore of the E4 cylinders was 4.710 inches, the stroke was 5.110 inches and the total displacement was 718 cubic inches.
 185
-(the total displacement ; bore ; 4.710 inches ; null) === 
+(the total displacement ; bore ; 4.710 inches) === 
 1
-(the E4 cylinders ; bore ; 4.710 inches ; null) === 
+(the E4 cylinders ; bore ; 4.710 inches) === 
 
 ::1832
 Including the special items for reduced value of assets and for severance costs, AMR lost $1.448 billion, its second worst three months.
@@ -6827,9 +6827,9 @@ With 10 treatment rooms and an indoor swimming pool, the Spa provides relaxing a
 ::1835
 Menthol, either allowed to retain about 98% of the hydroxyl group linked to a sausage and bination.
 163
-(hydroxyl ; group ; about 98 % ; null) === 
+(hydroxyl ; group ; about 98 %) === 
 290
-(the hydroxyl group linked to a sausage ; retain ; about 98 % ; null) === 
+(the hydroxyl group linked to a sausage ; retain ; about 98 %) === 
 
 ::1836
 Owned 100% by employees with no outside funding allows us to operate without external pressures.
@@ -6837,7 +6837,7 @@ Owned 100% by employees with no outside funding allows us to operate without ext
 ::1837
 A Broad Picture of Tourism in Delhi 11.12 Tourism Data Relating to Tourist Facilities in Delhi 11.13 Tourism Services Providers 11.14 Opportunities in Delhi Tourism Sector 11.15
 303
-(A ; Picture ; 11.12 tourism data ; null) === 
+(A ; Picture ; 11.12 tourism data) === 
 
 ::1838
 May have to consider lowering my price further, but at operating costs of only 10 bucks a day I think I must be the most competitive translation agency on the planet, and cannot understand how someone can underbid me.
@@ -6848,7 +6848,7 @@ Select each member, then choose 130 mm from the Member Size list.
 ::1840
 Have to do this by the end of the month....it comes to just over $5,000 for the 3 properties.
 404
-(it ; comes ; $ 5000 ; null) === 
+(it ; comes ; $ 5000) === 
 
 ::1841
 Roy had 237 wins in his career, with over 2500 strikeouts.
@@ -6882,7 +6882,7 @@ New Sublimation Printer & Inks Ricoh Gx7000 Gx 7000 Ricoh 7000 Printer $1,275.00
 ::1850
 The products are packaged in 1 lb. 2 oz or 1 lb. 5 oz clear jars.
 237
-(oz ; oz ; 5 oz clear jars ; null) === 
+(oz ; oz ; 5 oz clear jars) === 
 
 ::1851
 Meanwhile, you could have another customer who pays $500 for his only visit of the year and gets put in Port Orleans.
@@ -6899,12 +6899,12 @@ The Pnoes sat in a hallway of fair size at nearly five meters wide, almost 7 met
 ::1855
 The atmospheric pressure is 1023 hPa.
 264
-(pressure ; atmospheric ; 1023 hpa ; null) === 
+(pressure ; atmospheric ; 1023 hpa) === 
 
 ::1856
 I've used 297 KWH this billing period with about 6 days to go.
 96
-(I ; used ; 297 kwh this billing period ; null) === 
+(I ; used ; 297 kwh this billing period) === 
 
 ::1857
 3/14/2000 Morocco is experiencing a 55% deficit of rainfall due to a dry weather in the months of late February and early March, says the Equipment Ministry.
@@ -6912,9 +6912,9 @@ I've used 297 KWH this billing period with about 6 days to go.
 ::1858
 The last time we hired for such a position the price tag was $13,000.
 314
-(The last time hired for a position ; price tag ; $ 13000 ; null) === 
+(The last time hired for a position ; price tag ; $ 13000) === 
 123
-(price ; tag ; $ 13000 ; null) === 
+(price ; tag ; $ 13000) === 
 
 ::1859
 Among adults age 25 and above, 78 percent of those with a bachelor's degree or higher reported being in excellent or very good health in 2001, compared with 66 percent of those with some education beyond high school, 56 percent of high school completers, and 39 percent of those with less than a high school education.
@@ -6937,9 +6937,9 @@ The great pagoda is consisted of 9 tiers, over 32m, has more than 77 chapels, sh
 ::1865
 The Average App Gets 400 Uniques Per Day.
 237
-(The Average App ; Gets ; 400 uniques ; null) === 
+(The Average App ; Gets ; 400 uniques) === 
 238
-(Day ; Gets ; 400 uniques ; null) === 
+(Day ; Gets ; 400 uniques) === 
 
 ::1866
 The hotel is only 10 minutes from downtown Atlanta and 25 miles from Hartsfield International Airport.
@@ -6947,9 +6947,9 @@ The hotel is only 10 minutes from downtown Atlanta and 25 miles from Hartsfield 
 ::1867
 can be interpreted to mean that changes in the monthly unemployment rate of immigrants explains 30 percent of the variation in the size of the immigrant population.
 290
-(the variation in the size of the immigrant population ; explains ; 30 percent ; null) === 
+(the variation in the size of the immigrant population ; explains ; 30 percent) === 
 51
-(changes in the monthly unemployment rate of immigrants ; explains ; 30 percentof the variation in the size of the immigrant population ; null) === 
+(changes in the monthly unemployment rate of immigrants ; explains ; 30 percentof the variation in the size of the immigrant population) === 
 
 ::1868
 Renovated in 2008, the Property Comprises 16 Individually Furnished Rooms and Suites.
@@ -6974,7 +6974,7 @@ It seems he prefers to see them as 3 seperate entities of 1 God.
 ::1874
 Our fully equipped modular meeting rooms can accommodate up to 250 guests.
 51
-(Our fully equipped modular meeting rooms ; accommodate ; 250 guests ; null) === 
+(Our fully equipped modular meeting rooms ; accommodate ; 250 guests) === 
 
 ::1875
 In the 1980s, which like the 1990s was also a period of economic expansion, 8.7 million new immigrants arrived.
@@ -6982,7 +6982,7 @@ In the 1980s, which like the 1990s was also a period of economic expansion, 8.7 
 ::1876
 with 7 HR and 41 RBI in 50 games at Dunedin.
 175
-(with 7 HR Dunedin ; at ; 50 games ; null) === 
+(with 7 HR Dunedin ; at ; 50 games) === 
 
 ::1877
 Assigned on arrival Comfort Room 17 sqm/180 sq.ft./ located in the historical wing/ traditional style.
@@ -6993,9 +6993,9 @@ It took about a day to do the complete set of 96 passwords by hand.
 ::1879
 I received 2 of the free samples I've begun to send for.
 290
-(the free samples begun ; received ; 2 of the free samples ; null) === 
+(the free samples begun ; received ; 2 of the free samples) === 
 51
-(I ; received ; 2 of the free samples ; null) === 
+(I ; received ; 2 of the free samples) === 
 
 ::1880
 Osuna, Antonio WSN 22 .000 1 0 0 0 0 0 0 0 0 0 0 .000
@@ -7036,14 +7036,14 @@ Of the $250 actually loaned to banks, $180 has already been repaid and the remai
 ::1892
 I might have some 72 pin now though..
 51
-(I ; have now though ; 72 pin ; null) === 
+(I ; have now though ; 72 pin) === 
 
 ::1893
 Every .25 seconds I'll have a 100 ms lag period.
 411
-(I ; period ; 100 ms lag period ; null) === 
+(I ; period ; 100 ms lag period) === 
 237
-(I ; seconds have ; 100 ms lag period ; null) === 
+(I ; seconds have ; 100 ms lag period) === 
 
 ::1894
 Air Canada is offering symposium attendees a 10% discount on fares at the TANGO PLUS level or above.
@@ -7060,12 +7060,12 @@ He told me he was going to open up my cervix which was going to feel like the cr
 ::1898
 If the estimated net fiscal drain of $2,736 a year that each illegal household imposes on the federal treasury is multiplied by the nearly three million illegal households, the total cost comes to $10.4 billion a year.
 404
-(the total cost ; comes ; $ 10.4 billion a year ; null) === 
+(the total cost ; comes ; $ 10.4 billion a year) === 
 
 ::1899
 ... from $65 USD The Hilton Garden Inn Krakow is located in very close proximity to Wawel Castle, Jewish quarter, elegant old town and medieval market centre in a city ... The Novotel Krakow Bronowice is a hotel conveniently located near the city center.
 482
-(The Novotel Krakow Bronowice ; from ; 65 usd ; null) === 
+(The Novotel Krakow Bronowice ; from ; 65 usd) === 
 
 ::1900
 The numbers aren't real good with my little program here, only 2 out of 6 have taken advantage of the offer & made enough money to move a step up on the ladder.
@@ -7087,12 +7087,12 @@ Mekong Lowlands area averages 130 to 190 centimeters annually, but the amount va
 ::1905
 The atmospheric pressure is 1037 hPa.
 264
-(pressure ; atmospheric ; 1037 hpa ; null) === 
+(pressure ; atmospheric ; 1037 hpa) === 
 
 ::1906
 OpenOffice and StarOffice 6.0 also use XML to communicate with other applications.
 51
-(OpenOffice ; also use ; 6.0 also use xml ; null) === 
+(OpenOffice ; also use ; 6.0 also use xml) === 
 
 ::1907
 This revolutionary technology actually measures how far away your are from each of the Coffee County carrier's facilities and calculates with 99% accuracy the best price they can offer you.
@@ -7115,12 +7115,12 @@ The actual number, reports the National Institutes of Health, is about 150.
 ::1913
 Now cut 2 pieces of plywood as end gussets.
 290
-(plywood as end gussets ; Now cut ; 2 pieces ; null) === 
+(plywood as end gussets ; Now cut ; 2 pieces) === 
 
 ::1914
 The ARC Network receives over 2.5 million hits each month.
 51
-(The ARC Network ; receives ; 2.5 million hits ; null) === 
+(The ARC Network ; receives ; 2.5 million hits) === 
 
 ::1915
 You can exchange the dropped items for transformation pills from Pluto Emissary directly or just keep them when you've collected all the 7 items, because all the 7 items can be used as the key to summon the Evil Pluto.
@@ -7141,7 +7141,7 @@ Also found 4 charges that aren't mine, added that number to the TO DO list for t
 ::1919
 Each team will have 13 hitters and 7 pitchers, plus 5 minor leaguers.
 51
-(Each team ; have ; 13 hitters ; null) === 
+(Each team ; have ; 13 hitters) === 
 
 ::1920
 In Los Angeles, residents drive 142 million miles a day.
@@ -7169,7 +7169,7 @@ Excluding the unfavorable impact of currencies of approximately $31 million, seg
 51
 (segment profit ; increased ; increased approximately $ 21 million due primarily ; Excluding the unfavorable impact of currencies of approximately $ 31 million) === 
 458
-(segment profit ; increased ; increased approximately $ 21 million due primarily ; null) === 
+(segment profit ; increased ; increased approximately $ 21 million due primarily) === 
 
 ::1926
 Register once and work with over 20 tools from the AVS4YOU.com.
@@ -7180,14 +7180,14 @@ After the crowd thinned out, I gave her a perm and haircut, after which she prom
 ::1928
 Though Cheyenne aired for seven years, the series had only 108 episodes because it was in repeated alternation with other programs and was out of production for many episodes during Clint Walker's contract dispute with Warner Brothers.
 237
-(the series ; had ; 108 episodes ; null) === 
+(the series ; had ; 108 episodes) === 
 
 ::1929
 At the end of the eighth, Jacksonville leads 10 to 1. TOP OF THE NINTH Art Lopez struck out.
 237
 (Jacksonville ; leads ; 10 to 1 ; to 1) === 
 404
-(Jacksonville ; leads ; 10 to 1 ; null) === 
+(Jacksonville ; leads ; 10 to 1) === 
 
 ::1930
 A no spend day here, up to 6 now for the month if I remember right.
@@ -7219,7 +7219,7 @@ Assuming he sleeps 7 hours a night he makes about $52,000.
 ::1939
 Setting Up the Workspace Start up Flex 3 Builder, and making a new project.
 237
-(the Workspace ; Start ; 3 builder ; null) === 
+(the Workspace ; Start ; 3 builder) === 
 
 ::1940
 Divide into 2 unbaked pie crusts.
@@ -7236,7 +7236,7 @@ A year later, the U.S. Treasury Department charged Meister with violating U.S. l
 ::1944
 This location is also 500 meters from Hastings Street and Noosa Springs Golf Course, half a mile from Noosa National Park, two miles from Noosa River, and three miles from Eumundi markets.
 500
-(This location ; also ; 500 meters ; null) === 
+(This location ; also ; 500 meters) === 
 
 ::1945
 2X Rewritable Discs in Jewel Case by Maxell in a 100 Lot.
@@ -7253,18 +7253,18 @@ All these temples stand on a level area which call the Chaurasi after the 84 Sid
 ::1949
 As a foliar spray, Michigan State University recommends applying a mixture of 10 to 20 pounds of Epsom salt in 30 gallons water.
 303
-(a ; mixture ; 10 to 20 pounds ; null) === 
+(a ; mixture ; 10 to 20 pounds) === 
 439
-(Epsom ; salt ; 10 to 20 pounds ; null) === 
+(Epsom ; salt ; 10 to 20 pounds) === 
 
 ::1950
 Our membership roster is currently over 300 individual experts, 12 organizational memberships, over 45 police departments and the top educational institutions.
 500
-(Our membership roster ; currently ; 300 individual experts ; null) === 
+(Our membership roster ; currently ; 300 individual experts) === 
 252
-(Our ; membership roster ; 300 individual experts ; null) === 
+(Our ; membership roster ; 300 individual experts) === 
 14
-(membership ; roster ; 300 individual experts ; null) === 
+(membership ; roster ; 300 individual experts) === 
 
 ::1951
 The microphone reproduces each center frequency really well, with no appreciable attenuation or amplification above 200 Hz.
@@ -7281,7 +7281,7 @@ Moreover, 6.1 million new immigrants entered in the four years after 2000, compa
 ::1955
 In the end, I lost 13 pounds, increased my strength by 90%, dropped my body fat from 28% to 12% and transformed from the inside out.
 237
-(I ; lost ; 13 pounds ; null) === 
+(I ; lost ; 13 pounds) === 
 
 ::1956
 Also around this time a distant group of about 10 dolphins were noted, but these were too far away for specific identification.
@@ -7295,19 +7295,19 @@ By failing to consider accounting ... automateddirectincomemarketingpassivesyste
 ::1959
 After the kickoff moved, it rose to 26.8 percent of the time.
 175
-(percent ; to ; rose to 26.8 percentof the time ; null) === 
+(percent ; to ; rose to 26.8 percentof the time) === 
 404
-(it ; rose ; rose to 26.8 percentof the time ; null) === 
+(it ; rose ; rose to 26.8 percentof the time) === 
 
 ::1960
 Thanks, Amanda 12/28/99 In August of 1988 I was 18 yrs old and just graduated from a career center and high school.
 28
-(I ; yrs old ; 18 yrs old ; null) === 
+(I ; yrs old ; 18 yrs old) === 
 
 ::1961
 A Game Of 3 Halves Game Description Represent your country in the finals of the rugby world cup and help them win.
 349
-(A ; Game ; 3 halves ; null) === 
+(A ; Game ; 3 halves) === 
 
 ::1962
 A good $15.00 spent, since I've got over 100 seedlings to get in the ground.
@@ -7318,9 +7318,9 @@ the ring was created by famed jewelry designer, neil lane madonna s wedding band
 ::1964
 By default, wrapping is to 80 columns, but you may specify other widths.
 482
-(wrapping ; to ; 80 columns ; null) === 
+(wrapping ; to ; 80 columns) === 
 404
-(wrapping ; is ; 80 columns ; null) === 
+(wrapping ; is ; 80 columns) === 
 
 ::1965
 They had 10 children, with 8 surviving at the time of the 1900 census.
@@ -7336,7 +7336,7 @@ The chronic poor form the largest proportion of the rural households at 37% comp
 ::1968
 Red Sox Fan 734 Red Sox Sign Bush, Rotation Set Today the Boston Red Sox signed SP David Bush to a 3 year contract worth a combined 17.1 Million dollars.
 404
-(the Boston Red Sox ; Today signed ; 3 year contract ; null) === 
+(the Boston Red Sox ; Today signed ; 3 year contract) === 
 
 ::1969
 All this stuff bunched up here above 90 percent of American homes.
@@ -7344,12 +7344,12 @@ All this stuff bunched up here above 90 percent of American homes.
 ::1970
 Four lines of the palm, which converge at the symbolic Gate, correspond to the 4 posts in the Gate and represent four strategic paths associated with Salvation.
 404
-(Four lines of the palm converge at the symbolic Gate ; correspond ; 4 posts ; null) === 
+(Four lines of the palm converge at the symbolic Gate ; correspond ; 4 posts) === 
 
 ::1971
 If the player's House controls fewer than 25 friendly storage facilities when the code is invoked, then the code will also raise the total combined storage capacity of those facilities to 25,000 units.
 404
-(the code ; then also raise ; 25000 units ; null) === 
+(the code ; then also raise ; 25000 units) === 
 
 ::1972
 The kids teeth on the crib and get it sticky somehow and it's ruined by the time they are old enough for a toddler bed. posted 6 hrs ago They do teeth on them but you can buy a teething bumper type thing to avoid your crib getting chewed up lol posted 6 hrs ago That was what I was thinking about, was them chewing and stuff.
@@ -7357,9 +7357,9 @@ The kids teeth on the crib and get it sticky somehow and it's ruined by the time
 ::1973
 Our first lunch took 15 of us, as an entire group including friends and staff of the Casa, through the streets of Granada to their favorite eatery.
 237
-(Our first lunch as an entire group including friends of the Casa through the streets of Granada to their favorite eatery ; took ; 15 of us ; null) === 
+(Our first lunch as an entire group including friends of the Casa through the streets of Granada to their favorite eatery ; took ; 15 of us) === 
 290
-(us ; took ; 15 of us ; null) === 
+(us ; took ; 15 of us) === 
 
 ::1974
 She covered 4,500 miles in 301 days.
@@ -7387,7 +7387,7 @@ An experienced debt relief lawyer, as provided by our directory, can provide you
 ::1981
 The atmospheric pressure is 1034 hPa.
 264
-(pressure ; atmospheric ; 1034 hpa ; null) === 
+(pressure ; atmospheric ; 1034 hpa) === 
 
 ::1982
 In the XPath 1.0 data model, a TII lvalue MUST be a text node.
@@ -7410,12 +7410,12 @@ The government has just announced plans to extend Project Work pilot schemes to 
 ::1988
 Annual tuition at Occidental, a private college, is $32,800.
 264
-(tuition ; Annual ; $ 32800 ; null) === 
+(tuition ; Annual ; $ 32800) === 
 
 ::1989
 We will be accepting 10 nominations.
 237
-(We ; accepting ; 10 nominations ; null) === 
+(We ; accepting ; 10 nominations) === 
 
 ::1990
 Fortunately, the battlestar holds 40 Viper Mark IIs on board as part of its expected conversion into a museum .
@@ -7456,6 +7456,6 @@ As this meant the destruction of their improvements naturally no one removed any
 ::2000
 Ethernet Shield TFTP Bootloader alternative 1 bootloader to use the Arduino Ethernet Shield or the Arduino Ethernet Board with a bootloader that will allow upgrading the Firmware via TFTP.
 144
-(Ethernet Shield TFTP Bootloader ; alternative ; 1 bootloader ; null) === 
+(Ethernet Shield TFTP Bootloader ; alternative ; 1 bootloader) === 
 
 ==============Done===========

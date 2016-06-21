@@ -61,7 +61,14 @@ public class Onre_runMe_jsonStrings {
 				
 				Map<String, Integer> uniq_extrs = new HashMap<String, Integer>();
 				for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
-					uniq_extrs.put(entry.getKey().toString(), entry.getValue());
+					String extr_string = entry.getKey().toString();
+					Integer newValue = entry.getValue();
+					
+					/*//taking the highest(lowest number) patternNumber//TODO: checko-required?
+					Integer currValue = uniq_extrs.get(extr_string);
+					if(currValue!=null && currValue<newValue) newValue=currValue;*/
+					
+					uniq_extrs.put(extr_string, newValue);
 				}
 				
 				if(!OnreGlobals.arg_onre_isSeedFact) {

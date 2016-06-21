@@ -4,7 +4,6 @@
 package edu.iitd.cse.open_nre.onre.runner;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
@@ -32,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Orders in the region grew from $225 million in 1990 to $1.65 billion in 1994.";
+		String sentence = "And for Social Security, which is even more regressive, illegals pay 40 percent of the average household's contribution.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 

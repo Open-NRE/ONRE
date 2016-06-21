@@ -63,7 +63,7 @@ public class OnreHelper {
     	
     	if(OnreGlobals.arg_onre_isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
     		onreExtraction.quantity = new OnreExtractionPart(danrothSpan.value.toString());
-    		onreExtraction.extra_quantity_info = new OnreExtractionPart(danrothSpan.unit);
+    		onreExtraction.additional_info = new OnreExtractionPart(danrothSpan.unit);
     		return;
     	}
     	
@@ -131,7 +131,7 @@ public class OnreHelper {
     	return result;
     }
 	
-	public static void expandExtraction(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) throws IOException {
+	private static void expandExtraction(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) throws IOException {
 		if(onreExtraction.relation != null) expandRelation(onreExtraction, patternNode_sentence);
 		else onreExtraction.relation = new OnreExtractionPart();
 		
@@ -248,7 +248,7 @@ public class OnreHelper {
 				quantity_unit_plus = quantity_unit_plus.substring(0,posOfComma-1);
 			}*/
 			
-			onreExtraction.extra_quantity_info = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
+			onreExtraction.additional_info = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
 			break;
 		}
 		
@@ -280,14 +280,14 @@ public class OnreHelper {
 	    }
 	    
 	    //TODO: IMPORTANT-CHANGE:if the relation word is one of configured words(grew/increased/down), then expand it on prep
-	    /*List<String> expandOnPrep = OnreIO.readFile_classPath(OnreFilePaths.filePath_expandOnPrep);
+	    List<String> expandOnPrep = OnreIO.readFile_classPath(OnreFilePaths.filePath_expandOnPrep);
 		if(expandOnPrep.contains(node_relation.word)) {
 			for(OnrePatternNode child : node_relation.children) {
 				if(!child.dependencyLabel.equals("prep")) continue;
 				if(OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity, child) == null) continue;
 				expansions.add(child); 
 			}
-		}*/
+		}
 		
 		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
 		StringBuilder sb = new StringBuilder("");
@@ -423,14 +423,20 @@ public class OnreHelper {
 		onreExtraction.argument.text = str;
     }
 	
-	public static void onreExtraction_dummyForNull(OnreExtraction onreExtraction) {
+	private static void onreExtraction_dummyForNull(OnreExtraction onreExtraction) {
 		//TODO: 
 		//if(onreExtraction.quantity_modifier == null) onreExtraction.quantity_modifier = new OnreExtractionPart();
 		//if(onreExtraction.quantity_unit == null) onreExtraction.quantity_unit = new OnreExtractionPart();
 		
 		if(onreExtraction.quantity_unit_plus == null) onreExtraction.quantity_unit_plus = new OnreExtractionPart();
+		//if(onreExtraction.additional_info == null) onreExtraction.additional_info = new OnreExtractionPart();
 		
 		//if(onreExtraction.relation_joint == null) onreExtraction.relation_joint = new OnreExtractionPart();
+	}
+	
+	public static void onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction) throws IOException {
+		if(!OnreGlobals.arg_onre_isSeedFact) expandExtraction(onreExtraction, patternNode_sentence);
+    	onreExtraction_dummyForNull(onreExtraction);    	
 	}
 	
 }
