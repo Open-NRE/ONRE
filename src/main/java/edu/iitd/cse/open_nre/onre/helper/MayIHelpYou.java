@@ -82,6 +82,28 @@ public class MayIHelpYou {
     	return count;
     }
     
+    private static void addExtractionToMap(Map<OnreExtraction, Integer> extrs, OnreExtraction onreExtraction) {
+    	boolean isSimilarExtractionExists = false;
+    	OnreExtraction currExtraction = null;
+    	for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
+    		currExtraction = entry.getKey();
+    		if(checkIfSimilarExtractionExists(currExtraction, onreExtraction)) {
+    			isSimilarExtractionExists = true;
+    			break;
+    		}
+    	}
+    	
+    	if(!isSimilarExtractionExists) {
+    		extrs.put(onreExtraction, onreExtraction.patternNumber);
+    	}
+    	else {
+    		if(countNullFields(currExtraction) < countNullFields(onreExtraction)) {
+    			extrs.remove(currExtraction);
+    			extrs.put(onreExtraction, onreExtraction.patternNumber);
+    		}
+    	}
+    }
+    
     private static Map<OnreExtraction, Integer> getExtractions(OnrePatternTree onrePatternTree, List<OnrePatternNode> list_configuredPattern, Onre_dsDanrothSpans danrothSpans) throws IOException {
     	Map<OnreExtraction, Integer> extrs = new HashMap<OnreExtraction, Integer>();
     	
@@ -117,29 +139,8 @@ public class MayIHelpYou {
         	onreExtraction.patternNumber=i+1;
         	onreExtraction.sentence = onrePatternTree.sentence;
         	
-        	//TODO: IMPORTANT-CHANGE #10: ===START=== :Removing extractions where they are similar except for the additional-info field
-        	boolean isSimilarExtractionExists = false;
-        	OnreExtraction currExtraction = null;
-        	for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
-        		currExtraction = entry.getKey();
-        		if(checkIfSimilarExtractionExists(currExtraction, onreExtraction)) {
-        			isSimilarExtractionExists = true;
-        			break;
-        		}
-        	}
-        	
-        	if(!isSimilarExtractionExists) {
-        		extrs.put(onreExtraction, onreExtraction.patternNumber);
-        	}
-        	else {
-        		if(countNullFields(currExtraction) < countNullFields(onreExtraction)) {
-        			extrs.remove(currExtraction);
-        			extrs.put(onreExtraction, onreExtraction.patternNumber);
-        		}
-        	}
-        	//TODO: IMPORTANT-CHANGE #10: ===END=== :Removing extractions where they are similar except for the additional-info field
-        	
-        	
+        	//TODO: IMPORTANT-CHANGE #10:Removing extractions where they are similar except for the additional-info field
+        	addExtractionToMap(extrs, onreExtraction);
         }
     	
     	return extrs;
