@@ -7110,7 +7110,7 @@ Or, looked at in a different way, these five states accounted for 68 percent of 
 ::1870
 The National Association for the Advancement of Fat Acceptance claims eating disorders kill 150,000 women a year in the United States.
 48
-(The National Association for the Advancement of Fat Acceptance claims eating ; kill ; 150000 women a year ; in the United States) === T
+(The National Association for the Advancement of Fat Acceptance claims eating ; kill ; 150000 women a year ; in the United States) === F
 
 ::1871
 In fact, 90% of all abortions prior to 1973 were performed by physicians.
@@ -7523,7 +7523,7 @@ The kids teeth on the crib and get it sticky somehow and it's ruined by the time
 ::1973
 Our first lunch took 15 of us, as an entire group including friends and staff of the Casa, through the streets of Granada to their favorite eatery.
 274
-(Our first lunch as an entire group including friends of the Casa through the streets of Granada to their favorite eatery ; took ; 15 of us) === T
+(Our first lunch as an entire group including friends of the Casa through the streets of Granada to their favorite eatery ; took ; 15 of us) === F
 408
 (us ; took ; 15 of us) === F
 

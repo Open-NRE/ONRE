@@ -1,16 +1,33 @@
 package edu.iitd.cse.open_nre.onre.utils;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class OnreUtils_string {
 	
 	public static boolean isIgnoreCaseMatch(String s1, String s2) {
 		return s1.toLowerCase().matches(s2.toLowerCase());
 	}
 	
+	public static boolean ignoreCaseContainsWord(String s1, String s2) {
+		List<String> listOfWords = Arrays.asList(s1.split(" "));
+		
+		for (String word : listOfWords) {
+			if(word.equalsIgnoreCase(s2)) return true;
+		}
+		
+		return false;
+	}
+	
+	public static boolean isIgnoreCaseContains(String s1, String s2) {
+		return s1.toLowerCase().contains(s2.toLowerCase());
+	}
+	
 	public static boolean isIgnoreCaseIgnoreCommaIgnoreSpaceContains(String s1, String s2) {
 		return lowerTrimCommaSpace(s1).contains(lowerTrimCommaSpace(s2));
 	}
 
-	private static String lowerTrimCommaSpace(String s1) {
+	public static String lowerTrimCommaSpace(String s1) {
 		return s1.toLowerCase().trim().replace(",", "").replace(" ", "");
 	}
 	

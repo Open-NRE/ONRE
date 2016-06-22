@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "A single use of the laser system will never cost more than 4 fuel points, regardless of how many beams are released at the time of firing.";
+		String sentence = "That night I drove 100 miles to tell him.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 
