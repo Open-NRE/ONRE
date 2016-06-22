@@ -116,6 +116,7 @@ public class MayIHelpYou {
         	onreExtraction.patternNumber=i+1;
         	onreExtraction.sentence = onrePatternTree.sentence;
         	
+        	//TODO: IMPORTANT-CHANGE: Removing extractions where they are similar except for the additional-info field
         	boolean isSimilarExtractionExists = false;
         	OnreExtraction currExtraction = null;
         	for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
@@ -135,6 +136,8 @@ public class MayIHelpYou {
         			extrs.put(onreExtraction, onreExtraction.patternNumber);
         		}
         	}
+        	
+        	//extrs.put(onreExtraction, onreExtraction.patternNumber);
         }
     	
     	return extrs;
