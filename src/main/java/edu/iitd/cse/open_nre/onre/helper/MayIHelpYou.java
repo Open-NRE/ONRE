@@ -94,26 +94,6 @@ public class MayIHelpYou {
 	        if(onreExtraction == null) continue;
 	        if(!OnreUtils.quantityExists(onreExtraction)) continue;
 	        	
-	        //TODO: IMPORTANT-CHANGE #4:Don't extract if quantity value is present in the argument or relation
-	        if(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text)!=null) {
-	       		if(onreExtraction.argument.text.contains(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text))) continue;
-	        	if(onreExtraction.relation.text.contains(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text))) continue;
-	        }
-	        
-	        //TODO: IMPORTANT-CHANGE #5:Don't extract if quantity unit is present in the argument
-	        if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
-        		if(onreExtraction.argument.text.contains(onreExtraction.q_unit)) continue;
-        		if(onreExtraction.q_unit.contains(onreExtraction.argument_headWord.text)) continue;
-          	}
-	        
-	        //TODO: IMPORTANT-CHANGE #7:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
-	        if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
-	        	if(onreExtraction.relation.text.equals(onreExtraction.q_unit)) {
-	        		onreExtraction.quantity.text = onreExtraction.quantity.text.replace(onreExtraction.relation.text, "").trim();
-	        		onreExtraction.relation.text = "[number of] " + onreExtraction.relation.text;
-	        	}
-	        }
-	        
         	onreExtraction.patternNumber=i+1;
         	onreExtraction.sentence = onrePatternTree.sentence;
         	
