@@ -94,19 +94,19 @@ public class MayIHelpYou {
 	        if(onreExtraction == null) continue;
 	        if(!OnreUtils.quantityExists(onreExtraction)) continue;
 	        	
-	        //TODO: IMPORTANT-CHANGE:Don't extract if quantity value is present in the argument or relation
+	        //TODO: IMPORTANT-CHANGE #4:Don't extract if quantity value is present in the argument or relation
 	        if(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text)!=null) {
 	       		if(onreExtraction.argument.text.contains(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text))) continue;
 	        	if(onreExtraction.relation.text.contains(OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text))) continue;
 	        }
 	        
-	        //TODO: IMPORTANT-CHANGE:Don't extract if quantity unit is present in the argument
+	        //TODO: IMPORTANT-CHANGE #5:Don't extract if quantity unit is present in the argument
 	        if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
         		if(onreExtraction.argument.text.contains(onreExtraction.q_unit)) continue;
-        		//if(onreExtraction.q_unit.contains(onreExtraction.argument.text)) continue;
+        		if(onreExtraction.q_unit.contains(onreExtraction.argument_headWord.text)) continue;
           	}
 	        
-	        //TODO: IMPORTANT-CHANGE:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
+	        //TODO: IMPORTANT-CHANGE #7:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
 	        if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
 	        	if(onreExtraction.relation.text.equals(onreExtraction.q_unit)) {
 	        		onreExtraction.quantity.text = onreExtraction.quantity.text.replace(onreExtraction.relation.text, "").trim();
@@ -117,7 +117,7 @@ public class MayIHelpYou {
         	onreExtraction.patternNumber=i+1;
         	onreExtraction.sentence = onrePatternTree.sentence;
         	
-        	//TODO: IMPORTANT-CHANGE: Removing extractions where they are similar except for the additional-info field
+        	//TODO: IMPORTANT-CHANGE #10: ===START=== :Removing extractions where they are similar except for the additional-info field
         	boolean isSimilarExtractionExists = false;
         	OnreExtraction currExtraction = null;
         	for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
@@ -137,8 +137,9 @@ public class MayIHelpYou {
         			extrs.put(onreExtraction, onreExtraction.patternNumber);
         		}
         	}
+        	//TODO: IMPORTANT-CHANGE #10: ===END=== :Removing extractions where they are similar except for the additional-info field
         	
-        	//extrs.put(onreExtraction, onreExtraction.patternNumber);
+        	
         }
     	
     	return extrs;

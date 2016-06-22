@@ -71,6 +71,8 @@ public class Onre_runMe_jsonStrings {
 					uniq_extrs.put(extr_string, newValue);
 				}
 				
+				uniq_extrs = OnreUtils.sortMapByValue(uniq_extrs, false);
+				
 				if(!OnreGlobals.arg_onre_isSeedFact) {
 					System.out.println("::" + (i+1));
 					System.out.println(onrePatternTree.sentence);

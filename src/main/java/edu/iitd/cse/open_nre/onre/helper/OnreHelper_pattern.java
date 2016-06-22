@@ -32,9 +32,9 @@ public class OnreHelper_pattern {
 		for (String configuredPattern : configuredPatterns) {
 			if(configuredPattern.trim().length()==0) {list_configuredPattern.add(null); continue;}
 
-			if(configuredPattern.contains("(nn#")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE:ignoring patterns with depLabel as nn (nn#)
-			if(configuredPattern.contains("{arg}#dt")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE:ignoring patterns with {arg} postag as dt
-			if(configuredPattern.contains("rel}#in)")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE:ignoring patterns with {rel} postag as IN
+			if(configuredPattern.contains("(nn#")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE #1:ignoring patterns with depLabel as nn (nn#)
+			if(configuredPattern.contains("{arg}#dt")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE #2:ignoring patterns with {arg} postag as dt
+			if(configuredPattern.contains("rel}#in)")) {list_configuredPattern.add(null); continue;} //TODO: IMPORTANT-CHANGE #3:ignoring patterns with {rel} postag as IN
 			
 			list_configuredPattern.add(convertPattern2PatternTree(configuredPattern));
         }
@@ -92,7 +92,7 @@ public class OnreHelper_pattern {
 	    return index;
     }
 
-//------------ONRE_DS helper functions
+//------------ONRE_DS helper functions--------------------
     public static OnrePatternNode searchNode(OnrePatternTree onrePatternTree, String word, Onre_dsDanrothSpan danrothSpan) {
 		OnrePatternNode root = onrePatternTree.root;
 		
@@ -119,19 +119,6 @@ public class OnreHelper_pattern {
 		return null;
 	}
     
-    private static boolean nodeFound(String word, OnrePatternNode currNode, Onre_dsDanrothSpan danrothSpan) {
-		if(currNode.word.equalsIgnoreCase(word) && currNode.offset>=danrothSpan.start && currNode.offset<=danrothSpan.end) return true;
-    	
-		/*//compare as a number
-		try {
-			if(OnreUtils_number.str2Double(currNode.word).equals(OnreUtils_number.str2Double(word))) return true;
-		}catch(Exception e){
-			//ignoring the exception--prob bcauz string can't be converted to a number
-		}*/
-		
-		return false;
-	}
-
     public static OnrePatternNode searchNode(OnrePatternTree onrePatternTree, String word) {
 		OnrePatternNode root = onrePatternTree.root;
 		
@@ -154,7 +141,11 @@ public class OnreHelper_pattern {
 		return null;
 	}
 	
-
+    private static boolean nodeFound(String word, OnrePatternNode currNode, Onre_dsDanrothSpan danrothSpan) {
+		if(currNode.word.equalsIgnoreCase(word) && currNode.offset>=danrothSpan.start && currNode.offset<=danrothSpan.end) return true;
+		return false;
+	}
+    
 	private static boolean nodeFound(String word, OnrePatternNode currNode) {
 		
 		if(currNode.word.equalsIgnoreCase(word)) return true;
