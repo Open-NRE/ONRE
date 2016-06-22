@@ -56,6 +56,23 @@ public class OnreHelper {
 	    }
 	}
     
+    /*private static String addNegationIfPossibleToQuantity(OnreExtraction onreExtraction, OnrePatternTree onrePatternTree, String quantityPhrase) {
+    	OnrePatternNode quantity_parent_node = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, onrePatternTree.root);
+    	if(quantity_parent_node==null) return quantityPhrase;
+		
+    	String negationWord = "";
+		for(OnrePatternNode child : quantity_parent_node.children) {
+			if(child.dependencyLabel.equals("neg") ) {
+				negationWord = child.word;
+				break;
+			}
+		}
+		
+		if(!negationWord.isEmpty())
+			return negationWord + " " + quantityPhrase;
+		else return quantityPhrase;
+    }*/
+    
     private static void setQuantityExtractionPart(OnrePatternTree onrePatternTree, OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index, Onre_dsDanrothSpans danrothSpans) {
     	//Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
     	Onre_dsDanrothSpan danrothSpan = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode, danrothSpans);
@@ -74,9 +91,16 @@ public class OnreHelper {
     	onreExtraction.q_unit =danrothSpan.unit;
     	
     	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase);
-    	
-    	
     	onreExtraction.quantity.index = index;
+    	
+    	//TODO: IMPORTANT-CHANGE: Add sibling of quantity if that sibling is connected by "neg" depLabel
+    	/*String newQuantityPhrase = addNegationIfPossibleToQuantity(onreExtraction, onrePatternTree, quantityPhrase);
+    	
+    	if(!newQuantityPhrase.equals(quantityPhrase)) {
+    		onreExtraction.quantity.text = newQuantityPhrase;	
+    	}*/
+    	
+    	
     	if(!quantityPhrase.contains("per cent") && !quantityPhrase.contains("percent") && !quantityPhrase.contains("%")) return;
     	
     	//finding percent node
@@ -214,11 +238,11 @@ public class OnreHelper {
 	
 	private static void expandQuantity(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		
-		OnrePatternNode argument_parent_node = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
-		if(argument_parent_node==null) return;
+		OnrePatternNode quantity_parent_node = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
+		if(quantity_parent_node==null) return;
 		
 		OnrePatternNode node_prep = null;
-		for(OnrePatternNode child : argument_parent_node.children) {
+		for(OnrePatternNode child : quantity_parent_node.children) {
 			if(child.dependencyLabel.equals("prep") || child.word.equalsIgnoreCase("prior")) node_prep = child;
 			if(node_prep == null) continue;
 			
@@ -278,6 +302,7 @@ public class OnreHelper {
 	    	for(OnrePatternNode child : currNode.children) {
 				//if(child.dependencyLabel.equals("amod")) {expansions.add(child); q_yetToExpand.add(child); } 
 				if(child.dependencyLabel.equals("nn")) {expansions.add(child); q_yetToExpand.add(child); } 
+				if(child.dependencyLabel.equals("neg")) {expansions.add(child); q_yetToExpand.add(child); }//TODO: IMPORTANT-CHANGE: negation handling
 				//if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
 				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
