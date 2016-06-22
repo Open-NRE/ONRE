@@ -64,9 +64,9 @@ public class Onre_runMe_jsonStrings {
 					String extr_string = entry.getKey().toString();
 					Integer newValue = entry.getValue();
 					
-					/*//taking the highest(lowest number) patternNumber//TODO: checko-required?
+					//taking the highest(lowest number) patternNumber
 					Integer currValue = uniq_extrs.get(extr_string);
-					if(currValue!=null && currValue<newValue) newValue=currValue;*/
+					if(currValue!=null && currValue<newValue) newValue=currValue;
 					
 					uniq_extrs.put(extr_string, newValue);
 				}

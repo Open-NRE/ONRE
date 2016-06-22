@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "And for Social Security, which is even more regressive, illegals pay 40 percent of the average household's contribution.";
+		String sentence = "Current drug treatments using ribavirin and interferon cost $8,000 to $20,000 per year, and are usually only partly effective.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 

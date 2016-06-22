@@ -36,7 +36,9 @@ public class temp {
 		//pattern = pattern.replaceFirst("poss#\\{arg\\}#PRP\\$\\)", "poss#{arg}#PRP\\\\\\$)");
 		//System.out.println(pattern);
 		
-		System.out.println("2 terrapins".replace("terrapins", ""));
+		//System.out.println("2 terrapins".replace("terrapins", ""));
+		
+		System.out.println("1.2".replaceAll("\\.$", ""));
 		
 	}
 

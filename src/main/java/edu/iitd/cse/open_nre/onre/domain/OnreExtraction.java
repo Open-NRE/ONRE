@@ -32,7 +32,7 @@ public class OnreExtraction {
 	public String sentence;
 	
 	//public String q_value; //TO-DO: IMPORTANT-CHANGE:Don't extract if quantity value is present in the argument or relation
-	public String q_unit; //TODO: IMPORTANT-CHANGE:Don't extract if quantity unit is present in the argument
+	public String q_unit;
 
 	public OnreExtraction() {
 	}
@@ -88,10 +88,10 @@ public class OnreExtraction {
 		sb.append("(");
 		sb.append(this.argument);
 		sb.append(OnreConstants.DELIMETER_EXTR);
-		sb.append(this.relation.text);
+		sb.append(this.relation);
 		sb.append(OnreConstants.DELIMETER_EXTR);
 		sb.append(this.quantity);
-		sb.append(this.quantity_unit_plus);
+		if(this.quantity_unit_plus!=null) sb.append(" ").append(this.quantity_unit_plus);
 		if(this.additional_info!=null && this.additional_info.text!=null && !this.additional_info.text.isEmpty()) {
 			sb.append(OnreConstants.DELIMETER_EXTR);
 			sb.append(this.additional_info);
