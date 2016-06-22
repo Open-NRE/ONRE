@@ -6,10 +6,8 @@ package edu.iitd.cse.open_nre.onre.helper;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Queue;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
@@ -33,31 +31,26 @@ import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
  */
 public class OnreHelper {
 	
-    private static void setExtractionPart(OnrePatternTree onrePatternTree, OnrePatternNode subTreeNode, OnrePatternNode patternNode_configured,
-            OnreExtraction onreExtraction, Onre_dsDanrothSpans danrothSpans) {
-	    switch(OnreExtractionPartType.getType(patternNode_configured.word)) {
-	    	
-	    	case ARGUMENT: onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);  break;
-	    	//case RELATION_JOINT: onreExtraction.relation_joint = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case RELATION: onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case QUANTITY: setQuantityExtractionPart(onrePatternTree, subTreeNode, onreExtraction, subTreeNode.index, danrothSpans); break;
-	    	//case QUANTITY_UNIT: onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	//case QUANTITY_UNIT_OBJTYPE: onreExtraction.quantity_unit_objType = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break; 
-	    	//case QUANTITY_MODIFIER: onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	//case QUANTITY_VALUE: onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	//case QUANTITY_UNIT_PLUS: onreExtraction.quantity_unit_plus = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-			case UNKNOWN: break;
-	    		
-	    	/*case "{rel}": onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case "{q_value}": onreExtraction.quantity_value = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case "{q_modifier}": onreExtraction.quantity_modifier = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case "{q_unit}": onreExtraction.quantity_unit = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;
-	    	case "{arg}": onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index); break;*/
+    private static void setExtractionPart(OnrePatternTree onrePatternTree, OnrePatternNode subTreeNode, OnrePatternNode patternNode_configured, OnreExtraction onreExtraction, Onre_dsDanrothSpans danrothSpans) {
+
+    	switch(OnreExtractionPartType.getType(patternNode_configured.word)) {
+	    	case ARGUMENT: 
+	    		onreExtraction.argument_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);
+	    		onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);
+	    		break;	    	
+	    	case RELATION: 
+	    		onreExtraction.relation_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);
+	    		onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);
+	    		break;
+	    	case QUANTITY: 
+	    		setQuantityExtractionPart(onrePatternTree, subTreeNode, onreExtraction, subTreeNode.index, danrothSpans); 
+	    		break;
+	    	case UNKNOWN: 
+	    		break;
 	    }
 	}
     
     private static void setQuantityExtractionPart(OnrePatternTree onrePatternTree, OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index, Onre_dsDanrothSpans danrothSpans) {
-    	//Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
     	Onre_dsDanrothSpan danrothSpan = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode, danrothSpans);
     	if(danrothSpan == null) return;
     	
@@ -70,7 +63,6 @@ public class OnreHelper {
     		return;
     	}
     	
-    	//onreExtraction.q_value =danrothSpan.value.toString(); //TO-DO: IMPORTANT-CHANGE:Don't extract if quantity value is present in the argument or relation
     	onreExtraction.q_unit =danrothSpan.unit;
     	
     	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase);
@@ -141,32 +133,9 @@ public class OnreHelper {
 		else onreExtraction.relation = new OnreExtractionPart();
 		
 		expandArgument(onreExtraction, patternNode_sentence);
-		
-		if(OnreUtils.quantityExists(onreExtraction)) expandQuantity(onreExtraction,patternNode_sentence);
-		
-		//if(onreExtraction.quantity_unit_objType != null) expandUnitObjType(onreExtraction, patternNode_sentence);
+		if(OnreUtils.quantityExists(onreExtraction)) expandQuantity_settingAdditionalInfo(onreExtraction,patternNode_sentence);
 		if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
-		//if(onreExtraction.quantity_unit != null) expandUnit(onreExtraction, patternNode_sentence);
 	}
-	
-	/*private static void expandUnit(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-		OnrePatternNode node_relation = OnreUtils.searchNodeInTree(onreExtraction.quantity_unit, patternNode_sentence);
-		
-	    List<OnrePatternNode> expansions = new ArrayList<>();
-		expansions.add(node_relation);
-		for(OnrePatternNode child : node_relation.children) {
-			if(child.dependencyLabel.equals("amod")) expansions.add(child);
-			if(child.dependencyLabel.equals("hmod")) expansions.add(child);
-		}
-		
-		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
-		StringBuilder sb = new StringBuilder("");
-		for (OnrePatternNode expansion : expansions) {
-			sb.append(expansion.word + " ");
-        }
-		
-		onreExtraction.quantity_unit.text = sb.toString().trim();
-    }*/
 	
 	private static void expandQuantity_percent(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 
@@ -189,11 +158,6 @@ public class OnreHelper {
 			
 			for(OnrePatternNode child : currNode.children) {
 				expansions.add(child); q_yetToExpand.add(child);
-				//if(child.dependencyLabel.equals("amod")) { expansions.add(child); q_yetToExpand.add(child); }
-				//if(child.dependencyLabel.equals("nn")) { expansions.add(child); q_yetToExpand.add(child); }
-				
-				//if(child.dependencyLabel.equals("prep") && child.word.equals("of")) { expansions.add(child); q_yetToExpand.add(child); } 
-				//if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions.add(child); q_yetToExpand.add(child); }
 			}
 		}
 
@@ -212,7 +176,7 @@ public class OnreHelper {
 		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prepOf.index); 
     }
 	
-	private static void expandQuantity(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+	private static void expandQuantity_settingAdditionalInfo(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		
 		OnrePatternNode argument_parent_node = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
 		if(argument_parent_node==null) return;
@@ -238,22 +202,22 @@ public class OnreHelper {
 			
 			//sorting the expansions & setting in the argument
 			Collections.sort(expansions, new OnreComparator_PatternNode_Index());
-			StringBuilder sb = new StringBuilder("");
+			StringBuilder sb_additional_info = new StringBuilder("");
 			for (OnrePatternNode expansion : expansions) {
-				sb.append(expansion.word + " ");
+				sb_additional_info.append(expansion.word + " ");
 	        }
 			
-			String quantity_unit_plus = sb.toString().trim();
+			String additional_info = sb_additional_info.toString().trim();
 			
 			// If upon expansion, we include already included text - ignore
-			if(isAlreadyPresent(onreExtraction, quantity_unit_plus, 2)) return;
+			if(isAlreadyPresent(onreExtraction, additional_info, 2)) return;
 			
 			/*int posOfComma = quantity_unit_plus.indexOf(',');
 			if(posOfComma != -1) {
 				quantity_unit_plus = quantity_unit_plus.substring(0,posOfComma-1);
 			}*/
 			
-			onreExtraction.additional_info = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
+			onreExtraction.additional_info = new OnreExtractionPart(additional_info, node_prep.index);
 			break;
 		}
 		
@@ -284,7 +248,7 @@ public class OnreHelper {
 			}
 	    }
 	    
-	    //TODO: IMPORTANT-CHANGE:if the relation word is one of configured words(grew/increased/down), then expand it on prep
+	    //TODO: IMPORTANT-CHANGE #6: ===START=== :if the relation word is one of configured words(grew/increased/down), then expand it on prep
 	    List<String> expandOnPrep = OnreIO.readFile_classPath(OnreFilePaths.filePath_expandOnPrep);
 		if(expandOnPrep.contains(node_relation.word)) {
 			for(OnrePatternNode child : node_relation.children) {
@@ -293,6 +257,7 @@ public class OnreHelper {
 				expansions.add(child); 
 			}
 		}
+		//TODO: IMPORTANT-CHANGE #6: ===END=== :if the relation word is one of configured words(grew/increased/down), then expand it on prep
 		
 		Collections.sort(expansions, new OnreComparator_PatternNode_Index());
 		StringBuilder sb = new StringBuilder("");
@@ -340,7 +305,7 @@ public class OnreHelper {
     }
 
 	private static boolean isAlreadyPresent(OnreExtraction onreExtraction,	String str, int type) {
-		
+		//here we are checking the complete extractionPart rather than just their headWord, let it be like this only
 		switch(type) {
 		case 0: // expanding argument
 			if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.quantity.text)) return true;
@@ -350,7 +315,7 @@ public class OnreHelper {
 			if(onreExtraction.argument!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.argument.text)) return true;
 			if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.quantity.text)) return true;
 			break;
-		case 2: // expanding quantity
+		case 2: // expanding quantity_percent or setting additional_info
 			if(onreExtraction.argument!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.argument.text)) return true;
 			if(onreExtraction.relation!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.relation.text)) return true;
 			if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.quantity.text)) return true;
@@ -409,7 +374,7 @@ public class OnreHelper {
 				if(child.dependencyLabel.equals("prep")) { expansions.add(child); q_yetToExpand.add(child); }
 				if(child.dependencyLabel.equals("pobj")) { expansions.add(child); q_yetToExpand.add(child); }
 				
-				//if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); } //TODO: not expanding on 'in'
+				//if(child.dependencyLabel.equals("prep") && child.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); } //TO-DO: not expanding just on 'in'
 				//if(child.dependencyLabel.equals("pobj") && currNode.word.equals("in")) { expansions_argument.add(child); q_yetToExpand.add(child); }
 			}
 		}
@@ -443,11 +408,13 @@ public class OnreHelper {
 		if(!OnreGlobals.arg_onre_isSeedFact) expandExtraction(onreExtraction, patternNode_sentence);
     	onreExtraction_dummyForNull(onreExtraction);
     	
+		//TODO: IMPORTANT-CHANGE #8: ===START=== :additional_info not already present in argument or relation : checking headwords
     	if(onreExtraction.additional_info == null) return onreExtraction;
-    	if(onreExtraction.additional_info.text.contains(onreExtraction.argument.text)) return null;
-    	if(onreExtraction.additional_info.text.contains(onreExtraction.relation.text)) return null;
-    	
+    	if(onreExtraction.additional_info.text.contains(onreExtraction.argument_headWord.text)) return null;
+    	if(onreExtraction.additional_info.text.contains(onreExtraction.relation_headWord.text)) return null;
+		//TODO: IMPORTANT-CHANGE #8: ===END=== :additional_info not already present in argument or relation : checking headwords
     	
     	return onreExtraction;
 	}
+	
 }
