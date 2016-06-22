@@ -6,8 +6,10 @@ package edu.iitd.cse.open_nre.onre.helper;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
@@ -427,19 +429,25 @@ public class OnreHelper {
     }
 	
 	private static void onreExtraction_dummyForNull(OnreExtraction onreExtraction) {
-		//TODO: 
+		//TO-DO: not required 
 		//if(onreExtraction.quantity_modifier == null) onreExtraction.quantity_modifier = new OnreExtractionPart();
 		//if(onreExtraction.quantity_unit == null) onreExtraction.quantity_unit = new OnreExtractionPart();
 		
-		if(onreExtraction.quantity_unit_plus == null) onreExtraction.quantity_unit_plus = new OnreExtractionPart();
-		//if(onreExtraction.additional_info == null) onreExtraction.additional_info = new OnreExtractionPart();
+		//if(onreExtraction.quantity_unit_plus == null) onreExtraction.quantity_unit_plus = new OnreExtractionPart();
+		//if(onreExtraction.additional_info == null) onreExtraction.additional_info = new OnreExtractionPart();//not required
 		
 		//if(onreExtraction.relation_joint == null) onreExtraction.relation_joint = new OnreExtractionPart();
 	}
 	
-	public static void onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction) throws IOException {
+	public static OnreExtraction onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction) throws IOException {
 		if(!OnreGlobals.arg_onre_isSeedFact) expandExtraction(onreExtraction, patternNode_sentence);
-    	onreExtraction_dummyForNull(onreExtraction);    	
+    	onreExtraction_dummyForNull(onreExtraction);
+    	
+    	if(onreExtraction.additional_info == null) return onreExtraction;
+    	if(onreExtraction.additional_info.text.contains(onreExtraction.argument.text)) return null;
+    	if(onreExtraction.additional_info.text.contains(onreExtraction.relation.text)) return null;
+    	
+    	
+    	return onreExtraction;
 	}
-	
 }

@@ -52,7 +52,7 @@ public class MayIHelpYou {
 		//addDummyExtractions(extrs);
 		//return javaList2ScalaSeq(extrs);
 		
-		return OnreUtils.sortMapByValue(extrs);
+		return OnreUtils.sortMapByValue(extrs, false);
 
 		// System.out.println("You are running me :)");
 	}
@@ -103,6 +103,7 @@ public class MayIHelpYou {
 	        //TODO: IMPORTANT-CHANGE:Don't extract if quantity unit is present in the argument
 	        if(onreExtraction.q_unit!=null && !onreExtraction.q_unit.isEmpty()) {
         		if(onreExtraction.argument.text.contains(onreExtraction.q_unit)) continue;
+        		//if(onreExtraction.q_unit.contains(onreExtraction.argument.text)) continue;
           	}
 	        
 	        //TODO: IMPORTANT-CHANGE:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
@@ -149,9 +150,7 @@ public class MayIHelpYou {
     	
     	if(subTree == null) return null;
     	
-    	OnreHelper.onreExtraction_postProcessing(patternNode_sentence, onreExtraction);
-    	
-    	return onreExtraction;
+    	return OnreHelper.onreExtraction_postProcessing(patternNode_sentence, onreExtraction);
     }
 
 	/*private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {
