@@ -120,6 +120,7 @@ public class MayIHelpYou {
         	onreExtraction.sentence = onrePatternTree.sentence;
         	
         	//TODO: IMPORTANT-CHANGE #10:Removing extractions where they are similar except for the additional-info field
+        	//extrs.put(onreExtraction, onreExtraction.patternNumber);
         	addExtractionToMap(extrs, onreExtraction);
         }
     	

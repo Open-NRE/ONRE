@@ -21,11 +21,6 @@ public class OnreExtractionPart {
 		this.offsetInterval = new Interval(0, 0); //TODO: dummy offset
 	}
 	
-	public OnreExtractionPart(String text, Interval offsetInterval) {
-		this.text = text.trim();
-		this.offsetInterval = offsetInterval;
-	}
-	
 	public OnreExtractionPart(String text) {
 		this.text = text.trim();
 		this.offsetInterval = new Interval(0, 0); //TODO: dummy offset

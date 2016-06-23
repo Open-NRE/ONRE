@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "By his estimates, the US has spent over $5 trillion just on overkill in nuclear weapons and development.";
+		String sentence = "great pics thanks for sharing, I love the ac/dc bike Users Browsing this Thread There are currently 1 users browsing this thread.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 

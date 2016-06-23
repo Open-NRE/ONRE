@@ -181,6 +181,8 @@ It could be possible that the pumpkin with 10 pouns is heavier one.
 And for Social Security, which is even more regressive, illegals pay 40 percent of the average household's contribution.
 48
 (illegals ; pay ; 40 percent of the average household 's contribution ; for Social Security , which is even more regressive)
+343
+(Social Security which is even more regressive ; pay ; 40 percent of the average household 's contribution)
 408
 (the average household 's contribution ; pay ; 40 percent ; for Social Security , which is even more regressive)
 
@@ -1214,7 +1216,7 @@ As a result, over a thousand customers in 23 countries are currently benefiting 
 ::354
 Current drug treatments using ribavirin and interferon cost $8,000 to $20,000 per year, and are usually only partly effective.
 48
-(Current drug treatments using ; cost ; $ 8000 ; to $ 20,000 per year)
+(Current drug treatments using ribavirin and interferon ; cost ; $ 8000 ; to $ 20,000 per year)
 
 ::355
 Hoping to get my 2 kids out there & help groom.
@@ -1259,9 +1261,9 @@ Breast feeding requires an extra 500 calories per day.
 ::365
 The last ad we put up had 35 responses, even better than what we get from the newspaper.
 48
-(The last ad put ; had ; 35 responses)
+(The last ad we put up ; had ; 35 responses)
 96
-(The last ad put ; [number of] responses even better than what we get from the newspaper ; 35)
+(The last ad we put up ; [number of] responses even better than what we get from the newspaper ; 35)
 
 ::366
 A total of 200 to 300 mg of bilirubin is produced daily in the healthy adult.
@@ -1903,7 +1905,7 @@ I got her an 80GB drive for $100.00 USD.
 ::545
 The root, which is rich in starch, contains nearly 80 Calorie per 100 gm.
 48
-(The root is ; contains ; nearly 80 calorie per 100 gm)
+(The root which is rich in starch ; contains ; nearly 80 calorie per 100 gm)
 
 ::546
 While U.S. exports peaked at $389 million in 1996, they have declined since then to $224 million thanks in large part to existing sanctions and European competition.
@@ -1999,7 +2001,7 @@ It doesn't seem sensible that I could set the output level of this amp at 29, wh
 ::571
 The tank I placed them in has 6 serpea tetras and 8 zebra danios.
 96
-(The tank placed in ; [number of] serpea tetras ; 6)
+(The tank I placed them in ; [number of] serpea tetras ; 6)
 
 ::572
 There must be at least 1 empty space directly adjacent to the palace in order for a saboteur to be deployed.
@@ -2314,7 +2316,7 @@ I will post 2 series in each post.
 ::658
 o Any unit which fires 2 projectiles per attack can split its attack between 2 targets if one target is destroyed with the first projectile, and/or the attacking unit is given new orders before the second projectile is fired.
 48
-(Any unit fires ; split ; 2 projectiles per attack)
+(unit ; split ; 2 projectiles per attack)
 
 ::659
 They do grits, buy 100% Pure Okinawan Coral Calcium from mexico.
@@ -4254,7 +4256,7 @@ Victor Martinez C 3 1 0 0 0 0 0 0 .300
 ::1218
 The fundraising event, organized by the Rutgers Packaging Engineering Advisory Board, drew more than 100 participants including packaging industry executives, Rutgers officials and a large contingent of students.
 48
-(The fundraising event organized ; drew ; more than 100 participants)
+(The fundraising event organized by the Rutgers Packaging Engineering Advisory Board ; drew ; more than 100 participants)
 
 ::1219
 Sheet of 25 w/map of Sweden 38.
@@ -4278,8 +4280,6 @@ Production time We need about 5 working days for production plus the transport t
 
 ::1223
 great pics thanks for sharing, I love the ac/dc bike Users Browsing this Thread There are currently 1 users browsing this thread.
-34
-(great pics thanks for sharing love ; currently ; currently 1 users)
 185
 (pics ; great ; currently 1 users)
 
@@ -4670,7 +4670,7 @@ By 2025, it will grow to nearly 72 million.
 ::1328
 Furthermore, attendees are invited to peruse behavior analytic books in our bookstore, which will offer more than 1,000 titles.
 487
-(bookstore ; offer ; more than 1000 titles)
+(our bookstore ; offer ; more than 1000 titles)
 
 ::1329
 Secret Financier in Monterey Park In Monterey Park, home to stretches of the 60 and the 710 freeways, billboard opponent Judy Chu remembers a war that Regency waged against her in the early 1990s over the city's billboard ban.
@@ -5757,7 +5757,7 @@ Last year at this time we were approaching 150 individual members.
 48
 (we ; Last year approaching ; 150 individual members)
 487
-(Last year this time approaching ; Last year approaching ; 150 individual members)
+(this time ; Last year approaching ; 150 individual members)
 
 ::1640
 Tina D. Great PR Newsletter Sign up for the Great PR newsletter and get our free 7 day Crash Course in Public Relations.
@@ -6538,7 +6538,7 @@ I've used 297 KWH this billing period with about 6 days to go.
 ::1858
 The last time we hired for such a position the price tag was $13,000.
 287
-(The last time hired for such a position ; price tag ; $ 13000)
+(The last time we hired for such a position ; price tag ; $ 13000)
 
 ::1859
 Among adults age 25 and above, 78 percent of those with a bachelor's degree or higher reported being in excellent or very good health in 2001, compared with 66 percent of those with some education beyond high school, 56 percent of high school completers, and 39 percent of those with less than a high school education.
@@ -6960,7 +6960,7 @@ Four lines of the palm, which converge at the symbolic Gate, correspond to the 4
 339
 (the Gate ; correspond ; 4 posts)
 488
-(Four lines of the palm converge at the symbolic Gate ; correspond ; 4 posts)
+(Four lines of the palm which converge at the symbolic Gate ; correspond ; 4 posts)
 
 ::1971
 If the player's House controls fewer than 25 friendly storage facilities when the code is invoked, then the code will also raise the total combined storage capacity of those facilities to 25,000 units.
