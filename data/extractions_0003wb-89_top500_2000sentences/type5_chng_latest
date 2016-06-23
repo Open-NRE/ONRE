@@ -499,7 +499,7 @@ Ae C.C Sabathia has a 2.59 ERA and closer Rafael Betancourt has only allowed 4 r
 48
 (Ae C.C Sabathia ; has ; 2.59 era)
 96
-(Ae C.C Sabathia ; ERA ; 2.59 era)
+(Ae C.C Sabathia ; ERA ; 2.59)
 
 ::148
 The NHSA, with the support of it's member clubs convinced the New Hampshire state legislature to pass a bill requiring a person to either belong to a .NH not for profit snowmobile club or pay a $30.00 user fee, per machine, to register a snowmobile in the State of New Hampshire.
@@ -837,7 +837,7 @@ The unstoppable Drogba now has 25 goals this season with more than a dozen match
 48
 (The unstoppable Drogba ; now has yet ; 25 goals)
 96
-(The unstoppable Drogba ; goals season ; 25 goals ; with more than a dozen matches)
+(The unstoppable Drogba ; [number of] goals season ; 25 ; with more than a dozen matches)
 142
 (The unstoppable Drogba ; more matches ; 25 goals)
 
@@ -1063,7 +1063,7 @@ To make a flower, you have to collect 7 trees.
 ::309
 The oldest sda health summit orlando computer engineers governed deletion are adequately greener than 40 symptoms old.
 4
-(The oldest sda health summit orlando computer engineers ; [number of] symptoms old ; greener than 40)
+(The oldest sda health summit orlando computer engineers ; symptoms old ; greener than 40)
 
 ::310
 In a Washington Post piece by the PLO's Marwan Barghouti, for example, he claimed Jews got 78% of all of the land, the standard Arab line.
@@ -1146,7 +1146,7 @@ In the UK and U.S., 25 to 30 years is typical.
 ::334
 This very long fantasy novel is about 199,000 words long and, as a printed book, runs to over 700 pages.
 4
-(This very long fantasy novel ; words long ; about 199000 words)
+(This very long fantasy novel ; [number of] words long ; about 199000)
 
 ::335
 They represent more than 50 charitable federations and funds serving more than 2,000 nonprofits nationwide.
@@ -1174,7 +1174,7 @@ Together with other progressive organizations, we aim to mobilize around 50,000 
 ::342
 The Harrison Manor House Hotel Hotel is my favorite 7 hotel in Lake Bluff.
 496
-(my ; Harrison Manor House Hotel Hotel ; 7 hotel)
+(my ; Harrison Manor House Hotel Hotel ; 7)
 
 ::343
 Photos taken July 10th in a gravel pit, Meadow Lake Provincial Park, 550 km northwest of our home in Regina, SK.
@@ -1249,7 +1249,7 @@ I would like $300 for it, But I would be willing to trade for an equivalent amou
 ::363
 Only 5 min away from the entrance to the Kruger National Park, our up market house offers the perfect base from where to explore the many attractions of the region.
 42
-(the entrance to the Kruger National Park , our up market house offers the perfect base from where to explore the many attractions of the region ; min away ; 5 min)
+(the entrance to the Kruger National Park , our up market house offers the perfect base from where to explore the many attractions of the region ; min away ; 5)
 
 ::364
 Breast feeding requires an extra 500 calories per day.
@@ -1261,7 +1261,7 @@ The last ad we put up had 35 responses, even better than what we get from the ne
 48
 (The last ad put ; had ; 35 responses)
 96
-(The last ad put ; responses even better than what we get from the newspaper ; 35 responses)
+(The last ad put ; [number of] responses even better than what we get from the newspaper ; 35)
 
 ::366
 A total of 200 to 300 mg of bilirubin is produced daily in the healthy adult.
@@ -1417,7 +1417,7 @@ I also have a SCSI adapter pc card for connecting up to 7 scsi devices.
 ::409
 Above photographs taken August 5th and August 9th, on the banks of the Red Deer River, Boreal Forest, 400 km north of our home in Regina, SK.
 113
-(our home in Regina , SK ; Above photographs taken August 5th and August 9th , on the banks of the Red Deer River , Boreal Forest , km north . ; 400 km)
+(our home in Regina , SK ; Above photographs taken August 5th and August 9th , on the banks of the Red Deer River , Boreal Forest , km north . ; 400)
 
 ::410
 There is only a very narrow range of environmental conditions under which organisms... 85 by Patty Inglish, MS published 2 years ago Portsmouth, New Hampshire is among the Top 30 Cities for Jobs in America, even during a recession.
@@ -1595,7 +1595,7 @@ Ever widening circle It is estimated that the average person knows about 250 peo
 ::457
 The Holiday Inn Atlanta Northlake Hotel Hotel is my favorite 7 hotel in Atlanta.
 496
-(my ; Holiday Inn Atlanta Northlake Hotel Hotel ; 7 hotel)
+(my ; Holiday Inn Atlanta Northlake Hotel Hotel ; 7)
 
 ::458
 Think this one is $15.00 Also finished up a product test this AM on email, another $6.00.
@@ -1856,7 +1856,7 @@ It primarily has 2 sets each consisting of 6 pairs.
 48
 (It ; primarily has ; 2 sets)
 96
-(It ; sets consisting of 6 pairs ; 2 sets)
+(It ; [number of] sets consisting of 6 pairs ; 2)
 
 ::535
 Typical luminous intensity is 4,000 4,500 and 5,000 mcd for the red, amber and yellow LEDs, respectively, while luminous flux for the white, warm white, blue and green LEDs is 25, 25, 6 and 25 lm, respectively.
@@ -1988,7 +1988,7 @@ In 21 apperances with the Dodgers rookie ball team last season Eric had a 2.91 E
 48
 (last season Eric ; had ; 2.91 era ; In 21 apperances with the Dodgers rookie ball team)
 96
-(last season Eric ; ERA ; 2.91 era)
+(last season Eric ; ERA ; 2.91)
 
 ::569
 We are located at 985 King St. W., Hamilton, Ontario, and cater to women only.
@@ -1999,7 +1999,7 @@ It doesn't seem sensible that I could set the output level of this amp at 29, wh
 ::571
 The tank I placed them in has 6 serpea tetras and 8 zebra danios.
 96
-(The tank placed in ; serpea tetras ; 6 serpea)
+(The tank placed in ; [number of] serpea tetras ; 6)
 
 ::572
 There must be at least 1 empty space directly adjacent to the palace in order for a saboteur to be deployed.
@@ -2150,7 +2150,7 @@ BBC World News is available in more than 200 countries worldwide.
 ::614
 For our Club 48 members, unfortunately, in the face of this bankruptcy filing, you will no longer be able to redeem your points for rewards.
 47
-(our ; Club members ; 48 members)
+(our ; [number of] Club members ; 48)
 
 ::615
 The number of queries so far in 2009 is about 6 million, nearly what they were for all of 2008 and twice that for 2007.
@@ -2207,7 +2207,7 @@ I've got all the rest of my chores done for the day........except anything on my
 ::629
 Sacramento International Airport is about 30 miles away.
 2
-(Sacramento International Airport ; miles away ; about 30 miles)
+(Sacramento International Airport ; [number of] miles away ; about 30)
 
 ::630
 He estimated that startup costs will range be $133,000 to $201,000 and include the franchise fee, equipment, minimal building improvements, office supplies and accounting and legal fees.
@@ -2803,7 +2803,7 @@ The Oaks has 4 different spa vacation packages to choose from.
 48
 (The Oaks ; has ; 4 different spa vacation packages)
 96
-(The Oaks ; different spa vacation packages choose from ; 4 different spa vacation packages)
+(The Oaks ; [number of] different spa vacation packages choose from ; 4)
 
 ::800
 This 3 Bedroom, 2 Bath Home Also Has New Siding &Windows on Beautiful Mature Property.
@@ -3039,7 +3039,7 @@ Its handy phrasebook is divided into 12 topics to help you find just the phrase 
 ::869
 The Vat Phou boat has 12 elegant twin shared cabins, each with a view over the southern Mekong River in Laos.
 96
-(The Vat Phou boat ; elegant twin shared cabins ; 12 elegant twin)
+(The Vat Phou boat ; [number of] elegant twin shared cabins ; 12)
 
 ::870
 For fatal crashes occurring from midnight to 3 a.m., 75 percent involved alcohol.
@@ -3085,7 +3085,7 @@ I need to set it to run on 230 VAC 50 HZ.
 ::883
 they have everything on display that suit your budget and style. 1 total marks.
 96
-(they ; total marks ; 1 total)
+(they ; [number of] total marks ; 1)
 
 ::884
 This location is also 11 miles from Le Roy.
@@ -3236,7 +3236,7 @@ The resort has 79 rooms equipped with air conditioning, elevators, disabled park
 48
 (The resort ; has ; 79 rooms)
 96
-(The resort ; rooms equipped with air conditioning , elevators , disabled parking and facilities , lounges , bar , dining room , and 24 hour front desk ; 79 rooms)
+(The resort ; [number of] rooms equipped with air conditioning , elevators , disabled parking and facilities , lounges , bar , dining room , and 24 hour front desk ; 79)
 
 ::927
 The first quarter average was an economic expansion high of 1,749 million units.
@@ -3760,7 +3760,7 @@ More than 300 associates worldwide with Engineering Design Centers in Taipei, Ch
 ::1078
 I'm happily married and 31 yrs old and still have the abortion thing in the back of my mind.
 15
-(I ; [number of] yrs old ; 31)
+(I ; yrs old ; 31)
 
 ::1079
 Drogba and Shevchenko may not be 100% ready for tomorrow but it appears Sheva has a better chance of making it than Drogs.
@@ -3834,7 +3834,7 @@ UMD has 17 native Minnesotans on the roster.
 48
 (UMD ; has ; 17 native minnesotans)
 96
-(UMD ; native Minnesotans ; 17 native minnesotans ; on the roster)
+(UMD ; [number of] native Minnesotans ; 17 ; on the roster)
 142
 (UMD ; roster ; 17 native minnesotans)
 
@@ -4004,7 +4004,7 @@ The conference will bring together more than 1,000 participants to learn about t
 ::1144
 It is about 5 English miles north of Sefuri and 4 English miles northwest of Rimuni.
 2
-(It ; English miles north ; about 5 english miles ; of Sefuri)
+(It ; [number of] English miles north ; about 5 ; of Sefuri)
 
 ::1145
 release to be a stepping stone for JSF 2 support.
@@ -4408,8 +4408,6 @@ According to US Government surveys, about 14 million Americans, 7.4 percent of t
 
 ::1259
 By his estimates, the US has spent over $5 trillion just on overkill in nuclear weapons and development.
-48
-(the US ; spent ; $ 5 trillion just ; just on overkill in nuclear weapons and development)
 
 ::1260
 And it would be worth noting that Gore beat Bush among Latinos by 27 percentage points in the vote.
@@ -4515,7 +4513,7 @@ $10 off first purchase & free shipping in Canada.
 ::1287
 Directions Chicago Midway Airport is 29 miles North to the property.
 2
-(Directions Chicago Midway Airport ; miles North ; 29 miles ; to the property)
+(Directions Chicago Midway Airport ; [number of] miles North ; 29 ; to the property)
 
 ::1288
 Save up to $14.99 over other online flower services and 800 flower phone numbers that charge you to send birthday flowers.
@@ -4608,7 +4606,7 @@ His records sold more than 100 million copies and he has more than a dozen gold 
 ::1314
 Stool measures 14.5 inches wide x 14.5 inches deep x 26 inches high.
 25
-(measures ; inches deep inches high ; 26 inches)
+(measures ; [number of] inches deep inches high ; 26)
 
 ::1315
 Wez committed the patch to both PHP 5 branches following a lengthy review of his own.
@@ -4640,7 +4638,7 @@ This one said the charge was $13, but when I was done, they charged me $12.00.
 ::1322
 The corners are 8 layers thick where they attach to the legs.
 4
-(The corners ; layers thick ; 8 layers)
+(The corners ; [number of] layers thick ; 8)
 
 ::1323
 o A soldier can fire only 1 shell per attack.
@@ -4976,7 +4974,7 @@ Grace periods vary but this new product which fees features interest rates buyin
 ::1414
 The Surefire G2Z CombatLight is 5.2 inches long and weighs 4.3 ounces.
 4
-(The Surefire G2Z CombatLight ; inches long ; 5.2 inches)
+(The Surefire G2Z CombatLight ; [number of] inches long ; 5.2)
 
 ::1415
 In 1864 he went to Norway and has lived there since, on a farm of 227 acres.
@@ -5580,7 +5578,7 @@ It also uses 25 per cent less energy than other systems and reduces operating co
 ::1588
 The Surefire 10X Dominator is 9.5 inches long and weighs 20 ounce.
 4
-(The Surefire 10X Dominator ; inches long ; 9.5 inches)
+(The Surefire 10X Dominator ; [number of] inches long ; 9.5)
 
 ::1589
 The manufacturing complex was doubled in size, incorporating 100,000 sq.
@@ -5787,7 +5785,7 @@ On average, air traffic controllers in the United States handle 64 million takeo
 ::1645
 The M2 Centurion is 5.6 inches long and weighs 5.8 ounces.
 4
-(The M2 Centurion ; inches long ; 5.6 inches)
+(The M2 Centurion ; [number of] inches long ; 5.6)
 
 ::1646
 List the 4 steps by which this was done.
@@ -6083,7 +6081,7 @@ This potentially impacts every single woman seeking prenatal care because she ne
 ::1731
 On paper the dimensions are 2.20 meters high, 100cm wide and 90cm deep.
 4
-(the dimensions ; meters high ; 2.20 meters)
+(the dimensions ; [number of] meters high ; 2.20)
 
 ::1732
 This Colorado teen has a 5 pitch repetoire highlighted by a sinker and a 94 MPH Fastball.
@@ -6662,7 +6660,7 @@ I might have some 72 pin now though..
 48
 (I ; have now though ; 72 pin)
 96
-(I ; [number of] pin ; 72)
+(I ; pin ; 72)
 
 ::1893
 Every .25 seconds I'll have a 100 ms lag period.
@@ -6920,7 +6918,7 @@ After the kickoff moved, it rose to 26.8 percent of the time.
 ::1960
 Thanks, Amanda 12/28/99 In August of 1988 I was 18 yrs old and just graduated from a career center and high school.
 4
-(I ; [number of] yrs old ; 18)
+(I ; yrs old ; 18)
 
 ::1961
 A Game Of 3 Halves Game Description Represent your country in the finals of the rugby world cup and help them win.
@@ -6941,7 +6939,7 @@ They had 10 children, with 8 surviving at the time of the 1900 census.
 48
 (They ; had ; 10 children ; with 8 surviving at the time of the 1900 census)
 96
-(They ; [number of] children ; 10)
+(They ; children ; 10)
 
 ::1966
 She was born in Port Colbourne, Ontario, and owned a chain of 36 day care centres in that province for children six months to 12 years.

@@ -27,15 +27,15 @@ public class OnreHelper {
 
     	switch(OnreExtractionPartType.getType(patternNode_configured.word)) {
 	    	case ARGUMENT: 
-	    		onreExtraction.argument_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);
-	    		onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);
+	    		onreExtraction.argument_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);
+	    		onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);
 	    		break;	    	
 	    	case RELATION: 
-	    		onreExtraction.relation_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);
-	    		onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index);
+	    		onreExtraction.relation_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);
+	    		onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);
 	    		break;
 	    	case QUANTITY: 
-	    		setQuantityExtractionPart(onrePatternTree, subTreeNode, onreExtraction, subTreeNode.index, danrothSpans); 
+	    		setQuantityExtractionPart(onrePatternTree, subTreeNode, onreExtraction, subTreeNode.index, danrothSpans, subTreeNode.posTag); 
 	    		break;
 	    	case UNKNOWN: 
 	    		break;
@@ -59,7 +59,7 @@ public class OnreHelper {
 		else return quantityPhrase;
     }*/
     
-    private static void setQuantityExtractionPart(OnrePatternTree onrePatternTree, OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index, Onre_dsDanrothSpans danrothSpans) {
+    private static void setQuantityExtractionPart(OnrePatternTree onrePatternTree, OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index, Onre_dsDanrothSpans danrothSpans, String posTag) {
     	Onre_dsDanrothSpan danrothSpan = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode, danrothSpans);
     	if(danrothSpan == null) return;
     	
@@ -74,10 +74,9 @@ public class OnreHelper {
     	
     	onreExtraction.q_unit =danrothSpan.unit;
     	
-    	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase);
-    	onreExtraction.quantity.index = index;
+    	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase, index, posTag);
     	
-    	//TODO: IMPORTANT-CHANGE: Add sibling of quantity if that sibling is connected by "neg" depLabel
+    	//TODO: IMPORTANT-CHANGE: DIDN'T WORK :Add sibling of quantity if that sibling is connected by "neg" depLabel
     	/*String newQuantityPhrase = addNegationIfPossibleToQuantity(onreExtraction, onrePatternTree, quantityPhrase);
     	
     	if(!newQuantityPhrase.equals(quantityPhrase)) {
@@ -157,18 +156,29 @@ public class OnreHelper {
 
 	private static boolean postProcessingHelper_isAdditionalInfoAlreadyPresent(OnreExtraction onreExtraction) {
 		if(onreExtraction.additional_info == null) return false;
-    	if(onreExtraction.additional_info.text.contains(onreExtraction.argument_headWord.text)) return true;
-    	if(onreExtraction.additional_info.text.contains(onreExtraction.relation_headWord.text)) return true;
-    	
-    	return false;
+    	//if(onreExtraction.additional_info.text.contains(onreExtraction.argument_headWord.text)) return true;
+    	//if(onreExtraction.additional_info.text.contains(onreExtraction.relation_headWord.text)) return true;
+		
+		if(OnreUtils_string.ignoreCaseContainsWord(onreExtraction.additional_info.text, onreExtraction.argument_headWord.text)) return true;
+		if(OnreUtils_string.ignoreCaseContainsWord(onreExtraction.additional_info.text, onreExtraction.relation_headWord.text)) return true;
+
+		return false;
 	}
 
 	private static void postProcessingHelper_numberOf(OnreExtraction onreExtraction) {
 		if(onreExtraction.q_unit==null || onreExtraction.q_unit.isEmpty()) return;
 		
-        if(onreExtraction.relation.text.equals(onreExtraction.q_unit)) {
-        	onreExtraction.quantity.text = onreExtraction.quantity.text.replace(onreExtraction.relation.text, "").trim();
-        	onreExtraction.relation.text = "[number of] " + onreExtraction.relation.text;
+        //if(onreExtraction.relation.text.equalsIgnoreCase(onreExtraction.q_unit)) {
+		if(OnreUtils_string.ignoreCaseContainsWord(onreExtraction.relation.text, onreExtraction.q_unit)) {
+        	//onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("(?i)"+onreExtraction.relation.text, "").trim();
+			onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("(?i)"+onreExtraction.q_unit, "").trim();
+        	
+			if(onreExtraction.relation_headWord.posTag.matches("(?i)NNP?S")
+					|| onreExtraction.quantity.posTag.matches("(?i)NNP?S")
+					|| onreExtraction.relation_headWord.text.endsWith("s")
+					|| onreExtraction.q_unit.endsWith("s")
+					) //adding [number of] only in case of plural noun - rel headword or q_unit
+        		onreExtraction.relation.text = "[number of] " + onreExtraction.relation.text;
         }
 	}
 

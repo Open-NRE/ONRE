@@ -9,6 +9,7 @@ import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
 import edu.iitd.cse.open_nre.onre.helper.OnreHelper_DanrothQuantifier;
 import edu.iitd.cse.open_nre.onre.helper.OnreHelper_json;
 import edu.iitd.cse.open_nre.onre.utils.OnreIO;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
 
 
 public class temp {
@@ -38,7 +39,15 @@ public class temp {
 		
 		//System.out.println("2 terrapins".replace("terrapins", ""));
 		
-		System.out.println("1.2".replaceAll("\\.$", ""));
+		//System.out.println("1.2".replaceAll("\\.$", ""));
+		
+		//System.out.println("black plastic earth machine things".matches("\\w|^" + "black plastic earth machine things" + "\\w|$")); 
+		//System.out.println("black plastic earth machinE things".matches("(?i).*\\b" + "black plastic earth machine things" + "\\b.*"));
+		//System.out.println(" things ".matches(".*(\\w|^)" + "things" + "(\\w|$).*"));
+		String s1="the US$";
+		System.out.println(s1.matches("(?i).*\\b" + "us$" + "\\b.*"));
+		
+		//System.out.println(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContainsWord("of the average household 's contribution", "the average household 's contribution"));
 		
 	}
 

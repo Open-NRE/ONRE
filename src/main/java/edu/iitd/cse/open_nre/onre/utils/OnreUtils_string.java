@@ -1,7 +1,5 @@
 package edu.iitd.cse.open_nre.onre.utils;
 
-import java.util.Arrays;
-import java.util.List;
 
 public class OnreUtils_string {
 	
@@ -9,7 +7,7 @@ public class OnreUtils_string {
 		return s1.toLowerCase().matches(s2.toLowerCase());
 	}
 	
-	public static boolean ignoreCaseContainsWord(String s1, String s2) {
+	/*public static boolean ignoreCaseContainsWord(String s1, String s2) {
 		List<String> listOfWords = Arrays.asList(s1.split(" "));
 		
 		for (String word : listOfWords) {
@@ -17,10 +15,10 @@ public class OnreUtils_string {
 		}
 		
 		return false;
-	}
+	}*/
 	
-	public static boolean isIgnoreCaseContains(String s1, String s2) {
-		return s1.toLowerCase().contains(s2.toLowerCase());
+	public static boolean ignoreCaseContainsWord(String s1, String s2) {
+		return s1.matches("(?i).*\\b" + s2 + "\\b.*");
 	}
 	
 	public static boolean isIgnoreCaseIgnoreCommaIgnoreSpaceContains(String s1, String s2) {

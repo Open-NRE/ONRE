@@ -14,6 +14,8 @@ public class OnreExtractionPart {
 	public Interval offsetInterval;
 	public int index; //required for expanding extraction
 	
+	public String posTag;
+	
 	public OnreExtractionPart() {
 		this.text = "";
 		this.offsetInterval = new Interval(0, 0); //TODO: dummy offset
@@ -32,6 +34,13 @@ public class OnreExtractionPart {
 	public OnreExtractionPart(String text, int index) {
 		this.text = text.trim();
 		this.index = index;
+		this.offsetInterval = new Interval(0, 0); //TODO: dummy offset
+	}
+	
+	public OnreExtractionPart(String text, int index, String posTag) {
+		this.text = text.trim();
+		this.index = index;
+		this.posTag = posTag;
 		this.offsetInterval = new Interval(0, 0); //TODO: dummy offset
 	}
 	
