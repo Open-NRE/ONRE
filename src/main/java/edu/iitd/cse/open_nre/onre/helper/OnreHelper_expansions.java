@@ -26,8 +26,9 @@ public class OnreHelper_expansions {
 		else onreExtraction.relation = new OnreExtractionPart();
 		
 		expandArgument(onreExtraction, patternNode_sentence);
+		expandQuantity(onreExtraction, patternNode_sentence);
 		if(OnreUtils.quantityExists(onreExtraction)) expandQuantity_settingAdditionalInfo(onreExtraction,patternNode_sentence);
-		if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
+		//if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
 	}
 	
 	private static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
@@ -109,7 +110,35 @@ public class OnreHelper_expansions {
 		return expansions;
 	}
 	
-	private static void expandQuantity_percent(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+	private static void expandQuantity(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+		if(onreExtraction.quantity==null) return;
+
+		OnrePatternNode quantity = OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
+		
+		OnrePatternNode node_prep = null;
+		for(OnrePatternNode child : quantity.children) {
+			if(child.dependencyLabel.equals("prep")) node_prep = child;
+		}
+		
+		if(node_prep == null) return;
+		
+	    Set<OnrePatternNode> expansions = expandHelper_expandCompleteSubTree(node_prep);
+	    
+		String quantity_unit_plus = expandHelper_sortExpansions_createStr(expansions);
+		// If upon expansion, we include already included text - ignore
+		if(expandHelper_isAlreadyPresent(onreExtraction, quantity_unit_plus, 2)) return;
+		
+		String qPhraseExceptValue = OnreHelper_DanrothQuantifier.getPhraseExceptValue(onreExtraction.quantity.text);
+		
+		/*if(OnreUtils_string.isIgnoreCaseContainsPhrase(quantity_unit_plus, qPhraseExceptValue))
+			onreExtraction.quantity.text = onreExtraction.quantity.text.replace(qPhraseExceptValue, "").trim();*/
+		quantity_unit_plus = quantity_unit_plus.replaceAll("^"+qPhraseExceptValue, "");
+		quantity_unit_plus = quantity_unit_plus.replaceAll("^"+onreExtraction.q_unit, "");
+				
+		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
+    }
+	
+	/*private static void expandQuantity_percent(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 
 		OnrePatternNode quantity_percent = OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity_percent, patternNode_sentence);
 		
@@ -126,7 +155,7 @@ public class OnreHelper_expansions {
 		// If upon expansion, we include already included text - ignore
 		if(expandHelper_isAlreadyPresent(onreExtraction, quantity_unit_plus, 2)) return;
 		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prepOf.index); 
-    }
+    }*/
 
 	private static void expandQuantity_settingAdditionalInfo(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		
@@ -223,17 +252,20 @@ public class OnreHelper_expansions {
 			if(onreExtraction.argument!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.argument.text)) return true;
 			if(onreExtraction.relation!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.relation.text)) return true;
 			if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(str, onreExtraction.quantity.text)) return true;
+			
+			if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(onreExtraction.quantity.text, str)) return true;
+			//if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.quantity.text, str)) return true;
 			break;
 		}
 		
 		return false;
 	}
 	
-	private static Set<OnrePatternNode> expandHelper_expandCompleteSubTree(OnrePatternNode node_prepOf) {
+	private static Set<OnrePatternNode> expandHelper_expandCompleteSubTree(OnrePatternNode nodeToExpand) {
 		Set<OnrePatternNode> expansions = new HashSet<>();
-	    expansions.add(node_prepOf);
+	    expansions.add(nodeToExpand);
 		
-		expandHelper_expandCompleteSubTree(node_prepOf, expansions);
+		expandHelper_expandCompleteSubTree(nodeToExpand, expansions);
 		return expansions;
 	}
 

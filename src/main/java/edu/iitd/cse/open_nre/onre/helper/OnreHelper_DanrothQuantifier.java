@@ -70,6 +70,15 @@ public class OnreHelper_DanrothQuantifier {
 		return null;
 	}*/
 	
+	public static String getPhraseExceptValue(String phrase) {
+		String value = getValueFromPhrase(phrase);
+		if(value == null) return phrase;
+		
+		phrase =  phrase.replaceAll(".*"+value, "");
+		phrase = phrase.replace("  ", " ");
+		return phrase.trim();
+	}
+	
 	public static String getValueFromPhrase(String phrase) {
 		//String phrase = getQuantityPhrase(quantSpan);
 		

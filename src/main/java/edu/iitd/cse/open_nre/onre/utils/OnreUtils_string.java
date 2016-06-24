@@ -17,7 +17,7 @@ public class OnreUtils_string {
 		return false;
 	}*/
 	
-	public static boolean ignoreCaseContainsWord(String s1, String s2) {
+	public static boolean isIgnoreCaseContainsPhrase(String s1, String s2) {
 		return s1.matches("(?i).*\\b" + s2 + "\\b.*");
 	}
 	

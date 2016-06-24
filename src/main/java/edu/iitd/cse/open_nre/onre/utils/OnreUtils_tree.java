@@ -55,10 +55,7 @@ public class OnreUtils_tree {
 		
 		while(!q_patternNode.isEmpty()) {
 			OnrePatternNode currNode = q_patternNode.remove();
-			for(OnrePatternNode child : currNode.children)
-			{
-				if(child.index == onreExtractionPart.index) return currNode;
-			}
+			for(OnrePatternNode child : currNode.children) if(child.index == onreExtractionPart.index) return currNode;
 			q_patternNode.addAll(currNode.children);
 		}
 		

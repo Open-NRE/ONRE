@@ -235,7 +235,7 @@ Belladonna in Scarlatina But, he also stated, that before he could publish this 
 ::67
 If you're an average car owner, your car and its needs take up about 18 percent of your budget.
 274
-(your car ; take ; about 18 percentof your budget) === T
+(your car ; take ; about 18 percent of your budget) === T
 408
 (your budget ; take ; about 18 percent) === F
 
@@ -456,7 +456,7 @@ The exhibition starts with some photos that Tobias took at the age of 19 during 
 ::130
 Since then, the team that won the toss won 59.8 percent of the time, because even if it did not win on the first possession, it often controlled field position.
 48
-(team ; won ; 59.8 percentof the time ; Since then) === F
+(team ; won ; 59.8 percent of the time ; Since then) === F
 408
 (the time ; won ; 59.8 percent ; Since then) === F
 
@@ -513,7 +513,7 @@ Ae C.C Sabathia has a 2.59 ERA and closer Rafael Betancourt has only allowed 4 r
 499
 (Sabathia ; C.C ; 2.59 era) === F
 96
-(Ae C.C Sabathia ; ERA ; 2.59 era) === F
+(Ae C.C Sabathia ; ERA ; 2.59 era) === T
 274
 (Ae C.C Sabathia ; has ; 2.59 era) === T
 
@@ -871,7 +871,7 @@ I received a small bonus in this paycheck that I wasn't prepared for & I ended u
 ::243
 Just like in ALL NATO exercises, the U.S. would shoulder 85% of the burden, as evidenced by the fact that the French officer was shopping in the American PX, and not the other way around.
 274
-(the U.S. ; shoulder ; 85 %of the burden ; Just like in ALL NATO exercises) === T
+(the U.S. ; shoulder ; 85 % of the burden ; Just like in ALL NATO exercises) === T
 408
 (the burden ; shoulder ; 85 % ; Just like in ALL NATO exercises) === F
 
@@ -1343,7 +1343,7 @@ Breast feeding requires an extra 500 calories per day.
 ::365
 The last ad we put up had 35 responses, even better than what we get from the newspaper.
 48
-(The last ad put ; had ; 35 responses) === T
+(The last ad put ; had ; 35 responses) === F
 96
 (The last ad put ; responses even better ; 35 responses) === F
 
@@ -1559,7 +1559,7 @@ Liberty Head upper left corner block of eight, four wide by 2 high.
 ::421
 1998 County citizens approved $6 million in General Obligation Bonds to acquire land for a fourth regional park.
 48
-(1998 County citizens ; approved ; $ 6 million) === T
+(1998 County citizens ; approved ; $ 6 million)
 386
 (1998 County citizens ; approved ; $ 6 million ; in General Obligation Bonds) === T
 
@@ -1582,7 +1582,7 @@ Almost $50.00 less per month than individual providers.
 ::426
 President Bush won an enormous 13 percent of the vote there in 2004 and some people believe that that was overstating his support.
 48
-(President Bush ; won ; 13 percentof the vote there ; in 2004) === T
+(President Bush ; won ; 13 percent of the vote there ; in 2004) === T
 408
 (the vote there ; won ; 13 percent ; in 2004) === F
 
@@ -1695,7 +1695,7 @@ Villone, Ron WSN 51 .000 2 0 0 0 0 0 2 0 0 0 0 .000
 ::453
 There is a $25 charge for this.
 438
-(charge ; is ; $ 25 charge) === T
+(charge ; is ; $ 25 charge) === F
 
 ::454
 Latest Headlines by BethAnne, Special To NASCAR commentary and driver pictures, 2011 NASCAR schedule, video, Bench Racing With Steve and Charlie I am the field producer/photographer of the syndicated radio show/website ON PIT ROW.
@@ -2031,7 +2031,7 @@ I got her an 80GB drive for $100.00 USD.
 ::545
 The root, which is rich in starch, contains nearly 80 Calorie per 100 gm.
 274
-(The root is ; contains ; nearly 80 calorie per 100 gm) === T
+(The root is ; contains ; nearly 80 calorie per 100 gm) === F
 279
 (100 gm ; contains ; nearly 80 calorie per 100 gm) === F
 
@@ -2128,7 +2128,7 @@ In 21 apperances with the Dodgers rookie ball team last season Eric had a 2.91 E
 48
 (last season Eric ; had ; 2.91 era ; In 21 apperances with the Dodgers rookie ball team) === T
 96
-(last season Eric ; ERA ; 2.91 era) === F
+(last season Eric ; ERA ; 2.91 era) === T
 499
 (Eric ; last season ; 2.91 era ; In 21 apperances with the Dodgers rookie ball team) === F
 
@@ -2208,7 +2208,7 @@ The Jews got 59% of the land.
 408
 (the land ; got ; 59 %) === F
 274
-(The Jews ; got ; 59 %of the land) === T
+(The Jews ; got ; 59 % of the land) === T
 
 ::591
 For instance, the unemployment rate for these workers ranges from 12 percent for those with level two quantitative skills up to 20 percent for those with level one quantitative skills.
@@ -2229,7 +2229,7 @@ The family owns 60% of the group.
 408
 (the group ; owns ; 60 %) === F
 48
-(The family ; owns ; 60 %of the group) === T
+(The family ; owns ; 60 % of the group) === T
 
 ::596
 More Compare the Top 10 Web Hosts 2011.
@@ -2684,7 +2684,7 @@ Motor vehicles emit 85 percent of the benzene in the air.
 408
 (the benzene in the air ; emit ; 85 percent) === F
 48
-(Motor vehicles ; emit ; 85 percentof the benzene in the air) === T
+(Motor vehicles ; emit ; 85 percent of the benzene in the air) === T
 
 ::709
 Otherwise, I'll still get at least $30.00 in rebates from each through the year.
@@ -3195,7 +3195,7 @@ The player selects his party of 8 characters out of a pool of 40.
 ::847
 Combined, these three states represent about 40 percent of the H 1B visas for computer workers.
 48
-(these three states ; represent ; about 40 percentof the H 1B visas for computer workers) === T
+(these three states ; represent ; about 40 percent of the H 1B visas for computer workers) === T
 408
 (the H 1B visas for computer workers ; represent ; about 40 percent) === F
 
@@ -3837,7 +3837,7 @@ There are 3500 calories in a pound of fat.
 ::1015
 At about 90, I was out.
 492
-(I ; At ; about 90) === T
+(I ; At ; about 90) === F
 
 ::1016
 The tops of these islands are now 50 to 100 metres below sea level.
@@ -4622,9 +4622,9 @@ He makes $7,415 per hour more than the minimum wage.
 ::1222
 Production time We need about 5 working days for production plus the transport time.
 48
-(We ; Production time need ; about 5 working days) === T
+(We ; Production time need ; about 5 working days) === F
 408
-(production ; need ; about 5 working days) === T
+(production ; need ; about 5 working days) === F
 
 ::1223
 great pics thanks for sharing, I love the ac/dc bike Users Browsing this Thread There are currently 1 users browsing this thread.
@@ -4765,7 +4765,7 @@ According to US Government surveys, about 14 million Americans, 7.4 percent of t
 ::1259
 By his estimates, the US has spent over $5 trillion just on overkill in nuclear weapons and development.
 274
-(the US ; spent ; $ 5 trillion just ; just on overkill in nuclear weapons and development) === T
+(the US ; spent ; $ 5 trillion just ; just on overkill in nuclear weapons and development) === F
 
 ::1260
 And it would be worth noting that Gore beat Bush among Latinos by 27 percentage points in the vote.
@@ -4860,7 +4860,7 @@ Molitor was in the final year of his 2.1 million dollar per year contract and tu
 ::1284
 As you can see, if you simply applied 8 pounds of seed out of the bag, you'd only be achieving 85 percent of target rate.
 48
-(you ; only achieving ; 85 percentof target rate) === T
+(you ; only achieving ; 85 percent of target rate) === T
 408
 (target rate ; only achieving ; 85 percent) === F
 
@@ -4870,7 +4870,7 @@ Or check out the 24 hour forecast map , the 36 hour forecast map , or the 48 hou
 ::1286
 $10 off first purchase & free shipping in Canada.
 263
-(first purchase ; off ; $ 10 off first purchase & free shipping) === T
+(first purchase ; off ; $ 10 off first purchase & free shipping) === F
 
 ::1287
 Directions Chicago Midway Airport is 29 miles North to the property.
@@ -5394,7 +5394,7 @@ Instead of letting go one fifth of the work force, the firm reduces the hours of
 ::1420
 According to her words, at present the number of died people, who had received burns during the explosion in Pinsk, makes up 5 people.
 274
-(at present the number of died people received during the explosion in Pinsk ; makes ; 5 people ; According to her words) === T
+(at present the number of died people received during the explosion in Pinsk ; makes ; 5 people ; According to her words) === F
 
 ::1421
 This year organizers are projecting 75,000 participants and are offering $400,000 worth of prizes.
@@ -5487,7 +5487,7 @@ A survey by a Moroccan association showed that 32.4% of lawsuits at the court of
 408
 (lawsuits ; showed ; 32.4 %) === F
 48
-(A survey by a Moroccan association ; showed ; 32.4 %of lawsuits) === T
+(A survey by a Moroccan association ; showed ; 32.4 % of lawsuits) === F
 
 ::1444
 $1700 for the whole place, including washing, all the paint and my outbuildings.
@@ -5515,7 +5515,7 @@ Do water changes of 15 to 20% a week depending on bio load.
 ::1451
 Prasad Yendluri Revision 01.045 Applied Issue 134 to Section 9.1.4
 192
-(Issue ; Applied ; 01.045 applied issue 134) === T
+(Issue ; Applied ; 01.045 applied issue 134) === F
 197
 (Applied ; Issue ; 01.045 applied issue 134) === F
 
@@ -5525,7 +5525,7 @@ There are more than 30 million African Americans in the US and only 1 million Cu
 ::1453
 There are actually only 212 different HTML colors.
 438
-(colors ; are actually ; 212 different html colors) === T
+(colors ; are actually ; 212 different html colors) === F
 
 ::1454
 U.S. population growth is projected to be 1.1% in the next twenty years.
@@ -5544,7 +5544,7 @@ In the middle of the fourth, Bow Creek leads 2 to 1. BOTTOM OF THE FOURTH John K
 48
 (Bow Creek ; leads ; 2 to 1 ; In the middle of the fourth) === T
 488
-(Bow Creek ; leads ; 2 to 1) === T
+(Bow Creek ; leads ; 2 to 1) === F
 
 ::1459
 We currently offer 110 independent residences, 12 assisted living suites and 12 private skilled nursing rooms.
@@ -5728,7 +5728,7 @@ at 1 Length 37 This means that position 78 in the contig with xb54a3.s1
 ::1506
 Families have reported 365 deaths from the poison, 100 of which have been confirmed so far.
 48
-(Families ; reported ; 365 deaths) === T
+(Families ; reported ; 365 deaths) === F
 
 ::1507
 I measured stem leaves to 7 cm long and 5 mm wide.
@@ -5908,7 +5908,7 @@ We got to see the new grandbaby too yesterday, he now weighs 11 lbs and is doing
 ::1558
 Production time We need about 1 working days for production plus the transport time.
 274
-(We ; Production time need ; about 1 working days) === T
+(We ; Production time need ; about 1 working days) === F
 408
 (production ; need ; about 1 working days) === F
 
@@ -6050,11 +6050,11 @@ He's also scored 29 runs, 10 more than the next closest person.
 ::1594
 For example, pork tenderloin slow cooker recipes ic analysis shows that approximately 70% of the Canadian Forces.
 343
-(example ; shows ; approximately 70 %that of the Canadian Forces) === F
+(example ; shows ; approximately 70 % that of the Canadian Forces) === F
 408
 (the Canadian Forces ; shows ; approximately 70 % ; For example) === F
 274
-(slow cooker recipes ic analysis ; shows ; approximately 70 %that of the Canadian Forces ; For example) === T
+(slow cooker recipes ic analysis ; shows ; approximately 70 % that of the Canadian Forces ; For example) === F
 
 ::1595
 The old Model A engines developed a maximum of 175 horsepower at 1,800 rpm4, whereas the latest models of the same type developed a maximum of 285 horsepower at 2,300 rpm.
@@ -6478,7 +6478,7 @@ To change the Name Servers of your domain name Login to your Control Panel. 1 Se
 ::1708
 His final salary was $3.5 million including bonuses.
 202
-(His ; final salary ; $ 3.5 million including bonuses ; including bonuses) === T
+(His ; final salary ; $ 3.5 million including bonuses ; including bonuses) === F
 84
 (His ; final salary ; $ 3.5 million including bonuses) === T
 185
@@ -6754,7 +6754,7 @@ The national average was 1,509 this year.
 287
 (this year ; national average ; 1509 this year) === T
 185
-(average ; national ; 1509 this year) === T
+(average ; national ; 1509 this year) === F
 
 ::1777
 They have been in a 125 tank.
@@ -6765,7 +6765,7 @@ Ogden watched the Ravens' tight end, Shannon Sharpe, catch a pass and run 96 yar
 ::1779
 There are approximately 15,000 English words.
 438
-(words ; are ; approximately 15000 english words) === T
+(words ; are ; approximately 15000 english words) === F
 
 ::1780
 Banner Ads Careerlink.com averages 200,000 unique visitors per week, making us one of the most visited websites in the region.
@@ -6803,7 +6803,7 @@ The female promptly picks up 10 to 12 fertilized eggs to carry her mouth.
 488
 (The female ; promptly picks ; 10 to 12 fertilized eggs) === T
 48
-(The female ; promptly picks ; 10 to 12 fertilized eggs ; to 12 fertilized eggs) === T
+(The female ; promptly picks ; 10 to 12 fertilized eggs ; to 12 fertilized eggs) === F
 
 ::1790
 posted 27th Jan I just turned 20 yesterday.
@@ -7110,7 +7110,7 @@ Or, looked at in a different way, these five states accounted for 68 percent of 
 ::1870
 The National Association for the Advancement of Fat Acceptance claims eating disorders kill 150,000 women a year in the United States.
 48
-(The National Association for the Advancement of Fat Acceptance claims eating ; kill ; 150000 women a year ; in the United States) === T
+(The National Association for the Advancement of Fat Acceptance claims eating ; kill ; 150000 women a year ; in the United States) === F
 
 ::1871
 In fact, 90% of all abortions prior to 1973 were performed by physicians.
@@ -7297,7 +7297,7 @@ Each team will have 13 hitters and 7 pitchers, plus 5 minor leaguers.
 274
 (Each team ; have ; 13 hitters) === T
 96
-(Each team ; hitters ; 13 hitters) === F
+(Each team ; hitters ; 13 hitters) === T
 
 ::1920
 In Los Angeles, residents drive 142 million miles a day.
@@ -7343,7 +7343,7 @@ Though Cheyenne aired for seven years, the series had only 108 episodes because 
 ::1929
 At the end of the eighth, Jacksonville leads 10 to 1. TOP OF THE NINTH Art Lopez struck out.
 274
-(Jacksonville ; leads ; 10 to 1 ; to 1) === T
+(Jacksonville ; leads ; 10 to 1 ; to 1) === F
 488
 (Jacksonville ; leads ; 10 to 1) === T
 
@@ -7489,7 +7489,7 @@ They had 10 children, with 8 surviving at the time of the 1900 census.
 274
 (They ; had ; 10 children ; with 8 surviving at the time of the 1900 census) === T
 153
-(They ; children ; 10 children) === F
+(They ; children ; 10 children) === T
 
 ::1966
 She was born in Port Colbourne, Ontario, and owned a chain of 36 day care centres in that province for children six months to 12 years.
@@ -7508,7 +7508,7 @@ All this stuff bunched up here above 90 percent of American homes.
 ::1970
 Four lines of the palm, which converge at the symbolic Gate, correspond to the 4 posts in the Gate and represent four strategic paths associated with Salvation.
 488
-(Four lines of the palm converge at the symbolic Gate ; correspond ; 4 posts) === T
+(Four lines of the palm converge at the symbolic Gate ; correspond ; 4 posts) === F
 339
 (the Gate ; correspond ; 4 posts) === F
 
@@ -7523,7 +7523,7 @@ The kids teeth on the crib and get it sticky somehow and it's ruined by the time
 ::1973
 Our first lunch took 15 of us, as an entire group including friends and staff of the Casa, through the streets of Granada to their favorite eatery.
 274
-(Our first lunch as an entire group including friends of the Casa through the streets of Granada to their favorite eatery ; took ; 15 of us) === T
+(Our first lunch as an entire group including friends of the Casa through the streets of Granada to their favorite eatery ; took ; 15 of us) === F
 408
 (us ; took ; 15 of us) === F
 

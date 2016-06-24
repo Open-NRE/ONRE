@@ -5,7 +5,6 @@ package edu.iitd.cse.open_nre.onre.helper;
 
 import java.io.IOException;
 
-import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreExtractionPartType;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
@@ -147,22 +146,47 @@ public class OnreHelper {
 	public static OnreExtraction onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction) throws IOException {
 		//if(!OnreGlobals.arg_onre_isSeedFact) OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
 		OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
+
+		/*===DIDN'T WORK===if(onreExtraction.quantity!=null && OnreUtils_string.ignoreCaseContainsPhrase(onreExtraction.argument.text, OnreHelper_DanrothQuantifier.getPhraseExceptValue(onreExtraction.quantity.text))) {
+				onreExtraction.quantity.text = OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text);
+				onreExtraction.q_unit = "";
+		}*/
 		
         if(postProcessingHelper_isValueInArgOrRel(onreExtraction)) return null; 				//TODO: IMPORTANT-CHANGE #4:Don't extract if quantity value is present in the argument or relation
         if(postProcessingHelper_isUnitInArg(onreExtraction)) return null;   	   				//TODO: IMPORTANT-CHANGE #5:Don't extract if quantity unit is present in the argument
-    	if(postProcessingHelper_isAdditionalInfoAlreadyPresent(onreExtraction)) return null;	//TODO: IMPORTANT-CHANGE #8:additional_info not already present in argument or relation : checking headwords
-
+    	
+        if(postProcessingHelper_isAdditionalInfoAlreadyPresent(onreExtraction)) return null;		
+    	
     	postProcessingHelper_numberOf(onreExtraction); 											//TODO: IMPORTANT-CHANGE #7:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
+    	
+    	//replaceDoubleSpaces(onreExtraction);
     	return onreExtraction;
 	}
 
+	/*private static void replaceDoubleSpaces(OnreExtraction onreExtraction) {
+		onreExtraction.argument.text = onreExtraction.argument.text.replaceAll("  ", " ");
+    	onreExtraction.relation.text = onreExtraction.relation.text.replaceAll("  ", " ");
+    	if(onreExtraction.quantity_unit_plus!=null) onreExtraction.quantity_unit_plus.text = onreExtraction.quantity_unit_plus.text.replaceAll("  ", " ");
+    	if(onreExtraction.quantity!=null) onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("  ", " ");
+	}*/
+
 	private static boolean postProcessingHelper_isAdditionalInfoAlreadyPresent(OnreExtraction onreExtraction) {
+		removeAdditionalInfoIfAlreadyPresent(onreExtraction);									
+        if(postProcessingHelper_isAdditionalInfoStillPresent(onreExtraction)) return true;
+        return false;
+	}
+
+	private static void removeAdditionalInfoIfAlreadyPresent(OnreExtraction onreExtraction) {
+		if(onreExtraction.additional_info == null) return;
+		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.quantity.text, onreExtraction.additional_info.text)) {onreExtraction.additional_info = null; return;}
+		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.relation.text, onreExtraction.additional_info.text)) {onreExtraction.additional_info = null; return;}
+		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.argument.text, onreExtraction.additional_info.text)) {onreExtraction.additional_info = null; return;}
+	}
+
+	private static boolean postProcessingHelper_isAdditionalInfoStillPresent(OnreExtraction onreExtraction) {
 		if(onreExtraction.additional_info == null) return false;
-    	//if(onreExtraction.additional_info.text.contains(onreExtraction.argument_headWord.text)) return true;
-    	//if(onreExtraction.additional_info.text.contains(onreExtraction.relation_headWord.text)) return true;
-		
-		if(OnreUtils_string.ignoreCaseContainsWord(onreExtraction.additional_info.text, onreExtraction.argument_headWord.text)) return true;
-		if(OnreUtils_string.ignoreCaseContainsWord(onreExtraction.additional_info.text, onreExtraction.relation_headWord.text)) return true;
+		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.additional_info.text, onreExtraction.argument_headWord.text)) return true;
+		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.additional_info.text, onreExtraction.relation_headWord.text)) return true;
 
 		return false;
 	}
@@ -171,7 +195,7 @@ public class OnreHelper {
 		if(onreExtraction.q_unit==null || onreExtraction.q_unit.isEmpty()) return;
 		
         //if(onreExtraction.relation.text.equalsIgnoreCase(onreExtraction.q_unit)) {
-		if(OnreUtils_string.ignoreCaseContainsWord(onreExtraction.relation.text, onreExtraction.q_unit)) {
+		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.relation.text, onreExtraction.q_unit)) {
         	//onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("(?i)"+onreExtraction.relation.text, "").trim();
 			onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("(?i)"+onreExtraction.q_unit, "").trim();
         	
@@ -187,11 +211,8 @@ public class OnreHelper {
 	private static boolean postProcessingHelper_isUnitInArg(OnreExtraction onreExtraction) {
 		if(onreExtraction.q_unit == null || onreExtraction.q_unit.isEmpty()) return false;
 
-		//if(onreExtraction.argument.text.contains(onreExtraction.q_unit)) return true;
-   		//if(onreExtraction.q_unit.contains(onreExtraction.argument_headWord.text)) return true;
-		
-		if(OnreUtils_string.ignoreCaseContainsWord(onreExtraction.argument.text, onreExtraction.q_unit)) return true;
-		if(OnreUtils_string.ignoreCaseContainsWord(onreExtraction.q_unit, onreExtraction.argument_headWord.text)) return true;
+		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.argument.text, onreExtraction.q_unit)) return true;
+		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.q_unit, onreExtraction.argument_headWord.text)) return true;
    		
 		return false;
 	}
