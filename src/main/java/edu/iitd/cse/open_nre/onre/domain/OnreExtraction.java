@@ -3,6 +3,7 @@
  */
 package edu.iitd.cse.open_nre.onre.domain;
 
+import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 
 /**
@@ -26,6 +27,7 @@ public class OnreExtraction {
 	public OnreExtractionPart	argument_headWord;
 	public OnreExtractionPart	relation_headWord;
 	public String q_unit;
+	public Double q_value;
 
 
 	public OnreExtraction() {
@@ -34,18 +36,31 @@ public class OnreExtraction {
 	public String toString() {
 
 		StringBuilder sb = new StringBuilder();
-		sb.append("(");
-		sb.append(this.argument);
-		sb.append(OnreConstants.DELIMETER_EXTR);
-		sb.append(this.relation);
-		sb.append(OnreConstants.DELIMETER_EXTR);
-		sb.append(this.quantity);
-		if(this.quantity_unit_plus!=null) sb.append(" ").append(this.quantity_unit_plus);
-		if(this.additional_info!=null && this.additional_info.text!=null && !this.additional_info.text.isEmpty()) {
+		if(OnreGlobals.arg_onre_isSeedFact) {
+			sb.append("(");
+			sb.append(this.argument_headWord);
 			sb.append(OnreConstants.DELIMETER_EXTR);
-			sb.append(this.additional_info);
+			sb.append(this.relation_headWord);
+			sb.append(OnreConstants.DELIMETER_EXTR);
+			sb.append(this.q_value);
+			sb.append(OnreConstants.DELIMETER_EXTR);
+			sb.append(this.q_unit);
+			sb.append(")");
 		}
-		sb.append(")");
+		else {
+			sb.append("(");
+			sb.append(this.argument);
+			sb.append(OnreConstants.DELIMETER_EXTR);
+			sb.append(this.relation);
+			sb.append(OnreConstants.DELIMETER_EXTR);
+			sb.append(this.quantity);
+			if(this.quantity_unit_plus!=null) sb.append(" ").append(this.quantity_unit_plus);
+			if(this.additional_info!=null && this.additional_info.text!=null && !this.additional_info.text.isEmpty()) {
+				sb.append(OnreConstants.DELIMETER_EXTR);
+				sb.append(this.additional_info);
+			}
+			sb.append(")");
+		}
 		
 		return sb.toString();
 	}

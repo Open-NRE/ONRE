@@ -27,11 +27,11 @@ public class OnreHelper {
 
     	switch(OnreExtractionPartType.getType(patternNode_configured.word)) {
 	    	case ARGUMENT: 
-	    		onreExtraction.argument_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);
+	    		onreExtraction.argument_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);  //this shall not be modified later
 	    		onreExtraction.argument = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);
 	    		break;	    	
 	    	case RELATION: 
-	    		onreExtraction.relation_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);
+	    		onreExtraction.relation_headWord = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);  //this shall not be modified later
 	    		onreExtraction.relation = new OnreExtractionPart(subTreeNode.word, subTreeNode.index, subTreeNode.posTag);
 	    		break;
 	    	case QUANTITY: 
@@ -66,13 +66,14 @@ public class OnreHelper {
     	String quantityPhrase = danrothSpan.phrase;
     	if(quantityPhrase == null) return;
     	
-    	if(OnreGlobals.arg_onre_isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
+    	/*if(OnreGlobals.arg_onre_isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
     		onreExtraction.quantity = new OnreExtractionPart(danrothSpan.value.toString());
     		onreExtraction.additional_info = new OnreExtractionPart(danrothSpan.unit);
     		return;
-    	}
+    	}*/
     	
-    	onreExtraction.q_unit =danrothSpan.unit;
+    	onreExtraction.q_unit = danrothSpan.unit; //this shall not be modified later
+    	onreExtraction.q_value = danrothSpan.value; //this shall not be modified later
     	
     	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase, index, posTag);
     	
@@ -144,7 +145,8 @@ public class OnreHelper {
     }
 	
 	public static OnreExtraction onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction) throws IOException {
-		if(!OnreGlobals.arg_onre_isSeedFact) OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
+		//if(!OnreGlobals.arg_onre_isSeedFact) OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
+		OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
 		
         if(postProcessingHelper_isValueInArgOrRel(onreExtraction)) return null; 				//TODO: IMPORTANT-CHANGE #4:Don't extract if quantity value is present in the argument or relation
         if(postProcessingHelper_isUnitInArg(onreExtraction)) return null;   	   				//TODO: IMPORTANT-CHANGE #5:Don't extract if quantity unit is present in the argument
