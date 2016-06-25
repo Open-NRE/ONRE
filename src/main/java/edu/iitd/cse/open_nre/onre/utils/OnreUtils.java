@@ -22,7 +22,7 @@ import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 public class OnreUtils {
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-    public static Set scalaSet2JavaSet(scala.collection.immutable.Set set_scala){
+    public static Set scalaSet2JavaSet(scala.collection.immutable.Set set_scala) {
 		if(set_scala==null) return null;
 		return JavaConversions.asJavaSet(set_scala);
 	}
@@ -32,6 +32,8 @@ public class OnreUtils {
 	public static boolean quantityExists(OnreExtraction onreExtraction) {
 	    	if(onreExtraction.quantity == null) return false;
 	    	if(onreExtraction.quantity.text == null) return false;
+	    	
+	    	//if(OnreGlobals.arg_onre_isSeedFact && onreExtraction.q_value != null) return true;---let it be commented === remove later
 	    	
 	    	if(onreExtraction.quantity.text.matches(".*\\d.*")) return true;
 	    	

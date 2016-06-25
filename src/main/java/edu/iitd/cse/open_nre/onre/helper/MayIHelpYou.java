@@ -30,7 +30,7 @@ public class MayIHelpYou {
     	OnreGlobals.sentence = onrePatternTree.sentence;
     	
     	Onre_dsDanrothSpans danrothSpans = OnreHelper_DanrothQuantifier.getQuantitiesDanroth(OnreGlobals.sentence);
-    	List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getConfiguredPatterns();
+    	List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getDepPatterns();
     	
     	return runMe(onrePatternTree, danrothSpans, list_configuredPattern);
 	}

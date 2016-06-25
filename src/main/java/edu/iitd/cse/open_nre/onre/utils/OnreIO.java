@@ -56,18 +56,18 @@ public class OnreIO {
 		return lines;
 	}
 	
-	public static void writeFile(String filePath, List lines) throws IOException {
+	public static void writeFile(String filePath, @SuppressWarnings("rawtypes") List lines) throws IOException {
 		PrintWriter pw = new PrintWriter(filePath);
 		for (Object object : lines) pw.println(object.toString());
 		pw.close();
 	}
 	
-	public static void writeFile(String filePath, Map<String, Integer> lines) throws IOException {
+	public static void writeMap(String filePath, Map<String, Integer> lines) throws IOException {
 		PrintWriter pw = new PrintWriter(filePath);
 		for (Map.Entry<String, Integer> entry : lines.entrySet()) {
 		    String key = entry.getKey();
 		    Object value = entry.getValue();
-		    pw.println(value+" ; "+key);
+		    pw.println(value + " ; " + key + "\n");
 		}
 		pw.close();
 	}

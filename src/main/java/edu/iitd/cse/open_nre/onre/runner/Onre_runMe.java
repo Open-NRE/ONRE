@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Our rate for the job is US$ 0.05 per source English word.";
+		String sentence = "There are more than 15,000 KFC outlets in 109 countries and territories around the world serving some 12 million customers each day.";
 		
 		DependencyGraph depGraph = getDepGraph(sentence);
 

@@ -5,6 +5,7 @@ package edu.iitd.cse.open_nre.onre.helper;
 
 import java.io.IOException;
 
+import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreExtractionPartType;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtractionPart;
@@ -71,12 +72,13 @@ public class OnreHelper {
     		return;
     	}*/
     	
+    	
     	onreExtraction.q_unit = danrothSpan.unit; //this shall not be modified later
     	onreExtraction.q_value = danrothSpan.value; //this shall not be modified later
     	
     	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase, index, posTag);
     	
-    	//TODO: IMPORTANT-CHANGE: DIDN'T WORK :Add sibling of quantity if that sibling is connected by "neg" depLabel
+    	//IMPORTANT-CHANGE: DIDN'T WORK :Add sibling of quantity if that sibling is connected by "neg" depLabel
     	/*String newQuantityPhrase = addNegationIfPossibleToQuantity(onreExtraction, onrePatternTree, quantityPhrase);
     	
     	if(!newQuantityPhrase.equals(quantityPhrase)) {
@@ -151,6 +153,8 @@ public class OnreHelper {
 				onreExtraction.quantity.text = OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text);
 				onreExtraction.q_unit = "";
 		}*/
+		
+		if(OnreGlobals.arg_onre_isSeedFact) return onreExtraction;
 		
         if(postProcessingHelper_isValueInArgOrRel(onreExtraction)) return null; 				//TODO: IMPORTANT-CHANGE #4:Don't extract if quantity value is present in the argument or relation
         if(postProcessingHelper_isUnitInArg(onreExtraction)) return null;   	   				//TODO: IMPORTANT-CHANGE #5:Don't extract if quantity unit is present in the argument

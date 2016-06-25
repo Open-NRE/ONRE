@@ -34,9 +34,10 @@ public class OnreExtraction {
 	}
 
 	public String toString() {
-
 		StringBuilder sb = new StringBuilder();
 		if(OnreGlobals.arg_onre_isSeedFact) {
+			sb.append("\n").append(this.sentence).append("\n"); //TODO
+			sb.append(this.patternNumber).append("\n"); //TODO
 			sb.append("(");
 			sb.append(this.argument_headWord);
 			sb.append(OnreConstants.DELIMETER_EXTR);
@@ -48,6 +49,8 @@ public class OnreExtraction {
 			sb.append(")");
 		}
 		else {
+			//sb.append("\n").append(this.sentence).append("\n"); //TODO
+			//sb.append(this.patternNumber).append("\n"); //TODO
 			sb.append("(");
 			sb.append(this.argument);
 			sb.append(OnreConstants.DELIMETER_EXTR);

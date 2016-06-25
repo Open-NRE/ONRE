@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
+import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
@@ -25,7 +26,29 @@ import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
  */
 public class OnreHelper_pattern {
 	
-	public static List<OnrePatternNode> getConfiguredPatterns() throws IOException {
+	public static List<OnrePatternNode> getDepPatterns() throws IOException {
+		List<OnrePatternNode> list_depPattern = new ArrayList<OnrePatternNode>();
+		
+		list_depPattern.addAll(getSeedPatterns());
+		if(!OnreGlobals.arg_onre_isSeedFact) list_depPattern.addAll(getConfiguredPatterns());
+		
+		return list_depPattern;
+	}
+	
+	private static List<OnrePatternNode> getSeedPatterns() throws IOException {
+		List<OnrePatternNode> list_seedPattern = new ArrayList<OnrePatternNode>();
+		List<String> configuredPatterns = OnreIO.readFile_classPath(OnreFilePaths.filePath_seedPatterns);
+
+		for (String configuredPattern : configuredPatterns) {
+			if(configuredPattern.trim().length()==0) {list_seedPattern.add(null); continue;}
+
+			list_seedPattern.add(convertPattern2PatternTree(configuredPattern));
+        }
+		
+		return list_seedPattern;
+	}
+	
+	private static List<OnrePatternNode> getConfiguredPatterns() throws IOException {
 		List<OnrePatternNode> list_configuredPattern = new ArrayList<OnrePatternNode>();
 		List<String> configuredPatterns = OnreIO.readFile_classPath(OnreFilePaths.filePath_depPatterns);
 
