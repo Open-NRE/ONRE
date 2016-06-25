@@ -89,7 +89,7 @@ public class Onre_runMe_jsonStrings {
 			}
 		}
 		
-		if(OnreGlobals.arg_onre_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts", extrs_all);
+		if(OnreGlobals.arg_onre_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts_newSeedFactsLogic_justFacts", extrs_all);
 			
 		
 		
