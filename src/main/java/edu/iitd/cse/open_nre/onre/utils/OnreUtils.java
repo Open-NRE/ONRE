@@ -13,7 +13,6 @@ import java.util.Map;
 import java.util.Set;
 
 import scala.collection.JavaConversions;
-import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 
 /**
@@ -68,6 +67,22 @@ public class OnreUtils {
 
 		Map<K, V> result = new LinkedHashMap<K, V>();
 		for (Map.Entry<K, V> entry : list) result.put(entry.getKey(), entry.getValue());
+		
+		return result;
+	}
+	
+	public static Map<String, Set<String>> sortMapByValueCount(Map<String, Set<String>> map, boolean isDescending) {
+		
+		List<Map.Entry<String, Set<String>>> list = new LinkedList<Map.Entry<String, Set<String>>>(map.entrySet());
+		Collections.sort(list, new Comparator<Map.Entry<String, Set<String>>>() {
+			public int compare(Map.Entry<String, Set<String>> o1, Map.Entry<String, Set<String>> o2) {
+				if(isDescending) return o2.getValue().size() - o1.getValue().size();
+				else return o1.getValue().size()-o2.getValue().size();
+			}
+		});
+
+		Map<String, Set<String>> result = new LinkedHashMap<String, Set<String>>();
+		for (Map.Entry<String, Set<String>> entry : list) result.put(entry.getKey(), entry.getValue());
 		
 		return result;
 	}

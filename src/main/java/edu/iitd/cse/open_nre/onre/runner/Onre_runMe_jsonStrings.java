@@ -79,7 +79,7 @@ public class Onre_runMe_jsonStrings {
 					System.out.println("::" + (i+1));
 					System.out.println(onrePatternTree.sentence);
 					for (Map.Entry<String, Integer> entry : uniq_extrs.entrySet()) {
-						System.out.println(entry.getValue());
+						System.out.println(entry.getValue()-OnreConstants.NUMBER_OF_SEED_PATTERNS);
 						System.out.println(entry.getKey());
 					}
 					System.out.println();
@@ -89,7 +89,7 @@ public class Onre_runMe_jsonStrings {
 			}
 		}
 		
-		if(OnreGlobals.arg_onre_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts_newSeedFactsLogic_justFacts", extrs_all);
+		if(OnreGlobals.arg_onre_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts_newSeedFactsLogic_notJustFacts", extrs_all);
 			
 		
 		

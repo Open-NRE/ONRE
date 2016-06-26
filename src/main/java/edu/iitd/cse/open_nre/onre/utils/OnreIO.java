@@ -12,6 +12,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @author harinder
@@ -68,6 +69,20 @@ public class OnreIO {
 		    String key = entry.getKey();
 		    Object value = entry.getValue();
 		    pw.println(value + " ; " + key + "\n");
+		}
+		pw.close();
+	}
+	
+	public static void writeMap_valueList(String filePath, Map<String, Set<String>> lines) throws IOException {
+		PrintWriter pw = new PrintWriter(filePath);
+		for (Map.Entry<String, Set<String>> entry : lines.entrySet()) {
+		    String key = entry.getKey();
+		    Set<String> values = entry.getValue();
+		    pw.println();
+		    pw.println(key);
+		    for (String value : values) {
+		    	pw.println(value);
+			}
 		}
 		pw.close();
 	}

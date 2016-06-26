@@ -116,10 +116,10 @@ public class MayIHelpYou {
 	        if(onreExtraction == null) continue;
 	        if(!OnreUtils.quantityExists(onreExtraction)) continue;
 	        	
-        	onreExtraction.patternNumber=i+1;
+        	onreExtraction.patternNumber = i+1;
         	onreExtraction.sentence = onrePatternTree.sentence;
         	
-        	//TODO: IMPORTANT-CHANGE #10:Removing extractions where they are similar except for the additional-info field
+        	//TODO: IMPORTANT-CHANGE #11:Removing extractions where they are similar except for the additional-info field
         	//extrs.put(onreExtraction, onreExtraction.patternNumber);
         	addExtractionToMap(extrs, onreExtraction);
         }

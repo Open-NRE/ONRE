@@ -11,6 +11,8 @@ public class OnreConstants {
 
 	public static final String	 DELIMETER_EXTR	         = " ; ";
 	
+	public static final int NUMBER_OF_SEED_PATTERNS	         = 7;
+	
 	/*public static final String[]	CHANGE_KEYS_INCREASE	= { "increase", "up", "growth", "surge", "rise", "more",
 	        "boost", "expansion", "hike", "upgrade", "enlargement", "rise", "raise", "gain", "inflation", "addition" };
 

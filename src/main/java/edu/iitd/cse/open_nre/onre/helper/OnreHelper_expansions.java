@@ -26,9 +26,9 @@ public class OnreHelper_expansions {
 		else onreExtraction.relation = new OnreExtractionPart();
 		
 		expandArgument(onreExtraction, patternNode_sentence);
-		expandQuantity(onreExtraction, patternNode_sentence);
+		expandQuantity(onreExtraction, patternNode_sentence); //TODO: IMPORTANT-CHANGE #14: expand on prep if subtree does not have relation/arg
 		if(OnreUtils.quantityExists(onreExtraction)) expandQuantity_settingAdditionalInfo(onreExtraction,patternNode_sentence);
-		//if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence);
+		//if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence); //TODO: IMPORTANT-CHANGE #14: expand on prep if subtree does not have relation/arg
 	}
 	
 	private static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
@@ -200,8 +200,10 @@ public class OnreHelper_expansions {
 	    	for(OnrePatternNode child : currNode.children) {
 				if(child.dependencyLabel.equals("nn")) {expansions.add(child); q_yetToExpand.add(child); } 
 				if(child.dependencyLabel.equals("neg")) {expansions.add(child); q_yetToExpand.add(child); }//TODO: IMPORTANT-CHANGE #10: negation handling
+				
 				//if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
 				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
+				
 				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
 			}
 	    }

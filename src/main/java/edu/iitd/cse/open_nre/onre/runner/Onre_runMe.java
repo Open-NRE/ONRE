@@ -31,15 +31,13 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "There are more than 15,000 KFC outlets in 109 countries and territories around the world serving some 12 million customers each day.";
-		
+		String sentence = "The Hang Seng China Enterprises Index fell 24.59 points, or 0.19 percent, to close at 12,644.93 on Tuesday.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 
-		Onre_runMe.setArguments(args);
-		
 		if(depGraph != null) {
 			Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(depGraph);
 			for (OnreExtraction onreExtraction : extrs.keySet()) {
+				System.out.println(onreExtraction.sentence);
 				System.out.println(onreExtraction.patternNumber);
 				System.out.println(onreExtraction);
 			}

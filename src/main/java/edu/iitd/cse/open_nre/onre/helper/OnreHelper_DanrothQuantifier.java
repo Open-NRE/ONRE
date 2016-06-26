@@ -91,11 +91,11 @@ public class OnreHelper_DanrothQuantifier {
 	}
 	
 	/*private static String getUnitFromPhrase(QuantSpan quantSpan, String unit) {
-		if(unit.split(" ").length>1) return null; //TODO: ignoring multiwords unit as of now
+		if(unit.split(" ").length>1) return null; //TO-DO: ignoring multiwords unit as of now
 		
 		String phrase = getQuantityPhrase(quantSpan);
 
-		String[] phraseSplit = phrase.split(" "); //TODO: need tokenization?
+		String[] phraseSplit = phrase.split(" "); //TO-DO: need tokenization?
 		for (String word : phraseSplit) {
 			if(unit.equalsIgnoreCase("us$")) {
 				if(word.equalsIgnoreCase("dollar")) return "dollar";
