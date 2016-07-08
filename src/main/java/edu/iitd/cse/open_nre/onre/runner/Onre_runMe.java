@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "The Hang Seng China Enterprises Index fell 24.59 points, or 0.19 percent, to close at 12,644.93 on Tuesday.";
+		String sentence = "Tickets are available through the WWU Box Office and cost $10 for general admission and $8 for students.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 
 		if(depGraph != null) {

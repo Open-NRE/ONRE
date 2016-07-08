@@ -8,6 +8,8 @@ Richards began training with Hart this year, the 400 coaching guru who has train
 
 ::3
 In fact, it only costs us about $10 to ship $490 worth of supplies.
+76
+(supplies ; worth ; $ 490) === T
 
 ::4
 Selection of examiners Appendix 1 sets out our guidance on the selection of an independent examiner.
@@ -41,6 +43,8 @@ The employees of the Credit Union will use their cut of $681.50 to assist in fun
 
 ::15
 He and Galloway were among at least 10 Texas inmates with execution dates in the coming weeks.
+64
+(He ; among ; at least 10 texas inmates) === F
 
 ::16
 Strickland v. Washington, 466 U.S. 668, 687, 104 S.Ct.
@@ -71,12 +75,18 @@ Compared with other years, constitutional commissions have also been few, certai
 
 ::25
 In 2011, we have shipped more than $200 million worth of supplies to 35 countries.
+118
+(more than $ million worth of supplies ; shipped ; 35 countries) === F
 
 ::26
 Based on the total funds available for the initiative, 2 applications will be funded by INMD .
 
 ::27
 Extra Guest / Children 3rd Child is $15 per night surcharge with fold up bed.
+7
+(3rd ; Child ; $ 15 per night surcharge ; with fold up bed) === F
+214
+(night ; Guest Children 3rd Child ; $ 15 per night surcharge ; with fold up bed) === F
 
 ::28
 He said Port Klang, Malaysia's busiest container port, contributed 39.2 per cent of total sea throughput in 2011, while Port of Tanjung Pelepas contributed 22.7 per cent.
@@ -412,6 +422,10 @@ This is a very popular 4 star hotel in the heart of Victoria Island.
 The Extended Care Program request for funding for the fiscal year beginning July 1, 2010 and ending June 30, 2011 is $425,800 for operations, based on expected revenue of at least $425,800.
 -6
 (funding for the fiscal year beginning July 1 , 2010 and ending June 30 , 2011 ; Extended Care Program request ; $ 425800 for operations) === T
+7
+(Extended Care Program ; request ; $ 425800 for operations) === T
+16
+(operations ; Extended Care Program request ; $ 425800) === F
 
 ::139
 More than 30 Champlain College Information Technology and Sciences Division students helped lead groups and assist students building computers and robots.
@@ -454,6 +468,8 @@ Ranked as one of the world's top 10 providers of executive education in Business
 
 ::152
 McGowan is this year's US Indoor Champion at 1500 meters.
+64
+(McGowan ; at ; 1500 meters) === F
 
 ::153
 The petroleum ether layer was poured off and saved, and the aqueous phase was extracted four more times with 100 ml of petroleum ether each, whereafter the organic extracts were pooled, and in turn was washed with 4x75ml of water.
@@ -483,6 +499,8 @@ The AMI Antenna comes with 3 different adapters, that will allow you to mount th
 The data centre has 100,000 square feet of web hosting space, with redundant UPS, generator backup and smoke detection/fire protection systems located throughout the facility.
 -3
 (The data centre ; web hosting space ; 100000 square feet ; with redundant UPS , generator backup and smoke detection / fire protection systems located throughout the facility) === T
+35
+(The data centre ; square ; 100000 square feet of web hosting space ; with redundant UPS , generator backup and smoke detection / fire protection systems located throughout the facility) === F
 
 ::162
 That kind of access is probably what prompted the New York Times to recently estimate that wireless broadband technology will generate $860 billion in additional gross domestic product in the next ten years.
@@ -549,6 +567,8 @@ Combs has reached more than 25 million people through the Flight for the Human S
 
 ::184
 Metallic paint is a $1200 option for all variants and Hummer offers a comprehensive range of accessories at extra cost.
+16
+(all variants ; Metallic paint ; $ 1200 option) === F
 
 ::185
 The proposed system is being evaluated using a database consisting of 1,029 illicit drug pill images and 14,002 legal pill images.
@@ -573,6 +593,8 @@ Following years will be available for about 60% of the one year price.
 
 ::192
 This chesterfield sofa is available in 20 distinct leather colors and 2 leg color choices.
+64
+(This chesterfield sofa ; in ; 20 distinct leather colors) === F
 
 ::193
 The trial court applies a Rule 403 balancing test.
@@ -623,6 +645,8 @@ The Commission is satisfied that the amount of $230 million meets this test.
 
 ::208
 Heating element has a 4 temp setting, low, medium, high, and max.
+35
+(Heating element ; low ; 4 temp setting) === F
 
 ::210
 Learn the system that produces a new personal best 96% of the time.
@@ -850,6 +874,8 @@ Google maps says it's 8 miles from CSUSB.
 
 ::285
 Tickets are $40 per person or $45 with door prize ticket.
+214
+(person ; Tickets ; $ 40 per person or $ 45) === F
 
 ::286
 If he turns down 5/$50 and signs for 6/$60 this offseason, it was the right decision for him.
@@ -989,6 +1015,8 @@ Originally priced at over $500 per day to our VIP clients, we are no SLOWLY open
 
 ::333
 He was off the mark 50%.
+64
+(He ; off ; 50 %) === F
 
 ::334
 While having Phillips in the cleanup spot is not ideal, he is the best man for the job and showed that last season, driving in 98 runs and smashing 20 homers while stealing 25 bases.
@@ -1084,6 +1112,8 @@ You'll be able to bid in live and silent auctions on up to 200 experiences and t
 
 ::365
 If the purchase goes through it will take the total number of UK convenience stores under the Tesco fascia to 580 but the deal must be cleared first by the OFT and their decision will indicate whether the guardian of consumer rights has any concerns about the dominance of the supermarket chain which has a share of the grocery market in excess of 30%.
+118
+(the total number of UK convenience stores ; take ; 580) === F
 
 ::366
 Expect to pay in the region of US$250 per night for a single room in a decent 3 star hotel.
@@ -1099,6 +1129,8 @@ Pat has judged in 20 countries over 4 continents.
 
 ::370
 That situation slowed semiconductor demand to a mere 37% increase.
+118
+(semiconductor demand ; slowed ; 37 % increase) === F
 
 ::371
 The 2005 Reserve Merlot from Gibson is a blend of two Merlot crops, from the Adelaide Hills and Barossa Valley, both in South Australia, with a total of 15% of Cabernet Sauvignon added in, also from both locations.
@@ -1140,6 +1172,8 @@ the difference between the two of us is I have had 3 different loved ones go on 
 
 ::384
 With a high 30% lead content and beautiful pink coloring, these full lead prisms are very high quality chandelier parts and replacement crystals.
+64
+(these full lead prisms ; With ; 30 % lead content) === F
 
 ::385
 A great pair of socks makes a big difference in foot comfort, so Castelli made the main part of the Rosso Corsa 6 sock from Air Mesh to enhance breathability while a central foot band provides support.
@@ -1215,6 +1249,8 @@ This makes 6 small bowls of chili or 4 large ones.
 
 ::409
 In late Monday trade, the euro was at $US1.4460, down from $1.4484 late Friday, with the dollar at 84.61 yen after 84.80 yen.
+64
+(the euro ; at ; $ us1.4460) === T
 
 ::410
 Mills will be able to procure quality cotton from these depots at their doorstep, and this measure will enable the textiles mills to reduce the yarn cost by approximately Rs 2 per kg.
@@ -1335,6 +1371,8 @@ Researchers at Iowa State University assigned families of 6th graders from 33 ru
 
 ::451
 The 2007 maxium rate is $3,895.79.
+7
+(maxium ; rate ; $ 3895.79) === F
 
 ::452
 This weeked I had 75% old 23% new and 2% of the older $20s with the small president head.
@@ -1554,6 +1592,8 @@ We've just released episode 11 which is available for immediate consumption.
 
 ::527
 Furthermore, the correlation between mutual funds' performance on a year to year basis and the S&P 500, as well as the complete enumeration of all stocks on NYSE, and English equities, that Dimson and Lorie worked on has to be on the order of 95%.
+428
+(% ; order ; 95 %) === F
 
 ::528
 The Prius currently starts at $22,000 and a new $21,000 model will hit dealer lots in September.
@@ -1604,6 +1644,8 @@ On 28 August 2000, Carnival became the sole owner of Costa Crociere after purcha
 
 ::543
 Not including Marty's salary from work, his family's Passive Income is $1166.00.
+7
+(Passive ; Income ; $ 1166.00 ; Not including Marty 's salary from work) === F
 
 ::544
 Cross the burn and find the driest route ahead for 30 m then half left to the very weakly defined contouring path across the hillside ahead and 20 metres or so higher than the stream crossing.
@@ -1652,6 +1694,10 @@ Not everyone was receptive to signing up but I did manage to get 42 signatures.
 
 ::562
 Sales of services were up by $17,500, and other transfers were up by $16,900.
+22
+(Sales of services ; up ; $ 17500) === T
+64
+(Sales of services ; by ; $ 17500) === F
 
 ::563
 Cooper surpassed expectations that first season with 11 goals, despite playing for a coach, Colin Clark that was quick to pull him back to the sideline, even when games were on the line.
@@ -1727,6 +1773,8 @@ Enjoy the possibilities of Boracay at the 357 Boracay Resort.
 
 ::587
 He has presented over 400 project management seminars to more than 6,000 managers in the U.S., Canada , Europe and South America and China.
+118
+(over 400 project management seminars ; presented ; more than 6000 managers in the U.S. , Canada , Europe and South America and China) === F
 
 ::588
 As you all know, the demand for U.N. electoral assistance and monitoring has maintained a very high level, high public profile, with 44 countries since 1997 being arenas for U.N. electoral surveillance.
@@ -1775,6 +1823,8 @@ But I think we need to address Nose Tackle with our first pick, and especially s
 
 ::603
 At 11 A.M. on February 9, there in plain sight, was Cape Turnagain dead ahead.
+64
+(Cape Turnagain ; At ; 11 a.m. on February 9 there in plain sight) === F
 
 ::604
 Drawings should have disks 60 x 64 mm.
@@ -1848,6 +1898,8 @@ Per Mike Florio of Pro Football Talk, the contract includes a $586,000 signing b
 
 ::626
 It was the most active stock, with 1.77 million shares traded at the start of the trading session.
+64
+(It ; with ; 1.77 million shares) === F
 
 ::627
 I am now 52 and have had 3 major flare ups, the last being in Oct of 06.
@@ -1953,6 +2005,8 @@ For each additional book on the order we only charge an extra $ 1.00.
 
 ::662
 Abundance agenda absorption ante are as top as 30%.
+7
+(agenda absorption ; ante ; 30 %) === F
 
 ::663
 Healthcare and potential health insurance costs are a more significant worry than in 2009, when only 15 percent of residents cited them as their top financial problem in a similar Edward Jones survey.
@@ -1965,6 +2019,10 @@ I did remove 3 other possible exploits concerning the pausing of the game, also 
 
 ::666
 For improving a multi family structure, the maximum loan amount is $12,000 per family unit, not to exceed a total of $60,000 for the structure.
+7
+(loan ; amount ; $ 12000 per family unit ; For improving a multi family structure) === T
+214
+(family unit ; maximum loan amount ; $ 12000 per family unit ; For improving a multi family structure) === F
 
 ::667
 Spanning countless centuries and 1,500 miles, El Camino Real de Tierra Adentro linked vast deserts to lush valleys, isolated outposts to bustling cities.
@@ -2082,6 +2140,8 @@ Like you could have bashed him for saying 144 farads, which is insanely high, li
 
 ::706
 The cost is just $10 for BVSTX members and $15 for BVSTX friends.
+16
+(BVSTX members ; cost ; $ 10) === T
 
 ::707
 come on i know you... 3 members We look at new and up cooming games and rate them.
@@ -2109,6 +2169,8 @@ Slattery and Kaufman estimated that the change would generate $90 million toward
 
 ::715
 Their biggest mistake was to move gifts to the front of their stores in an effort to increase retail selling space for these lines by as much as 50%.
+179
+(their ; stores ; 50 %) === F
 
 ::716
 Even with a 50% cut in spending, they could only pay down the debt by $2,600 per year.
@@ -2127,6 +2189,8 @@ In other words, the proportion of graduates without articles doubled and the num
 
 ::721
 The current income tax rate is 5.95 percent.
+7
+(income tax ; rate ; 5.95 percent) === T
 
 ::722
 Play as Yoruichi Shihoin Successfully complete Tutorial mode to get 10,000 Kan and unlock Yoruichi Shihoin.
@@ -2321,6 +2385,8 @@ Serves 10 Carbs 7.9 Cal 56 Fat 17 and Protein 30 If you want to reduce the carbs
 
 ::786
 Those numbers, received by the School Committee on Sept. 24, forecast deficits of $7.6 million in fiscal 2004 and $10.7 million the next year.
+24
+(forecast ; deficits ; $ 7.6 million in fiscal 2004) === T
 
 ::787
 Dollar General and Family Dollar top the expansion list this year, with plans to open 625 stores and 300 stores respectively, according to Marcus & Millichap.
@@ -2369,6 +2435,8 @@ If you know your birth time, you may be interested in a full Solar Return Yearly
 
 ::804
 This property is very private and only 17 miles from the world famous Sawtooth Mountain and the town of Stanley, Idaho.
+34
+(This property ; very private ; 17 miles from the world famous Sawtooth Mountain and the town of Stanley , Idaho) === F
 
 ::805
 Students learn the more basic 400 Chinese characters and components that form hundreds and thousands of other Chinese characters and words.
@@ -2387,6 +2455,8 @@ If you were referring to the reference to the fact that the fundamentalists are 
 
 ::810
 Population is 5.4% of the State's total population.
+16
+(population ; Population ; 5.4 %) === F
 
 ::811
 Special sessions were limited to 12 legislative days within 30 consecutive calendar days.
@@ -2402,6 +2472,8 @@ Today, there are only 4,000 Jews in the entire country, and these are mainly imm
 
 ::815
 however it wasn't true on the two Apache 2.2 systems.
+64
+(it ; on ; two apache 2.2 systems) === F
 
 ::816
 All donation to a church are 100% deductable.
@@ -2419,6 +2491,8 @@ The iSnack 2.0 name broke many of the basic principles of naming.
 
 ::820
 Simply add our mix to 7 cups of boiling water and cook for 15 minutes.
+118
+(our mix ; Simply add ; 7 cups of boiling water) === F
 
 ::821
 For approximately 8 cents per newsletter, or ONE dollar a month, you can HELP keep SSTN alive.
@@ -2452,6 +2526,8 @@ For the record, I was talking about the station AND the red/blue transfer point,
 
 ::831
 Even at 50mm the pincushioning distortion is still a bit under 1%.
+64
+(the pincushioning distortion ; bit under ; 1 %) === T
 
 ::832
 With these enhancements, CIC 4.0 becomes a pure application server that can be located at a central data center with media servers at branch offices, thus creating a private cloud deployment model.
@@ -2461,6 +2537,8 @@ or... more Feb 29 position with one of the most advanced health systems in the a
 
 ::834
 Unfortunately, we must therefore raise our inflation predictions for this year to 4.7%.
+118
+(our inflation predictions for this year ; Unfortunately therefore raise ; 4.7 %) === F
 
 ::835
 CLA should know mats are a very local business, and general advertising, such as TV is completely a waste of money, unless you have 25 stores in a given market, or unless you are in the rural areas that have very cheap TV time.
@@ -2529,6 +2607,8 @@ but there will be a contractual adjustment of $250.00, and the insurance company
 
 ::857
 Consequently, BBS Ontario asked the Commission to revise the 1996 base amount for calculating its expected Canadian programming expenditures to $2,477,000.
+118
+(its expected Canadian programming expenditures ; calculating ; $ 2477000) === F
 
 ::858
 Info Guru The top 10 fashion styles include some very conservative outfits as well as some vintage styles and slightly bizarre, perhaps, concepts.
@@ -2553,6 +2633,8 @@ The kids had so much fun and we ended up having 22 kids at our first VBS.
 
 ::865
 Added to the existing Paso Robles and St. Louis, MO locations, CPL now has over 120,000 square feet of climate controlled, food grade space available for warehousing and order processing of wine direct to consumer orders.
+35
+(CPL ; square ; 120000 square feet of climate controlled) === F
 
 ::866
 Compact vehicles not only offer a cheaper Car Hire in Calgary 114 5Th Avenue S.E price but also a comfortable journey.
@@ -2601,9 +2683,13 @@ The group filed the initiative petition last year, but 3,507 of their signatures
 
 ::883
 The Hotel has 23 exclusive rooms, offering all the comforts to enjoy a pleasant stay in Rome.
+35
+(The Hotel ; exclusive ; 23 exclusive rooms) === F
 
 ::884
 New 12 Volt battery charger in addition to the 24 Volt one fitted in 2006.
+21
+(addition to the 24 Volt one fitted in 2006 ; New Volt battery charger ; 12 volt battery charger) === F
 
 ::885
 On average, a professional who has earned a criminal justice online bachelor degree or another discipline earns $900 per week, whereas the worker with only a high school education earns just $554 per week.
@@ -2748,6 +2834,8 @@ The modern, welcoming, impressive, architecturally pleasing and functional Amtra
 
 ::934
 Now you are on 104 west.
+64
+(you ; on ; 104 west) === T
 
 ::935
 BOX 685 AVONDALE, PA 19311
@@ -2839,6 +2927,8 @@ Combining 200 fewer calories per day of higher fat foods that's just a couple po
 The total metal weight of this ring is 1.94 grams.
 -6
 (this ring ; total metal weight ; 1.94 grams) === T
+7
+(metal ; weight ; 1.94 grams) === F
 
 ::967
 River Ely When navigating on the River Ely you should note that there is a 5 knot speed limit.
@@ -3201,6 +3291,8 @@ Currently, there are about 325,000 active members in the OK Plus Programme, whic
 
 ::1092
 She opens the range to 5,700 yards, and is straddled twice more, but not hit.
+118
+(the range ; opens twice more ; 5700 yards) === F
 
 ::1093
 Pennsylvanians get their drinking water from our state's more than 83,000 miles of waterways, acres of lakes, reservoirs and wetlands, and a natural system of underground aquifers.
@@ -3254,6 +3346,8 @@ As baseball fans of all ages flocked to the stadium to see the Nationals take on
 
 ::1109
 In London, the FTSE 100 index of leading shares closed down just 0.04 per cent at 6,053.44 points.
+13
+(the FTSE 100 index of leading shares ; down per cent ; 0.04 per cent) === T
 
 ::1110
 Top 10 Guru Milestones in life tend to be markers in time for all of us.
@@ -3471,6 +3565,8 @@ Mondale won around 40% of the popular vote.
 
 ::1185
 Yahoo shares dropped 2.09 U.S. dollars, or more than 10 percent, in extended trading Tuesday after finishing the regular session at 20.81 dollars, up 3 cents.
+104
+(Tuesday ; percent ; more than 10 percent) === F
 
 ::1186
 I used cardstock to print the pictures on and gave each child one listing all the pieces, and then I made 8 1/2 by 11 individual pieces to hold up and have them tell me what each one is.
@@ -3495,6 +3591,8 @@ A first goal in 51 games for the Danish defender was a welcome return, having wa
 
 ::1193
 Entrants will be expected to hold minimum of a 2.2 honours degree or equivalent in a cognate discipline.
+71
+(a ; honours degree ; 2.2 honours degree or equivalent) === F
 
 ::1194
 The shareware says china should maximize an unused friendliness rate of 17 stuff by 2011 and india should hit 7 combat during the inevitable self frame.
@@ -3581,6 +3679,8 @@ Learn every detail about this model with 2011 Chrysler Town & Country specs.
 
 ::1223
 The ARM CPU is in a square package with 84 connectors around the sides.
+64
+(The ARM CPU ; with ; 84 connectors around the sides) === F
 
 ::1224
 Underemployment rate, however, moved down to 19.9% from 21.9% a year ago.
@@ -3599,6 +3699,8 @@ Limit 30 Open to teens participating in the Summer of Stealth at the Coralville 
 
 ::1230
 The nice programmers were particularly small, with better than 35 universities in signature at each of the relative five elements and with the conception attendance in the distinct 13 rights of intentionally 120 attendees, at the 12th expectation in january of 1989.
+64
+(The nice programmers ; with ; 35 universities in signature) === F
 
 ::1231
 I had over $500 in cash and excellent securities, and I decided it was time I became a man with property.
@@ -3617,6 +3719,8 @@ Mention code 10608652 Cruise Line Itinerary Day Port Arrive Depart Dates/Pricing
 
 ::1236
 Champaign is located 135 miles south of Chicago on Interstate routes 72, 74, and 57.
+309
+(Champaign ; miles south ; 135 miles ; of Chicago) === T
 
 ::1237
 $59.99 $45.00 $24.99 $29.99 $5.99 $1,750.00
@@ -3638,6 +3742,8 @@ From PTSD 101, an interactive forum for the discussion of PTSD, ... new visitors
 
 ::1243
 They ask, return the tax rate to 5 percent like you said you would.
+118
+(the tax rate ; return ; 5 percent) === F
 
 ::1244
 This remote spot has become famous as the archeological site where Dr Mary Leakey, in 1959, discovered Ausralopithecus Boisei, the fossil skull of early man dated 1.75 million years ago.
@@ -3705,6 +3811,8 @@ Individual presentations will be 20 to 30 minutes duration.
 In 1831, the population of Duke Town was about 6000.
 -6
 (Duke Town ; population ; about 6000 ; In 1831) === T
+64
+(the population of Duke Town ; In ; 1831) === F
 
 ::1266
 He is the author of over 20 books in his native French, half of which have been translated into English.
@@ -3726,6 +3834,8 @@ Further, IRS as of a few years ago only requires receipts for expenditures over 
 
 ::1272
 Now you plan to raise the bar 10 percent, which would take it to just over 6 feet 7 inches.
+118
+(it ; take ; 6 feet) === F
 
 ::1273
 They have conducted online focus groups in over 100 cases, and their clients include two of the top insurance companies in the U.S. as well as many of the major plaintiff lawyers in the nation.
@@ -3804,6 +3914,8 @@ Las Vegas Hilton $45.95 2. New York City has long been constrained by geography.
 
 ::1300
 I did not dose with OxP last night, this moring I had 2 good BMs.
+35
+(I ; good ; 2 good bms) === F
 
 ::1301
 There are only about 400 mainframe sites in the country, but none of them is more than 2000 MIPS or so.
@@ -3886,6 +3998,10 @@ This First Class Traditional 5 Story Hotel Is Set In A Building That Dates Back 
 Its government debt is 118% of the annual volume of the economy or GDP.
 -2
 (Its ; government debt ; 118 % of the annual volume of the economy or GDP) === T
+7
+(government ; debt ; 118 % of the annual volume of the economy or GDP) === T
+16
+(the annual volume of the economy or GDP ; government debt ; 118 %) === F
 
 ::1330
 The ship set will contain 12 generators in a shared arrangement to drive all the catapults, he said.
@@ -3913,6 +4029,10 @@ The cooking beef tongue says 1.1 billion hours nowadays watch controllable messa
 
 ::1339
 In 2005, the government expenditure forcommunications was $15.8 million.
+7
+(government expenditure ; forcommunications ; $ 15.8 million ; In 2005) === T
+64
+(the government expenditure forcommunications ; In ; 2005) === F
 
 ::1340
 Top 10 Guru Dads to be need to be appreciated and all taken into account, so make sure to make the new Dad feels part of your growing family by getting him these awesome gifts.
@@ -3961,6 +4081,8 @@ The pound remained stable against the euro at 89.38 pence per euro.
 
 ::1355
 In April, CSA offered discounted tickets to 20 European destinations.
+118
+(discounted tickets ; offered ; 20 european destinations) === F
 
 ::1356
 Guidance 11.1 The requirements as to the form and content of the examiner's report are set out in the 2005 Regulations.
@@ -3994,6 +4116,8 @@ Additionally, members will also get 10% off of DJ and music production courses a
 
 ::1366
 He and his wife have 3 other children, ages 13, 10 and 7.
+35
+(He ; other ; 3 other children) === F
 
 ::1367
 P. major 'Rosea' is a vigorous perennial that grows up to 4 feet high.
@@ -4054,6 +4178,8 @@ Dining Highlights 26 hot buffet breakfasts.
 
 ::1386
 In Paris, the CAC 40 shed 0.57 per cent to 4,038.70 points and in Frankfurt the DAX was off 0.17 per cent to 7,204.86 points.
+118
+(0.57 per cent ; shed ; 4038.70 points) === F
 
 ::1387
 Dell OptiPlex 390 Mini Tower Intel Core i3 2120 3.3GHz, 3GB RAM, 500GB, Dell E2211 21.5 inch monitor for $579.00
@@ -4173,6 +4299,8 @@ The combined city/highway fuel economy rating for the Volt will still be rated a
 
 ::1427
 Luggage capacity is 520 litres and the car weighs 1870kg unladen.
+7
+(Luggage ; capacity ; 520 litres) === T
 
 ::1428
 More than 47,000 airport security workers are now in place at 424 airports nationwide as part of the Federal Transportation Security Administration, replacing a private work force that was often criticised as inefficient, inattentive and poorly trained.
@@ -4209,6 +4337,8 @@ There are approximately 100 pieces per pound.
 
 ::1440
 This micro size camera 1.75 H X 3.25 L X 1.12 W records at 30 frames per second with a resolution of 640 X 480.
+71
+(This ; micro size camera H X L X W records ; 1.75 h x 3.25 l x 1.12 w records ; at 30 frames per second with a resolution of 640 X 480) === F
 
 ::1441
 In the first two years, St. Ann received about $30,000 worth of instructional material, including new reading books, from Notre Dame, Morten says.
@@ -4360,6 +4490,8 @@ The coverage is costly, averaging approximately $3,000 for individuals and $8,00
 
 ::1490
 On top of that, it also has 13 franchised outlets.
+35
+(it ; franchised ; 13 franchised outlets ; On top of that) === F
 
 ::1491
 Three weeks early and 80 per cent of the Peace's crops are in the bins.
@@ -4483,6 +4615,8 @@ Amazingly, in the US, 34% of the people reported at least one medical error.
 
 ::1531
 In reviewing the FCC frequency chart, a majority of the public safety frequencies are below 1 GHz and, specifically, below 525 MHz.
+64
+(a majority of the public safety frequencies ; below ; below 1 ghz) === T
 
 ::1532
 American Flag 3 ft x 5 ft sewn nylon by Valley Forge Flag Low, low everyday price List Price$36.00
@@ -4564,12 +4698,20 @@ An estimated 300 families have been affected.
 
 ::1560
 Sales are up by 67%, at an increased margin.
+22
+(Sales at an increased margin ; up ; 67 %) === T
+64
+(Sales at an increased margin ; by ; 67 %) === F
 
 ::1561
 After Dena's death, they said they continued to publicly castigate state District Judge Paul Snead for allowing Clark to post $50,000 bond in the first place.
 
 ::1562
 A year ago, Ohio State was a consensus No. 1 seed.
+7
+(Ohio ; State ; 1 seed) === F
+15
+(Ohio State ; year ago ; 1 seed) === F
 
 ::1563
 Fares begin for JetBlue at $118.60, and fares begin for 145.60 for USAir.
@@ -4603,6 +4745,10 @@ The bombings come amid warnings that Afghanistan could see even more violence th
 
 ::1575
 Comparable sales were 7.9% down in the fourth quarter, echoing similar trends among other discretionary retailers in Australia.
+15
+(Comparable sales ; down ; 7.9 % ; in the fourth quarter) === T
+70
+(the fourth quarter ; Comparable sales ; 7.9 %) === F
 
 ::1576
 Congressman Jones collected a total of $52,436.10 for the quarter.
@@ -4621,6 +4767,8 @@ He had been in before about 2 mts.
 
 ::1581
 The Rock Hill Telephone Company Museum is approximately 100 yards on the left.
+7
+(Rock Hill Telephone ; Museum ; approximately 100 yards on the left) === F
 
 ::1582
 A small, family company run by Giacomo Neri, Casanova di Neri has only 48 hectares of planted vineyards.
@@ -4886,6 +5034,8 @@ This past Easter, we had our first new family at the church which included 2 boy
 
 ::1675
 Camposol also has many 3 bedroom villas some of which can sleep up to 8 people.
+35
+(Camposol ; many ; 3 bedroom villas) === F
 
 ::1676
 This is both a wet/dry vacuum and ships with a cloth filter bag that will remove particles down to 5 microns.
@@ -5031,6 +5181,8 @@ This litter has completely blown us away, producing many class winners, RCC and 
 
 ::1722
 For the calendar year before that, at 70% of its original capitalized cost.
+179
+(its ; For the calendar year before that original capitalized cost . ; 70 %) === F
 
 ::1723
 The shared funding will be directed to staffing, curriculum, and materials for a maximum of 25 mothers who have been reunified with children in the child welfare system.
@@ -5162,6 +5314,8 @@ Mr. Miller presented staff's report for this request from the Eastside Christian
 
 ::1765
 The fundist who's had 10 good years in a row with a Sharpe Ratio of 100.
+24
+(Sharpe ; Ratio ; 100) === F
 
 ::1766
 When the 1999 fiscal year ends June 30, state finance officials expect a surplus of $250 million to $300 million.
@@ -5194,6 +5348,8 @@ I just spent $12.50 after taxes and fees to see Rooney.
 The fine for this violation is also $480.00 plus a $20.00 court processing fee.
 -6
 (this violation ; fine ; $ 480.00 plus a $ 20.00 court processing fee) === T
+15
+(The fine for this violation ; also ; $ 480.00 plus a $ 20.00 court processing fee) === F
 
 ::1776
 Developers community number 1 connection string reference This is a .NET Framework Class Library provided by Devart .
@@ -5230,6 +5386,8 @@ That translates into 1.149 mph or 1.85 km/h.
 
 ::1787
 Chapter 146 of the Texas Civil Practices and Remedies Code requires hospitals to submit bills for payment under available health insurance policies in a timely manner.
+480
+(health insurance ; policies ; 146 of the texas civil practices) === F
 
 ::1788
 Snorkelling, in a comfortable 18 degrees of water, in about 3 to 7 metres of water we saw a kelp covered bottom, huge smooth boulders and shoals of whiting and pouting.
@@ -5289,6 +5447,14 @@ Comparison table of prices, flag durability, appearance, Click here Also conside
 The Dow Jones industrial average was up 92.83 points, or 0.73 percent, to 12,743.19.
 -4
 (The Dow Jones industrial average ; up points ; 92.83 points) === T
+28
+(The Dow Jones industrial average ; up points ; 0.73 percent) === T
+64
+(The Dow Jones industrial average ; to ; 12743.19) === F
+240
+(The Dow Jones industrial average ; to ; 92.83 points) === F
+362
+(Dow Jones ; up points ; 92.83 points) === F
 
 ::1807
 Winemaker's Notes The 2008 Tierra Secreta Malbec is deep ruby red color with dark purple hues.
@@ -5304,6 +5470,8 @@ Close to one in four of all borrowers have debt loads in excess of $30,000 upon 
 
 ::1812
 Through this organization, island property owners and businesses have provided a virtually free vacation to over 140 military families in which a spouse has served in Iraq or Afghanistan.
+118
+(a virtually free vacation ; provided ; 140 military families) === F
 
 ::1813
 The flowers are shaped like shallow cups, 1 to 2 inches across.
@@ -5313,6 +5481,8 @@ Give us a call and ask about a free consultation on how we can help you plan you
 
 ::1815
 Maximum price per ticket is $100.
+7
+(Maximum ; price ; $ 100) === F
 
 ::1817
 We are approximately 18 miles from Gatlinburg, Tennessee and situated next to the Great Smoky Mountain National Park and the Cherokee National Forest.
@@ -5388,6 +5558,8 @@ Not my favourate Ford but it still gets 4 stars from me.
 
 ::1842
 A typical recommendation from the weight loss experts is 3 glasses of water with every meal.
+16
+(water ; typical recommendation ; 3 glasses) === F
 
 ::1843
 The US uses less than 25% of world oil.
@@ -5440,9 +5612,13 @@ The chateau has more than 2,000 windows, 700 rooms filled with thousands of pain
 The result of that was a 60% rise in the FTSE 100 Index over the ensuing two years.
 0
 (the FTSE 100 Index ; % rise ; 60 % rise) === T
+207
+(the FTSE 100 Index ; result ; 60 % rise over the ensuing two years) === F
 
 ::1860
 Then move them to 1.5 feet apart.
+118
+(them ; Then move apart ; 1.5 feet) === T
 
 ::1861
 Inevitably, out of 2 rods used only one rod on a specific spot would produce 99 percent of the fish.
@@ -5470,6 +5646,8 @@ In South Korea, the sex ratio at birth increased in the 1980s, as it did in Chin
 
 ::1869
 Cook chicken and gravy for 1 hour on HIGH or for 2 hours on LOW.
+24
+(Cook ; chicken ; 1 hour on HIGH or for 2 hours on LOW) === F
 
 ::1870
 There are 3 vessels of this sphere.
@@ -5562,6 +5740,8 @@ Additionally, it is highly recommended that runners carry at least 20 oz. of wat
 
 ::1899
 Requires registration for the 4 week session.
+24
+(Requires ; registration ; 4 week session) === F
 
 ::1900
 This means he thought he was a safe 13.6 miles west of Southwest Cape, when in fact Endeavour was a good deal closer to running aground.
@@ -5628,6 +5808,8 @@ Yes it is tough, but, if you believe numbers from the ARC Group, revenue for dis
 
 ::1923
 Their number grew by 40,000 in half a year, which represents a 14 percent increase.
+176
+(Their ; number ; grew by 40000 in half a year) === T
 
 ::1924
 The date of departure from port of shipment of the Press, for the purposes of the guarantee period in clause 13 of the Contract, was August 16, 1991.
@@ -5802,9 +5984,13 @@ At that time, though, there were less than 2 billion people in the world and no 
 
 ::1979
 However our goal is to achieve 100% participation from all of our students.
+38
+(% ; participation ; 100 % ; from all of our students) === F
 
 ::1980
 James Jackson, 47, is among at least 11 Texas prisoners with execution dates.
+64
+(James Jackson ; among ; 11 texas prisoners with execution dates) === F
 
 ::1981
 Article 13 The CSRC shall, according to relevant laws, administrative regulations and the Rules, examine the application materials as provided for in the preceding paragraph, and shall decide on whether to approve the application within 45 working days upon receipt of valid application materials, and shall notify the applicant in writing.
@@ -5852,6 +6038,8 @@ In total, Spain's developers have a combined debt of 323 billion euros, or about
 
 ::1995
 The fiscal 2003 school budget is $31.8 million, as teachers seek a new contract.
+7
+(school ; budget ; $ 31.8 million) === F
 
 ::1996
 In stints with three different teams, most recently Washington, Collins has completed 381 of 674 passes, for 4,479 yards, with 22 touchdown passes, 19 interceptions, and a passer rating of 76.0.
@@ -5867,5 +6055,3 @@ Last year, more than 14,000 acres of cranberry bogs, mostly in the southeastern 
 
 ::2000
 Receive one card for every $40 in receipts.
-
-==============Done===========

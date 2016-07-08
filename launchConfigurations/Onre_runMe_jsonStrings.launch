@@ -6,8 +6,8 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/home/harinder/Desktop/111"/>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/home/harinder/Desktop/extractions_#4_type5_10percent"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="edu.iitd.cse.open_nre.onre.runner.Onre_runMe_jsonStrings"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="false /home/harinder/Documents/IITD_MTP/iitd_mtp/Workspace/openie_including_relnoun/data/sentences.txt"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="false data/input_files/1924_0411wb-99.sentences_filtered_jsonStrings"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ONRE"/>
 </launchConfiguration>

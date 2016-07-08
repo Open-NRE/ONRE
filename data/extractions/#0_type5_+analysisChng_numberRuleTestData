@@ -1,0 +1,1179 @@
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+
+::1
+log4j:WARN No appenders could be found for logger (com.clearnlp.component.pos.EnglishPOSTagger).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+::2
+
+::3
+
+::4
+
+::5
+
+::6
+
+::7
+on Sunday , police arrest at least 70 people as officer use baton and tear gas against protester , who be block road and prevent Nepal 's prime minister from reach he residence after return from the international climate change talk in Copenhagen .
+48
+(police ; arrest ; at least 70 people ; on Sunday) === T
+
+::8
+
+::9
+
+::10
+
+::11
+URGENT : China 's defense budget to grow 7.5 percent in 2010 : spokesman BEIJING , March 4 -lrb- Xinhua -rrb- China plan to increase its defense budget by 7.5 percent in 2010 , Li Zhaoxing , spokesman for the annual session of the National People 's Congress -lrb- npc -rrb- , tell a press conference here on Thursday .
+48
+(China 's defense budget ; grow ; 7.5 percent ; in 2010) === T
+
+::12
+
+::13
+
+::14
+
+::15
+
+::16
+
+::17
+
+::18
+it also plan to sell its U.S. internet banking arm ING Direct by 2013 and separate and sell some of its dutch banking operation .
+379
+(its U.S. internet banking arm ; sell ; 2013) === F
+
+::19
+
+::20
+
+::21
+
+::22
+
+::23
+
+::24
+
+::25
+
+::26
+
+::27
+
+::28
+
+::29
+
+::30
+
+::31
+
+::32
+
+::33
+
+::34
+
+::35
+
+::36
+
+::37
+
+::38
+
+::39
+
+::40
+
+::41
+
+::42
+
+::43
+
+::44
+
+::45
+
+::46
+
+::47
+President Bachelet have declare six of Chile 's 15 region catastrophe zone in the aftermath of the quake , which have slice highway to piece and collapse bridge and building .
+48
+(President Bachelet ; declare ; six of chile 's 15 region of Chile 's 15 region catastrophe zone ; to piece and collapse bridge and building) === F
+
+::48
+
+::49
+
+::50
+
+::51
+
+::52
+
+::53
+
+::54
+
+::55
+
+::56
+
+::57
+
+::58
+
+::59
+
+::60
+
+::61
+
+::62
+
+::63
+
+::64
+
+::65
+
+::66
+
+::67
+
+::68
+
+::69
+
+::70
+
+::71
+
+::72
+
+::73
+
+::74
+
+::75
+
+::76
+
+::77
+
+::78
+
+::79
+
+::80
+
+::81
+Mexico City 's IPC stock index close at 31,960.64 point , down 0.23 percent .
+72
+(point ; down percent ; down 0.23) === F
+
+::82
+
+::83
+
+::84
+
+::85
+
+::86
+
+::87
+
+::88
+
+::89
+
+::90
+
+::91
+
+::92
+
+::93
+
+::94
+
+::95
+
+::96
+
+::97
+
+::98
+
+::99
+
+::100
+
+::101
+
+::102
+
+::103
+
+::104
+
+::105
+tour down under result , stage 2 ADELAIDE , Australia 2010-01-20 06:19:10 UTC result on Wednesday for the 133.5-kilometer -lrb- 83.5-mile -rrb- second stage of the ProTour Tour Down under -lrb- Gawler to Hahndorf -rrb- : 1 .
+477
+(the ProTour Tour Down under lrb Gawler ; UTC result ; 133.5 - kilometer - lrb - 83.5 - mile - rrb - second stage to Hahndorf - rrb - : 1) === F
+
+::106
+
+::107
+
+::108
+
+::109
+
+::110
+
+::111
+
+::112
+
+::113
+
+::114
+
+::115
+
+::116
+
+::117
+
+::118
+
+::119
+
+::120
+
+::121
+China produce about 20 percent of the world 's corn and 30 percent of its rice , accord to the US Department of Agriculture website .
+48
+(China ; produce ; about 20 percent of the world 's corn and 30 percent of its rice , accord to the US Department of Agriculture website) === T
+408
+(the world 's corn ; produce ; about 20 percent) === F
+
+::122
+
+::123
+
+::124
+
+::125
+
+::126
+
+::127
+
+::128
+
+::129
+Watchmaker ` stand with Tiger ' amid new cheating report PALM BEACH , Florida , Dec 22 , 2009 -lrb- afp -rrb- swiss watchmaker tag heuer show support for embattled Tiger Woods on its website Tuesday even as a new report emerge that Woods and Rachel Uchitel have resume they relationship .
+408
+(embattled Tiger Woods ; show ; 2009 - lrb - afp - rrb - swiss watchmaker tag heuer show support on its website Tuesday ; even as a new report) === F
+
+::130
+
+::131
+
+::132
+
+::133
+
+::134
+
+::135
+
+::136
+
+::137
+
+::138
+
+::139
+
+::140
+
+::141
+
+::142
+
+::143
+
+::144
+
+::145
+
+::146
+
+::147
+
+::148
+
+::149
+
+::150
+but Canada do pour $ 110 million into its Own the podium program , the goal be to win the medal count over these 17 day in Vancouver .
+48
+(Canada ; pour ; $ 110 million ; into its Own the podium program) === T
+
+::151
+
+::152
+
+::153
+
+::154
+
+::155
+
+::156
+the latest improve offer increase the interest rate on unsecured canadian note to 10.25 percent from 9 percent .
+488
+(the latest improve offer ; increase to ; 10.25 percent) === F
+
+::157
+
+::158
+
+::159
+
+::160
+
+::161
+
+::162
+
+::163
+
+::164
+
+::165
+
+::166
+
+::167
+
+::168
+
+::169
+
+::170
+
+::171
+
+::172
+Obama have order 21,000 more troops to Afghanistan , increase the number of U.S. force there to a record 68,000 , and watch as Marines push deep into taliban-controlled district ahead of Afghanistan 's national election in August .
+48
+(Obama ; have ; 21000 more troops ; to Afghanistan) === T
+96
+(Obama ; [number of] more troops ; 21000 more) === F
+
+::173
+
+::174
+
+::175
+
+::176
+
+::177
+
+::178
+
+::179
+
+::180
+
+::181
+
+::182
+
+::183
+
+::184
+
+::185
+
+::186
+
+::187
+
+::188
+
+::189
+
+::190
+
+::191
+
+::192
+
+::193
+
+::194
+
+::195
+
+::196
+
+::197
+
+::198
+
+::199
+
+::200
+
+::201
+
+::202
+accord to the survey , Brazil 's inflation rate will reach 4.31 percent in 2009 .
+48
+(Brazil 's inflation rate ; accord to the survey reach ; 4.31 percent ; in 2009) === T
+
+::203
+
+::204
+According to Bank Negara Malaysia , the country 's central bank , headline inflation moderated in September to 1.8 percent , and inflation is expected to remain moderate going into 2011 .
+488
+(the country 's central bank headline inflation ; moderated ; 1.8 percent) === F
+
+::205
+
+::206
+
+::207
+
+::208
+According to Singapore National Environment Agency , Singapore emits about 38,000 kilotons of CO2 each year , 15 % of which is from transportation .
+48
+(Singapore ; emits ; about 38000 kilotons of CO2) === F
+408
+(CO2 ; emits ; about 38000 kilotons ; According to Singapore National Environment Agency) === F
+
+::209
+According to the authority 's preliminary estimate , greenhouse gas emissions in Finland amounted to 70.1 million tons of carbon dioxide equivalent in 2008 .
+488
+(greenhouse gas emissions in Finland ; amounted ; 70.1 million tons of carbon dioxide equivalent) === T
+
+::210
+
+::211
+
+::212
+
+::213
+According to the IEA the Russian gross production of electricity was 1,038 TWh in 2008 and 930 TWh in 2004 giving the 4 th top position among the world producers in 2008 .
+-6
+(electricity ; Russian gross production ; 1038 twh ; According to the IEA) === T
+185
+(production ; gross ; 1038 twh ; According to the IEA) === F
+
+::214
+
+::215
+According to the U.S. Department of Energy 's Carbon Dioxide Information Analysis Center , China in 2012 emitted 9.8 million kilotons of CO2 , while the United States emitted 5.2 million kilotons .
+48
+(China ; emitted ; 5.2 million kilotons of CO2 ; According to the U.S. Department of Energy 's Carbon Dioxide Information Analysis Center) === T
+408
+(CO2 ; emitted ; 5.2 million kilotons ; According to the U.S. Department of Energy 's Carbon Dioxide Information Analysis Center) === F
+
+::216
+According to TNIC , there are 17.64 million Internet users in Taiwan , or 75.43 percent of the entire population .
+0
+(Taiwan ; [number of] Internet users ; 17.64 million) === T
+
+::217
+
+::218
+
+::219
+
+::220
+
+::221
+
+::222
+Annual average inflation -- a different measure that is crucial for countries like Lithuania aiming to adopt the euro -- fell to 7.9 percent in July from 8.7 percent in June and 9.4 percent in May .
+488
+(Annual average inflation ; fell to ; 7.9 percent) === T
+
+::223
+
+::224
+
+::225
+
+::226
+As host country , China won 51 golds , 21 silvers and 28 bronze , total 100 medals , ranked 1st at the 2008 Summer Olympics in Beijing .
+48
+(China ; won ; 51 golds ; As host country) === T
+
+::227
+
+::228
+
+::229
+
+::230
+
+::231
+At the time , Singapore had about 1,000 inhabitants .
+48
+(Singapore ; had ; about 1000 inhabitants ; At the time) === T
+96
+(Singapore ; [number of] inhabitants ; about 1000) === T
+
+::232
+At the turn of the 20th century , Illinois had a population of nearly 5 million .
+-5
+(Illinois ; population ; nearly 5 million) === T
+
+::233
+
+::234
+
+::235
+
+::236
+
+::237
+Brazil has 36.4 million active internet users in July : survey RIO DE JANEIRO , Aug. 20 -LRB- Xinhua -RRB- The number of active internet users in Brazil jumped to 36.4 million in July , up 10 percent from June , according to a survey released on Thursday by consulting company Ibope Nielsen Online .
+488
+(20 LRB Xinhua RRB ; jumped up percent from June ; 36.4 million active internet users) === F
+
+::238
+
+::239
+But in the rest of Canada , male life expectancy rose to 77.5 years from 74.1 years and among females it rose to 81.3 years from 79.7 years .
+488
+(male life expectancy ; rose to ; rose to 77.5 years) === F
+
+::240
+
+::241
+By introducing nuclear energy , between 2020 , when plants might begin working , and 2030 , when they should account for 25 percent of electricity supply , Italy might save up to -LRB- EURO -RRB- 69 billion in generation costs and cut up to 381 million tons in carbon emissions , according to the study .
+48
+(Italy ; save ; 69 billion in generation costs ; By introducing nuclear energy , between 2020 , when plants might begin working , and 2030 ,) === T
+
+::242
+
+::243
+
+::244
+
+::245
+
+::246
+Chile is the longest and narrowest nation in the world , with a total area of 756 , 626 sq km .
+123
+(Chile ; total area ; 756) === F
+368
+(the longest nation in the world ; total area ; 756) === F
+
+::247
+
+::248
+
+::249
+
+::250
+China shipped US$ 2.21 trillion worth of goods , up by 84 % since 2009 .
+379
+(US$ trillion worth of goods ; shipped up ; 84 %) === F
+
+::251
+China , with a population of about 1.3 billion , is an ideal place for companies of ASEAN members to do business .
+123
+(China ; population ; about 1.3 billion) === T
+368
+(an ideal place for companies of ASEAN members to do business ; population ; about 1.3 billion) === F
+
+::252
+China 's total electricity generated in 2013 amounted to 5322 billion kWh -LRB- TWh -RRB- , including 3959 TWh from coal power stations -LRB- 74 % -RRB- , 896 TWh from hydro power stations , 140 TWh from wind , 8.7 TWh from solar PV , 112 TWh from nuclear , and the rest from other sources .
+488
+(China 's total electricity generated in 2013 ; amounted ; 5322 billion kwh - lrb - twh - rrb -) === T
+
+::253
+
+::254
+Covering a total area of 8.51 million square kilometers , Brazil has a rangeland of more than 200 million hectares , a farmland of 6.2 million hectares and 100 million hectares of unexploited land .
+-5
+(Brazil ; rangeland ; more than 200 million hectares) === T
+
+::255
+Cuba has a work force of 4.9 million people , a life expectancy of 77 years , and an infant mortality rate of 5.8 per 1,000 live births .
+-5
+(Cuba ; infant mortality rate ; 5.8 per 1000 live births) === T
+
+::256
+
+::257
+
+::258
+
+::259
+
+::260
+
+::261
+
+::262
+
+::263
+
+::264
+
+::265
+
+::266
+
+::267
+Food Inflation in India decreased to 3.50 percent in November of 2014 from 5.68 percent in October of 2014 .
+488
+(Food Inflation in India ; decreased to ; 3.50 percent) === T
+
+::268
+
+::269
+Foreign direct investment -LRB- FDI -RRB- in U.S. businesses , measured on a cumulative stock basis , reached $ 2.7 trillion at the end of 2012 , which is equivalent to about 16 percent of U.S. gross domestic product .
+48
+(Foreign direct investment LRB FDI RRB in U.S. businesses measured on a cumulative stock basis ; reached ; $ 2.7 trillion ; at the end of 2012 ,) === T
+
+::270
+
+::271
+
+::272
+
+::273
+
+::274
+
+::275
+Greece has an area of approximately 132,000 square kilometers and a population of 11.31 million , of which 98 percent are Greeks .
+-5
+(Greece ; area of which are ; approximately 132000 square kilometers) === T
+
+::276
+
+::277
+
+::278
+
+::279
+
+::280
+
+::281
+In 2011 , electric power generation totaled approximately 996 billion kilowatthors , and Russia consumed about 861 billion kilowatthors .
+48
+(electric power generation ; totaled ; approximately 996 billion kilowatthors ; In 2011) === T
+
+::282
+In 2012 , U.S. greenhouse gas emissions totaled 6,526 million metric tons CO2 .
+48
+(U.S. greenhouse gas emissions ; totaled ; 6526 million metric tons co2 ; In 2012) === T
+
+::283
+In 2013 Germany 's electricity production reached 631.4 TWh .
+48
+(Germany 's electricity production ; reached ; 631.4 twh ; In 2013) === T
+
+::284
+In 2013 , exports from Russia amounted to US$ 526.4 billion , up 74.4 % since 2009 .
+488
+(exports from Russia ; amounted ; $ 526.4 billion) === T
+
+::285
+In 2013 , the United States generated about 4,058 billion kilowatthors of electricity .
+48
+(the United States ; generated ; about 4058 billion kilowatthors of electricity ; In 2013) === T
+408
+(electricity ; generated ; about 4058 billion kilowatthors ; In 2013) === F
+
+::286
+
+::287
+
+::288
+
+::289
+In Pakistan , petrol costs $ 0.8 per litre , $ 0.87 per litre in Bhutan , $ 1.02 per litre in Maldives , $ 1.03 per litre in India , $ 1.10 per litre in Nepal and highly expensive in Sri-Lanka at $ 1.20 per litre .
+279
+(litre ; costs ; $ 0.8 per litre ; In Pakistan) === F
+
+::290
+
+::291
+
+::292
+
+::293
+
+::294
+
+::295
+India is a federal union of states comprising 29 states and 7 union territories .
+21
+(states ; India ; 7 union territories) === F
+
+::296
+
+::297
+
+::298
+
+::299
+Indonesian internet users rise up 17 percent to 2.3 million .
+488
+(Indonesian internet users ; rise up percent to ; 2.3 million) === T
+
+::300
+
+::301
+
+::302
+It does not top any individual category -- average income in Liechtenstein is a wallet-busting 81,011 dollars and Japan 's life expectancy is 83.6 years -- but Norway 's all-round performance gave it superiority in the UN Development Programme -LRB- UNDP -RRB- 20th annual rankings .
+188
+(Japan 's ; life expectancy ; 83.6 years) === T
+
+::303
+
+::304
+
+::305
+
+::306
+
+::307
+
+::308
+Kerala has the highest cognizable crime rate of 455.8 as on 2012 , while Nagaland recorded lowest rates .
+-5
+(Kerala ; highest cognizable crime rate ; 455.8 as on 2012) === T
+
+::309
+
+::310
+
+::311
+
+::312
+
+::313
+Life expectancy in Zimbabwe , plagued by AIDS and poverty , has fallen to 47 years from 61 years over the past quarter century .
+488
+(Life expectancy in Zimbabwe plagued by AIDS and poverty ; fallen to ; 47 years) === T
+
+::314
+Literacy rate of Mumbai Suburban is 89.91 percent .
+-6
+(Mumbai Suburban ; Literacy rate ; 89.91 percent) === T
+
+::315
+
+::316
+Meanwhile , Myanmar 's exports rose 12 percent to $ 7.6 billion in year through March from $ 6.78 billion the previous year , according to the report .
+339
+(year ; Meanwhile rose percent to ; $ 7.6 billion) === F
+488
+(Myanmar 's exports ; Meanwhile rose percent to ; $ 7.6 billion in year) === F
+
+::317
+Mexico 's land area extends 1,964,375 sq km .
+48
+(Mexico 's land area ; extends ; 1964375 sq km) === T
+
+::318
+
+::319
+
+::320
+
+::321
+
+::322
+
+::323
+
+::324
+Pakistan typically exports about $ 10 billion of textile products each year , with about a quarter of that amount going to U.S. retailers .
+48
+(Pakistan ; typically exports year ; about $ 10 billion of textile products ; with about a quarter of that amount going to U.S. retailers) === F
+408
+(textile products ; typically exports year ; about $ 10 billion ; with about a quarter of that amount going to U.S. retailers) === F
+
+::325
+
+::326
+
+::327
+Personal Income Tax Rate in India averaged 30.73 percent from 2004 until 2014 , reaching an all time high of 33.99 percent in 2013 and a record low of 30 percent in 2005 .
+48
+(Personal Income Tax Rate in India ; averaged ; 30.73 percent ; from 2004 until 2014) === T
+
+::328
+Population Census of Mumbai Suburban District in 2011 is 9356962 .
+-6
+(Mumbai Suburban District in 2011 ; Population Census ; 9356962) === T
+
+::329
+Portugal has a total area of about 92,300 square kilometers with a population of 10.7 million .
+-5
+(Portugal ; total area ; about 92300 square kilometers) === T
+
+::330
+
+::331
+
+::332
+
+::333
+
+::334
+
+::335
+
+::336
+
+::337
+
+::338
+
+::339
+
+::340
+
+::341
+
+::342
+
+::343
+Sri Lanka has a surface area of 65,000 square kilometres -LRB- 25,000 square miles -RRB- .
+-5
+(Sri Lanka ; surface area ; 65000 square kilometres) === T
+
+::344
+Starting from a base of less than $ 19 billion in 1990 , the stock of FDI in China rose to over $ 300 billion at the end of 1999 .
+488
+(the stock of FDI in China ; rose to ; less than $ 19 billion) === T
+
+::345
+
+::346
+
+::347
+
+::348
+Sweden has a total area of 449,964 square km with Stockholm as its capital .
+-5
+(Sweden ; total area ; 449964 square km with Stockholm as its capital) === T
+
+::349
+
+::350
+Thailand , a country which is widely known for its craze for social networks , reportedly , has a Facebook and internet penetration of 36 percent and 26 percent respectively .
+-5
+(Thailand ; Facebook penetration ; 36 percent) === T
+
+::351
+The 747-400 passenger version can accommodate 416 passengers in a typical three-class layout , 524 passengers in a typical two-class layout , or 660 passengers in a high density one-class configuration .
+48
+(The 747-400 passenger version ; accommodate ; 524 passengers in a typical two - class layout ; in a typical three - class layout ,) === F
+
+::352
+The average life expectancy in Guinea-Bissau is just 46 years .
+67
+(Guinea Bissau ; average life expectancy ; 46 years) === T
+185
+(expectancy ; average ; 46 years) === F
+
+::353
+
+::354
+
+::355
+
+::356
+The current Internet penetration is only 46 % in China compared to 88 % in the US .
+185
+(penetration ; current ; 46 % in China ; compared to 88 % in the US) === F
+305
+(The current Internet penetration ; China ; 46 % ; compared to 88 % in the US) === F
+
+::357
+
+::358
+
+::359
+The electricity sector in India had an installed capacity of 250.256 GW as of end July 2014 .
+-5
+(The electricity sector in India ; installed capacity ; 250.256 gw) === T
+
+::360
+
+::361
+The GDP of India in the year 2007 was US $ 1.09 trillion .
+-6
+(India ; GDP ; $ 1.09 trillion) === T
+67
+(the year ; GDP ; $ 1.09 trillion) === F
+
+::362
+The Gross Domestic Product -LRB- GDP -RRB- in India was worth 1876.80 billion US dollars in 2013 .
+-4
+(Gross Domestic Product LRB GDP RRB ; worth US dollars ; 1876.80 billion us dollars) === F
+
+::363
+The Gross Domestic Product -LRB- GDP -RRB- in Somalia was worth 1.07 billion US dollars in 2010 .
+-4
+(Gross ; worth US dollars ; 1.07 billion us dollars) === F
+
+::364
+
+::365
+The inflow of FDI into Pakistan was US$ 258.42 million in 1991 , and in the same year in Afghanistan it was zero but in the year 2007 the inflow of FDI into Pakistan increased to US$ 4273 million and into Afghanistan it was at US$ 288 during 2007 .
+36
+(FDI ; inflow ; $ 258.42 million ; in 1991) === F
+247
+(it ; inflow ; $ 258.42 million in 1991) === F
+
+::366
+
+::367
+
+::368
+
+::369
+The land area of China is 36926 square miles , and that of India is 11823 square miles .
+-6
+(China ; land area ; 36926 square miles) === T
+
+::370
+
+::371
+
+::372
+The latest annual inflation rate for the United States is 1.3 % through the 12 months ended November 2014 , as published by the US government on December 17 , 2014 .
+-6
+(the United States ; latest annual inflation rate ; 1.3 % ; through the 12 months ended November 2014) === T
+185
+(rate ; latest ; 1.3 % ; through the 12 months ended November 2014) === F
+
+::373
+The latest value for Exports of goods and services -LRB- BoP , current US$ -RRB- in Bangladesh was $ 26,990,090,000 as of 2011 .
+-6
+(Exports of goods and services - LRB - BoP , ; latest value ; $ 26990090000 as of 2011) === F
+148
+(Bangladesh ; US$ RRB ; $ 26990090000 as of 2011) === F
+185
+(value ; latest ; $ 26990090000 as of 2011) === F
+
+::374
+The latest value for Pump price for diesel fuel -LRB- US$ per liter -RRB- in Zambia was 1.48 as of 2012 .
+-6
+(Pump price for diesel fuel - LRB - US$ per ; latest value ; 1.48 as of 2012) === F
+148
+(Zambia ; latest value ; 1.48 as of 2012) === F
+185
+(value ; latest ; 1.48 as of 2012) === F
+
+::375
+
+::376
+The literacy rate in Tunisia is 79.1 % with a rank of 165 out of 194 .
+67
+(Tunisia ; literacy rate ; 79.1 % with a rank of 165 out of 194) === T
+
+::377
+
+::378
+The median home value in the United States is $ 175,600 .
+67
+(the United States ; median home value ; $ 175600) === T
+The median home value in the United States is $ 175,600 .
+185
+(value ; median ; $ 175600) === F
+
+::379
+
+::380
+The population of Vatican City is about 800 people , of whom over 450 have Vatican citizenship , while the rest have permission to reside there , either temporarily or permanently , without the benefit of citizenship .
+-6
+(Vatican City ; population ; about 800 people) === T
+
+::381
+The price of a Big Mac was # 2.29 in the United Kingdom .
+-6
+(a Big Mac ; price ; 2.29 in the United Kingdom) === T
+The price of a Big Mac was # 2.29 in the United Kingdom .
+305
+(The price of a Big Mac ; United Kingdom ; 2.29) === F
+
+::382
+
+::383
+
+::384
+The Reserve Bank of India cut its main repurchase rate by 0.25 percentage point to 7.5 % , citing weakness in parts of the economy as well as favorable inflation figures and structural overhauls included in the government 's proposed budget .
+379
+(its main repurchase rate ; cut ; 0.25 percentage point) === F
+488
+(The Reserve Bank of India ; cut ; 7.5 %) === F
+
+::385
+
+::386
+
+::387
+The total livestock population in India consisting of cattle , buffalo , sheep , goat , pig , horses & ponies , mules , donkeys , camels , Mithun and Yak in the country is 512.05 million numbers in 2012 .
+67
+(India consisting of cattle , buffalo , sheep , goat , pig , horses & ponies , mules , donkeys , camels , Mithun and Yak in the country ; total livestock population ; 512.05 million numbers ; in 2012) === T
+185
+(population ; total ; 512.05 million numbers ; in 2012) === F
+
+::388
+
+::389
+
+::390
+
+::391
+The US has a total area of more than 3.5 million square miles , making it the third largest country in the world after Russia and Canada .
+-5
+(The US ; total area ; more than 3.5 million square miles) === T
+
+::392
+The value for Land area -LRB- sq. km -RRB- in Pakistan was 770,880 as of 2011 .
+-6
+(Land area LRB sq ; value ; 770880 as of 2011 ; . km - RRB - in Pakistan) === F
+148
+(Pakistan ; value ; 770880 as of 2011) === F
+
+::393
+
+::394
+
+::395
+
+::396
+
+::397
+
+::398
+
+::399
+
+::400
+
+::401
+
+::402
+To put that into perspective the United States has only 96,669,000 cows -LRB- less than half the number of cows that India has -RRB- .
+48
+(the United States ; has ; 96669000 cows) === T
+96
+(the United States ; [number of] cows ; 96669000) === T
+
+::403
+Togo , a nation of 6.5 million people , covers about 22,000 square miles near Africa 's Atlantic coast , an area slightly larger than West Virginia .
+48
+(Togo ; covers ; about 22000 square miles near Africa 's Atlantic coast) === T
+
+::404
+Total annual greenhouse gas emissions grew from 1.25 billion tonnes in 1994 to 1.90 billion tonnes in 2007 , confirming India among the world 's biggest emitters .
+488
+(Total annual greenhouse gas emissions ; grew to ; 1.90 billion tonnes) === T
+
+::405
+
+::406
+
+::407
+
+::408
+
+::409
+Tuvalu -- population 10,000 -- press a demand that the conference discuss its idea that emerge giant economy be tie to bind emission cut under a new round of pledge under the Kyoto Protocol .
+48
+(Tuvalu ; press ; 10000 - - press a demand) === F
+
+::410
+
+::411
+
+::412
+
+::413
+
+::414
+Vatican City officially Vatican City State -LRB- Italian : Stato della Città del Vaticano ; pronounced -RRB- , a walled enclave within the city of Rome , with an area of approximately 44 hectares -LRB- 110 acres -RRB- , and a population of 842 , is the smallest internationally recognized independent state in the world by both area and population .
+123
+(a population of 842 ; area ; approximately 44 hectares) === F
+368
+(state ; area ; approximately 44 hectares) === F
+
+::415
+
+::416
+
+::417
+
+::418
+
+::419
+With a total area of about 88,300 square km , Serbia has a population of about 9.9 million .
+-5
+(Serbia ; population ; about 9.9 million) === T
+
+::420
+With a total land area of 8,514,215 square kilometers -LRB- 3,287,357 square miles -RRB- , Brazil is larger than Australia and is Latin America 's biggest country .
+123
+(Brazil ; total land area ; 8514215 square kilometers) === T
+
+::421
+With an area of 1.29 million square km and Lima as its capital , Peru has a population of some 28.22 million , including Amerindians , Indian - Europeans , Europeans and others .
+20
+(Peru ; population ; some 28.22 million ; including Amerindians , Indian - Europeans , Europeans and others) === T
+
+::422
+With an area of 504,030 km ² , Spain is the second largest country in Western Europe -LRB- behind France -RRB- and with an average altitude of 650 m , the second highest country in Europe -LRB- behind Switzerland -RRB- .
+123
+(Spain ; area ; 504030 km) === T
+368
+(the second largest country in Western Europe - LRB - behind France - RRB - and with an average altitude of 650 m , the second highest country in Europe - LRB - behind Switzerland - RRB - ; area ; 504030 km) === T
+
+::423
+With an area of about 9.6 million km ² , the People 's Republic of China is the 3rd largest country in total area behind Russia and Canada , and very similar to the US .
+123
+(the People 's Republic of China ; area ; about 9.6 million km ²) === T
+368
+(country ; area ; about 9.6 million km ²) === F
+
+::424
+
+::425
+The number of Internet users in Bangladesh in 2009 was 617,300 , representing a penetration rate of 0.38 percent .
+-6
+(Internet users ; number ; 617300) === F
+The number of Internet users in Bangladesh in 2009 was 617,300 , representing a penetration rate of 0.38 percent .
+67
+(Bangladesh ; number ; 617300) === F
+

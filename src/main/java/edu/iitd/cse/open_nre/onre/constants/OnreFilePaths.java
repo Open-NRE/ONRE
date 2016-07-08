@@ -16,4 +16,7 @@ public class OnreFilePaths {
 	
 	//ONRE_DS
 	public static String filePath_stopWords = "stopwords.txt";
+	
+	//ONRE_ANALYSIS_HELPER
+	public static String filePath_pronounsList = "pronouns.txt";
 }
