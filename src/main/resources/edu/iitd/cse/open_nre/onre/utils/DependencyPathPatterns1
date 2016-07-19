@@ -405,7 +405,7 @@
 <(pobj#{quantity}#.+)<(prep#of|for#in)<(pobj#{rel}#nnp|nn)<(nn#{arg}#nnp|nn|prp)>>>>
 <(nsubj#{rel}#nnp|nn)<(amod#old#jj)<(npadvmod#yr#nnp|nn)<(num#{quantity}#.+)>>(poss#{arg}#prp\$)>>
 <(ccomp#{rel}#jj)<(advcl#give#verb)<(dobj#{quantity}#.+)(nsubj#{arg}#prp)>>>
-<(#{rel}#verb)<(dobj#{quantity}#.+)<(prep#of|for#in)<(pobj#{arg}#nnp|nn|prp)>>>>
+<(#{rel}#verb)<(dobj#{quantity}#.+)<(prep#for#in)<(pobj#{arg}#nnp|nn|prp)>>>>
 <(ccomp#make#verb)<(dobj#{quantity}#.+)<(prep#of|for#in)<(pobj#{arg}#nnp|nn|prp)>>(prt#{rel}#rp)>>
 <(#rose#verb)<(nsubj#{rel}#nnp|nn)<(nn#{arg}#nnp|nn|prp)>(prep#to#in)<(pobj#{quantity}#.+)>>>
 <(nsubj#{rel}#nnp|nn)<(amod#old#jj)<(npadvmod#month#nnp|nn)<(num#{quantity}#.+)>>(poss#{arg}#prp\$)>>

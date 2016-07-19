@@ -185,6 +185,7 @@ public class OnreHelper_expansions {
 	    expandRelationHelper_basicExpansions(node_relation, expansions);
 	    expandRelationHelper_expandOnPrepForConfiguredWords(onreExtraction, node_relation, expansions); //TODO: IMPORTANT-CHANGE #6: if the relation word is one of configured words(grew/increased/down), then expand it on prep
 	    expansions = expandRelationHelper_expandOnPrepSubTree(onreExtraction, expansions); //TODO: IMPORTANT-CHANGE #12: expand on prep (except headWord) if subtree does not have argument/quantity
+	    expansions = expandRelationHelper_expandOnAuxVerbs(onreExtraction, expansions);
 	    
 		String str = expandHelper_sortExpansions_createStr(expansions);
 		if(expandHelper_isAlreadyPresent(onreExtraction, str, 1)) return;		// If upon expansion, we include already included text - ignore
@@ -233,6 +234,20 @@ public class OnreHelper_expansions {
 	    		if(OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.argument_headWord, child) != null) continue;
 	    		
 	    		expansions_all.addAll(expandHelper_expandCompleteSubTree(child));
+	    	}
+		}
+	    expansions = expansions_all;
+		return expansions;
+	}
+	
+	private static Set<OnrePatternNode> expandRelationHelper_expandOnAuxVerbs(OnreExtraction onreExtraction, Set<OnrePatternNode> expansions) {
+		Set<OnrePatternNode> expansions_all = new HashSet<>();
+	    expansions_all.addAll(expansions);
+	    for (OnrePatternNode onrePatternNode : expansions) {
+	    	if(onrePatternNode.posTag.equals("VERB")) {
+	    		for(OnrePatternNode child : onrePatternNode.children) {
+		    		if(child.dependencyLabel.equals("aux") || child.dependencyLabel.equals("auxpass")) expansions_all.add(child);
+		    	}
 	    	}
 		}
 	    expansions = expansions_all;
