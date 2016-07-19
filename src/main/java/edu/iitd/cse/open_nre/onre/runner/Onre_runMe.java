@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Tickets are available through the WWU Box Office and cost $10 for general admission and $8 for students.";
+		String sentence = "When established, your October Glory Maple Tree will grow up to 5 ft.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 
 		if(depGraph != null) {
