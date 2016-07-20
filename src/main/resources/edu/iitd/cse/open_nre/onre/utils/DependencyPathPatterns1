@@ -491,7 +491,7 @@
 <(#is|are|was|were#verb)<(attr#s#nnp|nn)<(nn#{quantity}#.+)>(nsubj#{rel}#nnp|nn)<(prep#of|for#in)<(pobj#{arg}#nnp|nn|prp)>>>>
 <(#is|are|was|were#verb)<(nsubj#{arg}#nnp|nn|prp)(prep#{rel}#in)<(pobj#{quantity}#.+)>>>
 <(#be#verb)<(attr#{rel}#nnp|nn)<(nn#{quantity}#.+)>(nsubj#ticket#nnp|nn)<(poss#{arg}#prp\$)>>>
-<(#is#verb)<(attr#{quantity}#.+)(nsubj#{rel}#nnp|nn)<(prep#of#in)<(pobj#{arg}#nnp|nn|prp)>>>>
+<(#is|are|was|were#verb)<(attr#{quantity}#.+)(nsubj#{rel}#nnp|nn)<(prep#of#in)<(pobj#{arg}#nnp|nn|prp)>>>>
 <(#measures#verb)<(advmod#{rel}#jj)<(npadvmod#{quantity}#.+)>(nsubj#{arg}#prp)>>
 <(#is|are|was|were#verb)<(attr#{quantity}#.+)<(poss#{arg}#prp\$)>(nsubj#{rel}#nnp|nn)>>
 <(rcmod#is|are|was|were#verb)<(attr#{quantity}#.+)(nsubj#{rel}#nnp|nn)<(poss#{arg}#prp\$)>>>

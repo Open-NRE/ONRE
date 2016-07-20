@@ -111,6 +111,7 @@ public class MayIHelpYou {
     		//System.out.println("pattern: " + i);
     		OnrePatternNode configuredPattern = list_configuredPattern.get(i);
     		if(configuredPattern==null) continue;
+    		OnreGlobals.resetGlobals();
     		
 	        OnreExtraction onreExtraction = getExtraction(onrePatternTree, onrePatternTree.root, configuredPattern, danrothSpans);
 	        if(onreExtraction == null) continue;
@@ -133,7 +134,7 @@ public class MayIHelpYou {
     	
     	if(subTree == null) return null;
     	
-    	return OnreHelper.onreExtraction_postProcessing(patternNode_sentence, onreExtraction);
+    	return OnreHelper.onreExtraction_postProcessing(patternNode_sentence, onreExtraction, patternNode_configured);
     }
 
 	/*private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {

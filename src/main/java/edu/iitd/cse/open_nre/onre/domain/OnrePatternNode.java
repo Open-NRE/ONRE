@@ -6,6 +6,7 @@ package edu.iitd.cse.open_nre.onre.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreExtractionPartType;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
@@ -89,7 +90,34 @@ public class OnrePatternNode {
 		
 		//if(this.word.equalsIgnoreCase(onrePatternNode.word)) return true;
 		//if(this.word.toLowerCase().matches(regexNode.word.toLowerCase())) return true;
-		if(OnreUtils_string.isIgnoreCaseMatch(this.word, regexNode.word)) return true;
+		if(OnreUtils_string.isIgnoreCaseMatch(this.word, regexNode.word)) {
+			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "has") 
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "is") 
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "was")) {
+				OnreGlobals.isSubjectSingular = true;
+			}
+			
+			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "have") 
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "are") 
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "were")) {
+				OnreGlobals.isSubjectSingular = false;
+			}
+			
+			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "was") 
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "were")
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "had")) {
+				OnreGlobals.isSentenceInPastTense = true;
+			}
+			
+			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "is") 
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "are")
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "has")
+					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "have")) {
+				OnreGlobals.isSentenceInPastTense = false;
+			}
+			
+			return true;
+		}
 		
 		return false;
 	}

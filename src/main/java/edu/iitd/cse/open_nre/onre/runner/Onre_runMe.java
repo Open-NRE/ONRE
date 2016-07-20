@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "When established, your October Glory Maple Tree will grow up to 5 ft.";
+		String sentence = "Not including Marty's salary from work, his family's Passive Income is $1166.00.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 
 		if(depGraph != null) {

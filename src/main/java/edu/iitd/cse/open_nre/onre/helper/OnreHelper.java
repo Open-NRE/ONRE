@@ -4,6 +4,8 @@
 package edu.iitd.cse.open_nre.onre.helper;
 
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Queue;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreExtractionPartType;
@@ -145,7 +147,7 @@ public class OnreHelper {
     	return result;
     }
 	
-	public static OnreExtraction onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction) throws IOException {
+	public static OnreExtraction onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction, OnrePatternNode patternNode_configured) throws IOException {
 		//if(!OnreGlobals.arg_onre_isSeedFact) OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
 		OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
 
@@ -163,8 +165,60 @@ public class OnreHelper {
     	
     	postProcessingHelper_numberOf(onreExtraction); 											//TODO: IMPORTANT-CHANGE #7:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
     	
+    	postProcessingHelper_removeApostrophe(onreExtraction);
+    	
+    	postProcessingHelper_appendHasHave(onreExtraction, patternNode_configured);
+    	
     	//replaceDoubleSpaces(onreExtraction);
     	return onreExtraction;
+	}
+	
+	public static void postProcessingHelper_appendHasHave(OnreExtraction onreExtraction, OnrePatternNode patternNode_configured) {
+		boolean isNounRelation = false, containsBeVerbs = false;
+		
+		Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+		q_yetToExpand.add(patternNode_configured);
+		while(!q_yetToExpand.isEmpty()) {
+			OnrePatternNode currNode = q_yetToExpand.remove();
+			if(currNode.word.equals("{rel}") && currNode.posTag.equalsIgnoreCase("nnp|nn")) { isNounRelation = true;}
+			if(currNode.word.equals("is|are|was|were") || currNode.word.equals("has|have|had")) { containsBeVerbs = true;}
+			
+			for(OnrePatternNode child : currNode.children) {
+				 q_yetToExpand.add(child);
+			}
+		}
+		
+		if(isNounRelation && containsBeVerbs) {
+			if(OnreGlobals.isSentenceInPastTense) {
+				onreExtraction.relation.text = "had " + onreExtraction.relation.text;
+			}
+			else {
+				if(OnreGlobals.isSubjectSingular && !onreExtraction.argument.text.endsWith("s")) {
+					onreExtraction.relation.text = "has " + onreExtraction.relation.text;
+				}
+				else {
+					onreExtraction.relation.text = "have " + onreExtraction.relation.text;
+				}
+			}
+			
+			if(!onreExtraction.relation.text.endsWith("of") && !onreExtraction.relation.text.contains("[number of]")) {
+				onreExtraction.relation.text = onreExtraction.relation.text + " of";
+			}
+			
+			if(OnreGlobals.negatedWord != null) {
+				onreExtraction.relation.text = OnreGlobals.negatedWord + " " + onreExtraction.relation.text;
+			}
+			
+			if(OnreGlobals.auxVerb != null) {
+				onreExtraction.relation.text = OnreGlobals.auxVerb + " " + onreExtraction.relation.text;
+			}
+		}
+	}
+	
+	private static void postProcessingHelper_removeApostrophe(OnreExtraction onreExtraction) {
+		if(onreExtraction.argument.text.endsWith("'s")) {
+			onreExtraction.argument.text = onreExtraction.argument.text.substring(0, onreExtraction.argument.text.length() - 3);
+		}
 	}
 
 	/*private static void replaceDoubleSpaces(OnreExtraction onreExtraction) {

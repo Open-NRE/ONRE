@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
+import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.comparators.OnreComparator_PatternNode_Index;
 import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
@@ -29,6 +30,23 @@ public class OnreHelper_expansions {
 		expandQuantity(onreExtraction, patternNode_sentence); //TODO: IMPORTANT-CHANGE #14: expand on prep if subtree does not have relation/arg
 		if(OnreUtils.quantityExists(onreExtraction)) expandQuantity_settingAdditionalInfo(onreExtraction,patternNode_sentence);
 		//if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence); //TODO: IMPORTANT-CHANGE #14: expand on prep if subtree does not have relation/arg
+		
+		fillNegationAndAuxWords(onreExtraction, patternNode_sentence);
+	}
+	
+	private static void fillNegationAndAuxWords(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
+		OnrePatternNode node_parent_relation = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.relation, patternNode_sentence);
+		
+		if(node_parent_relation == null) return;
+		
+		for(OnrePatternNode child : node_parent_relation.children) {
+			if(child.dependencyLabel.equals("aux") || child.dependencyLabel.equals("auxpass")) {
+				OnreGlobals.auxVerb = child.word;
+			}
+			if(child.dependencyLabel.equals("neg")) {
+				OnreGlobals.negatedWord = child.word;
+			}
+		}
 	}
 	
 	private static void expandArgument(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
@@ -206,6 +224,8 @@ public class OnreHelper_expansions {
 				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
 				
 				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
+				
+				if(child.word.equalsIgnoreCase("each")) {expansions.add(child);}
 			}
 	    }
 	}
