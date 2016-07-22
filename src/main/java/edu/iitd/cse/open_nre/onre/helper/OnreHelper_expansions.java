@@ -60,7 +60,19 @@ public class OnreHelper_expansions {
 		expansions = expandArgumentHelper_expand_rcMod_partmod(onreExtraction, expansions); //TODO: IMPORTANT-CHANGE #9: expandArg: completely expand on rcmod & partmod if subtree does not include rel/quantity
 
 		String str = expandHelper_sortExpansions_createStr(expansions);
-		if(expandHelper_isAlreadyPresent(onreExtraction, str, 0)) return;		// If upon expansion, we include already included text - ignore
+		
+		// If upon expansion, we include already included text - ignore
+		if(expandHelper_isAlreadyPresent(onreExtraction, str, 0)) {
+			String newStr = "";
+			String []words = str.split(" ");
+			for(String word : words) {
+				if(onreExtraction.quantity!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(onreExtraction.quantity.text, word)) continue;
+				if(onreExtraction.relation!=null && OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(onreExtraction.relation.text, word)) continue;
+				newStr = newStr + word + " ";
+			}
+			if(newStr.trim().length() != 0) onreExtraction.argument.text = newStr.trim();
+			return;		
+		}
 		onreExtraction.argument.text = str;
     }
 

@@ -181,7 +181,7 @@ public class OnreHelper {
 		while(!q_yetToExpand.isEmpty()) {
 			OnrePatternNode currNode = q_yetToExpand.remove();
 			if(currNode.word.equals("{rel}") && currNode.posTag.equalsIgnoreCase("nnp|nn")) { isNounRelation = true;}
-			if(currNode.word.equals("is|are|was|were") || currNode.word.equals("has|have|had")) { containsBeVerbs = true;}
+			if(currNode.word.contains("is|are|was|were") || currNode.word.equals("has|have|had")) { containsBeVerbs = true;}
 			
 			for(OnrePatternNode child : currNode.children) {
 				 q_yetToExpand.add(child);
@@ -193,7 +193,7 @@ public class OnreHelper {
 				onreExtraction.relation.text = "had " + onreExtraction.relation.text;
 			}
 			else {
-				if(OnreGlobals.isSubjectSingular && !onreExtraction.argument.text.endsWith("s")) {
+				if(!onreExtraction.argument.text.endsWith("s") && OnreGlobals.isSubjectSingular) {
 					onreExtraction.relation.text = "has " + onreExtraction.relation.text;
 				}
 				else {
