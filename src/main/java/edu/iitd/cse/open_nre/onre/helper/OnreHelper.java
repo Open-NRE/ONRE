@@ -160,6 +160,7 @@ public class OnreHelper {
 		
         if(postProcessingHelper_isValueInArgOrRel(onreExtraction)) return null; 				//TODO: IMPORTANT-CHANGE #4:Don't extract if quantity value is present in the argument or relation
         if(postProcessingHelper_isUnitInArg(onreExtraction)) return null;   	   				//TODO: IMPORTANT-CHANGE #5:Don't extract if quantity unit is present in the argument
+        if(postProcessingHelper_isArgWordInQuantity(onreExtraction)) return null;
     	
         if(postProcessingHelper_isAdditionalInfoAlreadyPresent(onreExtraction)) return null;		
     	
@@ -287,6 +288,22 @@ public class OnreHelper {
 		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(onreExtraction.argument.text, q_value)) return true;
 		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(onreExtraction.relation.text, q_value)) return true;
 		
+		return false;
+	}
+	
+	private static boolean postProcessingHelper_isArgWordInQuantity(OnreExtraction onreExtraction) {
+		if(!OnreUtils.quantityExists(onreExtraction)) return false;
+		String []argWords = onreExtraction.argument.text.split(" ");
+		String []quantWords = onreExtraction.quantity.text.split(" ");
+		
+		if(argWords.length == 1) {
+			String argWord = argWords[0];
+			for(String quantWord : quantWords) {
+				if(quantWord.equalsIgnoreCase(argWord)) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 	
