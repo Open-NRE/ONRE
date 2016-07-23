@@ -201,8 +201,13 @@ public class OnreHelper_expansions {
 			
 			String additional_info = expandHelper_sortExpansions_createStr(expansions);
 			if(expandHelper_isAlreadyPresent(onreExtraction, additional_info, 2)) return;			// If upon expansion, we include already included text - ignore
-			onreExtraction.additional_info = new OnreExtractionPart(additional_info, node_prep.index);
-			break;
+			if(onreExtraction.additional_info == null) {
+				onreExtraction.additional_info = new OnreExtractionPart(additional_info, node_prep.index);
+			}
+			else {
+				onreExtraction.additional_info.text = onreExtraction.additional_info.text + " ; " + additional_info;
+			}
+			//break;
 		}
 	}
 	
