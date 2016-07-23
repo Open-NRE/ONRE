@@ -21,8 +21,18 @@ public class OnreUtils_string {
 		return s1.matches("(?i).*\\b" + s2 + "\\b.*");
 	}
 	
+	// checks for substring match but the match must not be part of a word, rather should match word for word
 	public static boolean isIgnoreCaseIgnoreCommaIgnoreSpaceContains(String s1, String s2) {
-		return lowerTrimCommaSpace(s1).contains(lowerTrimCommaSpace(s2));
+		if(!lowerTrimCommaSpace(s1).contains(lowerTrimCommaSpace(s2))) {
+			return false;
+		}
+		else {
+			int startIndex = s1.indexOf(s2);
+			int endIndex = startIndex + s2.length() - 1;
+			if(startIndex > 0 && s1.charAt(startIndex - 1) != ' ') return false;
+			if(endIndex < s1.length() - 1 && s1.charAt(endIndex + 1) != ' ') return false;
+			return true;
+		}
 	}
 
 	public static String lowerTrimCommaSpace(String s1) {
