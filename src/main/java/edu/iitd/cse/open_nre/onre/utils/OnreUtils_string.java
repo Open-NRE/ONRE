@@ -27,7 +27,7 @@ public class OnreUtils_string {
 			return false;
 		}
 		else {
-			int startIndex = s1.indexOf(s2);
+			int startIndex = s1.toLowerCase().indexOf(s2.toLowerCase());
 			int endIndex = startIndex + s2.length() - 1;
 			if(startIndex > 0 && s1.charAt(startIndex - 1) != ' ') return false;
 			if(endIndex < s1.length() - 1 && s1.charAt(endIndex + 1) != ' ') return false;

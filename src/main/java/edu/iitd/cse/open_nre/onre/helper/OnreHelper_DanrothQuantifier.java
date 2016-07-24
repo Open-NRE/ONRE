@@ -289,7 +289,8 @@ public class OnreHelper_DanrothQuantifier {
 			if(subTreeNode.offset >= danrothSpan.start && subTreeNode.offset <= danrothSpan.end) return danrothSpan;
 		
 		for (Onre_dsDanrothSpan danrothSpan : danrothSpans.quantSpans)
-			if(danrothSpan.phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return danrothSpan;
+			if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(danrothSpan.phrase, subTreeNode.word)) return danrothSpan;
+			//if(danrothSpan.phrase.toLowerCase().contains(subTreeNode.word.toLowerCase())) return danrothSpan;
 		
 		return null;
 	}
