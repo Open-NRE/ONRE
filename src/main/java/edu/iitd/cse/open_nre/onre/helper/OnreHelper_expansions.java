@@ -96,6 +96,8 @@ public class OnreHelper_expansions {
 				
 				//if(child.dependencyLabel.equals("prep")) { expansions.add(child); q_yetToExpand.add(child); } //TODO: IMPORTANT-CHANGE #13: expand on prep if subtree does not have relation/quantity
 				if(child.dependencyLabel.equals("pobj")) { expansions.add(child); q_yetToExpand.add(child); }
+				
+				if(child.dependencyLabel.equals("cc") || child.dependencyLabel.equals("conj")) { expansions.add(child); q_yetToExpand.add(child); }
 			}
 		}
 	}
@@ -194,7 +196,7 @@ public class OnreHelper_expansions {
 		
 		for(OnrePatternNode child : quantity_parent_node.children) {
 			OnrePatternNode node_prep = null;
-			if(child.dependencyLabel.equals("prep") || child.word.equalsIgnoreCase("prior")) node_prep = child;
+			if(child.dependencyLabel.equals("prep") || child.dependencyLabel.equals("advcl") || child.word.equalsIgnoreCase("prior")) node_prep = child;
 			if(node_prep == null) continue;
 			
 			Set<OnrePatternNode> expansions = expandHelper_expandCompleteSubTree(node_prep);
@@ -241,6 +243,8 @@ public class OnreHelper_expansions {
 				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
 				
 				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
+				
+				if(child.dependencyLabel.matches("det")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				if(child.word.equalsIgnoreCase("each")) {expansions.add(child);}
 			}
