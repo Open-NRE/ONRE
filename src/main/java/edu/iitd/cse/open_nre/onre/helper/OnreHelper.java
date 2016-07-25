@@ -231,7 +231,7 @@ public class OnreHelper {
 
 	private static boolean postProcessingHelper_isAdditionalInfoAlreadyPresent(OnreExtraction onreExtraction) {
 		removeAdditionalInfoIfAlreadyPresent(onreExtraction);									
-        if(postProcessingHelper_isAdditionalInfoStillPresent(onreExtraction)) return true;
+        //if(postProcessingHelper_isAdditionalInfoStillPresent(onreExtraction)) return true;
         return false;
 	}
 
