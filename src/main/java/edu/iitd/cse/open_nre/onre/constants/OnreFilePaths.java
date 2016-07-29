@@ -13,6 +13,9 @@ public class OnreFilePaths {
 	public static String filePath_depPatterns = "DependencyPathPatterns1";
 	public static final String filePath_properties = "config.properties";
 	public static String filePath_expandOnPrep = "expandOnPrep";
+	public static String filePath_hasPronouns = "hasPronouns.txt";
+	public static String filepath_havePronouns = "havePronouns.txt";
+	public static String filepath_auxverbs = "auxVerbs";
 	
 	//ONRE_DS
 	public static String filePath_stopWords = "stopwords.txt";

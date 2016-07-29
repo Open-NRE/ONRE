@@ -45,7 +45,6 @@
 <(#has|have|had#verb)<(dobj#{rel}#nnp|nn)<(prep#of|for#in)<(pobj#million#cd)<(number#{quantity}#.+)>>>(nsubj#{arg}#nnp|nn|prp)>>
 <(pobj#{rel}#nnp|nn)<(nn#{quantity}#.+)(poss#{arg}#prp\$)>>
 <(dobj#{quantity}#.+)<(prep#of|for#in)<(pobj#{rel}#nnp|nn)<(poss#{arg}#prp\$)>>>>
-<(#{rel}#verb)<(dobj#{quantity}#.+)(nsubj#{arg}#nnp|nn|prp)>>
 <(pobj#{rel}#nnp|nn)<(nn#{quantity}#.+)(prep#of|for#in)<(pobj#{arg}#nnp|nn|prp)>>>
 <(pobj#{arg}#nnp|nn|prp)<(amod#{rel}#jj)(nn#{quantity}#.+)>>
 <(dobj#{rel}#nnp|nn)<(nn#{arg}#nnp|nn|prp)(nn#{quantity}#.+)>>

@@ -9,10 +9,12 @@ import java.util.List;
 import java.util.Map;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
+import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternTree;
 import edu.iitd.cse.open_nre.onre.domain.Onre_dsDanrothSpans;
+import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.knowitall.tool.parse.graph.DependencyGraph;
 
@@ -112,6 +114,9 @@ public class MayIHelpYou {
     		OnrePatternNode configuredPattern = list_configuredPattern.get(i);
     		if(configuredPattern==null) continue;
     		OnreGlobals.resetGlobals();
+    		OnreGlobals.hasPronounsList = OnreIO.readFile_classPath(OnreFilePaths.filePath_hasPronouns);
+    		OnreGlobals.havePronounsList = OnreIO.readFile_classPath(OnreFilePaths.filepath_havePronouns);
+    		OnreGlobals.auxVerbsList = OnreIO.readFile_classPath(OnreFilePaths.filepath_auxverbs);
     		
 	        OnreExtraction onreExtraction = getExtraction(onrePatternTree, onrePatternTree.root, configuredPattern, danrothSpans);
 	        if(onreExtraction == null) continue;
@@ -134,7 +139,7 @@ public class MayIHelpYou {
     	
     	if(subTree == null) return null;
     	
-    	return OnreHelper.onreExtraction_postProcessing(patternNode_sentence, onreExtraction, patternNode_configured);
+    	return OnreHelper_PostProcessing.onreExtraction_postProcessing(patternNode_sentence, onreExtraction, patternNode_configured);
     }
 
 	/*private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {

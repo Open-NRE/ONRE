@@ -91,17 +91,6 @@ public class OnrePatternNode {
 		//if(this.word.equalsIgnoreCase(onrePatternNode.word)) return true;
 		//if(this.word.toLowerCase().matches(regexNode.word.toLowerCase())) return true;
 		if(OnreUtils_string.isIgnoreCaseMatch(this.word, regexNode.word)) {
-			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "has") 
-					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "is") 
-					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "was")) {
-				OnreGlobals.isSubjectSingular = true;
-			}
-			
-			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "have") 
-					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "are") 
-					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "were")) {
-				OnreGlobals.isSubjectSingular = false;
-			}
 			
 			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "was") 
 					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "were")
@@ -114,6 +103,10 @@ public class OnrePatternNode {
 					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "has")
 					|| OnreUtils_string.isIgnoreCaseMatch(this.word, "have")) {
 				OnreGlobals.isSentenceInPastTense = false;
+			}
+			
+			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "be")) {
+				OnreGlobals.isMatchingWithBe = true;
 			}
 			
 			return true;

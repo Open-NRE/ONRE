@@ -166,8 +166,11 @@ public class OnreHelper_expansions {
 			onreExtraction.quantity.text = onreExtraction.quantity.text.replace(qPhraseExceptValue, "").trim();*/
 		quantity_unit_plus = quantity_unit_plus.replaceAll("^"+qPhraseExceptValue, "");
 		quantity_unit_plus = quantity_unit_plus.replaceAll("^"+onreExtraction.q_unit, "");
-				
-		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
+		
+		if(node_prep.word.equals("of"))
+			onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
+		else
+			onreExtraction.additional_info = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
     }
 	
 	/*private static void expandQuantity_percent(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
@@ -242,7 +245,7 @@ public class OnreHelper_expansions {
 				//if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
 				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
 				
-				if(child.dependencyLabel.matches(".*mod")) { expansions.add(child); q_yetToExpand.add(child); }
+				if(child.dependencyLabel.matches(".*mod") && !child.dependencyLabel.equals("npadvmod") && !child.dependencyLabel.equals("advmod")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				if(child.dependencyLabel.matches("det")) { expansions.add(child); q_yetToExpand.add(child); }
 				
@@ -254,13 +257,14 @@ public class OnreHelper_expansions {
 	private static void expandRelationHelper_expandOnPrepForConfiguredWords(OnreExtraction onreExtraction, OnrePatternNode node_relation, Set<OnrePatternNode> expansions) throws IOException {
 		
 	    List<String> expandOnPrep = OnreIO.readFile_classPath(OnreFilePaths.filePath_expandOnPrep);
-		if(expandOnPrep.contains(node_relation.word)) {
+		//if(expandOnPrep.contains(node_relation.word)) {
 			for(OnrePatternNode child : node_relation.children) {
 				if(!child.dependencyLabel.equals("prep")) continue;
 				if(OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity, child) == null) continue;
-				expansions.add(child); 
+				//expansions.add(child);
+				OnreGlobals.expandedOnPrep = child.word;
 			}
-		}
+		//}
 	}
 	
 	private static Set<OnrePatternNode> expandRelationHelper_expandOnPrepSubTree(OnreExtraction onreExtraction, Set<OnrePatternNode> expansions) {

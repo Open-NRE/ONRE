@@ -31,7 +31,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Not including Marty's salary from work, his family's Passive Income is $1166.00.";
+		String sentence = "The valve shall be having a cold water rated working pressure of 250 psig.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 
 		if(depGraph != null) {

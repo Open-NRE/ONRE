@@ -30,7 +30,7 @@ public class OnreHelper_pattern {
 		List<OnrePatternNode> list_depPattern = new ArrayList<OnrePatternNode>();
 		
 		list_depPattern.addAll(getSeedPatterns());
-		if(!OnreGlobals.arg_onre_isSeedFact) list_depPattern.addAll(getConfiguredPatterns());
+		//if(!OnreGlobals.arg_onre_isSeedFact) list_depPattern.addAll(getConfiguredPatterns());
 		
 		return list_depPattern;
 	}
