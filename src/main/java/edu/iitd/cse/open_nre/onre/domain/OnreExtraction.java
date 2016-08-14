@@ -28,6 +28,7 @@ public class OnreExtraction {
 	public OnreExtractionPart	relation_headWord;
 	public String q_unit;
 	public Double q_value;
+	public String argHeadWord_PosTag;
 
 
 	public OnreExtraction() {
@@ -40,12 +41,15 @@ public class OnreExtraction {
 			//sb.append(this.patternNumber).append("\n"); //TODO
 			sb.append("(");
 			sb.append(this.argument_headWord);
+			sb.append("(" + argHeadWord_PosTag + ")");
 			sb.append(OnreConstants.DELIMETER_EXTR);
 			sb.append(this.relation_headWord);
 			sb.append(OnreConstants.DELIMETER_EXTR);
 			sb.append(this.q_value);
 			sb.append(OnreConstants.DELIMETER_EXTR);
 			sb.append(this.q_unit);
+			sb.append(OnreConstants.DELIMETER_EXTR);
+			sb.append(this.relation);
 			sb.append(")");
 		}
 		else {

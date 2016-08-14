@@ -28,7 +28,7 @@ public class OnreHelper_PostProcessing {
 				onreExtraction.q_unit = "";
 		}*/
 		
-		if(OnreGlobals.arg_onre_isSeedFact) return onreExtraction;
+		//if(OnreGlobals.arg_onre_isSeedFact) return onreExtraction;
 		
         if(postProcessingHelper_isValueInArgOrRel(onreExtraction)) return null; 				//TODO: IMPORTANT-CHANGE #4:Don't extract if quantity value is present in the argument or relation
         if(postProcessingHelper_isUnitInArg(onreExtraction)) return null;   	   				//TODO: IMPORTANT-CHANGE #5:Don't extract if quantity unit is present in the argument
@@ -136,10 +136,10 @@ public class OnreHelper_PostProcessing {
 	}
 	
 	private static void postProcessingHelper_removePossession(OnreExtraction onreExtraction) {
-		if(onreExtraction.argument.text.endsWith("'s")) {
+		if(onreExtraction.argument.text.endsWith("'s") && onreExtraction.argument.text.length() > 2) {
 			onreExtraction.argument.text = onreExtraction.argument.text.substring(0, onreExtraction.argument.text.length() - 3);
 		}
-		if(onreExtraction.argument.text.endsWith("'")) {
+		if(onreExtraction.argument.text.endsWith("'") && onreExtraction.argument.text.length() > 1) {
 			onreExtraction.argument.text = onreExtraction.argument.text.substring(0, onreExtraction.argument.text.length() - 2);
 		}
 		

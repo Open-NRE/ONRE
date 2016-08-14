@@ -9,6 +9,7 @@ import java.util.Map;
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.helper.MayIHelpYou;
+import edu.iitd.cse.open_nre.onre.helper.OnreHelper_graph;
 import edu.knowitall.tool.parse.ClearParser;
 import edu.knowitall.tool.parse.DependencyParser;
 import edu.knowitall.tool.parse.graph.DependencyGraph;
@@ -31,8 +32,9 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "The valve shall be having a cold water rated working pressure of 250 psig.";
+		String sentence = "Obama wins 10.0 dollars.";
 		DependencyGraph depGraph = getDepGraph(sentence);
+		Map<String, String> posTags = OnreHelper_graph.getPosTags(depGraph);
 
 		if(depGraph != null) {
 			Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(depGraph);

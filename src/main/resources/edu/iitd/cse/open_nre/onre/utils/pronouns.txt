@@ -20,3 +20,6 @@ his
 our
 their
 a
+the
+an
+

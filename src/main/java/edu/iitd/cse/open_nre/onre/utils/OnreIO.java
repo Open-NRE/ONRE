@@ -73,6 +73,16 @@ public class OnreIO {
 		pw.close();
 	}
 	
+	public static void writeMapNotJustFacts(String filePath, Map<String, String> lines) throws IOException {
+		PrintWriter pw = new PrintWriter(filePath);
+		for (Map.Entry<String, String> entry : lines.entrySet()) {
+		    String key = entry.getKey();
+		    Object value = entry.getValue();
+		    pw.println(key + "\n" + value + "\n");
+		}
+		pw.close();
+	}
+	
 	public static void writeMap_valueList(String filePath, Map<String, Set<String>> lines) throws IOException {
 		PrintWriter pw = new PrintWriter(filePath);
 		for (Map.Entry<String, Set<String>> entry : lines.entrySet()) {

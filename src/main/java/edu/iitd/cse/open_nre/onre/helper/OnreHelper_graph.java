@@ -4,7 +4,9 @@
 package edu.iitd.cse.open_nre.onre.helper;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Set;
 
 import scala.collection.JavaConversions;
@@ -56,6 +58,25 @@ public class OnreHelper_graph {
 		
 		OnrePatternTree onrePatternTree = new OnrePatternTree(depGraph.text(), onrePatternNode);
 		return onrePatternTree;
+	}
+	
+	public static Map<String, String> getPosTags(DependencyGraph depGraph) {
+		Map<String, String> posTags = new HashMap<String, String>();
+		OnrePatternTree tree = convertGraph2PatternTree(depGraph);
+		
+		Queue<OnrePatternNode> q_patternNode = new LinkedList<>();
+		q_patternNode.add(tree.root);
+		
+		while(!q_patternNode.isEmpty()) {
+			OnrePatternNode currNode = q_patternNode.remove();
+			posTags.put(currNode.word, currNode.posTag);
+			
+			for(OnrePatternNode child : currNode.children) {
+				q_patternNode.add(child);
+			}
+		}
+		
+		return posTags;
 	}
 	
 	@SuppressWarnings("unchecked")

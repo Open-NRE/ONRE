@@ -50,9 +50,13 @@ public class OnreHelper_WordNet {
 		List<String> stemmedWords = stemmer.findStems(word, POS.VERB);
 		
 		for (int i = 0; i < stemmedWords.size(); i++) {
-            if(!stemmedWords.equals(word)) return stemmedWords.get(i);
+            if(!stemmedWords.equals(word)) {
+            	dict.close();
+            	return stemmedWords.get(i);
+            }
         }
 		
+		dict.close();
 		return null;
 	}
 	
@@ -71,7 +75,10 @@ public class OnreHelper_WordNet {
 			idxWord = dict.getIndexWord (word, POS.ADVERB );
 		}
 		
-		if(idxWord == null || idxWord.getWordIDs().isEmpty()) return null;
+		if(idxWord == null || idxWord.getWordIDs().isEmpty()) {
+			dict.close();
+			return null;
+		}
 		IWordID wordID = idxWord.getWordIDs().get(0) ;
         IWord Iword = dict.getWord (wordID);
         
@@ -80,10 +87,12 @@ public class OnreHelper_WordNet {
 	        String pos = derivedWord.getPOS().toString();
 	        if(pos.equals("noun") && !derivedWord.getLemma().equals(word)) 
 	        {
+	        	dict.close();
 	        	return derivedWord.getLemma();
 	        }
         }
         
+        dict.close();
         return null;
 	}
 	

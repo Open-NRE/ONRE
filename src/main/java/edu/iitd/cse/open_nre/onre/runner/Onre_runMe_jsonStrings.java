@@ -44,12 +44,14 @@ public class Onre_runMe_jsonStrings {
 		OnreUtils.listFilesForFolder(folder, files);
 		
 		List<OnreExtraction> extrs_all = new ArrayList<OnreExtraction>();
+		Map<String, String> fact_extrs_all = new HashMap<String, String>();
 		for (String file : files) {
 			if(!file.endsWith(OnreConstants.SUFFIX_JSON_STRINGS)) continue; //only jsonSuffix files are required
 			System.out.println("----------------------------------running file: " + file);
 			
 			List<String> inputJsonStrings_patternTree = OnreIO.readFile(file);
 			List<Onre_dsDanrothSpans> listOfDanrothSpans = OnreHelper_DanrothQuantifier.getListOfDanrothSpans(file.replaceAll("_jsonStrings", ""));
+			//List<Map<String, String> > listOfPosTags = OnreHelper_json.getListOfPosTags(file.replaceAll("_jsonStrings", ""));
 
 			List<OnrePatternNode> list_configuredPattern = OnreHelper_pattern.getDepPatterns();
 			
@@ -61,9 +63,19 @@ public class Onre_runMe_jsonStrings {
 				
 				if(extrs == null) continue;
 				
+				//Map<String, String> posTags = listOfPosTags.get(i);
+				
 				Map<String, Integer> uniq_extrs = new HashMap<String, Integer>();
 				for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
-					String extr_string = entry.getKey().toString();
+					OnreExtraction extr = entry.getKey();
+					/*if(posTags.containsKey(extr.argument_headWord.text)) {
+						extr.argHeadWord_PosTag = posTags.get(extr.argument_headWord.text);
+					}
+					else {
+						extr.argHeadWord_PosTag = null;	
+					}*/
+					
+					String extr_string = extr.toString();
 					Integer newValue = entry.getValue();
 					
 					//taking the highest(lowest number) patternNumber
@@ -85,11 +97,19 @@ public class Onre_runMe_jsonStrings {
 					System.out.println();
 				}
 				
+				/*if(OnreGlobals.arg_onre_isSeedFact) {
+					for(Map.Entry<OnreExtraction, Integer> entry : extrs.entrySet()) {
+						String extr_string = entry.getKey().toString();
+						String sentenceAndValue = entry.getValue().toString() + "\n" + onrePatternTree.sentence;
+						fact_extrs_all.put(extr_string, sentenceAndValue);
+					}
+				}*/
 				extrs_all.addAll(extrs.keySet());
 			}
 		}
 		
-		if(OnreGlobals.arg_onre_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts_newSeedFactsLogic_notJustFacts", extrs_all);
+		if(OnreGlobals.arg_onre_isSeedFact) OnreIO.writeFile(args[1]+"_out_facts_newSeedFactsLogic_JustFacts", extrs_all);
+		//if(OnreGlobals.arg_onre_isSeedFact) OnreIO.writeMapNotJustFacts(args[1]+"_out_facts_newSeedFactsLogic_notJustFacts", fact_extrs_all);
 			
 		
 		
