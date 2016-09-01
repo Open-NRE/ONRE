@@ -22,4 +22,5 @@ public class OnreFilePaths {
 	
 	//ONRE_ANALYSIS_HELPER
 	public static String filePath_pronounsList = "pronouns.txt";
+	public static String filePath_yagoRelationsList = "yagoNumericalRelations";
 }
