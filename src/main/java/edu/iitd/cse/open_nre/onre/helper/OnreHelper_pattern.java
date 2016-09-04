@@ -65,7 +65,7 @@ public class OnreHelper_pattern {
 		return list_configuredPattern;
 	}
 	
-	private static OnrePatternNode convertPattern2PatternTree(String pattern) {
+	public static OnrePatternNode convertPattern2PatternTree(String pattern) {
 		OnrePatternNode onrePatternNode = convertPattern2PatternTree_helper(pattern);
 		OnreUtils_tree.sortPatternTree(onrePatternNode);
 		return onrePatternNode;
