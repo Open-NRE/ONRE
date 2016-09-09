@@ -32,7 +32,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Obama wins 10.0 dollars.";
+		String sentence = "Heavy Metal High Rise is 1,200 linear feet long, and it contains over 200 tons of steel and 700 cubic yards of concrete.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		Map<String, String> posTags = OnreHelper_graph.getPosTags(depGraph);
 

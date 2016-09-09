@@ -12,6 +12,7 @@ import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
+import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
 
 /**
  * @author swarna
@@ -38,7 +39,7 @@ public class OnreHelper_PostProcessing {
     	
     	postProcessingHelper_numberOf(onreExtraction); 											//TODO: IMPORTANT-CHANGE #7:use [number of] if the relation phrase is exactly same as unit - have only value in the quantity part
     	
-    	postProcessingHelper_improveRelations(onreExtraction, patternNode_configured);
+    	postProcessingHelper_improveRelations(patternNode_sentence, onreExtraction, patternNode_configured);
     	
     	postProcessingHelper_removePossession(onreExtraction);
     	
@@ -46,7 +47,7 @@ public class OnreHelper_PostProcessing {
     	return onreExtraction;
 	}
 	
-	public static void postProcessingHelper_improveRelations(OnreExtraction onreExtraction, OnrePatternNode patternNode_configured) throws IOException {
+	public static void postProcessingHelper_improveRelations(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction, OnrePatternNode patternNode_configured) throws IOException {
 		boolean isNounRelation = false, isAdjectiveOrAdverbRelation = false;
 		
 		Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
@@ -54,20 +55,21 @@ public class OnreHelper_PostProcessing {
 		while(!q_yetToExpand.isEmpty()) {
 			OnrePatternNode currNode = q_yetToExpand.remove();
 			if(currNode.word.equals("{rel}") && currNode.posTag.equalsIgnoreCase("nnp|nn")) { isNounRelation = true;}
-			if(currNode.word.equals("{rel}") && currNode.posTag.equalsIgnoreCase("JJ|RB")) { isAdjectiveOrAdverbRelation = true; }
+			if(currNode.word.equals("{rel}") && 
+					(currNode.posTag.equalsIgnoreCase("JJ|RB") || (currNode.posTag.equalsIgnoreCase("JJ") || (currNode.posTag.equalsIgnoreCase("RB"))))) { isAdjectiveOrAdverbRelation = true; }
 			for(OnrePatternNode child : currNode.children) {
 				 q_yetToExpand.add(child);
 			}
 		}
 		
-		appendHasHaveAndPrep(onreExtraction, isNounRelation, isAdjectiveOrAdverbRelation);
+		appendHasHaveAndPrep(patternNode_sentence, onreExtraction, isNounRelation, isAdjectiveOrAdverbRelation);
 		
 		if(isAdjectiveOrAdverbRelation) {
 			replaceRelationWithNounForm(onreExtraction);
 		}
 	}
 	
-	private static void appendHasHaveAndPrep(OnreExtraction onreExtraction, boolean isNounRelation, boolean isAdjectiveOrAdverbRelation) {
+	private static void appendHasHaveAndPrep(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction, boolean isNounRelation, boolean isAdjectiveOrAdverbRelation) {
 		if(isNounRelation || isAdjectiveOrAdverbRelation) {
 			if(OnreGlobals.isSentenceInPastTense) {
 				onreExtraction.relation.text = "had " + onreExtraction.relation.text;
@@ -82,7 +84,14 @@ public class OnreHelper_PostProcessing {
 			}
 			
 			if(OnreGlobals.expandedOnPrep == null && !onreExtraction.relation.text.endsWith("of") && !onreExtraction.relation.text.contains("[number of]")) {
-				onreExtraction.relation.text = onreExtraction.relation.text + " of";
+				// if the parent of the quantity already has a prep,a ppend that, else append of
+				OnrePatternNode parentArgument = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, patternNode_sentence);
+				if(parentArgument != null && parentArgument.dependencyLabel != null && parentArgument.dependencyLabel.equals("prep")) {
+					onreExtraction.relation.text = onreExtraction.relation.text + " " + parentArgument.word;
+				}
+				else {
+					onreExtraction.relation.text = onreExtraction.relation.text + " of";
+				}
 			}
 			
 			if(OnreGlobals.negatedWord != null) {
@@ -101,6 +110,9 @@ public class OnreHelper_PostProcessing {
 	
 	private static void replaceRelationWithNounForm(OnreExtraction onreExtraction) throws IOException {
 		String nounForm = OnreHelper_WordNet.getWhoseAttributeIsWord(onreExtraction.relation_headWord.text);
+		if(nounForm != null && nounForm.equals("duration")) {
+			nounForm = "length";
+		}
 		
 		if(onreExtraction.relation_headWord.posTag.equalsIgnoreCase("JJ")) {
 			if(nounForm == null) {
