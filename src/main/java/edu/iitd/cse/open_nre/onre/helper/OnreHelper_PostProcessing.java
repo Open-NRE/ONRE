@@ -4,12 +4,16 @@
 package edu.iitd.cse.open_nre.onre.helper;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
+import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
+import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_string;
 import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
@@ -192,12 +196,17 @@ public class OnreHelper_PostProcessing {
 		return false;
 	}
 
-	private static void postProcessingHelper_numberOf(OnreExtraction onreExtraction) {
+	private static void postProcessingHelper_numberOf(OnreExtraction onreExtraction) throws IOException {
 		if(onreExtraction.q_unit==null || onreExtraction.q_unit.isEmpty()) return;
 		
         //if(onreExtraction.relation.text.equalsIgnoreCase(onreExtraction.q_unit)) {
 		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.relation.text, onreExtraction.q_unit)) {
         	//onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("(?i)"+onreExtraction.relation.text, "").trim();
+			String replaceQuantity = checkIfUnitIsInQuantityUnitMap(onreExtraction);
+			if(replaceQuantity != null) {
+				onreExtraction.relation.text = onreExtraction.relation.text.replaceAll("(?i)"+onreExtraction.q_unit, replaceQuantity).trim();
+			}
+			else {
 			onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("(?i)"+onreExtraction.q_unit, "").trim();
         	
 			if(onreExtraction.relation_headWord.posTag.matches("(?i)NNP?S")
@@ -205,8 +214,37 @@ public class OnreHelper_PostProcessing {
 					|| onreExtraction.relation_headWord.text.endsWith("s")
 					|| onreExtraction.q_unit.endsWith("s")
 					) //adding [number of] only in case of plural noun - rel headword or q_unit
-        		onreExtraction.relation.text = "[number of] " + onreExtraction.relation.text;
+					onreExtraction.relation.text = "[number of] " + onreExtraction.relation.text;
+			}
         }
+	}
+	
+	private static String checkIfUnitIsInQuantityUnitMap(OnreExtraction onreExtraction) throws IOException {
+		String replaceQuantity = null;
+		
+		List<String> unitsAndQuantities = OnreIO.readFile_classPath(OnreFilePaths.filepath_quantityUnitMap);
+		for(String unitsAndQuantity : unitsAndQuantities) {
+			String []parts = unitsAndQuantity.split("\\[");
+			String quantity = parts[0].trim();
+			
+			String []units = parts[1].substring(0, parts[1].length()-2).split(",");
+			
+			boolean found = false;
+			for(String unit : units) {
+				if(unit.trim().equalsIgnoreCase(onreExtraction.q_unit) || 
+						(onreExtraction.q_unit.endsWith("s") && unit.trim().equalsIgnoreCase(onreExtraction.q_unit.substring(0, onreExtraction.q_unit.length()-1)))) {
+					replaceQuantity = quantity.toLowerCase();
+					found = true;
+					break;
+				}
+			}
+			
+			if(found) {
+				break;
+			}
+		}
+		
+		return replaceQuantity;
 	}
 
 	private static boolean postProcessingHelper_isUnitInArg(OnreExtraction onreExtraction) {

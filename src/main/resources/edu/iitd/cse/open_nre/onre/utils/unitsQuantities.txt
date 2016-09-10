@@ -1,2 +1,0 @@
-temperature [celsius,fahrenheit,kelvin,reaumur,newton,rankine,c,f,k,n,ra]
-volume [cubic meter,cubic decimeter,cubic centimeter,liter,deciliter,centiliter,milliliter,cubic inch,cubic foot,cubic yard,gallon,ounce,cu m,m3,M3, m^3, m**3, CBM, cbm

@@ -16,6 +16,7 @@ public class OnreFilePaths {
 	public static String filePath_hasPronouns = "hasPronouns.txt";
 	public static String filepath_havePronouns = "havePronouns.txt";
 	public static String filepath_auxverbs = "auxVerbs";
+	public static String filepath_quantityUnitMap = "quantityUnitMap";
 	
 	//ONRE_DS
 	public static String filePath_stopWords = "stopwords.txt";
