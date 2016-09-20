@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Queue;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
+import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.domain.OnrePatternNode;
@@ -24,7 +25,8 @@ import edu.iitd.cse.open_nre.onre.utils.OnreUtils_tree;
  */
 public class OnreHelper_PostProcessing {
 	
-	public static OnreExtraction onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction, OnrePatternNode patternNode_configured) throws IOException {
+	public static OnreExtraction onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction, 
+			OnrePatternNode patternNode_configured, int patternNumber) throws IOException {
 		//if(!OnreGlobals.arg_onre_isSeedFact) OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
 		OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
 
@@ -46,6 +48,8 @@ public class OnreHelper_PostProcessing {
     	postProcessingHelper_improveRelations(patternNode_sentence, onreExtraction, patternNode_configured);
     	
     	postProcessingHelper_removePossession(onreExtraction);
+    	
+    	postProcessingHelper_handlePassiveExtractions(onreExtraction, patternNode_sentence, patternNumber);
     	
     	//replaceDoubleSpaces(onreExtraction);
     	return onreExtraction;
@@ -285,5 +289,22 @@ public class OnreHelper_PostProcessing {
 			}
 		}
 		return false;
+	}
+	
+	// doing this specifically for seed pattern #8(quantity and argument are swapped)
+	private static void postProcessingHelper_handlePassiveExtractions(OnreExtraction onreExtraction, 
+			OnrePatternNode patternNode_sentence, int patternNumber) {
+		if(patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS == 0) {
+			// append the preposition
+			OnrePatternNode parentArgument = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.argument_headWord, patternNode_sentence);
+			onreExtraction.relation.text = onreExtraction.relation.text + " " + parentArgument.word;
+			
+			if(onreExtraction.argument != null && onreExtraction.argument.text != null && onreExtraction.quantity != null 
+					&& onreExtraction.quantity.text != null) {
+				String temp = onreExtraction.argument.text;
+				onreExtraction.argument.text = onreExtraction.quantity.text;
+				onreExtraction.quantity.text = temp;
+			}
+		}
 	}
 }

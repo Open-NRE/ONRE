@@ -118,12 +118,14 @@ public class MayIHelpYou {
     		OnreGlobals.havePronounsList = OnreIO.readFile_classPath(OnreFilePaths.filepath_havePronouns);
     		OnreGlobals.auxVerbsList = OnreIO.readFile_classPath(OnreFilePaths.filepath_auxverbs);
     		
-	        OnreExtraction onreExtraction = getExtraction(onrePatternTree, onrePatternTree.root, configuredPattern, danrothSpans);
+	        OnreExtraction onreExtraction = getExtraction(onrePatternTree, onrePatternTree.root, configuredPattern, danrothSpans, i+1);
 	        if(onreExtraction == null) continue;
+	        
+	        onreExtraction.patternNumber = i+1;
+        	onreExtraction.sentence = onrePatternTree.sentence;
+        	
 	        if(!OnreUtils.quantityExists(onreExtraction)) continue;
 	        	
-        	onreExtraction.patternNumber = i+1;
-        	onreExtraction.sentence = onrePatternTree.sentence;
         	
         	//TODO: IMPORTANT-CHANGE #11:Removing extractions where they are similar except for the additional-info field
         	//extrs.put(onreExtraction, onreExtraction.patternNumber);
@@ -133,13 +135,14 @@ public class MayIHelpYou {
     	return extrs;
     }
     
-    private static OnreExtraction getExtraction(OnrePatternTree onrePatternTree, OnrePatternNode patternNode_sentence, OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans) throws IOException {
+    private static OnreExtraction getExtraction(OnrePatternTree onrePatternTree, OnrePatternNode patternNode_sentence, 
+    		OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans, int patternNumber) throws IOException {
     	OnreExtraction onreExtraction = new OnreExtraction();
     	OnrePatternNode subTree = OnreHelper.findPatternSubTree(onrePatternTree, patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
     	
     	if(subTree == null) return null;
     	
-    	return OnreHelper_PostProcessing.onreExtraction_postProcessing(patternNode_sentence, onreExtraction, patternNode_configured);
+    	return OnreHelper_PostProcessing.onreExtraction_postProcessing(patternNode_sentence, onreExtraction, patternNode_configured, patternNumber);
     }
 
 	/*private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {

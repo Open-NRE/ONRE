@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 
 import scala.collection.JavaConversions;
+import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 
 /**
@@ -36,6 +37,10 @@ public class OnreUtils {
 	    	//if(OnreGlobals.arg_onre_isSeedFact && onreExtraction.q_value != null) return true;//---let it be commented === remove later
 	    	
 	    	if(onreExtraction.quantity.text.matches(".*\\d.*")) return true;
+	    	
+	    	if(onreExtraction.patternNumber != null && onreExtraction.patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS == 0) {
+	    		if(onreExtraction.argument.text.matches(".*\\d.*")) return true;
+	    	}
 	    	
 	    	return false;
 	}
