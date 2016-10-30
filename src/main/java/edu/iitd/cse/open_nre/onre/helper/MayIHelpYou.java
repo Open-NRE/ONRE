@@ -5,8 +5,10 @@ package edu.iitd.cse.open_nre.onre.helper;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
 import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
@@ -138,11 +140,30 @@ public class MayIHelpYou {
     private static OnreExtraction getExtraction(OnrePatternTree onrePatternTree, OnrePatternNode patternNode_sentence, 
     		OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans, int patternNumber) throws IOException {
     	OnreExtraction onreExtraction = new OnreExtraction();
-    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(onrePatternTree, patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
+    	
+    	OnrePatternNode subTree = getSubTree(onrePatternTree, patternNode_sentence, onreExtraction, patternNode_configured, danrothSpans);
     	
     	if(subTree == null) return null;
     	
     	return OnreHelper_PostProcessing.onreExtraction_postProcessing(patternNode_sentence, onreExtraction, patternNode_configured, patternNumber);
+    }
+    
+    private static OnrePatternNode getSubTree(OnrePatternTree onrePatternTree, OnrePatternNode patternNode_sentence, 
+    		OnreExtraction onreExtraction, OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans) {
+    	
+    	Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+		q_yetToExpand.add(patternNode_sentence);
+		while(!q_yetToExpand.isEmpty()) {
+			OnrePatternNode currNode = q_yetToExpand.remove();
+			OnrePatternNode subTree = OnreHelper.findPatternSubTree(onrePatternTree, currNode, patternNode_configured, onreExtraction, danrothSpans);
+			if(subTree != null) return subTree;
+			
+			for(OnrePatternNode child : currNode.children) {
+				q_yetToExpand.add(child);
+			}
+		}
+		
+		return null;
     }
 
 	/*private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {
