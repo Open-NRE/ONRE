@@ -38,7 +38,8 @@ public class OnreUtils {
 	    	
 	    	if(onreExtraction.quantity.text.matches(".*\\d.*")) return true;
 	    	
-	    	if(onreExtraction.patternNumber != null && onreExtraction.patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS == 0) {
+	    	if(onreExtraction.patternNumber != null && 
+	    			(onreExtraction.patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS == 0 || onreExtraction.patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS == -1)) {
 	    		if(onreExtraction.argument.text.matches(".*\\d.*")) return true;
 	    	}
 	    	

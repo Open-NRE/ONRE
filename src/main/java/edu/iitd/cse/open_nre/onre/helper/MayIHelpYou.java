@@ -141,29 +141,11 @@ public class MayIHelpYou {
     		OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans, int patternNumber) throws IOException {
     	OnreExtraction onreExtraction = new OnreExtraction();
     	
-    	OnrePatternNode subTree = getSubTree(onrePatternTree, patternNode_sentence, onreExtraction, patternNode_configured, danrothSpans);
+    	OnrePatternNode subTree = OnreHelper.findPatternSubTree(onrePatternTree, patternNode_sentence, patternNode_configured, onreExtraction, danrothSpans);
     	
     	if(subTree == null) return null;
     	
     	return OnreHelper_PostProcessing.onreExtraction_postProcessing(patternNode_sentence, onreExtraction, patternNode_configured, patternNumber);
-    }
-    
-    private static OnrePatternNode getSubTree(OnrePatternTree onrePatternTree, OnrePatternNode patternNode_sentence, 
-    		OnreExtraction onreExtraction, OnrePatternNode patternNode_configured, Onre_dsDanrothSpans danrothSpans) {
-    	
-    	Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
-		q_yetToExpand.add(patternNode_sentence);
-		while(!q_yetToExpand.isEmpty()) {
-			OnrePatternNode currNode = q_yetToExpand.remove();
-			OnrePatternNode subTree = OnreHelper.findPatternSubTree(onrePatternTree, currNode, patternNode_configured, onreExtraction, danrothSpans);
-			if(subTree != null) return subTree;
-			
-			for(OnrePatternNode child : currNode.children) {
-				q_yetToExpand.add(child);
-			}
-		}
-		
-		return null;
     }
 
 	/*private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {

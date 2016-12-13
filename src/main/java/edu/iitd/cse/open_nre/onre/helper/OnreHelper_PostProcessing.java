@@ -291,16 +291,23 @@ public class OnreHelper_PostProcessing {
 		return false;
 	}
 	
-	// doing this specifically for seed pattern #8(quantity and argument are swapped)
+	// doing this specifically for seed pattern #8 and #9(quantity and argument are swapped)
 	private static void postProcessingHelper_handlePassiveExtractions(OnreExtraction onreExtraction, 
 			OnrePatternNode patternNode_sentence, int patternNumber) {
-		if(patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS == 0) {
+		if(patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS == 0 ||
+				patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS == -1) {
 			// append the preposition
 			OnrePatternNode parentArgument = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.argument_headWord, patternNode_sentence);
-			onreExtraction.relation.text = onreExtraction.relation.text + " " + parentArgument.word;
+			if(parentArgument != null && parentArgument.posTag.equals("IN")) {
+				onreExtraction.relation.text = onreExtraction.relation.text + " " + parentArgument.word;
+			}
 			
 			if(onreExtraction.argument != null && onreExtraction.argument.text != null && onreExtraction.quantity != null 
 					&& onreExtraction.quantity.text != null) {
+				if(onreExtraction.quantity_unit_plus != null) {
+					onreExtraction.quantity.text += " " + onreExtraction.quantity_unit_plus.text;
+					onreExtraction.quantity_unit_plus = null;
+				}
 				String temp = onreExtraction.argument.text;
 				onreExtraction.argument.text = onreExtraction.quantity.text;
 				onreExtraction.quantity.text = temp;
