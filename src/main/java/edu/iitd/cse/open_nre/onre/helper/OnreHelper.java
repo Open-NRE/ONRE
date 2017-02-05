@@ -46,23 +46,6 @@ public class OnreHelper {
 	    }
 	}
     
-    /*private static String addNegationIfPossibleToQuantity(OnreExtraction onreExtraction, OnrePatternTree onrePatternTree, String quantityPhrase) {
-    	OnrePatternNode quantity_parent_node = OnreUtils_tree.searchParentOfNodeInTreeByIndex(onreExtraction.quantity, onrePatternTree.root);
-    	if(quantity_parent_node==null) return quantityPhrase;
-		
-    	String negationWord = "";
-		for(OnrePatternNode child : quantity_parent_node.children) {
-			if(child.dependencyLabel.equals("neg") ) {
-				negationWord = child.word;
-				break;
-			}
-		}
-		
-		if(!negationWord.isEmpty())
-			return negationWord + " " + quantityPhrase;
-		else return quantityPhrase;
-    }*/
-    
     private static void setQuantityExtractionPart(OnrePatternTree onrePatternTree, OnrePatternNode subTreeNode, OnreExtraction onreExtraction, int index, Onre_dsDanrothSpans danrothSpans, String posTag) {
     	Onre_dsDanrothSpan danrothSpan = OnreHelper_DanrothQuantifier.getQuantity(subTreeNode, danrothSpans);
     	if(danrothSpan == null) return;
@@ -70,24 +53,11 @@ public class OnreHelper {
     	String quantityPhrase = danrothSpan.phrase;
     	if(quantityPhrase == null) return;
     	
-    	/*if(OnreGlobals.arg_onre_isSeedFact) { //saving value and unit separately in case we want to generate a seed fact
-    		onreExtraction.quantity = new OnreExtractionPart(danrothSpan.value.toString());
-    		onreExtraction.additional_info = new OnreExtractionPart(danrothSpan.unit);
-    		return;
-    	}*/
-    	
     	
     	onreExtraction.q_unit = danrothSpan.unit; //this shall not be modified later
     	onreExtraction.q_value = danrothSpan.value; //this shall not be modified later
     	
     	onreExtraction.quantity = new OnreExtractionPart(quantityPhrase, index, posTag);
-    	
-    	//IMPORTANT-CHANGE: DIDN'T WORK :Add sibling of quantity if that sibling is connected by "neg" depLabel
-    	/*String newQuantityPhrase = addNegationIfPossibleToQuantity(onreExtraction, onrePatternTree, quantityPhrase);
-    	
-    	if(!newQuantityPhrase.equals(quantityPhrase)) {
-    		onreExtraction.quantity.text = newQuantityPhrase;	
-    	}*/
     	
     	
     	if(!quantityPhrase.contains("per cent") && !quantityPhrase.contains("percent") && !quantityPhrase.contains("%")) return;

@@ -33,12 +33,6 @@ public class OnrePatternNode {
 	public int visitedCount; //used while creating the pattern while learning the pattern
 	public OnreExtractionPartType nodeType; //used while creating the pattern while learning the pattern
 	
-	//public ExtractionPartType extractionPartType;
-	
-	/*public OnrePatternNode() {
-		this.children = new ArrayList<OnrePatternNode>();
-	}*/
-	
 	public OnrePatternNode(String nodeString, OnrePatternNode parentNode) {
 		String split[] = nodeString.split("#");
 		this.dependencyLabel = split[0];
@@ -59,11 +53,6 @@ public class OnrePatternNode {
 	}
 	
 	public boolean matches(OnrePatternNode regexNode) {
-		//System.out.println(this.word);
-		//System.out.println(onrePatternNode.word);
-		//System.out.println();
-		//if(!isValid(regexNode)) return false; //TO-DO: not required
-		
 		if(!isMatchPosTag(regexNode)) return false;
 		if(!isMatchDepLabel(regexNode)) return false;
 		if(!isMatchWord(regexNode)) return false; 
@@ -72,9 +61,6 @@ public class OnrePatternNode {
 
 	private boolean isValid(OnrePatternNode regexNode) {
 		if(!(regexNode.word.startsWith("{") && regexNode.word.endsWith("}"))) return true;
-		
-		//if(regexNode.word.equals("{q_value}") && !OnreUtils.isNumber(this.word)) return false;
-		//if(!regexNode.word.equals("{q_value}") && OnreUtils.isNumber(this.word)) return false;
 		
 		return true;
 	}
@@ -86,10 +72,7 @@ public class OnrePatternNode {
 		
 		//TODO: curly check for both this & that - edit: commented for 'this'
 		if(regexNode.word.startsWith("{") && regexNode.word.endsWith("}")) return true;
-		//if(this.word.startsWith("{") && this.word.endsWith("}")) return true;
 		
-		//if(this.word.equalsIgnoreCase(onrePatternNode.word)) return true;
-		//if(this.word.toLowerCase().matches(regexNode.word.toLowerCase())) return true;
 		if(OnreUtils_string.isIgnoreCaseMatch(this.word, regexNode.word)) {
 			
 			if(OnreUtils_string.isIgnoreCaseMatch(this.word, "was") 
@@ -120,8 +103,6 @@ public class OnrePatternNode {
 		if(this.dependencyLabel==null || this.dependencyLabel.equals("")) return true;
 		if(regexNode.dependencyLabel==null || regexNode.dependencyLabel.equals("")) return true;
 		
-		//if(this.dependencyLabel.equalsIgnoreCase(regexNode.dependencyLabel)) return true;
-		//if(this.dependencyLabel.matches(regexNode.dependencyLabel)) return true;
 		if(OnreUtils_string.isIgnoreCaseMatch(this.dependencyLabel, regexNode.dependencyLabel)) return true;
 		
 		return false;
@@ -132,8 +113,6 @@ public class OnrePatternNode {
 		if(this.posTag==null || this.posTag.equals("")) return true;
 		if(regexNode.posTag==null || regexNode.posTag.equals("")) return true;
 		
-		//if(this.posTag.equalsIgnoreCase(regexNode.posTag)) return true;
-		//if(this.posTag.matches(regexNode.posTag)) return true;
 		if(OnreUtils_string.isIgnoreCaseMatch(this.posTag, regexNode.posTag)) return true;
 		
 		return false;

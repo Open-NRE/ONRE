@@ -43,6 +43,7 @@ public class Onre_runMe_file {
 					extractions.add(onreExtraction.toString());
 					System.out.println(onreExtraction);
 				}
+				System.out.println();
 			}
 		}
 		

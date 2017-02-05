@@ -36,12 +36,13 @@ public class Onre_runMe {
 		String sentence = "James Valley has 5 cubic miles of fruit orchards.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		Map<String, String> posTags = OnreHelper_graph.getPosTags(depGraph);
-
+		
+		System.out.println(sentence);
+		System.out.println();
 		if(depGraph != null) {
 			Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(depGraph);
 			for (OnreExtraction onreExtraction : extrs.keySet()) {
-				System.out.println(onreExtraction.sentence);
-				System.out.println(onreExtraction.patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS);
+				//System.out.println(onreExtraction.patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS);
 				System.out.println(onreExtraction);
 			}
 		}
@@ -52,9 +53,6 @@ public class Onre_runMe {
 	}
 
     public static DependencyGraph getDepGraph(String sentence) {
-    	//sentence = preprocessing(sentence);
-    	
-	    //String cleaned = clean(sentence);
     	if(parser == null) parser = getParser();
 		
 		DependencyGraph depGraph = null;
@@ -75,20 +73,4 @@ public class Onre_runMe {
 		DependencyParser parser = new ClearParser(postagger);
 		return parser;
 	}
-    
-    /*private static String preprocessing(String sentence) {
-    	sentence = sentence.replace("per cent", "percent");
-    	return sentence;
-    }*/
-
-	/*private String clean(String line) {
-		String cleaned = line;
-
-		cleaned = replaceChars.replacenow(cleaned);
-
-		cleaned = CharMatcher.WHITESPACE.replaceFrom(cleaned, ' ');
-		cleaned = CharMatcher.JAVA_ISO_CONTROL.removeFrom(cleaned);
-
-		return cleaned;
-	}*/
 }

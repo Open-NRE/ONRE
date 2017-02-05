@@ -41,12 +41,7 @@ public class OnreHelper_graph {
 		if (OnrePropertiesReader.isSimplifyVBPostags()) {
 			simplifiedDepGraph = simplifiedDepGraph.simplifyVBPostags();
 		}
-
-		/*simplifiedDepGraph = simplifiedDepGraph.normalize(); //TODO: not sure whether we need these
-		simplifiedDepGraph = simplifiedDepGraph.collapseNNPOf();
-		simplifiedDepGraph = simplifiedDepGraph.collapseWeakLeaves();
-		simplifiedDepGraph = simplifiedDepGraph.collapseXNsubj();*/
-
+		
 		return simplifiedDepGraph;
 	}
 	
@@ -109,7 +104,6 @@ public class OnreHelper_graph {
 		for (Edge<DependencyNode> edge : outgoing_set) {
 			DependencyNode child_depNode = edge.dest();
 			OnrePatternNode child_patternNode = convertGraph2PatternTree_helper(child_depNode, graph, depMap);
-			//child_patternNode.parent = onrePatternNode;
 			child_patternNode.dependencyLabel = depMap.get(depNode).get(child_depNode);
 			onrePatternNode.children.add(child_patternNode);
         }

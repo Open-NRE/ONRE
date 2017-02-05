@@ -27,15 +27,7 @@ public class OnreHelper_PostProcessing {
 	
 	public static OnreExtraction onreExtraction_postProcessing(OnrePatternNode patternNode_sentence, OnreExtraction onreExtraction, 
 			OnrePatternNode patternNode_configured, int patternNumber) throws IOException {
-		//if(!OnreGlobals.arg_onre_isSeedFact) OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
 		OnreHelper_expansions.expandExtraction(onreExtraction, patternNode_sentence);
-
-		/*===DIDN'T WORK===if(onreExtraction.quantity!=null && OnreUtils_string.ignoreCaseContainsPhrase(onreExtraction.argument.text, OnreHelper_DanrothQuantifier.getPhraseExceptValue(onreExtraction.quantity.text))) {
-				onreExtraction.quantity.text = OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text);
-				onreExtraction.q_unit = "";
-		}*/
-		
-		//if(OnreGlobals.arg_onre_isSeedFact) return onreExtraction;
 		
         if(postProcessingHelper_isValueInArgOrRel(onreExtraction)) return null; 				//TODO: IMPORTANT-CHANGE #4:Don't extract if quantity value is present in the argument or relation
         if(postProcessingHelper_isUnitInArg(onreExtraction)) return null;   	   				//TODO: IMPORTANT-CHANGE #5:Don't extract if quantity unit is present in the argument
@@ -51,7 +43,6 @@ public class OnreHelper_PostProcessing {
     	
     	postProcessingHelper_handlePassiveExtractions(onreExtraction, patternNode_sentence, patternNumber);
     	
-    	//replaceDoubleSpaces(onreExtraction);
     	return onreExtraction;
 	}
 	
@@ -172,16 +163,8 @@ public class OnreHelper_PostProcessing {
 		}
 	}
 
-	/*private static void replaceDoubleSpaces(OnreExtraction onreExtraction) {
-		onreExtraction.argument.text = onreExtraction.argument.text.replaceAll("  ", " ");
-    	onreExtraction.relation.text = onreExtraction.relation.text.replaceAll("  ", " ");
-    	if(onreExtraction.quantity_unit_plus!=null) onreExtraction.quantity_unit_plus.text = onreExtraction.quantity_unit_plus.text.replaceAll("  ", " ");
-    	if(onreExtraction.quantity!=null) onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("  ", " ");
-	}*/
-
 	private static boolean postProcessingHelper_isAdditionalInfoAlreadyPresent(OnreExtraction onreExtraction) {
 		removeAdditionalInfoIfAlreadyPresent(onreExtraction);									
-        //if(postProcessingHelper_isAdditionalInfoStillPresent(onreExtraction)) return true;
         return false;
 	}
 
@@ -203,9 +186,7 @@ public class OnreHelper_PostProcessing {
 	private static void postProcessingHelper_numberOf(OnreExtraction onreExtraction) throws IOException {
 		if(onreExtraction.q_unit==null || onreExtraction.q_unit.isEmpty()) return;
 		
-        //if(onreExtraction.relation.text.equalsIgnoreCase(onreExtraction.q_unit)) {
 		if(OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.relation.text, onreExtraction.q_unit)) {
-        	//onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("(?i)"+onreExtraction.relation.text, "").trim();
 			String replaceQuantity = checkIfUnitIsInQuantityUnitMap(onreExtraction);
 			if(replaceQuantity != null) {
 				onreExtraction.relation.text = onreExtraction.relation.text.replaceAll("(?i)"+onreExtraction.q_unit, replaceQuantity).trim();
@@ -270,9 +251,6 @@ public class OnreHelper_PostProcessing {
 		String q_value = OnreHelper_DanrothQuantifier.getValueFromPhrase(onreExtraction.quantity.text);
 		if(q_value == null) return false;
       
-		//if(onreExtraction.argument.text.contains(q_value)) return true;
-       	//if(onreExtraction.relation.text.contains(q_value)) return true;
-		
 		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(onreExtraction.argument.text, q_value)) return true;
 		if(OnreUtils_string.isIgnoreCaseIgnoreCommaIgnoreSpaceContains(onreExtraction.relation.text, q_value)) return true;
 		

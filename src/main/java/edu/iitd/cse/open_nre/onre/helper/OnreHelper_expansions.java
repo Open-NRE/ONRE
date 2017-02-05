@@ -29,7 +29,6 @@ public class OnreHelper_expansions {
 		expandArgument(onreExtraction, patternNode_sentence);
 		expandQuantity(onreExtraction, patternNode_sentence); //TODO: IMPORTANT-CHANGE #14: expand on prep if subtree does not have relation/arg
 		if(OnreUtils.quantityExists(onreExtraction)) expandQuantity_settingAdditionalInfo(onreExtraction,patternNode_sentence);
-		//if(onreExtraction.quantity_percent != null) expandQuantity_percent(onreExtraction, patternNode_sentence); //TODO: IMPORTANT-CHANGE #14: expand on prep if subtree does not have relation/arg
 		
 		fillNegationAndAuxWords(onreExtraction, patternNode_sentence);
 	}
@@ -94,7 +93,6 @@ public class OnreHelper_expansions {
 				
 				if(child.dependencyLabel.equals("nn")) { expansions.add(child); q_yetToExpand.add(child); }
 				
-				//if(child.dependencyLabel.equals("prep")) { expansions.add(child); q_yetToExpand.add(child); } //TODO: IMPORTANT-CHANGE #13: expand on prep if subtree does not have relation/quantity
 				if(child.dependencyLabel.equals("pobj")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				if(child.dependencyLabel.equals("cc") || child.dependencyLabel.equals("conj")) { expansions.add(child); q_yetToExpand.add(child); }
@@ -106,7 +104,6 @@ public class OnreHelper_expansions {
 		Set<OnrePatternNode> expansions_all = new HashSet<>();
 	    expansions_all.addAll(expansions);
 	    for (OnrePatternNode onrePatternNode : expansions) {
-	    	//if(onrePatternNode.word.equals(onreExtraction.argument_headWord.text)) continue; //not expanding on headWord?
 	    	for(OnrePatternNode child : onrePatternNode.children) {
 	    		OnrePatternNode node_prep = null;
 	    		if(child.dependencyLabel.equals("prep")) node_prep = child;
@@ -166,8 +163,6 @@ public class OnreHelper_expansions {
 		
 		String qPhraseExceptValue = OnreHelper_DanrothQuantifier.getPhraseExceptValue(onreExtraction.quantity.text);
 		
-		/*if(OnreUtils_string.isIgnoreCaseContainsPhrase(quantity_unit_plus, qPhraseExceptValue))
-			onreExtraction.quantity.text = onreExtraction.quantity.text.replace(qPhraseExceptValue, "").trim();*/
 		quantity_unit_plus = quantity_unit_plus.replaceAll("^"+qPhraseExceptValue, "");
 		quantity_unit_plus = quantity_unit_plus.replaceAll("^"+onreExtraction.q_unit, "");
 		
@@ -192,25 +187,6 @@ public class OnreHelper_expansions {
 		
 		return false;
 	}
-	
-	/*private static void expandQuantity_percent(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
-
-		OnrePatternNode quantity_percent = OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity_percent, patternNode_sentence);
-		
-		OnrePatternNode node_prepOf = null;
-		for(OnrePatternNode child : quantity_percent.children) {
-			if(child.dependencyLabel.equals("prep") && child.word.equals("of")) node_prepOf = child;
-		}
-		
-		if(node_prepOf == null) return;
-		
-	    Set<OnrePatternNode> expansions = expandHelper_expandCompleteSubTree(node_prepOf);
-	    
-		String quantity_unit_plus = expandHelper_sortExpansions_createStr(expansions);
-		// If upon expansion, we include already included text - ignore
-		if(expandHelper_isAlreadyPresent(onreExtraction, quantity_unit_plus, 2)) return;
-		onreExtraction.quantity_unit_plus = new OnreExtractionPart(quantity_unit_plus, node_prepOf.index); 
-    }*/
 
 	private static void expandQuantity_settingAdditionalInfo(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 		
@@ -232,7 +208,6 @@ public class OnreHelper_expansions {
 			else {
 				onreExtraction.additional_info.text = onreExtraction.additional_info.text + " ; " + additional_info;
 			}
-			//break;
 		}
 	}
 	
@@ -262,9 +237,6 @@ public class OnreHelper_expansions {
 				if(child.dependencyLabel.equals("nn")) {expansions.add(child); q_yetToExpand.add(child); } 
 				if(child.dependencyLabel.equals("neg")) {expansions.add(child); q_yetToExpand.add(child); }//TODO: IMPORTANT-CHANGE #10: negation handling
 				
-				//if(child.dependencyLabel.equals("advmod")) {expansions.add(child); q_yetToExpand.add(child); } 
-				//if(child.dependencyLabel.equals("hmod")) {expansions.add(child); q_yetToExpand.add(child); }
-				
 				if(child.dependencyLabel.matches(".*mod") && !child.dependencyLabel.equals("npadvmod") && !child.dependencyLabel.equals("advmod")) { expansions.add(child); q_yetToExpand.add(child); }
 				
 				if(child.dependencyLabel.matches("det")) { expansions.add(child); q_yetToExpand.add(child); }
@@ -277,14 +249,11 @@ public class OnreHelper_expansions {
 	private static void expandRelationHelper_expandOnPrepForConfiguredWords(OnreExtraction onreExtraction, OnrePatternNode node_relation, Set<OnrePatternNode> expansions) throws IOException {
 		
 	    List<String> expandOnPrep = OnreIO.readFile_classPath(OnreFilePaths.filePath_expandOnPrep);
-		//if(expandOnPrep.contains(node_relation.word)) {
-			for(OnrePatternNode child : node_relation.children) {
-				if(!child.dependencyLabel.equals("prep")) continue;
-				if(OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity, child) == null) continue;
-				//expansions.add(child);
-				OnreGlobals.expandedOnPrep = child.word;
-			}
-		//}
+		for(OnrePatternNode child : node_relation.children) {
+			if(!child.dependencyLabel.equals("prep")) continue;
+			if(OnreUtils_tree.searchNodeInTreeByIndex(onreExtraction.quantity, child) == null) continue;
+			OnreGlobals.expandedOnPrep = child.word;
+		}
 	}
 	
 	private static Set<OnrePatternNode> expandRelationHelper_expandOnPrepSubTree(OnreExtraction onreExtraction, Set<OnrePatternNode> expansions) {

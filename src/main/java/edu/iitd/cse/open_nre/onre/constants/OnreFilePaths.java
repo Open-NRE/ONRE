@@ -18,7 +18,6 @@ public class OnreFilePaths {
 	public static String filepath_auxverbs = "auxVerbs";
 	public static String filepath_quantityUnitMap = "quantityUnitMap";
 	public static String filepath_wordnetAttributes = "wordnet_attributes_json";
-	//public static String folderpath_wordnet = "src/main/resources/edu/iitd/cse/open_nre/onre/utils/WordNet-3.0";
 	public static String folderpath_wordnet = "./WordNet-3.0";
 	
 	//ONRE_DS

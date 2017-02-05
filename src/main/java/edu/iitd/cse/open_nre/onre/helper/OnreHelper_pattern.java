@@ -137,8 +137,6 @@ public class OnreHelper_pattern {
 			}
 		}
 		
-		//System.err.println("---It shall never come here...problem, exiting---");
-		//System.exit(1); //TODO: this shall be uncommented..commented due to "\C2" special char issue
 		return null;
 	}
     
@@ -159,8 +157,6 @@ public class OnreHelper_pattern {
 			}
 		}
 		
-		//System.err.println("---It shall never come here...problem, exiting---");
-		//System.exit(1); //TODO: this shall be uncommented..commented due to "\C2" special char issue
 		return null;
 	}
 	
@@ -250,7 +246,6 @@ public class OnreHelper_pattern {
 		if(node==null) return null;
 		
 		markVisited(node);
-		//node.nodeType = partType;
 		return node;
 	}
 	

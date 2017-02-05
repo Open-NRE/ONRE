@@ -45,20 +45,8 @@ public class MayIHelpYou {
     	
     	Map<OnreExtraction, Integer> extrs = getExtractions(onrePatternTree, list_configuredPattern, danrothSpans);
 		
-		//if(!OnreGlobals.arg_isSeedFact) System.out.println(OnreGlobals.sentence);
-		
-		//for (OnreExtraction onreExtraction : extrs) {
-			//if(OnreUtils.quantityExists(onreExtraction)) System.out.println(onreExtraction);
-		//}
-		
-		//if(!OnreGlobals.arg_isSeedFact) System.out.println();
-		
-		//addDummyExtractions(extrs);
-		//return javaList2ScalaSeq(extrs);
-		
 		return OnreUtils.sortMapByValue(extrs, false);
 
-		// System.out.println("You are running me :)");
 	}
     
     private static boolean checkIfExtractionPartSimilar(String s1, String s2) {
@@ -112,7 +100,6 @@ public class MayIHelpYou {
     	Map<OnreExtraction, Integer> extrs = new HashMap<OnreExtraction, Integer>();
     	
     	for (int i=0; i<list_configuredPattern.size(); i++) {
-    		//System.out.println("pattern: " + i);
     		OnrePatternNode configuredPattern = list_configuredPattern.get(i);
     		if(configuredPattern==null) continue;
     		OnreGlobals.resetGlobals();
@@ -127,10 +114,7 @@ public class MayIHelpYou {
         	onreExtraction.sentence = onrePatternTree.sentence;
         	
 	        if(!OnreUtils.quantityExists(onreExtraction)) continue;
-	        	
-        	
-        	//TODO: IMPORTANT-CHANGE #11:Removing extractions where they are similar except for the additional-info field
-        	//extrs.put(onreExtraction, onreExtraction.patternNumber);
+	        
         	addExtractionToMap(extrs, onreExtraction);
         }
     	
@@ -147,26 +131,4 @@ public class MayIHelpYou {
     	
     	return OnreHelper_PostProcessing.onreExtraction_postProcessing(patternNode_sentence, onreExtraction, patternNode_configured, patternNumber);
     }
-
-	/*private static Seq<OnreExtraction> javaList2ScalaSeq(List<OnreExtraction> list_java) {
-	    return JavaConversions.asScalaBuffer(list_java).toList();
-    }*/
-
-	/*private static void addDummyExtractions(List<OnreExtraction> extrs) {
-	    OnreExtraction extr1 = newExtr("Deadpool", "budget", "53", "$ million");
-		OnreExtraction extr2 = newExtr("India", "population", "1", "billion");
-		extr2.temporal = newPart("2011");
-		extr2.changeType = newPart(OnreChangeType.CHANGE_INCREASE.toString());
-		
-		extrs.add(extr1);
-		extrs.add(extr2);
-    }
-
-	private static OnreExtraction newExtr(String arg, String rel, String q, String unit) {
-		return new OnreExtraction(newPart(arg), newPart(rel), newPart(q), newPart(unit));
-	}
-
-	private static OnreExtractionPart newPart(String text) {
-		return new OnreExtractionPart(text);
-	}*/
 }

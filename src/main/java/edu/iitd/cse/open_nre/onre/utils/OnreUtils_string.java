@@ -7,16 +7,6 @@ public class OnreUtils_string {
 		return s1.toLowerCase().matches(s2.toLowerCase());
 	}
 	
-	/*public static boolean ignoreCaseContainsWord(String s1, String s2) {
-		List<String> listOfWords = Arrays.asList(s1.split(" "));
-		
-		for (String word : listOfWords) {
-			if(word.equalsIgnoreCase(s2)) return true;
-		}
-		
-		return false;
-	}*/
-	
 	public static boolean isIgnoreCaseContainsPhrase(String s1, String s2) {
 		return s1.matches("(?i).*\\b" + s2 + "\\b.*");
 	}

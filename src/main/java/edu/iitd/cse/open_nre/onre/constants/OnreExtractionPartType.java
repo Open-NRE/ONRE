@@ -14,17 +14,10 @@ public enum OnreExtractionPartType {
 
 	ARGUMENT("{arg}"),
 	RELATION("{rel}"),
-	//RELATION_JOINT("{rel_joint}"),
-	//QUANTITY_UNIT("{q_unit}"),
 	QUANTITY("{quantity}"),
-	//QUANTITY_UNIT_PLUS("{q_unit_plus}"),
-	//QUANTITY_UNIT_OBJTYPE("{q_unit_objType}"),
-	//QUANTITY_VALUE("{q_value}"),
-	//QUANTITY_MODIFIER("{q_modifier}"),
 	UNKNOWN("{unknown}");
 	
 	public String text;
-	//public String value;
 	private static Map<String, OnreExtractionPartType> typeMap;
 	
 	private OnreExtractionPartType(String text) {

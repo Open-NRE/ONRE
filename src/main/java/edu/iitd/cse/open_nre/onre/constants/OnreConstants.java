@@ -13,13 +13,6 @@ public class OnreConstants {
 	
 	public static final int NUMBER_OF_SEED_PATTERNS	         = 9;
 	
-	/*public static final String[]	CHANGE_KEYS_INCREASE	= { "increase", "up", "growth", "surge", "rise", "more",
-	        "boost", "expansion", "hike", "upgrade", "enlargement", "rise", "raise", "gain", "inflation", "addition" };
-
-	public static final String[]	CHANGE_KEYS_DECREASE	= { "decrease", "down", "fall", "less", "compression",
-	        "reduction", "depletion", "shrinkage", "loss", "decline", "drop", "cutback", "contraction" };*/
-	
-	
 	//ONRE_DS
 	public static int MAX_DISTANCE_QUANTITY_UNIT = 3;
 	
