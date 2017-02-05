@@ -36,14 +36,11 @@ public class Onre_runMe_file {
 			DependencyGraph depGraph = Onre_runMe.getDepGraph(inputLines.get(i));
 			if(depGraph != null) {
 				Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(depGraph);
-				System.out.println(inputLines.get(i));
 				extractions.add(inputLines.get(i));
-				extractions.add("\nNumerical Extractions");
 				for (OnreExtraction onreExtraction : extrs.keySet()) {
 					extractions.add(onreExtraction.toString());
-					System.out.println(onreExtraction);
 				}
-				System.out.println();
+				extractions.add("\n");
 			}
 		}
 		
