@@ -5,6 +5,7 @@ package edu.iitd.cse.open_nre.onre.helper;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,6 +16,7 @@ import java.util.Set;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import edu.iitd.cse.open_nre.onre.constants.OnreFilePaths;
 import edu.iitd.cse.open_nre.onre.utils.OnreIO;
 import edu.mit.jwi.Dictionary;
 import edu.mit.jwi.IDictionary;
@@ -33,7 +35,7 @@ public class OnreHelper_WordNet {
 	
 	private static IDictionary getWordnetDictionary() throws IOException {
 		//construct URL to WordNet Dictionary directory on the computer
-        String wordNetDirectory = "/home/harinder/Documents/IITD_MTP/swarna/WordNet-3.0"; //TODO: Remove absolute path 
+        String wordNetDirectory = OnreFilePaths.folderpath_wordnet;
         String path = wordNetDirectory + File.separator + "dict";
         URL url = new URL("file", null, path);      
 
@@ -97,7 +99,7 @@ public class OnreHelper_WordNet {
 	}
 	
 	public static String getWhoseAttributeIsWord(String word) throws IOException {
-		List<String> inputJsonStrings = OnreIO.readFile("/home/harinder/Documents/IITD_MTP/Open_nre/ONRE/src/main/resources/edu/iitd/cse/open_nre/onre/utils/wordnet_attributes_json"); //TODO: Remove absolute path 
+		List<String> inputJsonStrings = OnreIO.readFile_classPath(OnreFilePaths.filepath_wordnetAttributes);
         Type mapType = new TypeToken<Map<String, Set<String>>>(){}.getType();  
         Map<String, Set<String>> attributeMap = new Gson().fromJson(inputJsonStrings.get(0), mapType);
         

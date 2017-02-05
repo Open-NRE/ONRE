@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import edu.iitd.cse.open_nre.onre.OnreGlobals;
+import edu.iitd.cse.open_nre.onre.constants.OnreConstants;
 import edu.iitd.cse.open_nre.onre.domain.OnreExtraction;
 import edu.iitd.cse.open_nre.onre.helper.MayIHelpYou;
 import edu.iitd.cse.open_nre.onre.helper.OnreHelper_graph;
@@ -32,7 +33,7 @@ public class Onre_runMe {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String sentence = "Heavy Metal High Rise is 1,200 linear feet long, and it contains over 200 tons of steel and 700 cubic yards of concrete.";
+		String sentence = "James Valley has 5 cubic miles of fruit orchards.";
 		DependencyGraph depGraph = getDepGraph(sentence);
 		Map<String, String> posTags = OnreHelper_graph.getPosTags(depGraph);
 
@@ -40,7 +41,7 @@ public class Onre_runMe {
 			Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(depGraph);
 			for (OnreExtraction onreExtraction : extrs.keySet()) {
 				System.out.println(onreExtraction.sentence);
-				System.out.println(onreExtraction.patternNumber);
+				System.out.println(onreExtraction.patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS);
 				System.out.println(onreExtraction);
 			}
 		}

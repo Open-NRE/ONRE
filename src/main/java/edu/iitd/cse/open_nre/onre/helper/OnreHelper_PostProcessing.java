@@ -209,6 +209,10 @@ public class OnreHelper_PostProcessing {
 			String replaceQuantity = checkIfUnitIsInQuantityUnitMap(onreExtraction);
 			if(replaceQuantity != null) {
 				onreExtraction.relation.text = onreExtraction.relation.text.replaceAll("(?i)"+onreExtraction.q_unit, replaceQuantity).trim();
+				if(onreExtraction.additional_info != null) {
+					onreExtraction.relation.text += " " + onreExtraction.additional_info.text;
+					onreExtraction.additional_info = null;
+				}
 			}
 			else {
 			onreExtraction.quantity.text = onreExtraction.quantity.text.replaceAll("(?i)"+onreExtraction.q_unit, "").trim();

@@ -152,6 +152,10 @@ public class OnreHelper_expansions {
 			if(child.dependencyLabel.equals("prep")) node_prep = child;
 		}
 		
+		if(subtreeContainsOver(quantity) && !OnreUtils_string.isIgnoreCaseContainsPhrase(onreExtraction.quantity.text, "over")) {
+			onreExtraction.quantity.text = "over " + onreExtraction.quantity.text;
+		}
+		
 		if(node_prep == null) return;
 		
 	    Set<OnrePatternNode> expansions = expandHelper_expandCompleteSubTree(node_prep);
@@ -172,6 +176,22 @@ public class OnreHelper_expansions {
 		else
 			onreExtraction.additional_info = new OnreExtractionPart(quantity_unit_plus, node_prep.index);
     }
+	
+	private static boolean subtreeContainsOver(OnrePatternNode quantityNode) {
+		
+		Queue<OnrePatternNode> q_yetToExpand = new LinkedList<OnrePatternNode>();
+		q_yetToExpand.add(quantityNode);
+		while(!q_yetToExpand.isEmpty()) {
+			OnrePatternNode currNode = q_yetToExpand.remove();
+			
+			for(OnrePatternNode child : currNode.children) {
+				if(child.word.equalsIgnoreCase("over")) return true;
+				q_yetToExpand.add(child);
+			}
+		}
+		
+		return false;
+	}
 	
 	/*private static void expandQuantity_percent(OnreExtraction onreExtraction, OnrePatternNode patternNode_sentence) {
 

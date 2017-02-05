@@ -4,6 +4,7 @@
 package edu.iitd.cse.open_nre.onre.runner;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -26,21 +27,26 @@ public class Onre_runMe_file {
 	public static void main(String[] args) throws IOException {
 		Onre_runMe.setArguments(args);
 
-		String filePath_inputSentences = "data/input_files/in_numberRuleTestSet_lrb_rrb";
+		String filePath_inputSentences = args[1];
 		List<String> inputLines = OnreIO.readFile(filePath_inputSentences);
+		
+		List<String> extractions = new ArrayList<String>();
 
 		for(int i=0;i<inputLines.size();i++){
-			System.out.println("\n::" + (i+1));
 			DependencyGraph depGraph = Onre_runMe.getDepGraph(inputLines.get(i));
 			if(depGraph != null) {
 				Map<OnreExtraction, Integer> extrs = MayIHelpYou.runMe(depGraph);
 				System.out.println(inputLines.get(i));
+				extractions.add(inputLines.get(i));
+				extractions.add("\nNumerical Extractions");
 				for (OnreExtraction onreExtraction : extrs.keySet()) {
-					System.out.println(onreExtraction.patternNumber-OnreConstants.NUMBER_OF_SEED_PATTERNS);
+					extractions.add(onreExtraction.toString());
 					System.out.println(onreExtraction);
 				}
 			}
 		}
+		
+		OnreIO.writeFile(args[2], extractions);
 
 	}
 

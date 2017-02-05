@@ -61,7 +61,7 @@ public class OnreUtils {
 	    }
 	}
 	
-	public static <K, V extends Comparable<? super V>> Map<K, V> sortMapByValue(Map<K, V> map, boolean isDescending) {
+	public static <K, V extends Comparable<? super V>> Map<K, V> sortMapByValue(Map<K, V> map, final boolean isDescending) {
 		
 		List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());
 		Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
@@ -77,7 +77,7 @@ public class OnreUtils {
 		return result;
 	}
 	
-	public static Map<String, Set<String>> sortMapByValueCount(Map<String, Set<String>> map, boolean isDescending) {
+	public static Map<String, Set<String>> sortMapByValueCount(Map<String, Set<String>> map, final boolean isDescending) {
 		
 		List<Map.Entry<String, Set<String>>> list = new LinkedList<Map.Entry<String, Set<String>>>(map.entrySet());
 		Collections.sort(list, new Comparator<Map.Entry<String, Set<String>>>() {
