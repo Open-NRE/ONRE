@@ -2,6 +2,7 @@ import AssemblyKeys._
 import NativePackagerKeys._
 
 assemblySettings
+releaseSettings
 
 ReleaseSettings.defaults
 
