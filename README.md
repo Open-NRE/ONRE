@@ -1,5 +1,5 @@
 # ONRE
-Open Numerical Relation Extractor is integrated in Open IE 5.0. Run Open IE 5.0(https://github.com/dair-iitd/OpenIE-standalone) to generate extractions from numerical sentences.
+This codebase is unclean and might not work directly. However, BONIE is integrated in Open IE 5.0. Run Open IE 5.0(https://github.com/dair-iitd/OpenIE-standalone) to generate extractions from numerical sentences. Our test data and extractions can be found [[here]](https://github.com/dair-iitd/OpenIE-standalone/tree/master/data)
 
 Examples:
   
